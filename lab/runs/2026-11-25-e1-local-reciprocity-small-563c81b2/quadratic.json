@@ -1,0 +1,286 @@
+[
+  {
+    "p": 2,
+    "d": 5,
+    "kind": "unramified",
+    "character": "x = u p^v goes to (-1)^v from Q_2(sqrt 5) = Q_2(zeta_3)",
+    "kernel": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "found": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 2,
+    "d": -1,
+    "kind": "ramified",
+    "character": "x = u p^v goes to the sign of u mod 4 from Q_2(zeta_4)",
+    "kernel": [
+      1,
+      5,
+      2,
+      10
+    ],
+    "found": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 2,
+    "d": -5,
+    "kind": "ramified",
+    "character": "x = u p^v goes to (-1)^v from Q_2(sqrt 5) = Q_2(zeta_3) times the sign of u mod 4 from Q_2(zeta_4)",
+    "kernel": [
+      1,
+      5,
+      6,
+      14
+    ],
+    "found": [
+      1,
+      5,
+      6,
+      14
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 2,
+    "d": 2,
+    "kind": "ramified",
+    "character": "x = u p^v goes to the sign of u mod 8 up to -1 from Q_2(zeta_8)",
+    "kernel": [
+      1,
+      7,
+      2,
+      14
+    ],
+    "found": [
+      1,
+      2,
+      7,
+      14
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 2,
+    "d": -2,
+    "kind": "ramified",
+    "character": "x = u p^v goes to the sign of u mod 4 from Q_2(zeta_4) times the sign of u mod 8 up to -1 from Q_2(zeta_8)",
+    "kernel": [
+      1,
+      3,
+      2,
+      6
+    ],
+    "found": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 2,
+    "d": 10,
+    "kind": "ramified",
+    "character": "x = u p^v goes to (-1)^v from Q_2(sqrt 5) = Q_2(zeta_3) times the sign of u mod 8 up to -1 from Q_2(zeta_8)",
+    "kernel": [
+      1,
+      7,
+      6,
+      10
+    ],
+    "found": [
+      1,
+      6,
+      7,
+      10
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 2,
+    "d": -10,
+    "kind": "ramified",
+    "character": "x = u p^v goes to (-1)^v from Q_2(sqrt 5) = Q_2(zeta_3) times the sign of u mod 4 from Q_2(zeta_4) times the sign of u mod 8 up to -1 from Q_2(zeta_8)",
+    "kernel": [
+      1,
+      3,
+      10,
+      14
+    ],
+    "found": [
+      1,
+      3,
+      10,
+      14
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 3,
+    "d": 2,
+    "kind": "unramified",
+    "character": "x = u p^v goes to (-1)^v from the unramified extension",
+    "kernel": [
+      1,
+      2
+    ],
+    "found": [
+      1,
+      2
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 3,
+    "d": -3,
+    "kind": "ramified",
+    "character": "x = u p^v goes to the Legendre symbol (u/3) from Q_3(zeta_3)",
+    "kernel": [
+      1,
+      3
+    ],
+    "found": [
+      1,
+      3
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 3,
+    "d": -6,
+    "kind": "ramified",
+    "character": "x = u p^v goes to (-1)^v from the unramified extension times the Legendre symbol (u/3) from Q_3(zeta_3)",
+    "kernel": [
+      1,
+      6
+    ],
+    "found": [
+      1,
+      6
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 5,
+    "d": 2,
+    "kind": "unramified",
+    "character": "x = u p^v goes to (-1)^v from the unramified extension",
+    "kernel": [
+      1,
+      2
+    ],
+    "found": [
+      1,
+      2
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 5,
+    "d": 5,
+    "kind": "ramified",
+    "character": "x = u p^v goes to the Legendre symbol (u/5) from Q_5(zeta_5)",
+    "kernel": [
+      1,
+      5
+    ],
+    "found": [
+      1,
+      5
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 5,
+    "d": 10,
+    "kind": "ramified",
+    "character": "x = u p^v goes to (-1)^v from the unramified extension times the Legendre symbol (u/5) from Q_5(zeta_5)",
+    "kernel": [
+      1,
+      10
+    ],
+    "found": [
+      1,
+      10
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 7,
+    "d": 3,
+    "kind": "unramified",
+    "character": "x = u p^v goes to (-1)^v from the unramified extension",
+    "kernel": [
+      1,
+      3
+    ],
+    "found": [
+      1,
+      3
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 7,
+    "d": -7,
+    "kind": "ramified",
+    "character": "x = u p^v goes to the Legendre symbol (u/7) from Q_7(zeta_7)",
+    "kernel": [
+      1,
+      7
+    ],
+    "found": [
+      1,
+      7
+    ],
+    "norms": 3320,
+    "outside": 0
+  },
+  {
+    "p": 7,
+    "d": -21,
+    "kind": "ramified",
+    "character": "x = u p^v goes to (-1)^v from the unramified extension times the Legendre symbol (u/7) from Q_7(zeta_7)",
+    "kernel": [
+      1,
+      21
+    ],
+    "found": [
+      1,
+      21
+    ],
+    "norms": 3320,
+    "outside": 0
+  }
+]
