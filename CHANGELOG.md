@@ -4,6 +4,14 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## v0.1.4 (2026-11-26)
+
+### Changed
+
+- The nodes LGVAKJJD8Y for global reciprocity and LGX8K4ZEGW for the global existence theorem are proved, by `Langlands.Bridge.globalReciprocity` and `Langlands.Bridge.globalExistence` and the port of global class field theory.
+- The node LG06WS8A1Y for the theorem of Kronecker and Weber is proved and not proved-mod, because the node for global reciprocity that it uses is proved.
+- `records/lean.json` is at langlands-lean b6f61f2, with 707 declarations.
+
 ## v0.1.3 (2026-11-26)
 
 ### Added
