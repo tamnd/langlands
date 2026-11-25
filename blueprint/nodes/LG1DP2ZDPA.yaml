@@ -1,0 +1,8 @@
+tag: "LG1DP2ZDPA"
+slug: "fc-ramanujan-tau-bridge"
+kind: "theorem"
+title: "The Ramanujan bound for tau follows from the project statement"
+statement: "Assume that $\\Delta = q \\prod_{n \\ge 1} (1 - q^n)^{24}$ is the $q$-expansion of a normalized Hecke eigenform of weight 12 and level 1. Then the Ramanujan-Petersson bound for holomorphic eigenforms implies $|\\tau(p)| \\le 2 p^{11/2}$ for each prime $p$."
+lean: {"statement": "Langlands.Bridge.ramanujan_petersson_of_ramanujanPeterssonHolomorphic", "proof": "Langlands.Bridge.ramanujan_petersson_of_ramanujanPeterssonHolomorphic"}
+tier: "T4"
+notes: "The Lean statement is an implication from the node LGV8B6TVWZ (RamanujanPeterssonHolomorphic), so its proof does not use a proof of that node. This is the bridge of spec 06.4 for RamanujanTau. The assumption is the hypothesis DeltaIsEigenform of the Lean statement, a theorem of Mordell and Hecke that Mathlib does not have yet."

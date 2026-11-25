@@ -1,14 +1,69 @@
 {
   "repository": "https://github.com/tamnd/langlands-lean",
-  "commit": "a7228f84f6773a5a34eb2b925efd81e80c487dcf",
+  "commit": "3668a96d40e86f11392610fd4b11dfd77f499d09",
   "toolchain": "4.35.0",
   "mathlib": "v4.35.0",
   "built": "2026-11-25",
   "decls": {
+    "Langlands.Bridge.ApAgree": {
+      "kind": "def",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 248,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(E : WeierstrassCurve ℚ) → [E.IsElliptic] → Prop"
+    },
+    "Langlands.Bridge.DeltaIsEigenform": {
+      "kind": "def",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 299,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.Bridge.HasseBound": {
+      "kind": "def",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 252,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "WeierstrassCurve ℚ → Prop"
+    },
+    "Langlands.Bridge.card_primes_le_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 186,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (N : ℕ) (Q : ℕ → Prop) [inst : DecidablePred Q],\n  Nat.card { p // Nat.Prime p ∧ p ≤ N ∧ Q p } = (Finset.filter Q (N + 1).primesBelow).card"
+    },
+    "Langlands.Bridge.card_primes_le_eq'": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 193,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (N : ℕ), Nat.card { p // Nat.Prime p ∧ p ≤ N } = (N + 1).primesBelow.card"
+    },
     "Langlands.Bridge.coeff_one_qExpansion_eq_zero": {
       "kind": "theorem",
       "file": "Langlands/Bridge/FormalConjectures.lean",
-      "line": 111,
+      "line": 118,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -19,7 +74,7 @@
     "Langlands.Bridge.cuspForm_weight_two_eq_zero_of_eq": {
       "kind": "theorem",
       "file": "Langlands/Bridge/FormalConjectures.lean",
-      "line": 135,
+      "line": 142,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -30,7 +85,7 @@
     "Langlands.Bridge.cuspFunction_natCast_eq": {
       "kind": "theorem",
       "file": "Langlands/Bridge/FormalConjectures.lean",
-      "line": 79,
+      "line": 86,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -52,7 +107,7 @@
     "Langlands.Bridge.gamma0_one_eq": {
       "kind": "theorem",
       "file": "Langlands/Bridge/FormalConjectures.lean",
-      "line": 129,
+      "line": 136,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -60,10 +115,21 @@
       ],
       "type": "Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 1) =\n  (Matrix.SpecialLinearGroup.mapGL ℝ).range"
     },
+    "Langlands.Bridge.hasCM_iff_hasCMOverQ": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 256,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (E : WeierstrassCurve ℚ) [inst : E.IsElliptic],\n  Langlands.Ported.FormalConjectures.SatoTateConjecture.HasCM E ↔ Langlands.HasCMOverQ E"
+    },
     "Langlands.Bridge.hasseWeil_rat_of_hasseWeilEllipticQ": {
       "kind": "theorem",
       "file": "Langlands/Bridge/FormalConjectures.lean",
-      "line": 32,
+      "line": 39,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -85,7 +151,7 @@
     "Langlands.Bridge.modularFormAn_one_eq_zero": {
       "kind": "theorem",
       "file": "Langlands/Bridge/FormalConjectures.lean",
-      "line": 140,
+      "line": 147,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -96,7 +162,7 @@
     "Langlands.Bridge.natCast_mem_strictPeriods_Gamma0": {
       "kind": "theorem",
       "file": "Langlands/Bridge/FormalConjectures.lean",
-      "line": 74,
+      "line": 81,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -107,7 +173,7 @@
     "Langlands.Bridge.not_modularityConjecture": {
       "kind": "theorem",
       "file": "Langlands/Bridge/FormalConjectures.lean",
-      "line": 151,
+      "line": 158,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -118,7 +184,7 @@
     "Langlands.Bridge.not_modularity_conjecture": {
       "kind": "theorem",
       "file": "Langlands/Bridge/FormalConjectures.lean",
-      "line": 158,
+      "line": 165,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -129,13 +195,57 @@
     "Langlands.Bridge.one_mem_strictPeriods_Gamma0": {
       "kind": "theorem",
       "file": "Langlands/Bridge/FormalConjectures.lean",
-      "line": 70,
+      "line": 77,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
         "propext"
       ],
       "type": "∀ (N : ℕ), 1 ∈ (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)).strictPeriods"
+    },
+    "Langlands.Bridge.ramanujan_petersson_of_ramanujanPeterssonHolomorphic": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 304,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.Bridge.DeltaIsEigenform →\n  Langlands.RamanujanPeterssonHolomorphic → Langlands.Ported.FormalConjectures.RamanujanTau.ramanujan_petersson"
+    },
+    "Langlands.Bridge.satoTateMeasure_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 176,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {a b : ℝ},\n  -1 ≤ a →\n    a ≤ 1 →\n      -1 ≤ b →\n        b ≤ 1 →\n          Langlands.Ported.FormalConjectures.SatoTateConjecture.satoTateMeasure a b =\n            2 / Real.pi * ∫ (θ : ℝ) in Real.arccos b..Real.arccos a, Real.sin θ ^ 2"
+    },
+    "Langlands.Bridge.satoTate_conjecture_of_satoTate": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 260,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(∀ (E : WeierstrassCurve ℚ) [inst : E.IsElliptic], Langlands.Bridge.ApAgree E ∧ Langlands.Bridge.HasseBound E) →\n  Langlands.SatoTate → Langlands.Ported.FormalConjectures.SatoTateConjecture.satoTate_conjecture"
+    },
+    "Langlands.Bridge.tendsto_density_congr": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 199,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {Q Q' : ℕ → Prop} [inst : DecidablePred Q] [inst_1 : DecidablePred Q'] (P₀ : ℕ),\n  (∀ (p : ℕ), P₀ ≤ p → Nat.Prime p → (Q p ↔ Q' p)) →\n    ∀ {L : ℝ},\n      Filter.Tendsto (fun N =\u003e ↑(Finset.filter Q N.primesBelow).card / ↑N.primesBelow.card) Filter.atTop (nhds L) →\n        Filter.Tendsto (fun N =\u003e ↑(Finset.filter Q' N.primesBelow).card / ↑N.primesBelow.card) Filter.atTop (nhds L)"
     },
     "Langlands.Fidelity.IsArtinMapArith": {
       "kind": "inductive",
@@ -1177,6 +1287,16 @@
         "propext"
       ],
       "type": "(E : WeierstrassCurve ℚ) → [E.IsElliptic] → ℕ → ℝ"
+    },
+    "Langlands.Ported.FormalConjectures.SatoTateConjecture.normalisedAp.congr_simp": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (E E_1 : WeierstrassCurve ℚ) (e_E : E = E_1) [inst : E.IsElliptic] (p p_1 : ℕ),\n  p = p_1 →\n    Langlands.Ported.FormalConjectures.SatoTateConjecture.normalisedAp E p =\n      Langlands.Ported.FormalConjectures.SatoTateConjecture.normalisedAp E_1 p_1"
     },
     "Langlands.Ported.FormalConjectures.SatoTateConjecture.primeCountInInterval": {
       "kind": "def",
