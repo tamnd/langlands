@@ -6,6 +6,10 @@ Each release has a section. The newest release is first.
 
 ### Added
 
+- The node LG4S7A4G1F for the local Langlands correspondence for induced tori. It is proved.
+- The node LG6NN4B43V for the functional equation of Hecke L-functions, with the status stated, and the paper records CF67 (Cassels and Frohlich, with Tate's thesis in Chapter XV) and Neu99 (Neukirch).
+- `blueprint/milestones.yaml`: the default weights of the milestones for `lgl queue`.
+- `records/lean.json`: the declarations of langlands-lean at commit 54b0386, with 483 declarations.
 - The nodes LG3VDFDBW0 (the Weil group is dense in the absolute Galois group), LGDEPE7CM9 (the abelianized Weil group embeds in the abelianized Galois group) and LG5YHMSJZM (the local Langlands correspondence for split tori). All three are proved.
 - `records/lean.json`: the declarations of langlands-lean at commit 835c3bf.
 
