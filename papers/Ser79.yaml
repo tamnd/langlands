@@ -1,0 +1,24 @@
+id: T0-06
+key: Ser79
+title: Local Fields
+authors: [Jean-Pierre Serre]
+where: "Graduate Texts in Mathematics 67, Springer (1979)"
+doi: 10.1007/978-1-4757-5673-9
+arxiv: null
+also: [T0-04]
+read: { version: book, by: owner, date: 2026-11-25, tag: S }
+tier: T0
+why: unramified extensions, ramification groups and the structure of local fields; the base of Volume 3, Chapter 1
+expert_status: accepted
+uses: []
+results:
+  - id: "Chapter III, Section 5, Theorem 2"
+    statement: null
+    node: null
+    kind: theorem
+    status: unstated
+lean_elsewhere: []
+lean_status: none
+code_licence: null
+handbook: { volume: 3, chapter: 1 }
+notes: Mathlib has the lower numbering of the ramification groups but not the upper numbering.

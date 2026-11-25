@@ -1,0 +1,25 @@
+id: T0-04
+key: Ser67
+title: Local class field theory
+authors: [Jean-Pierre Serre]
+where: "Algebraic Number Theory (Cassels and Frohlich, eds.), Academic Press (1967), Chapter VI, 128-161"
+doi: null
+arxiv: null
+also: [T0-06, T0-07]
+read: { version: book, by: owner, date: 2026-11-25, tag: S }
+tier: T0
+why: the reference proof of local class field theory, and the source of the statement LocalReciprocityGL1
+expert_status: accepted
+uses: []
+results:
+  - id: "Chapter VI, Theorem 2"
+    statement: LocalReciprocityGL1
+    node: null
+    kind: theorem
+    status: unstated
+lean_elsewhere:
+  - { repo: n-yamaguchi/ClassFieldTheory, commit: null, licence: Apache-2.0, what: finite abelian local reciprocity, use: port }
+lean_status: port-available
+code_licence: Apache-2.0
+handbook: { volume: 3, chapter: 2 }
+notes: The handbook follows the cohomological proof of this chapter for the finite abelian case.
