@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## v0.0.2 (2026-11-25)
+
 ### Added
 
 - The first 15 nodes of the map in `blueprint/nodes/`: the Weil group, its geometric Frobenius elements and its abelianization, finite abelian local reciprocity, the statements of class field theory, the statements of modularity, Hasse-Weil, Ramanujan-Petersson and Sato-Tate, and the false modularity statement of formal-conjectures.
