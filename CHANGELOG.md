@@ -6,6 +6,13 @@ Each release has a section. The newest release is first.
 
 ### Added
 
+- The node LG01JZBNVC for Hecke's theorem over Q. It is proved by `Langlands.heckeFunctionalEquationAt_rat`.
+
+### Changed
+
+- The node LG06WS8A1Y for the theorem of Kronecker and Weber is proved, by `Langlands.Bridge.kroneckerWeber` and the port of global class field theory.
+- `records/lean.json` is at langlands-lean 8e3e859, with 702 declarations.
+
 - Six nodes with the status stated: the Galois representations of modular forms (LGG3ZW59RX), the weak form of Serre's conjecture (LGKH3WKEVV), Artin's conjecture (LGEHB4MGJK), Artin's conjecture for odd representations of dimension 2 over Q (LGX6BXWH0J), Selberg's eigenvalue conjecture (LG0S1WN9ND) and the Ramanujan conjecture for Maass forms (LG75ERTV5K). Three of them are open conjectures.
 - The paper records Del69 (Deligne), KW09 (Khare and Wintenberger), Kis09 (Kisin), DS74 (Deligne and Serre), Sel65 (Selberg) and Kim03 (Kim and Sarnak).
 

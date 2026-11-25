@@ -1,0 +1,10 @@
+tag: "LG01JZBNVC"
+slug: "hecke-functional-equation-rat"
+kind: "theorem"
+title: "The functional equation of Hecke L-functions over Q"
+statement: "Let $\\chi$ be a Hecke character of $\\mathbb{Q}$. The completed L-function $\\Lambda(s, \\chi)$ has a meromorphic continuation to $\\mathbb{C}$ and satisfies $\\Lambda(s, \\chi) = W N(\\mathfrak{f}_\\chi)^{1/2 - s - \\sigma} \\Lambda(1 - s, \\chi^{-1})$ with $|W| = 1$. It is entire unless $\\chi = \\|\\cdot\\|^{s_0}$, and then it has simple poles at $-s_0$ and $1 - s_0$ only."
+sources: [{"paper": "Neu99", "loc": "Chapter VII, Theorem 8.5"}]
+uses: []
+lean: {"statement": "Langlands.HeckeFunctionalEquationAt", "proof": "Langlands.heckeFunctionalEquationAt_rat"}
+tier: "T3"
+notes: "This is the case K = Q of LG6NN4B43V. A Hecke character of Q is a primitive Dirichlet character times a power of the idele norm, so the theorem follows from the functional equation of Dirichlet L-functions in Mathlib. The general case needs Tate's local and global zeta integrals."
