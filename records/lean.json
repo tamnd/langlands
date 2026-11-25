@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/tamnd/langlands-lean",
-  "commit": "61d225ce0525dc68b79fb52a47872e2bdf0c0e64",
+  "commit": "835c3bf3de5c1a09746a8c3d38a81baffe3fea89",
   "toolchain": "4.35.0",
   "mathlib": "v4.35.0",
   "built": "2026-11-25",
@@ -905,6 +905,193 @@
       ],
       "type": "Prop"
     },
+    "Langlands.LocalField.coe_smul_integers": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 288,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] (σ : Field.absoluteGaloisGroup K)\n  (ζ : Langlands.LocalField.integers K),\n  ↑(σ • ζ) =\n    (have this := σ;\n      this)\n      ↑ζ"
+    },
+    "Langlands.LocalField.coe_weilSubgroup": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 547,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  ↑(Langlands.LocalField.weilSubgroup K) =\n    ⇑(Langlands.LocalField.residueAut K) ⁻¹' ↑(Subgroup.zpowers (Langlands.LocalField.frobenius K))"
+    },
+    "Langlands.LocalField.compactSpace_of_normal": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 163,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (F : Type u_1) (E : Type u_2) [inst : Field F] [inst_1 : Field E] [inst_2 : Algebra F E] [Normal F E],\n  CompactSpace Gal(E/F)"
+    },
+    "Langlands.LocalField.continuous_residueAut": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 464,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], Continuous ⇑(Langlands.LocalField.residueAut K)"
+    },
+    "Langlands.LocalField.coprime_card_pow_sub_one": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 375,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (m : ℕ),\n  0 \u003c m →\n    (ringChar (Langlands.LocalField.residueField K)).Coprime\n      (Fintype.card (Langlands.LocalField.residueField K) ^ m - 1)"
+    },
+    "Langlands.LocalField.denseRange_residueAut": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 520,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], DenseRange ⇑(Langlands.LocalField.residueAut K)"
+    },
+    "Langlands.LocalField.dense_of_forall_exists_eqOn": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 207,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u_1} {L : Type u_2} [inst : Field F] [inst_1 : Field L] [inst_2 : Algebra F L] (A : Set Gal(L/F)),\n  (∀ (τ : Gal(L/F)) (E : IntermediateField F L), FiniteDimensional F ↥E → ∃ a ∈ A, ∀ x ∈ E, a x = τ x) → Dense A"
+    },
+    "Langlands.LocalField.dense_zpowers_frobenius": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 448,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], Dense ↑(Subgroup.zpowers (Langlands.LocalField.frobenius K))"
+    },
+    "Langlands.LocalField.eq_of_pow_eq": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 144,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (F : Type u_1) (E : Type u_2) [inst : Field F] [inst_1 : Field E] [inst_2 : Algebra F E] (p : ℕ) [ExpChar F p]\n  (g : Gal(E/F)) (x : E) (n : ℕ), g (x ^ p ^ n) = x ^ p ^ n → g x = x"
+    },
+    "Langlands.LocalField.eq_prime_of_isMaximal": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 256,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (P : Ideal (Langlands.LocalField.integers K)) [P.IsMaximal],\n  P = Langlands.LocalField.prime K"
+    },
+    "Langlands.LocalField.exists_frobenius_pow_eq": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 433,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K]\n  (τ : Gal(Langlands.LocalField.residueFieldBar K/Langlands.LocalField.residueField K))\n  (E : IntermediateField (Langlands.LocalField.residueField K) (Langlands.LocalField.residueFieldBar K))\n  [FiniteDimensional (Langlands.LocalField.residueField K) ↥E],\n  ∃ n, ∀ x ∈ E, (Langlands.LocalField.frobenius K ^ n) x = τ x"
+    },
+    "Langlands.LocalField.exists_generator": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 396,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K]\n  (E : IntermediateField (Langlands.LocalField.residueField K) (Langlands.LocalField.residueFieldBar K))\n  [FiniteDimensional (Langlands.LocalField.residueField K) ↥E],\n  ∃ y,\n    ∀ (σ τ : Gal(Langlands.LocalField.residueFieldBar K/Langlands.LocalField.residueField K)),\n      σ y = τ y → ∀ x ∈ E, σ x = τ x"
+    },
+    "Langlands.LocalField.exists_isRoot_lift": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 296,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {g : Polynomial (Langlands.LocalField.integers K)},\n  g.Monic →\n    ∀ {x : Langlands.LocalField.residueFieldBar K},\n      Polynomial.eval x (Polynomial.map (Ideal.Quotient.mk (Langlands.LocalField.prime K)) g) = 0 →\n        ∃ ζ, Polynomial.eval ζ g = 0 ∧ (Ideal.Quotient.mk (Langlands.LocalField.prime K)) ζ = x"
+    },
+    "Langlands.LocalField.exists_pow_card_pow_eq_self": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 335,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (x : Langlands.LocalField.residueFieldBar K),\n  ∃ m, 0 \u003c m ∧ x ^ Fintype.card (Langlands.LocalField.residueField K) ^ m = x"
+    },
+    "Langlands.LocalField.exists_pow_card_pow_eq_self_lift": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 349,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (x : Langlands.LocalField.residueFieldBar K),\n  ∃ m,\n    0 \u003c m ∧\n      ∃ ζ,\n        ζ ^ Fintype.card (Langlands.LocalField.residueField K) ^ m = ζ ∧\n          (Ideal.Quotient.mk (Langlands.LocalField.prime K)) ζ = x"
+    },
+    "Langlands.LocalField.exists_pow_card_pow_sub_one_eq_one_lift": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 361,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {x : Langlands.LocalField.residueFieldBar K},\n  x ≠ 0 →\n    ∃ m,\n      0 \u003c m ∧\n        ∃ ζ,\n          ζ ^ (Fintype.card (Langlands.LocalField.residueField K) ^ m - 1) = 1 ∧\n            (Ideal.Quotient.mk (Langlands.LocalField.prime K)) ζ = x"
+    },
+    "Langlands.LocalField.exists_pow_mem_separableClosure": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 132,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (F : Type u_1) (E : Type u_2) [inst : Field F] [inst_1 : Field E] [inst_2 : Algebra F E] [Normal F E] (p : ℕ)\n  [ExpChar F p] (x : E), ∃ n, x ^ p ^ n ∈ separableClosure F E"
+    },
     "Langlands.LocalField.exists_prime": {
       "kind": "theorem",
       "file": "Langlands/Statements/Basic.lean",
@@ -916,6 +1103,17 @@
       ],
       "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  ∃ P, P.IsMaximal ∧ P.LiesOver (IsLocalRing.maximalIdeal ↥(ValuativeRel.valuation K).integer)"
     },
+    "Langlands.LocalField.exists_residueAut_apply_eq": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 483,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K]\n  (τ : Gal(Langlands.LocalField.residueFieldBar K/Langlands.LocalField.residueField K))\n  (y : Langlands.LocalField.residueFieldBar K), ∃ g, ((Langlands.LocalField.residueAut K) g) y = τ y"
+    },
     "Langlands.LocalField.frobenius": {
       "kind": "def",
       "file": "Langlands/Statements/Basic.lean",
@@ -926,6 +1124,17 @@
         "propext"
       ],
       "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          Gal(Langlands.LocalField.residueFieldBar K/Langlands.LocalField.residueField K)"
+    },
+    "Langlands.LocalField.instCompactSpaceAbsoluteGaloisGroup_langlands": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 530,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K], CompactSpace (Field.absoluteGaloisGroup K)"
     },
     "Langlands.LocalField.instFaithfulSMulSubtypeMemSubringIntegerValueGroupWithZeroValuationIntegers": {
       "kind": "theorem",
@@ -1037,6 +1246,17 @@
       ],
       "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K],\n  SMulCommClass (Field.absoluteGaloisGroup K) (↥(ValuativeRel.valuation K).integer) (AlgebraicClosure K)"
     },
+    "Langlands.LocalField.instT2SpaceAlgEquivResidueFieldResidueFieldBar": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 528,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  T2Space Gal(Langlands.LocalField.residueFieldBar K/Langlands.LocalField.residueField K)"
+    },
     "Langlands.LocalField.integers": {
       "kind": "def",
       "file": "Langlands/Statements/Basic.lean",
@@ -1047,6 +1267,72 @@
         "propext"
       ],
       "type": "(K : Type u) → [inst : Field K] → [ValuativeRel K] → Type u"
+    },
+    "Langlands.LocalField.isIntegral_of_spectralNorm_le_one": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 63,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} {L : Type u_2} {R : Type u_3} [inst : NontriviallyNormedField K] [inst_1 : Field L]\n  [inst_2 : Algebra K L] [Algebra.IsAlgebraic K L] [inst_4 : CommRing R] [inst_5 : Algebra R K] [inst_6 : Algebra R L]\n  [IsScalarTower R K L],\n  (∀ (x : K), ‖x‖ ≤ 1 → x ∈ (algebraMap R K).range) → ∀ {x : L}, spectralNorm K L x ≤ 1 → IsIntegral R x"
+    },
+    "Langlands.LocalField.isLocalRing_integers": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 233,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [IsNonarchimedeanLocalField K], IsLocalRing (Langlands.LocalField.integers K)"
+    },
+    "Langlands.LocalField.isLocalRing_integralClosure": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 109,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} {L : Type u_2} {R : Type u_3} [inst : NontriviallyNormedField K] [inst_1 : Field L]\n  [inst_2 : Algebra K L] [Algebra.IsAlgebraic K L] [inst_4 : CommRing R] [inst_5 : Algebra R K] [inst_6 : Algebra R L]\n  [IsScalarTower R K L] [IsUltrametricDist K] [CompleteSpace K],\n  (∀ (x : K), ‖x‖ ≤ 1 ↔ x ∈ (algebraMap R K).range) → IsLocalRing ↥(integralClosure R L)"
+    },
+    "Langlands.LocalField.isOpenMap_residueAut": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 541,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], IsOpenMap ⇑(Langlands.LocalField.residueAut K)"
+    },
+    "Langlands.LocalField.isUnit_iff_spectralNorm_eq_one": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 76,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} {L : Type u_2} {R : Type u_3} [inst : NontriviallyNormedField K] [inst_1 : Field L]\n  [inst_2 : Algebra K L] [Algebra.IsAlgebraic K L] [inst_4 : CommRing R] [inst_5 : Algebra R K] [inst_6 : Algebra R L]\n  [IsScalarTower R K L] [IsUltrametricDist K] [CompleteSpace K],\n  (∀ (x : K), ‖x‖ ≤ 1 ↔ x ∈ (algebraMap R K).range) → ∀ (a : ↥(integralClosure R L)), IsUnit a ↔ spectralNorm K L ↑a = 1"
+    },
+    "Langlands.LocalField.mem_stabilizer": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 274,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (σ : Field.absoluteGaloisGroup K),\n  σ ∈ MulAction.stabilizer (Field.absoluteGaloisGroup K) (Langlands.LocalField.prime K)"
     },
     "Langlands.LocalField.prime": {
       "kind": "def",
@@ -1059,6 +1345,50 @@
       ],
       "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] → [IsNonarchimedeanLocalField K] → Ideal (Langlands.LocalField.integers K)"
     },
+    "Langlands.LocalField.prime_eq_maximalIdeal": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 252,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  Langlands.LocalField.prime K = IsLocalRing.maximalIdeal (Langlands.LocalField.integers K)"
+    },
+    "Langlands.LocalField.residueAut": {
+      "kind": "def",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 455,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u_1) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          Field.absoluteGaloisGroup K →* Gal(Langlands.LocalField.residueFieldBar K/Langlands.LocalField.residueField K)"
+    },
+    "Langlands.LocalField.residueAut_mk": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 459,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (g : Field.absoluteGaloisGroup K) (ζ : Langlands.LocalField.integers K),\n  ((Langlands.LocalField.residueAut K) g) ((Ideal.Quotient.mk (Langlands.LocalField.prime K)) ζ) =\n    (Ideal.Quotient.mk (Langlands.LocalField.prime K)) (g • ζ)"
+    },
+    "Langlands.LocalField.residueAut_surjective": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 533,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], Function.Surjective ⇑(Langlands.LocalField.residueAut K)"
+    },
     "Langlands.LocalField.residueField": {
       "kind": "def",
       "file": "Langlands/Statements/Basic.lean",
@@ -1069,6 +1399,16 @@
         "propext"
       ],
       "type": "(K : Type u) →\n  [inst : Field K] → [inst_1 : ValuativeRel K] → [inst_2 : TopologicalSpace K] → [IsNonarchimedeanLocalField K] → Type u"
+    },
+    "Langlands.LocalField.residueField.congr_simp": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], Langlands.LocalField.residueField K = Langlands.LocalField.residueField K"
     },
     "Langlands.LocalField.residueFieldBar": {
       "kind": "def",
@@ -1092,6 +1432,61 @@
       ],
       "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          ↥(MulAction.stabilizer (Field.absoluteGaloisGroup K) (Langlands.LocalField.prime K)) →*\n            Gal(Langlands.LocalField.residueFieldBar K/Langlands.LocalField.residueField K)"
     },
+    "Langlands.LocalField.residueHom_mk": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 279,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K]\n  (σ : ↥(MulAction.stabilizer (Field.absoluteGaloisGroup K) (Langlands.LocalField.prime K)))\n  (ζ : Langlands.LocalField.integers K),\n  ((Langlands.LocalField.residueHom K) σ) ((Ideal.Quotient.mk (Langlands.LocalField.prime K)) ζ) =\n    (Ideal.Quotient.mk (Langlands.LocalField.prime K)) (↑σ • ζ)"
+    },
+    "Langlands.LocalField.restrictNormalHom_separableClosure_injective": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 151,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (F : Type u_1) (E : Type u_2) [inst : Field F] [inst_1 : Field E] [inst_2 : Algebra F E] [inst_3 : Normal F E],\n  Function.Injective ⇑(AlgEquiv.restrictNormalHom ↥(separableClosure F E))"
+    },
+    "Langlands.LocalField.smul_prime": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 260,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (σ : Field.absoluteGaloisGroup K),\n  σ • Langlands.LocalField.prime K = Langlands.LocalField.prime K"
+    },
+    "Langlands.LocalField.spectralNorm_le_one_of_isIntegral": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 49,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} {L : Type u_2} {R : Type u_3} [inst : NontriviallyNormedField K] [inst_1 : Field L]\n  [inst_2 : Algebra K L] [Algebra.IsAlgebraic K L] [inst_4 : CommRing R] [inst_5 : Algebra R K] [inst_6 : Algebra R L]\n  [IsScalarTower R K L] [IsUltrametricDist K],\n  (∀ (r : R), ‖(algebraMap R K) r‖ ≤ 1) → ∀ {x : L}, IsIntegral R x → spectralNorm K L x ≤ 1"
+    },
+    "Langlands.LocalField.stabilizer_eq_top": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 269,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  MulAction.stabilizer (Field.absoluteGaloisGroup K) (Langlands.LocalField.prime K) = ⊤"
+    },
     "Langlands.LocalField.weilSubgroup": {
       "kind": "def",
       "file": "Langlands/Statements/Basic.lean",
@@ -1113,6 +1508,17 @@
         "propext"
       ],
       "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  Langlands.LocalField.weilSubgroup K ≤\n    MulAction.stabilizer (Field.absoluteGaloisGroup K) (Langlands.LocalField.prime K)"
+    },
+    "Langlands.LocalLanglandsTorusSplit": {
+      "kind": "def",
+      "file": "Langlands/Statements/Torus.lean",
+      "line": 43,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "ℕ → Prop"
     },
     "Langlands.LocalReciprocityGL1": {
       "kind": "def",
@@ -1386,6 +1792,17 @@
       ],
       "type": "Prop"
     },
+    "Langlands.TorusCorrespond": {
+      "kind": "def",
+      "file": "Langlands/Statements/Torus.lean",
+      "line": 36,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          {n : ℕ} →\n            Kˣ ≃ₜ* Langlands.WeilGroup.Ab K → ((Fin n → Kˣ) →ₜ* ℂˣ) → (Langlands.WeilGroup K →ₜ* Fin n → ℂˣ) → Prop"
+    },
     "Langlands.WeilGroup": {
       "kind": "def",
       "file": "Langlands/Statements/Basic.lean",
@@ -1407,6 +1824,38 @@
         "propext"
       ],
       "type": "(K : Type u) →\n  [inst : Field K] → [inst_1 : ValuativeRel K] → [inst_2 : TopologicalSpace K] → [IsNonarchimedeanLocalField K] → Type u"
+    },
+    "Langlands.WeilGroup.Ab.lift": {
+      "kind": "def",
+      "file": "Langlands/Torus/Split.lean",
+      "line": 26,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          {A : Type u_1} →\n            [inst_4 : CommGroup A] →\n              [inst_5 : TopologicalSpace A] →\n                [IsTopologicalGroup A] → [T2Space A] → (Langlands.WeilGroup K →ₜ* A) → Langlands.WeilGroup.Ab K →ₜ* A"
+    },
+    "Langlands.WeilGroup.Ab.lift.congr_simp": {
+      "kind": "theorem",
+      "file": "Langlands/Torus/Split.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {A : Type u_1} [inst_4 : CommGroup A] [inst_5 : TopologicalSpace A]\n  [inst_6 : IsTopologicalGroup A] [inst_7 : T2Space A] (φ φ_1 : Langlands.WeilGroup K →ₜ* A),\n  φ = φ_1 → Langlands.WeilGroup.Ab.lift φ = Langlands.WeilGroup.Ab.lift φ_1"
+    },
+    "Langlands.WeilGroup.Ab.lift_mk": {
+      "kind": "theorem",
+      "file": "Langlands/Torus/Split.lean",
+      "line": 36,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {A : Type u_1} [inst_4 : CommGroup A] [inst_5 : TopologicalSpace A]\n  [inst_6 : IsTopologicalGroup A] [inst_7 : T2Space A] (φ : Langlands.WeilGroup K →ₜ* A) (w : Langlands.WeilGroup K),\n  (Langlands.WeilGroup.Ab.lift φ) ↑w = φ w"
     },
     "Langlands.WeilGroup.Ab.restrict": {
       "kind": "def",
@@ -1451,6 +1900,39 @@
       ],
       "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] → [inst_3 : IsNonarchimedeanLocalField K] → Langlands.WeilGroup K → Prop"
     },
+    "Langlands.WeilGroup.commutator_le_comap": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 40,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  commutator (Langlands.WeilGroup K) ≤\n    Subgroup.comap (Langlands.WeilGroup.toGalois K) (commutator (Field.absoluteGaloisGroup K))"
+    },
+    "Langlands.WeilGroup.commutator_le_inertia": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 81,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], commutator (Langlands.WeilGroup K) ≤ Langlands.WeilGroup.inertia K"
+    },
+    "Langlands.WeilGroup.commutator_le_topologicalClosure_map": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 230,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  commutator (Field.absoluteGaloisGroup K) ≤\n    (Subgroup.map (Langlands.WeilGroup.toGalois K) (commutator (Langlands.WeilGroup K))).topologicalClosure"
+    },
     "Langlands.WeilGroup.continuous_toGalois": {
       "kind": "theorem",
       "file": "Langlands/Statements/Basic.lean",
@@ -1461,6 +1943,39 @@
         "propext"
       ],
       "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], Continuous ⇑(Langlands.WeilGroup.toGalois K)"
+    },
+    "Langlands.WeilGroup.continuous_toGaloisAb": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 61,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], Continuous ⇑(Langlands.WeilGroup.toGaloisAb K)"
+    },
+    "Langlands.WeilGroup.denseRange_toGalois": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Dense.lean",
+      "line": 566,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], DenseRange ⇑(Langlands.WeilGroup.toGalois K)"
+    },
+    "Langlands.WeilGroup.eventually_smul_eq": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 94,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] (σ : Field.absoluteGaloisGroup K) (x : AlgebraicClosure K),\n  ∀ᶠ (τ : Field.absoluteGaloisGroup K) in nhds σ, τ • x = σ • x"
     },
     "Langlands.WeilGroup.inertia": {
       "kind": "def",
@@ -1517,6 +2032,17 @@
       ],
       "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (L : IntermediateField K (AlgebraicClosure K)) [inst_4 : Normal K ↥L]\n  [FiniteDimensional K ↥L], IsClosed ↑(Langlands.WeilGroup.restrict K L).ker"
     },
+    "Langlands.WeilGroup.isClosed_topologicalClosure_commutator": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 302,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], IsClosed ↑(commutator (Langlands.WeilGroup K)).topologicalClosure"
+    },
     "Langlands.WeilGroup.isOpen_fiber_toResidue": {
       "kind": "theorem",
       "file": "Langlands/Statements/Basic.lean",
@@ -1539,6 +2065,17 @@
       ],
       "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], IsOpen ↑(Langlands.WeilGroup.inertia K)"
     },
+    "Langlands.WeilGroup.ker_mk_comp_toGalois": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 284,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  ((QuotientGroup.mk' (commutator (Field.absoluteGaloisGroup K)).topologicalClosure).comp\n        (Langlands.WeilGroup.toGalois K)).ker =\n    (commutator (Langlands.WeilGroup K)).topologicalClosure"
+    },
     "Langlands.WeilGroup.ker_restrict": {
       "kind": "theorem",
       "file": "Langlands/Statements/Basic.lean",
@@ -1549,6 +2086,50 @@
         "propext"
       ],
       "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (L : IntermediateField K (AlgebraicClosure K)) [inst_4 : Normal K ↥L],\n  (Langlands.WeilGroup.restrict K L).ker = Subgroup.comap (Langlands.WeilGroup.toGalois K) L.fixingSubgroup"
+    },
+    "Langlands.WeilGroup.mem_range_toGaloisAb": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 310,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (x : Field.absoluteGaloisGroupAbelianization K),\n  x ∈ (Langlands.WeilGroup.toGaloisAb K).range ↔ ∃ g ∈ Langlands.LocalField.weilSubgroup K, ↑g = x"
+    },
+    "Langlands.WeilGroup.mem_stabilizer_of_mem_closure": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 155,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  ∀ c ∈ (Subgroup.map (Langlands.WeilGroup.toGalois K) (commutator (Langlands.WeilGroup K))).topologicalClosure,\n    c ∈ MulAction.stabilizer (Field.absoluteGaloisGroup K) (Langlands.LocalField.prime K)"
+    },
+    "Langlands.WeilGroup.mem_topologicalClosure_commutator_of_mem_closure": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 210,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (w : Langlands.WeilGroup K),\n  (Langlands.WeilGroup.toGalois K) w ∈\n      closure (⇑(Langlands.WeilGroup.toGalois K) '' ↑(commutator (Langlands.WeilGroup K))) →\n    w ∈ (commutator (Langlands.WeilGroup K)).topologicalClosure"
+    },
+    "Langlands.WeilGroup.nhds_eq": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 198,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (w : Langlands.WeilGroup K),\n  nhds w =\n    Filter.comap (⇑(Langlands.WeilGroup.toGalois K)) (nhds ((Langlands.WeilGroup.toGalois K) w)) ⊓\n      Filter.comap (⇑(Langlands.WeilGroup.toResidue K)) (pure ((Langlands.WeilGroup.toResidue K) w))"
     },
     "Langlands.WeilGroup.restrict": {
       "kind": "def",
@@ -1561,6 +2142,28 @@
       ],
       "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          (L : IntermediateField K (AlgebraicClosure K)) → [Normal K ↥L] → Langlands.WeilGroup K →* Gal(↥L/K)"
     },
+    "Langlands.WeilGroup.smul_mem_prime_of_mem_closure": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 137,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  ∀ c ∈ (Subgroup.map (Langlands.WeilGroup.toGalois K) (commutator (Langlands.WeilGroup K))).topologicalClosure,\n    ∀ x ∈ Langlands.LocalField.prime K, c • x ∈ Langlands.LocalField.prime K"
+    },
+    "Langlands.WeilGroup.t2Space": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 306,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], T2Space (Langlands.WeilGroup.Ab K)"
+    },
     "Langlands.WeilGroup.toGalois": {
       "kind": "def",
       "file": "Langlands/Statements/Basic.lean",
@@ -1571,6 +2174,50 @@
         "propext"
       ],
       "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] → Langlands.WeilGroup K →* Field.absoluteGaloisGroup K"
+    },
+    "Langlands.WeilGroup.toGaloisAb": {
+      "kind": "def",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 53,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] → Langlands.WeilGroup.Ab K →* Field.absoluteGaloisGroupAbelianization K"
+    },
+    "Langlands.WeilGroup.toGaloisAbContinuous": {
+      "kind": "def",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 65,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] → Langlands.WeilGroup.Ab K →ₜ* Field.absoluteGaloisGroupAbelianization K"
+    },
+    "Langlands.WeilGroup.toGaloisAb_injective": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 290,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], Function.Injective ⇑(Langlands.WeilGroup.toGaloisAb K)"
+    },
+    "Langlands.WeilGroup.toGaloisAb_mk": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 57,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (w : Langlands.WeilGroup K),\n  (Langlands.WeilGroup.toGaloisAb K) ↑w = ↑((Langlands.WeilGroup.toGalois K) w)"
     },
     "Langlands.WeilGroup.toGalois_injective": {
       "kind": "theorem",
@@ -1594,6 +2241,94 @@
       ],
       "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          Langlands.WeilGroup K →* Gal(Langlands.LocalField.residueFieldBar K/Langlands.LocalField.residueField K)"
     },
+    "Langlands.WeilGroup.toResidue_eq_one_of_mem_closure": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 116,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (w : Langlands.WeilGroup K),\n  (Langlands.WeilGroup.toGalois K) w ∈\n      closure (⇑(Langlands.WeilGroup.toGalois K) '' ↑(commutator (Langlands.WeilGroup K))) →\n    (Langlands.WeilGroup.toResidue K) w = 1"
+    },
+    "Langlands.WeilGroup.toResidue_mem_zpowers": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 73,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (w : Langlands.WeilGroup K),\n  (Langlands.WeilGroup.toResidue K) w ∈ Subgroup.zpowers (Langlands.LocalField.frobenius K)"
+    },
+    "Langlands.WeilGroup.topologicalClosure_commutator_eq": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 254,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  (commutator (Field.absoluteGaloisGroup K)).topologicalClosure =\n    (Subgroup.map (Langlands.WeilGroup.toGalois K) (commutator (Langlands.WeilGroup K))).topologicalClosure"
+    },
+    "Langlands.WeilGroup.topologicalClosure_commutator_eq_comap": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 275,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  (commutator (Langlands.WeilGroup K)).topologicalClosure =\n    Subgroup.comap (Langlands.WeilGroup.toGalois K) (commutator (Field.absoluteGaloisGroup K)).topologicalClosure"
+    },
+    "Langlands.WeilGroup.topologicalClosure_commutator_le_comap": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 45,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  (commutator (Langlands.WeilGroup K)).topologicalClosure ≤\n    Subgroup.comap (Langlands.WeilGroup.toGalois K) (commutator (Field.absoluteGaloisGroup K)).topologicalClosure"
+    },
+    "Langlands.WeilGroup.topologicalClosure_commutator_le_map_inertia": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 264,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  (commutator (Field.absoluteGaloisGroup K)).topologicalClosure ≤\n    Subgroup.map (Langlands.WeilGroup.toGalois K) (Langlands.WeilGroup.inertia K)"
+    },
+    "Langlands.WeilGroup.topologicalClosure_commutator_le_weilSubgroup": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 271,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  (commutator (Field.absoluteGaloisGroup K)).topologicalClosure ≤ Langlands.LocalField.weilSubgroup K"
+    },
+    "Langlands.WeilGroup.topologicalClosure_map_commutator_le_map_inertia": {
+      "kind": "theorem",
+      "file": "Langlands/WeilGroup/Ab.lean",
+      "line": 168,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  (Subgroup.map (Langlands.WeilGroup.toGalois K) (commutator (Langlands.WeilGroup K))).topologicalClosure ≤\n    Subgroup.map (Langlands.WeilGroup.toGalois K) (Langlands.WeilGroup.inertia K)"
+    },
     "Langlands.cmJInvariants": {
       "kind": "def",
       "file": "Langlands/Statements/Modularity.lean",
@@ -1603,6 +2338,17 @@
         "propext"
       ],
       "type": "Set ℚ"
+    },
+    "Langlands.eq_torusParameter": {
+      "kind": "theorem",
+      "file": "Langlands/Torus/Split.lean",
+      "line": 82,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {n : ℕ} (rec : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K) (χ : (Fin n → Kˣ) →ₜ* ℂˣ)\n  (ψ : Langlands.WeilGroup K →ₜ* Fin n → ℂˣ), Langlands.TorusCorrespond K rec χ ψ → ψ = Langlands.torusParameter rec χ"
     },
     "Langlands.instSMulCommClassAlgEquivSubtypeAlgebraicClosureMemIntermediateFieldRingOfIntegers_langlands": {
       "kind": "theorem",
@@ -1614,6 +2360,17 @@
         "propext"
       ],
       "type": "∀ (K : Type u) [inst : Field K] (L : IntermediateField K (AlgebraicClosure K)),\n  SMulCommClass Gal(↥L/K) (NumberField.RingOfIntegers K) (NumberField.RingOfIntegers ↥L)"
+    },
+    "Langlands.localLanglandsTorusSplit": {
+      "kind": "theorem",
+      "file": "Langlands/Torus/Split.lean",
+      "line": 105,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (n : ℕ), Langlands.LocalLanglandsTorusSplit n"
     },
     "Langlands.normGroup": {
       "kind": "def",
@@ -1647,6 +2404,50 @@
         "propext"
       ],
       "type": "WeierstrassCurve ℚ → ℕ → ℝ"
+    },
+    "Langlands.torusCharacter": {
+      "kind": "def",
+      "file": "Langlands/Torus/Split.lean",
+      "line": 60,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          {n : ℕ} → Kˣ ≃ₜ* Langlands.WeilGroup.Ab K → (Langlands.WeilGroup K →ₜ* Fin n → ℂˣ) → (Fin n → Kˣ) →ₜ* ℂˣ"
+    },
+    "Langlands.torusCorrespond_torusCharacter": {
+      "kind": "theorem",
+      "file": "Langlands/Torus/Split.lean",
+      "line": 98,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {n : ℕ} (rec : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K)\n  (φ : Langlands.WeilGroup K →ₜ* Fin n → ℂˣ), Langlands.TorusCorrespond K rec (Langlands.torusCharacter rec φ) φ"
+    },
+    "Langlands.torusCorrespond_torusParameter": {
+      "kind": "theorem",
+      "file": "Langlands/Torus/Split.lean",
+      "line": 72,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {n : ℕ} (rec : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K) (χ : (Fin n → Kˣ) →ₜ* ℂˣ),\n  Langlands.TorusCorrespond K rec χ (Langlands.torusParameter rec χ)"
+    },
+    "Langlands.torusParameter": {
+      "kind": "def",
+      "file": "Langlands/Torus/Split.lean",
+      "line": 44,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          {n : ℕ} → Kˣ ≃ₜ* Langlands.WeilGroup.Ab K → ((Fin n → Kˣ) →ₜ* ℂˣ) → Langlands.WeilGroup K →ₜ* Fin n → ℂˣ"
     }
   }
 }

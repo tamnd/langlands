@@ -1,0 +1,10 @@
+tag: "LG5YHMSJZM"
+slug: "local-langlands-split-torus"
+kind: "theorem"
+title: "The local Langlands correspondence for split tori"
+statement: "For a local Artin map $\\mathrm{rec}_K$, the map $\\varphi \\mapsto (x \\mapsto \\prod_i \\varphi_i(\\mathrm{rec}_K(x_i)))$ is a bijection from the continuous homomorphisms $W_K \\to (\\mathbb{C}^\\times)^n$ to the continuous characters of $(K^\\times)^n$."
+sources: [{"paper": "Tat79", "loc": "Section 9"}]
+uses: ["LGVSG50K41"]
+lean: {"statement": "Langlands.LocalLanglandsTorusSplit", "proof": "Langlands.localLanglandsTorusSplit"}
+tier: "T3"
+notes: "The proof needs only that $\\mathrm{rec}_K$ is an isomorphism of topological groups. The induced tori come later in milestone S1."

@@ -4,6 +4,11 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The nodes LG3VDFDBW0 (the Weil group is dense in the absolute Galois group), LGDEPE7CM9 (the abelianized Weil group embeds in the abelianized Galois group) and LG5YHMSJZM (the local Langlands correspondence for split tori). All three are proved.
+- `records/lean.json`: the declarations of langlands-lean at commit 835c3bf.
+
 ## v0.1.1 (2026-11-25)
 
 ### Added
