@@ -9,10 +9,12 @@ Each release has a section. The newest release is first.
 - Eleven nodes for the new statements of langlands-lean about GL(n). Eight have the status stated: the local Langlands correspondence for GL(n) (LG2E74SP8W) and for GL(2) (LG453577KN), the L-packets of SL(2) (LG75V240RB), the local Jacquet-Langlands correspondence for GL(2) (LG7NVV7NSF), symmetric power functoriality (LGC3KP178Q), cyclic base change (LGCH6QCV3P), the fundamental lemma for unitary Lie algebras (LGH8C75DFX) and Kisin's theorem on the Fontaine-Mazur conjecture for GL(2) over Q (LGNT1M1N6Z). Three are open conjectures: the Ramanujan conjecture for GL(n) (LGAGRC05KF), functoriality from GL(n) to GL(m) (LGANNYN8R0) and the Hasse-Weil conjecture (LGFQ0HXS3H).
 - Six nodes with the status unstated, for the rows of section 6.2.2 that have no Lean statement yet: the local Langlands correspondence for GSp(4) (LGQCVGBMVA), the Breuil-Mezard conjecture for GL(2) over Q_p (LGRMD7S8EV), the reciprocity conjecture for GL(n) (LGRYCDD49K), the Galois representations of regular algebraic cuspidal representations (LGV2KZTSNS), the Langlands correspondence for GL(n) over function fields (LGZJQ4K11G) and the global Jacquet-Langlands correspondence (LGZWX81F9A). The notes of each node say which vocabulary is missing.
 - The paper records HT01 (Harris and Taylor), Hen00 (Henniart), Kut80 (Kutzko), BH06 (Bushnell and Henniart), LL79 (Labesse and Langlands), JL70 (Jacquet and Langlands), NT21 (Newton and Thorne), AC89 (Arthur and Clozel), Ngo10 (Ngo), Kis09b (Kisin) and Lan70 (Langlands). They are made from the bibliographic data only, and their read tag is U.
+- The paper record Laf02 (L. Lafforgue, Invent. Math. 147, 2002), from the bibliographic data only, with the read tag U.
 
 ### Changed
 
-- `records/lean.json` is at langlands-lean 911de27, with 1175 declarations.
+- `records/lean.json` is at langlands-lean 3c0391a, with 1337 declarations.
+- The node LGZJQ4K11G for the Langlands correspondence over function fields has the status stated. Its Lean statement is `Langlands.ReciprocityFunctionFieldGL`, and its source is Laf02.
 
 ## v0.1.4 (2026-11-26)
 

@@ -1,0 +1,25 @@
+id: T10-02
+key: Laf02
+title: "Chtoucas de Drinfeld et correspondance de Langlands"
+authors: [Laurent Lafforgue]
+where: "Invent. Math. 147 (2002), 1-241"
+year: 2002
+doi: 10.1007/s002220100174
+arxiv: null
+also: []
+read: { version: journal, by: owner, date: 2026-11-26, tag: U }
+tier: T10
+why: the proof of the Langlands correspondence for GL(n) over a global function field by the cohomology of the stacks of Drinfeld shtukas; the source of Langlands.ReciprocityFunctionFieldGL
+expert_status: accepted
+uses: []
+results:
+  - id: "Theorem principal"
+    statement: ReciprocityFunctionFieldGL
+    node: LGZJQ4K11G
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 10, chapter: null }
+notes: The case n = 2 is the earlier theorem of Drinfeld, which is not a row of the corpus. The record is made from the bibliographic data only. Nobody has read the paper for the project yet, so the read tag is U.
