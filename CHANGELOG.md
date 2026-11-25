@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## v0.1.3 (2026-11-26)
+
 ### Added
 
 - The node LG01JZBNVC for Hecke's theorem over Q. It is proved by `Langlands.heckeFunctionalEquationAt_rat`.
