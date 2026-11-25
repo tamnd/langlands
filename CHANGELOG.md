@@ -4,6 +4,11 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Changed
+
+- The node LG875TDM3B, the local existence theorem, is proved. Its proof is `Langlands.Bridge.localExistence` of langlands-lean, from the NYLL port.
+- `records/lean.json`: the declarations of langlands-lean at commit 61d225c.
+
 ## v0.1.0 (2026-11-25)
 
 ### Changed

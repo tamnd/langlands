@@ -5,5 +5,5 @@ title: "The local existence theorem"
 statement: "Each open subgroup of finite index of $K^\\times$ is the norm group $N_{L/K}(L^\\times)$ of a finite abelian extension $L/K$."
 sources: [{"paper": "Ser67", "loc": "Chapter VI"}, {"paper": "Mil20", "loc": "Chapter I"}]
 uses: ["LGHEK0BGSD"]
-lean: {"statement": "Langlands.LocalExistence"}
+lean: {"statement": "Langlands.LocalExistence", "proof": "Langlands.Bridge.localExistence"}
 tier: "T3"

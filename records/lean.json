@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/tamnd/langlands-lean",
-  "commit": "3668a96d40e86f11392610fd4b11dfd77f499d09",
+  "commit": "61d225ce0525dc68b79fb52a47872e2bdf0c0e64",
   "toolchain": "4.35.0",
   "mathlib": "v4.35.0",
   "built": "2026-11-25",
@@ -93,10 +93,21 @@
       ],
       "type": "∀ {N : ℕ} {k : ℤ},\n  0 \u003c N →\n    ∀ (f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)) k),\n      UpperHalfPlane.cuspFunction ↑N ⇑f = UpperHalfPlane.cuspFunction 1 ⇑f ∘ fun q =\u003e q ^ N"
     },
+    "Langlands.Bridge.exists_intermediateField_of_finiteAbelianExtension": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/NYLL.lean",
+      "line": 39,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] (E : ClassFieldTheory.FiniteAbelianExtension K),\n  ∃ L,\n    FiniteDimensional K ↥L ∧ IsAbelianGalois K ↥L ∧ Langlands.normGroup K ↥L = LocalFieldTheory.localNormSubgroup K ↥↑E"
+    },
     "Langlands.Bridge.finiteAbelianLocalReciprocity": {
       "kind": "theorem",
       "file": "Langlands/Bridge/NYLL.lean",
-      "line": 29,
+      "line": 32,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -140,13 +151,24 @@
     "Langlands.Bridge.isFieldNorm_iff_mem_normGroup": {
       "kind": "theorem",
       "file": "Langlands/Bridge/NYLL.lean",
-      "line": 23,
+      "line": 26,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
         "propext"
       ],
       "type": "∀ (K : Type u) (L : Type v) [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] [inst_3 : FiniteDimensional K L]\n  (x : Kˣ), ClassFieldTheory.IsFieldNorm K L x ↔ x ∈ Langlands.normGroup K L"
+    },
+    "Langlands.Bridge.localExistence": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/NYLL.lean",
+      "line": 64,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.LocalExistence"
     },
     "Langlands.Bridge.modularFormAn_one_eq_zero": {
       "kind": "theorem",
