@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/tamnd/langlands-lean",
-  "commit": "911de277a10a6505c4dd46f09d871049b11777b2",
+  "commit": "3c0391ac54fce92b4b4e761da7a8d79a4b7e1a25",
   "toolchain": "4.35.0",
   "mathlib": "v4.35.0",
   "built": "2026-11-26",
@@ -1058,6 +1058,842 @@
         "propext"
       ],
       "type": "Prop"
+    },
+    "Langlands.GlobalFunctionField.AdeleQuotient": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 169,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) → [Field F] → Type u"
+    },
+    "Langlands.GlobalFunctionField.AdeleRing": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 148,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) → [Field F] → Type u"
+    },
+    "Langlands.GlobalFunctionField.AdelicGL": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 174,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) → [Field F] → ℕ → Type u"
+    },
+    "Langlands.GlobalFunctionField.AutomorphicClass": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 367,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) → [Field F] → ℕ → Type u"
+    },
+    "Langlands.GlobalFunctionField.Corresponds": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 444,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {n ℓ : ℕ} →\n      [inst_1 : Fact (Nat.Prime ℓ)] →\n        PadicAlgCl ℓ ≃+* ℂ →\n          Langlands.GlobalFunctionField.CuspEigenform F n → Langlands.GlobalFunctionField.GaloisRep F n ℓ → Prop"
+    },
+    "Langlands.GlobalFunctionField.CuspEigenform": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 324,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) → [Field F] → ℕ → Type u"
+    },
+    "Langlands.GlobalFunctionField.CuspEigenform.Equiv": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 328,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {n : ℕ} → Langlands.GlobalFunctionField.CuspEigenform F n → Langlands.GlobalFunctionField.CuspEigenform F n → Prop"
+    },
+    "Langlands.GlobalFunctionField.CuspEigenform.IsUnramifiedAt": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 371,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {n : ℕ} → Langlands.GlobalFunctionField.CuspEigenform F n → Langlands.GlobalFunctionField.Place F → Prop"
+    },
+    "Langlands.GlobalFunctionField.GaloisClass": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 438,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) → [Field F] → ℕ → (ℓ : ℕ) → [Fact (Nat.Prime ℓ)] → Type u"
+    },
+    "Langlands.GlobalFunctionField.GaloisGroup": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 378,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) → [Field F] → Type u"
+    },
+    "Langlands.GlobalFunctionField.GaloisRep": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 418,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) → [Field F] → ℕ → (ℓ : ℕ) → [Fact (Nat.Prime ℓ)] → Type u"
+    },
+    "Langlands.GlobalFunctionField.GaloisRep.Iso": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 422,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {n ℓ : ℕ} →\n      [inst_1 : Fact (Nat.Prime ℓ)] →\n        Langlands.GlobalFunctionField.GaloisRep F n ℓ → Langlands.GlobalFunctionField.GaloisRep F n ℓ → Prop"
+    },
+    "Langlands.GlobalFunctionField.HasVanishingConstantTerm": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 240,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → {n : ℕ} → ℕ → (Langlands.GlobalFunctionField.AdelicGL F n → ℂ) → Prop"
+    },
+    "Langlands.GlobalFunctionField.HeckeCoset": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 274,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → ℕ → Langlands.GlobalFunctionField.Place F → ℕ → Type u"
+    },
+    "Langlands.GlobalFunctionField.IsCuspForm": {
+      "kind": "inductive",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 250,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → {n : ℕ} → (Langlands.GlobalFunctionField.AdelicGL F n → ℂ) → Prop"
+    },
+    "Langlands.GlobalFunctionField.IsCuspForm.central": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 260,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n : ℕ} {φ : Langlands.GlobalFunctionField.AdelicGL F n → ℂ},\n  Langlands.GlobalFunctionField.IsCuspForm φ →\n    ∃ ω,\n      (∃ m, 0 \u003c m ∧ ∀ (z : (Langlands.GlobalFunctionField.AdeleRing F)ˣ), ω z ^ m = 1) ∧\n        ∀ (z : (Langlands.GlobalFunctionField.AdeleRing F)ˣ) (g : Langlands.GlobalFunctionField.AdelicGL F n),\n          φ (g * Langlands.GlobalFunctionField.adelicScalarGL z) = ω z * φ g"
+    },
+    "Langlands.GlobalFunctionField.IsCuspForm.cuspidal": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 262,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n : ℕ} {φ : Langlands.GlobalFunctionField.AdelicGL F n → ℂ},\n  Langlands.GlobalFunctionField.IsCuspForm φ →\n    ∀ (r : ℕ), 0 \u003c r → r \u003c n → Langlands.GlobalFunctionField.HasVanishingConstantTerm r φ"
+    },
+    "Langlands.GlobalFunctionField.IsCuspForm.left_invariant": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 257,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n : ℕ} {φ : Langlands.GlobalFunctionField.AdelicGL F n → ℂ},\n  Langlands.GlobalFunctionField.IsCuspForm φ →\n    ∀ γ ∈ Langlands.GlobalFunctionField.principalGL F n,\n      ∀ (g : Langlands.GlobalFunctionField.AdelicGL F n), φ (γ * g) = φ g"
+    },
+    "Langlands.GlobalFunctionField.IsCuspForm.smooth": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 258,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n : ℕ} {φ : Langlands.GlobalFunctionField.AdelicGL F n → ℂ},\n  Langlands.GlobalFunctionField.IsCuspForm φ →\n    ∃ U, IsOpen ↑U ∧ ∀ k ∈ U, ∀ (g : Langlands.GlobalFunctionField.AdelicGL F n), φ (g * k) = φ g"
+    },
+    "Langlands.GlobalFunctionField.IsFrobeniusAt": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 398,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] → Langlands.GlobalFunctionField.Place F → Langlands.GlobalFunctionField.GaloisGroup F → Prop"
+    },
+    "Langlands.GlobalFunctionField.IsHeckeEigenAt": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 315,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {n : ℕ} → (Langlands.GlobalFunctionField.AdelicGL F n → ℂ) → Langlands.GlobalFunctionField.Place F → (ℕ → ℂ) → Prop"
+    },
+    "Langlands.GlobalFunctionField.IsHeckeEigenAt.congr": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 345,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n : ℕ} {φ : Langlands.GlobalFunctionField.AdelicGL F n → ℂ}\n  {v : Langlands.GlobalFunctionField.Place F} {ev ev' : ℕ → ℂ},\n  Langlands.GlobalFunctionField.IsHeckeEigenAt φ v ev →\n    (∀ (i : ℕ), 1 ≤ i → i ≤ n → ev i = ev' i) → Langlands.GlobalFunctionField.IsHeckeEigenAt φ v ev'"
+    },
+    "Langlands.GlobalFunctionField.IsHeckeEigenAt.eq_of_ne_zero": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 333,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n : ℕ} {φ : Langlands.GlobalFunctionField.AdelicGL F n → ℂ},\n  φ ≠ 0 →\n    ∀ {v : Langlands.GlobalFunctionField.Place F} {ev ev' : ℕ → ℂ},\n      Langlands.GlobalFunctionField.IsHeckeEigenAt φ v ev →\n        Langlands.GlobalFunctionField.IsHeckeEigenAt φ v ev' → ∀ {i : ℕ}, 1 ≤ i → i ≤ n → ev i = ev' i"
+    },
+    "Langlands.GlobalFunctionField.IsHeckeEigenform": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 319,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → {n : ℕ} → (Langlands.GlobalFunctionField.AdelicGL F n → ℂ) → Prop"
+    },
+    "Langlands.GlobalFunctionField.IsInDecomposition": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 390,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] → ValuationSubring (AlgebraicClosure F) → Langlands.GlobalFunctionField.GaloisGroup F → Prop"
+    },
+    "Langlands.GlobalFunctionField.IsInInertia": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 394,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] → ValuationSubring (AlgebraicClosure F) → Langlands.GlobalFunctionField.GaloisGroup F → Prop"
+    },
+    "Langlands.GlobalFunctionField.IsIntegralGL": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 264,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → {n : ℕ} → (v : Langlands.GlobalFunctionField.Place F) → GL (Fin n) v.Completion → Prop"
+    },
+    "Langlands.GlobalFunctionField.IsLafforgueRep": {
+      "kind": "inductive",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 408,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {n : ℕ} →\n      (ℓ : ℕ) →\n        [inst_1 : Fact (Nat.Prime ℓ)] →\n          (Langlands.GlobalFunctionField.GaloisGroup F →* GL (Fin n) (PadicAlgCl ℓ)) → Prop"
+    },
+    "Langlands.GlobalFunctionField.IsLafforgueRep.almost_unramified": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 413,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n ℓ : ℕ} [inst_1 : Fact (Nat.Prime ℓ)]\n  {ρ : Langlands.GlobalFunctionField.GaloisGroup F →* GL (Fin n) (PadicAlgCl ℓ)},\n  Langlands.GlobalFunctionField.IsLafforgueRep ℓ ρ → {v | ¬Langlands.GlobalFunctionField.IsUnramifiedAt ρ v}.Finite"
+    },
+    "Langlands.GlobalFunctionField.IsLafforgueRep.continuous": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 411,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n ℓ : ℕ} [inst_1 : Fact (Nat.Prime ℓ)]\n  {ρ : Langlands.GlobalFunctionField.GaloisGroup F →* GL (Fin n) (PadicAlgCl ℓ)},\n  Langlands.GlobalFunctionField.IsLafforgueRep ℓ ρ → Continuous ⇑ρ"
+    },
+    "Langlands.GlobalFunctionField.IsLafforgueRep.det_finite_order": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 414,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n ℓ : ℕ} [inst_1 : Fact (Nat.Prime ℓ)]\n  {ρ : Langlands.GlobalFunctionField.GaloisGroup F →* GL (Fin n) (PadicAlgCl ℓ)},\n  Langlands.GlobalFunctionField.IsLafforgueRep ℓ ρ →\n    ∃ m, 0 \u003c m ∧ ∀ (σ : Langlands.GlobalFunctionField.GaloisGroup F), (↑(ρ σ)).det ^ m = 1"
+    },
+    "Langlands.GlobalFunctionField.IsLafforgueRep.irreducible": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 412,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n ℓ : ℕ} [inst_1 : Fact (Nat.Prime ℓ)]\n  {ρ : Langlands.GlobalFunctionField.GaloisGroup F →* GL (Fin n) (PadicAlgCl ℓ)},\n  Langlands.GlobalFunctionField.IsLafforgueRep ℓ ρ → Langlands.IsIrreducibleRep ρ"
+    },
+    "Langlands.GlobalFunctionField.IsSphericalAt": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 269,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {n : ℕ} → (Langlands.GlobalFunctionField.AdelicGL F n → ℂ) → Langlands.GlobalFunctionField.Place F → Prop"
+    },
+    "Langlands.GlobalFunctionField.IsUnramifiedAt": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 403,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {H : Type u_1} →\n      [inst_1 : Group H] →\n        (Langlands.GlobalFunctionField.GaloisGroup F →* H) → Langlands.GlobalFunctionField.Place F → Prop"
+    },
+    "Langlands.GlobalFunctionField.Place": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 93,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) → [Field F] → Type u"
+    },
+    "Langlands.GlobalFunctionField.Place.Completion": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 101,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → Langlands.GlobalFunctionField.Place F → Type u"
+    },
+    "Langlands.GlobalFunctionField.Place.ResidueField": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 116,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → Langlands.GlobalFunctionField.Place F → Type u"
+    },
+    "Langlands.GlobalFunctionField.Place.embed": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 109,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → (v : Langlands.GlobalFunctionField.Place F) → F →+* v.Completion"
+    },
+    "Langlands.GlobalFunctionField.Place.integers": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 105,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → (v : Langlands.GlobalFunctionField.Place F) → ValuationSubring v.Completion"
+    },
+    "Langlands.GlobalFunctionField.Place.norm": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 120,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → Langlands.GlobalFunctionField.Place F → ℕ"
+    },
+    "Langlands.GlobalFunctionField.Place.residueLift": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 279,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → (v : Langlands.GlobalFunctionField.Place F) → v.ResidueField → v.Completion"
+    },
+    "Langlands.GlobalFunctionField.Place.uniformizer": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 132,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → (v : Langlands.GlobalFunctionField.Place F) → v.Completion"
+    },
+    "Langlands.GlobalFunctionField.Place.uniformizerOfField": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 124,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → Langlands.GlobalFunctionField.Place F → F"
+    },
+    "Langlands.GlobalFunctionField.Place.uniformizer_ne_zero": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 139,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] (v : Langlands.GlobalFunctionField.Place F), v.uniformizer ≠ 0"
+    },
+    "Langlands.GlobalFunctionField.Place.valuation_uniformizerOfField": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 128,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] (v : Langlands.GlobalFunctionField.Place F), ↑v v.uniformizerOfField = WithZero.exp (-1)"
+    },
+    "Langlands.GlobalFunctionField.Place.valued_embed": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 113,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] (v : Langlands.GlobalFunctionField.Place F) (x : F), Valued.v (v.embed x) = ↑v x"
+    },
+    "Langlands.GlobalFunctionField.Place.valued_uniformizer": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 136,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] (v : Langlands.GlobalFunctionField.Place F), Valued.v v.uniformizer = WithZero.exp (-1)"
+    },
+    "Langlands.GlobalFunctionField.ValuationSubring.LiesOver": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 386,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → ValuationSubring (AlgebraicClosure F) → Langlands.GlobalFunctionField.Place F → Prop"
+    },
+    "Langlands.GlobalFunctionField.adeleSingle": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 189,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    (v : Langlands.GlobalFunctionField.Place F) → v.Completion →+ Langlands.GlobalFunctionField.AdeleRing F"
+    },
+    "Langlands.GlobalFunctionField.adeleSingle_mapMatrix_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 202,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n : ℕ} (v : Langlands.GlobalFunctionField.Place F)\n  (A B : Matrix (Fin n) (Fin n) v.Completion),\n  (Langlands.GlobalFunctionField.adeleSingle v).mapMatrix (A * B) =\n    (Langlands.GlobalFunctionField.adeleSingle v).mapMatrix A *\n      (Langlands.GlobalFunctionField.adeleSingle v).mapMatrix B"
+    },
+    "Langlands.GlobalFunctionField.adeleSingle_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 195,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] (v : Langlands.GlobalFunctionField.Place F) (x y : v.Completion),\n  (Langlands.GlobalFunctionField.adeleSingle v) (x * y) =\n    (Langlands.GlobalFunctionField.adeleSingle v) x * (Langlands.GlobalFunctionField.adeleSingle v) y"
+    },
+    "Langlands.GlobalFunctionField.adelicScalarGL": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 185,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] → {n : ℕ} → (Langlands.GlobalFunctionField.AdeleRing F)ˣ → Langlands.GlobalFunctionField.AdelicGL F n"
+    },
+    "Langlands.GlobalFunctionField.blockMask": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 222,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {n : ℕ} →\n      ℕ →\n        (Fin n → Fin n → Langlands.GlobalFunctionField.AdeleRing F) →\n          Matrix (Fin n) (Fin n) (Langlands.GlobalFunctionField.AdeleRing F)"
+    },
+    "Langlands.GlobalFunctionField.blockMask_mul_blockMask": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 226,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n : ℕ} (r : ℕ) (X Y : Fin n → Fin n → Langlands.GlobalFunctionField.AdeleRing F),\n  Langlands.GlobalFunctionField.blockMask r X * Langlands.GlobalFunctionField.blockMask r Y = 0"
+    },
+    "Langlands.GlobalFunctionField.correspondence_unique": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 480,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n ℓ : ℕ} [inst_1 : Fact (Nat.Prime ℓ)] (ι : PadicAlgCl ℓ ≃+* ℂ)\n  (Φ Φ' : Langlands.GlobalFunctionField.AutomorphicClass F n ≃ Langlands.GlobalFunctionField.GaloisClass F n ℓ),\n  (∀ (φ : Langlands.GlobalFunctionField.CuspEigenform F n) (ρ : Langlands.GlobalFunctionField.GaloisRep F n ℓ),\n      Φ ⟦φ⟧ = ⟦ρ⟧ ↔ Langlands.GlobalFunctionField.Corresponds ι φ ρ) →\n    (∀ (φ : Langlands.GlobalFunctionField.CuspEigenform F n) (ρ : Langlands.GlobalFunctionField.GaloisRep F n ℓ),\n        Φ' ⟦φ⟧ = ⟦ρ⟧ ↔ Langlands.GlobalFunctionField.Corresponds ι φ ρ) →\n      Φ = Φ'"
+    },
+    "Langlands.GlobalFunctionField.corresponds_congr_left": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 471,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n ℓ : ℕ} [inst_1 : Fact (Nat.Prime ℓ)] (ι : PadicAlgCl ℓ ≃+* ℂ)\n  {φ φ' : Langlands.GlobalFunctionField.CuspEigenform F n},\n  φ.Equiv φ' →\n    ∀ (ρ : Langlands.GlobalFunctionField.GaloisRep F n ℓ),\n      Langlands.GlobalFunctionField.Corresponds ι φ ρ ↔ Langlands.GlobalFunctionField.Corresponds ι φ' ρ"
+    },
+    "Langlands.GlobalFunctionField.corresponds_congr_right": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 458,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n ℓ : ℕ} [inst_1 : Fact (Nat.Prime ℓ)] (ι : PadicAlgCl ℓ ≃+* ℂ)\n  (φ : Langlands.GlobalFunctionField.CuspEigenform F n) {ρ ρ' : Langlands.GlobalFunctionField.GaloisRep F n ℓ},\n  ρ.Iso ρ' → (Langlands.GlobalFunctionField.Corresponds ι φ ρ ↔ Langlands.GlobalFunctionField.Corresponds ι φ ρ')"
+    },
+    "Langlands.GlobalFunctionField.cuspSetoid": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 351,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) → [inst : Field F] → (n : ℕ) → Setoid (Langlands.GlobalFunctionField.CuspEigenform F n)"
+    },
+    "Langlands.GlobalFunctionField.galoisAct": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 382,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} → [inst : Field F] → Langlands.GlobalFunctionField.GaloisGroup F → AlgebraicClosure F → AlgebraicClosure F"
+    },
+    "Langlands.GlobalFunctionField.galoisSetoid": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 427,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) →\n  [inst : Field F] → (n ℓ : ℕ) → [inst_1 : Fact (Nat.Prime ℓ)] → Setoid (Langlands.GlobalFunctionField.GaloisRep F n ℓ)"
+    },
+    "Langlands.GlobalFunctionField.heckeCosetGL": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 307,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {n : ℕ} →\n      (v : Langlands.GlobalFunctionField.Place F) →\n        {i : ℕ} → Langlands.GlobalFunctionField.HeckeCoset n v i → GL (Fin n) v.Completion"
+    },
+    "Langlands.GlobalFunctionField.heckeCosetMatrix": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 283,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {n : ℕ} →\n      (v : Langlands.GlobalFunctionField.Place F) →\n        {i : ℕ} → Langlands.GlobalFunctionField.HeckeCoset n v i → Matrix (Fin n) (Fin n) v.Completion"
+    },
+    "Langlands.GlobalFunctionField.heckeCosetMatrix_det_ne_zero": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 298,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n : ℕ} (v : Langlands.GlobalFunctionField.Place F) {i : ℕ}\n  (c : Langlands.GlobalFunctionField.HeckeCoset n v i), (Langlands.GlobalFunctionField.heckeCosetMatrix v c).det ≠ 0"
+    },
+    "Langlands.GlobalFunctionField.heckeCosetMatrix_isUpperTriangular": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 291,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] {n : ℕ} (v : Langlands.GlobalFunctionField.Place F) {i : ℕ}\n  (c : Langlands.GlobalFunctionField.HeckeCoset n v i),\n  (Langlands.GlobalFunctionField.heckeCosetMatrix v c).IsUpperTriangular"
+    },
+    "Langlands.GlobalFunctionField.heckeCosetOneOne": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 527,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] → (v : Langlands.GlobalFunctionField.Place F) → Langlands.GlobalFunctionField.HeckeCoset 1 v 1"
+    },
+    "Langlands.GlobalFunctionField.heckeOperator": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 311,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {n : ℕ} →\n      Langlands.GlobalFunctionField.Place F →\n        ℕ → (Langlands.GlobalFunctionField.AdelicGL F n → ℂ) → Langlands.GlobalFunctionField.AdelicGL F n → ℂ"
+    },
+    "Langlands.GlobalFunctionField.instSubsingletonHeckeCosetOfNatNat": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 514,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] (v : Langlands.GlobalFunctionField.Place F),\n  Subsingleton (Langlands.GlobalFunctionField.HeckeCoset 1 v 1)"
+    },
+    "Langlands.GlobalFunctionField.isCuspEigenform_one": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 536,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F],\n  (Langlands.GlobalFunctionField.IsCuspForm fun x =\u003e 1) ∧\n    (fun x =\u003e 1) ≠ 0 ∧ Langlands.GlobalFunctionField.IsHeckeEigenform fun x =\u003e 1"
+    },
+    "Langlands.GlobalFunctionField.isIrreducibleRep_of_dim_one": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 492,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] {G : Type u_2} [inst_1 : Group G] (ρ : G →* GL (Fin 1) K),\n  Langlands.IsIrreducibleRep ρ"
+    },
+    "Langlands.GlobalFunctionField.isLafforgueRep_one": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 506,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] (ℓ : ℕ) [inst_1 : Fact (Nat.Prime ℓ)], Langlands.GlobalFunctionField.IsLafforgueRep ℓ 1"
+    },
+    "Langlands.GlobalFunctionField.localGL": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 218,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {n : ℕ} →\n      (v : Langlands.GlobalFunctionField.Place F) →\n        GL (Fin n) v.Completion →* Langlands.GlobalFunctionField.AdelicGL F n"
+    },
+    "Langlands.GlobalFunctionField.localMatrix": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 208,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {n : ℕ} →\n      (v : Langlands.GlobalFunctionField.Place F) →\n        Matrix (Fin n) (Fin n) v.Completion →* Matrix (Fin n) (Fin n) (Langlands.GlobalFunctionField.AdeleRing F)"
+    },
+    "Langlands.GlobalFunctionField.principalAdeles": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 153,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) → [inst : Field F] → Subring (Langlands.GlobalFunctionField.AdeleRing F)"
+    },
+    "Langlands.GlobalFunctionField.principalGL": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 181,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) → [inst : Field F] → (n : ℕ) → Subgroup (Langlands.GlobalFunctionField.AdelicGL F n)"
+    },
+    "Langlands.GlobalFunctionField.satakePolynomial_one_eq_charpoly_map_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 549,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {ℓ : ℕ} [inst : Fact (Nat.Prime ℓ)] (ι : PadicAlgCl ℓ ≃+* ℂ) (q : ℕ) (ev : ℕ → ℂ)\n  (A : Matrix (Fin 1) (Fin 1) (PadicAlgCl ℓ)),\n  Langlands.satakePolynomial 1 q ev = Polynomial.map (↑ι) A.charpoly ↔ ι (A 0 0) = ev 1"
+    },
+    "Langlands.GlobalFunctionField.unipotentGL": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 233,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u} →\n  [inst : Field F] →\n    {n : ℕ} →\n      ℕ → (Fin n → Fin n → Langlands.GlobalFunctionField.AdeleRing F) → Langlands.GlobalFunctionField.AdelicGL F n"
     },
     "Langlands.GlobalReciprocity": {
       "kind": "def",
@@ -6295,6 +7131,17 @@
       ],
       "type": "(K : Type u) → [inst : Field K] → SeparableClosure K →ₐ[K] AlgebraicClosure K"
     },
+    "Langlands.ReciprocityFunctionFieldGL": {
+      "kind": "def",
+      "file": "Langlands/Statements/FunctionField.lean",
+      "line": 562,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "ℕ → Prop"
+    },
     "Langlands.SatoTate": {
       "kind": "def",
       "file": "Langlands/Statements/Modularity.lean",
@@ -7167,6 +8014,17 @@
       ],
       "type": "∀ {d : Type u_1} [inst : Fintype d] {f : EuclideanSpace ℝ d → ℂ},\n  Langlands.Tate.HasSummableTranslates f →\n    ∀ (x : EuclideanSpace ℝ d), Summable fun m =\u003e f (x + Langlands.Tate.intPoint m)"
     },
+    "Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits": {
+      "kind": "def",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 200,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u_1} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) →\n        ((IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ) → ℕ → Prop"
+    },
     "Langlands.Tate.NonArchimedean.addHaar_smul_of_ne_zero": {
       "kind": "theorem",
       "file": "Langlands/Tate/NonArchimedeanMeasure.lean",
@@ -7188,6 +8046,28 @@
         "propext"
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) {r : ℝ}\n  {a : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  a ∈ Metric.closedBall 0 r →\n    ∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n      x + a ∈ Metric.closedBall 0 r ↔ x ∈ Metric.closedBall 0 r"
+    },
+    "Langlands.Tate.NonArchimedean.ae_ne_zero": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 278,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)),\n  ∀ᵐ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ∂Langlands.Tate.NonArchimedean.multHaar v, x ≠ 0"
+    },
+    "Langlands.Tate.NonArchimedean.aestronglyMeasurable_of_continuousOn": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 282,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) {E : Type u_2} [inst_2 : NormedAddCommGroup E]\n  {g : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → E},\n  ContinuousOn g {0}ᶜ → MeasureTheory.AEStronglyMeasurable g (Langlands.Tate.NonArchimedean.multHaar v)"
     },
     "Langlands.Tate.NonArchimedean.ball_one_eq_smul": {
       "kind": "theorem",
@@ -7211,6 +8091,61 @@
       ],
       "type": "{F : Type u_2} → [inst : GroupWithZero F] → (Fˣ →* ℂˣ) → F → ℂ"
     },
+    "Langlands.Tate.NonArchimedean.charExt_eq_of_norm_sub_le": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 235,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {m : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ m →\n    ∀ {x y : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n      x ≠ 0 →\n        ‖y - x‖ ≤ (Langlands.Tate.NonArchimedean.q v)⁻¹ ^ (m + 1) * ‖x‖ →\n          Langlands.Tate.NonArchimedean.charExt χ y = Langlands.Tate.NonArchimedean.charExt χ x"
+    },
+    "Langlands.Tate.NonArchimedean.charExt_inv": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 134,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u_2} [inst : GroupWithZero F] (χ : Fˣ →* ℂˣ) (x : F),\n  Langlands.Tate.NonArchimedean.charExt χ⁻¹ x = (Langlands.Tate.NonArchimedean.charExt χ x)⁻¹"
+    },
+    "Langlands.Tate.NonArchimedean.charExt_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 122,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u_2} [inst : GroupWithZero F] (χ : Fˣ →* ℂˣ) {a : F} (ha : a ≠ 0) (x : F),\n  Langlands.Tate.NonArchimedean.charExt χ (a * x) = ↑(χ (Units.mk0 a ha)) * Langlands.Tate.NonArchimedean.charExt χ x"
+    },
+    "Langlands.Tate.NonArchimedean.charExt_units": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 141,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u_2} [inst : GroupWithZero F] (χ : Fˣ →* ℂˣ) (u : Fˣ), Langlands.Tate.NonArchimedean.charExt χ ↑u = ↑(χ u)"
+    },
+    "Langlands.Tate.NonArchimedean.closedBall_one_subset_sphere": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 174,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) {r : ℝ},\n  r \u003c 1 → Metric.closedBall 1 r ⊆ Metric.sphere 0 1"
+    },
     "Langlands.Tate.NonArchimedean.coe_adicCompletionIntegers": {
       "kind": "theorem",
       "file": "Langlands/Tate/NonArchimedeanMeasure.lean",
@@ -7221,6 +8156,61 @@
         "propext"
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)),\n  ↑(IsDedekindDomain.HeightOneSpectrum.adicCompletionIntegers K v) = Metric.closedBall 0 1"
+    },
+    "Langlands.Tate.NonArchimedean.conj_gaussSum": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 304,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {m : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ m →\n    ∀ (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n      (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n          ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n        ∀ (c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n          (starRingEnd ℂ) (Langlands.Tate.NonArchimedean.gaussSum v χ ψ c) =\n            Langlands.Tate.NonArchimedean.gaussSum v χ⁻¹ ψ (-c)"
+    },
+    "Langlands.Tate.NonArchimedean.continuousOn_charExt": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 256,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {m : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ m →\n    ContinuousOn (Langlands.Tate.NonArchimedean.charExt χ) {0}ᶜ"
+    },
+    "Langlands.Tate.NonArchimedean.continuousOn_ramifiedIntegrand": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 293,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {m : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ m →\n    ∀ (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n      (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n          ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n        ∀ (a : ℕ) (c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) (s : ℂ),\n          ContinuousOn (Langlands.Tate.NonArchimedean.ramifiedIntegrand v χ ψ a c s) {0}ᶜ"
+    },
+    "Langlands.Tate.NonArchimedean.continuous_addChar": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 270,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n  (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n      ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n    Continuous ⇑ψ"
+    },
+    "Langlands.Tate.NonArchimedean.density_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 79,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {a : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  a ≠ 0 →\n    ∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n      ENNReal.ofReal ‖a‖ * ENNReal.ofReal ((1 - (Langlands.Tate.NonArchimedean.q v)⁻¹)⁻¹ * ‖a * x‖⁻¹) =\n        ENNReal.ofReal ((1 - (Langlands.Tate.NonArchimedean.q v)⁻¹)⁻¹ * ‖x‖⁻¹)"
     },
     "Langlands.Tate.NonArchimedean.distribHaarChar_eq_nnnorm": {
       "kind": "theorem",
@@ -7265,6 +8255,83 @@
         "propext"
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (u : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ),\n  ‖↑u‖ = 1 → (MeasureTheory.distribHaarChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)) u = 1"
+    },
+    "Langlands.Tate.NonArchimedean.epsilonRamified": {
+      "kind": "def",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 261,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u_1} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) →\n        ((IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ) →\n          AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ →\n            {c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v} → c ≠ 0 → ℂ → ℂ"
+    },
+    "Langlands.Tate.NonArchimedean.epsilonRamified_ne_zero": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 415,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {b : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ (b + 1) →\n    ¬Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ b →\n      ∀ (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n        (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n            ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n          (∃ x, ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (d + 1) ∧ ψ x ≠ 1) →\n            ∀ {c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v} (hc0 : c ≠ 0),\n              ‖c‖ = Langlands.Tate.NonArchimedean.q v ^ (d + ↑(b + 1)) →\n                ∀ (s : ℂ), Langlands.Tate.NonArchimedean.epsilonRamified v χ ψ hc0 s ≠ 0"
+    },
+    "Langlands.Tate.NonArchimedean.epsilonUnramified": {
+      "kind": "def",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 119,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u_1} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) →\n        ((IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ) → ℤ → ℂ → ℂ"
+    },
+    "Langlands.Tate.NonArchimedean.epsilonUnramified_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 178,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ) (d : ℤ) (s : ℂ),\n  Langlands.Tate.NonArchimedean.epsilonUnramified v χ d s =\n    ↑(χ (Langlands.localUniformizer K v)) ^ d * ↑(Langlands.Tate.NonArchimedean.q v ^ d) ^ (1 / 2 - s) *\n      ↑(Langlands.Tate.NonArchimedean.q v ^ d) ^ (1 / 2)"
+    },
+    "Langlands.Tate.NonArchimedean.epsilonUnramified_zero": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 186,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ) (s : ℂ),\n  Langlands.Tate.NonArchimedean.epsilonUnramified v χ 0 s = 1"
+    },
+    "Langlands.Tate.NonArchimedean.eq_one_of_pow_le": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 369,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {r C : ℝ}, 0 \u003c r → (∀ (n : ℕ), r ^ n ≤ C) → (∀ (n : ℕ), r⁻¹ ^ n ≤ C) → r = 1"
+    },
+    "Langlands.Tate.NonArchimedean.exists_norm_charExt_le": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 328,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {m : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ m →\n    ∃ C,\n      ∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n        x ≠ 0 →\n          ‖x‖ ≤ 1 →\n            ‖Langlands.Tate.NonArchimedean.charExt χ x‖ ≤\n              C * ‖x‖ ^ (-Real.logb (Langlands.Tate.NonArchimedean.q v) ‖↑(χ (Langlands.localUniformizer K v))‖)"
     },
     "Langlands.Tate.NonArchimedean.exists_norm_eq_q_zpow": {
       "kind": "theorem",
@@ -7321,6 +8388,17 @@
       ],
       "type": "{K : Type u_1} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) →\n        AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ →\n          (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → ℂ) →\n            IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → ℂ"
     },
+    "Langlands.Tate.NonArchimedean.fourier_comp_sub_one": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 230,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ)\n  (f : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → ℂ)\n  (y : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n  Langlands.Tate.NonArchimedean.fourier v ψ (fun x =\u003e f (x - 1)) y = ψ y * Langlands.Tate.NonArchimedean.fourier v ψ f y"
+    },
     "Langlands.Tate.NonArchimedean.fourier_fourier_indicator_integers": {
       "kind": "theorem",
       "file": "Langlands/Tate/NonArchimedeanFourier.lean",
@@ -7376,6 +8454,61 @@
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n  (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n      ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n    (∃ x, ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (d + 1) ∧ ψ x ≠ 1) →\n      Langlands.Tate.NonArchimedean.fourier v ψ ((Metric.closedBall 0 1).indicator 1) =\n        (Metric.closedBall 0 (Langlands.Tate.NonArchimedean.q v ^ d)).indicator 1"
     },
+    "Langlands.Tate.NonArchimedean.fourier_testFunction": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 242,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n  (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n      ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n    (∃ x, ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (d + 1) ∧ ψ x ≠ 1) →\n      ∀ (a : ℕ) (y : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n        Langlands.Tate.NonArchimedean.fourier v ψ (Langlands.Tate.NonArchimedean.testFunction v a) y =\n          ψ y *\n            (Metric.closedBall 0 (Langlands.Tate.NonArchimedean.q v ^ (d + ↑a))).indicator\n              (fun x =\u003e ↑((Langlands.Tate.NonArchimedean.q v)⁻¹ ^ a)) y"
+    },
+    "Langlands.Tate.NonArchimedean.gaussSum": {
+      "kind": "def",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 49,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u_1} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) →\n        ((IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ) →\n          AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ →\n            IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → ℂ"
+    },
+    "Langlands.Tate.NonArchimedean.gaussSum_eq_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 85,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ)\n  (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ)\n  (c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)\n  {w : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v} (hw : ‖w‖ = 1),\n  Langlands.Tate.NonArchimedean.gaussSum v χ ψ c =\n    ↑(χ (Units.mk0 w ⋯)) * Langlands.Tate.NonArchimedean.gaussSum v χ ψ (c * w)"
+    },
+    "Langlands.Tate.NonArchimedean.gaussSum_mul_gaussSum_inv": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 201,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {b : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ (b + 1) →\n    ¬Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ b →\n      ∀ (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n        (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n            ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n          (∃ x, ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (d + 1) ∧ ψ x ≠ 1) →\n            ∀ {c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n              ‖c‖ = Langlands.Tate.NonArchimedean.q v ^ (d + ↑(b + 1)) →\n                Langlands.Tate.NonArchimedean.gaussSum v χ ψ c * Langlands.Tate.NonArchimedean.gaussSum v χ⁻¹ ψ (-c) =\n                  ↑((Langlands.Tate.NonArchimedean.q v)⁻¹ ^ (b + 1))"
+    },
+    "Langlands.Tate.NonArchimedean.gaussSum_ne_zero": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 327,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {b : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ (b + 1) →\n    ¬Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ b →\n      ∀ (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n        (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n            ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n          (∃ x, ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (d + 1) ∧ ψ x ≠ 1) →\n            ∀ {c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n              ‖c‖ = Langlands.Tate.NonArchimedean.q v ^ (d + ↑(b + 1)) →\n                Langlands.Tate.NonArchimedean.gaussSum v χ ψ c ≠ 0"
+    },
     "Langlands.Tate.NonArchimedean.haar": {
       "kind": "def",
       "file": "Langlands/Tate/NonArchimedeanMeasure.lean",
@@ -7419,6 +8552,17 @@
         "propext"
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)),\n  (Langlands.Tate.NonArchimedean.haar v) (Metric.closedBall 0 1) = 1"
+    },
+    "Langlands.Tate.NonArchimedean.haar_closedBall_one_pow": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 181,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) (m : ℕ),\n  (Langlands.Tate.NonArchimedean.haar v) (Metric.closedBall 1 ((Langlands.Tate.NonArchimedean.q v)⁻¹ ^ m)) =\n    ENNReal.ofReal ((Langlands.Tate.NonArchimedean.q v)⁻¹ ^ m)"
     },
     "Langlands.Tate.NonArchimedean.haar_closedBall_pow": {
       "kind": "theorem",
@@ -7530,6 +8674,160 @@
       ],
       "type": "{K : Type u_1} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) →\n        TopologicalSpace.PositiveCompacts (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)"
     },
+    "Langlands.Tate.NonArchimedean.integrableOn_closedBall_one_of_le": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 318,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) {E : Type u_2} [inst_2 : NormedAddCommGroup E]\n  {g : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → E},\n  MeasureTheory.AEStronglyMeasurable g (Langlands.Tate.NonArchimedean.multHaar v) →\n    ∀ {C σ : ℝ},\n      0 \u003c σ →\n        (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), x ≠ 0 → ‖x‖ ≤ 1 → ‖g x‖ ≤ C * ‖x‖ ^ σ) →\n          MeasureTheory.IntegrableOn g (Metric.closedBall 0 1) (Langlands.Tate.NonArchimedean.multHaar v)"
+    },
+    "Langlands.Tate.NonArchimedean.integrableOn_norm_rpow": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 291,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) {σ : ℝ},\n  0 \u003c σ →\n    MeasureTheory.IntegrableOn (fun x =\u003e ‖x‖ ^ σ) (Metric.closedBall 0 1) (Langlands.Tate.NonArchimedean.multHaar v)"
+    },
+    "Langlands.Tate.NonArchimedean.integrableOn_ramifiedIntegrand": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 310,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {m : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ m →\n    ∀ (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n      (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n          ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n        ∀ (a : ℕ) (c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) (s : ℂ),\n          ‖↑(χ⁻¹ (Langlands.localUniformizer K v))‖ \u003c Langlands.Tate.NonArchimedean.q v ^ (1 - s).re →\n            MeasureTheory.IntegrableOn (Langlands.Tate.NonArchimedean.ramifiedIntegrand v χ ψ a c s)\n              (Metric.closedBall 0 1) (Langlands.Tate.NonArchimedean.multHaar v)"
+    },
+    "Langlands.Tate.NonArchimedean.integral_comp_mul_left": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 115,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) {E : Type u_2} [inst_2 : NormedAddCommGroup E]\n  [inst_3 : NormedSpace ℝ E] {a : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  a ≠ 0 →\n    ∀ (g : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → E),\n      ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n          g (a * x) ∂Langlands.Tate.NonArchimedean.multHaar v =\n        ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), g x ∂Langlands.Tate.NonArchimedean.multHaar v"
+    },
+    "Langlands.Tate.NonArchimedean.integral_comp_mul_left_haar": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 70,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) {E : Type u_2} [inst_2 : NormedAddCommGroup E]\n  [inst_3 : NormedSpace ℝ E] {a : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  a ≠ 0 →\n    ∀ (g : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → E),\n      ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), g (a * x) ∂Langlands.Tate.NonArchimedean.haar v =\n        ‖a‖⁻¹ • ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), g x ∂Langlands.Tate.NonArchimedean.haar v"
+    },
+    "Langlands.Tate.NonArchimedean.integral_eq_zero_of_comp_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 162,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (g : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → ℂ)\n  {a : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  a ≠ 0 →\n    ∀ {c : ℂ},\n      c ≠ 1 →\n        (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), g (a * x) = c * g x) →\n          ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), g x ∂Langlands.Tate.NonArchimedean.multHaar v =\n            0"
+    },
+    "Langlands.Tate.NonArchimedean.inv_apply_localUniformizer_zpow_neg": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 130,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ) (d : ℤ)\n  (h : ↑(Langlands.localUniformizer K v) ^ (-d) ≠ 0),\n  ↑(χ⁻¹ (Units.mk0 (↑(Langlands.localUniformizer K v) ^ (-d)) h)) = ↑(χ (Langlands.localUniformizer K v)) ^ d"
+    },
+    "Langlands.Tate.NonArchimedean.inv_mem_higherUnits": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 108,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) {r : ℝ}\n  {w : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  w ∈ Metric.sphere 0 1 ∩ Metric.closedBall 1 r → w⁻¹ ∈ Metric.sphere 0 1 ∩ Metric.closedBall 1 r"
+    },
+    "Langlands.Tate.NonArchimedean.inv_one_sub_inv_q_pos": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 81,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)),\n  0 \u003c (1 - (Langlands.Tate.NonArchimedean.q v)⁻¹)⁻¹"
+    },
+    "Langlands.Tate.NonArchimedean.inv_q_lt_one": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 232,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)), (Langlands.Tate.NonArchimedean.q v)⁻¹ \u003c 1"
+    },
+    "Langlands.Tate.NonArchimedean.inv_q_pow_lt_one": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 197,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) {a : ℕ},\n  a ≠ 0 → (Langlands.Tate.NonArchimedean.q v)⁻¹ ^ a \u003c 1"
+    },
+    "Langlands.Tate.NonArchimedean.isTrivialOnHigherUnits_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 216,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) (χ : Langlands.HeckeCharacter K) (m : ℕ),\n  χ.IsTrivialOnHigherUnits v m ↔ Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v (χ.finiteComponent v) m"
+    },
+    "Langlands.Tate.NonArchimedean.isTrivialOnHigherUnits_inv": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 59,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {m : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ m →\n    Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ⁻¹ m"
+    },
+    "Langlands.Tate.NonArchimedean.isTrivialOnHigherUnits_inv_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 65,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {m : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ⁻¹ m ↔\n    Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ m"
+    },
     "Langlands.Tate.NonArchimedean.isUnramifiedAt_iff": {
       "kind": "theorem",
       "file": "Langlands/Tate/NonArchimedeanZeta.lean",
@@ -7540,6 +8838,116 @@
         "propext"
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) (χ : Langlands.HeckeCharacter K),\n  χ.IsUnramifiedAt v ↔\n    ∀ (u : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ), ‖↑u‖ = 1 → (χ.finiteComponent v) u = 1"
+    },
+    "Langlands.Tate.NonArchimedean.lintegral_comp_mul_left_haar": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 62,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {a : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  a ≠ 0 →\n    ∀ (g : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → ENNReal),\n      ∫⁻ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), g (a * x) ∂Langlands.Tate.NonArchimedean.haar v =\n        ENNReal.ofReal ‖a‖⁻¹ *\n          ∫⁻ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), g x ∂Langlands.Tate.NonArchimedean.haar v"
+    },
+    "Langlands.Tate.NonArchimedean.localFactor": {
+      "kind": "def",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 115,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u_1} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) →\n        ((IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ) → ℂ → ℂ"
+    },
+    "Langlands.Tate.NonArchimedean.localFunctionalEquation_ramified": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 389,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {b : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ (b + 1) →\n    ¬Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ b →\n      ∀ (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n        (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n            ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n          (∃ x, ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (d + 1) ∧ ψ x ≠ 1) →\n            ∀ {c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v} (hc0 : c ≠ 0),\n              ‖c‖ = Langlands.Tate.NonArchimedean.q v ^ (d + ↑(b + 1)) →\n                ∀ (s : ℂ),\n                  ‖↑(χ⁻¹ (Langlands.localUniformizer K v))‖ \u003c Langlands.Tate.NonArchimedean.q v ^ (1 - s).re →\n                    Langlands.Tate.NonArchimedean.zetaIntegral v\n                        (Langlands.Tate.NonArchimedean.fourier v ψ\n                          (Langlands.Tate.NonArchimedean.testFunction v (b + 1)))\n                        χ⁻¹ (1 - s) =\n                      Langlands.Tate.NonArchimedean.epsilonRamified v χ ψ hc0 s *\n                        Langlands.Tate.NonArchimedean.zetaIntegral v\n                          (Langlands.Tate.NonArchimedean.testFunction v (b + 1)) χ s"
+    },
+    "Langlands.Tate.NonArchimedean.localFunctionalEquation_unramified": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 162,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ),\n  (∀ (u : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ), ‖↑u‖ = 1 → χ u = 1) →\n    ∀ (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n      (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n          ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n        (∃ x, ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (d + 1) ∧ ψ x ≠ 1) →\n          ∀ (s : ℂ),\n            ‖↑(χ (Langlands.localUniformizer K v))‖ \u003c Langlands.Tate.NonArchimedean.q v ^ s.re →\n              ‖↑(χ⁻¹ (Langlands.localUniformizer K v))‖ \u003c Langlands.Tate.NonArchimedean.q v ^ (1 - s).re →\n                Langlands.Tate.NonArchimedean.zetaIntegral v\n                      (Langlands.Tate.NonArchimedean.fourier v ψ ((Metric.closedBall 0 1).indicator 1)) χ⁻¹ (1 - s) *\n                    Langlands.Tate.NonArchimedean.localFactor v χ s =\n                  Langlands.Tate.NonArchimedean.epsilonUnramified v χ d s *\n                      Langlands.Tate.NonArchimedean.localFactor v χ⁻¹ (1 - s) *\n                    Langlands.Tate.NonArchimedean.zetaIntegral v ((Metric.closedBall 0 1).indicator 1) χ s"
+    },
+    "Langlands.Tate.NonArchimedean.map_mul_left_haar": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 54,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {a : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  a ≠ 0 →\n    MeasureTheory.Measure.map (fun x =\u003e a * x) (Langlands.Tate.NonArchimedean.haar v) =\n      ENNReal.ofReal ‖a‖⁻¹ • Langlands.Tate.NonArchimedean.haar v"
+    },
+    "Langlands.Tate.NonArchimedean.map_mul_left_multHaar": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 86,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {a : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  a ≠ 0 →\n    MeasureTheory.Measure.map (fun x =\u003e a * x) (Langlands.Tate.NonArchimedean.multHaar v) =\n      Langlands.Tate.NonArchimedean.multHaar v"
+    },
+    "Langlands.Tate.NonArchimedean.measurePreserving_mul_left": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 110,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {a : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  a ≠ 0 →\n    MeasureTheory.MeasurePreserving (fun x =\u003e a * x) (Langlands.Tate.NonArchimedean.multHaar v)\n      (Langlands.Tate.NonArchimedean.multHaar v)"
+    },
+    "Langlands.Tate.NonArchimedean.mul_mem_higherUnits": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 97,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) {r : ℝ}\n  {w x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  w ∈ Metric.sphere 0 1 ∩ Metric.closedBall 1 r →\n    x ∈ Metric.sphere 0 1 ∩ Metric.closedBall 1 r → w * x ∈ Metric.sphere 0 1 ∩ Metric.closedBall 1 r"
+    },
+    "Langlands.Tate.NonArchimedean.mul_mem_higherUnits_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 119,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) {r : ℝ}\n  {w : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  w ∈ Metric.sphere 0 1 ∩ Metric.closedBall 1 r →\n    ∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n      w * x ∈ Metric.sphere 0 1 ∩ Metric.closedBall 1 r ↔ x ∈ Metric.sphere 0 1 ∩ Metric.closedBall 1 r"
+    },
+    "Langlands.Tate.NonArchimedean.mul_mem_sphere_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 80,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {w : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  ‖w‖ = 1 →\n    ∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), w * x ∈ Metric.sphere 0 1 ↔ x ∈ Metric.sphere 0 1"
     },
     "Langlands.Tate.NonArchimedean.multHaar": {
       "kind": "def",
@@ -7562,6 +8970,17 @@
         "propext"
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {E : Set (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)},\n  MeasurableSet E →\n    ∀ {r : ℝ},\n      E ⊆ Metric.sphere 0 r →\n        (Langlands.Tate.NonArchimedean.multHaar v) E =\n          ENNReal.ofReal ((1 - (Langlands.Tate.NonArchimedean.q v)⁻¹)⁻¹ * r⁻¹) *\n            (Langlands.Tate.NonArchimedean.haar v) E"
+    },
+    "Langlands.Tate.NonArchimedean.multHaar_restrict_sphere": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 72,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)),\n  (Langlands.Tate.NonArchimedean.multHaar v).restrict (Metric.sphere 0 1) =\n    ENNReal.ofReal (1 - (Langlands.Tate.NonArchimedean.q v)⁻¹)⁻¹ •\n      (Langlands.Tate.NonArchimedean.haar v).restrict (Metric.sphere 0 1)"
     },
     "Langlands.Tate.NonArchimedean.multHaar_singleton_zero": {
       "kind": "theorem",
@@ -7607,6 +9026,83 @@
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)),\n  Nat.card (Valued.ResidueField (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)) = Ideal.absNorm v.asIdeal"
     },
+    "Langlands.Tate.NonArchimedean.neg_logb_add_pos": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 362,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {σ : ℝ},\n  ‖↑(χ (Langlands.localUniformizer K v))‖ \u003c Langlands.Tate.NonArchimedean.q v ^ σ →\n    0 \u003c -Real.logb (Langlands.Tate.NonArchimedean.q v) ‖↑(χ (Langlands.localUniformizer K v))‖ + σ"
+    },
+    "Langlands.Tate.NonArchimedean.norm_addChar_eq_one": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 407,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n  (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n      ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n    ∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), ‖ψ x‖ = 1"
+    },
+    "Langlands.Tate.NonArchimedean.norm_charExt_of_norm_eq_one": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 386,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {m : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ m →\n    ∀ {x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n      ‖x‖ = 1 → ‖Langlands.Tate.NonArchimedean.charExt χ x‖ = 1"
+    },
+    "Langlands.Tate.NonArchimedean.norm_eq_one_of_norm_sub_one_lt": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 225,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v}, ‖x - 1‖ \u003c 1 → ‖x‖ = 1"
+    },
+    "Langlands.Tate.NonArchimedean.norm_gaussSum_inv_sq": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 404,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {b : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ (b + 1) →\n    ¬Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ b →\n      ∀ (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n        (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n            ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n          (∃ x, ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (d + 1) ∧ ψ x ≠ 1) →\n            ∀ {c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n              ‖c‖ = Langlands.Tate.NonArchimedean.q v ^ (d + ↑(b + 1)) →\n                ‖Langlands.Tate.NonArchimedean.gaussSum v χ⁻¹ ψ c‖ ^ 2 = (Langlands.Tate.NonArchimedean.q v)⁻¹ ^ (b + 1)"
+    },
+    "Langlands.Tate.NonArchimedean.norm_gaussSum_sq": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 315,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {b : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ (b + 1) →\n    ¬Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ b →\n      ∀ (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n        (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n            ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n          (∃ x, ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (d + 1) ∧ ψ x ≠ 1) →\n            ∀ {c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n              ‖c‖ = Langlands.Tate.NonArchimedean.q v ^ (d + ↑(b + 1)) →\n                ‖Langlands.Tate.NonArchimedean.gaussSum v χ ψ c‖ ^ 2 = (Langlands.Tate.NonArchimedean.q v)⁻¹ ^ (b + 1)"
+    },
+    "Langlands.Tate.NonArchimedean.norm_le_inv_q_pow_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 205,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) (m : ℕ),\n  ‖x‖ ≤ (Langlands.Tate.NonArchimedean.q v)⁻¹ ^ m ↔ Valued.v x ≤ WithZero.exp (-↑m)"
+    },
     "Langlands.Tate.NonArchimedean.norm_localUniformizer": {
       "kind": "theorem",
       "file": "Langlands/Tate/NonArchimedeanMeasure.lean",
@@ -7618,6 +9114,17 @@
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)),\n  ‖↑(Langlands.localUniformizer K v)‖ = (Langlands.Tate.NonArchimedean.q v)⁻¹"
     },
+    "Langlands.Tate.NonArchimedean.norm_localUniformizer_zpow_neg": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 103,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) (d : ℤ),\n  ‖↑(Langlands.localUniformizer K v) ^ (-d)‖ = Langlands.Tate.NonArchimedean.q v ^ d"
+    },
     "Langlands.Tate.NonArchimedean.norm_lt_one_iff_le": {
       "kind": "theorem",
       "file": "Langlands/Tate/NonArchimedeanMeasure.lean",
@@ -7628,6 +9135,39 @@
         "propext"
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v}, ‖x‖ \u003c 1 ↔ ‖x‖ ≤ (Langlands.Tate.NonArchimedean.q v)⁻¹"
+    },
+    "Langlands.Tate.NonArchimedean.norm_mul_cpow": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 146,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (a x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) (s : ℂ), ↑‖a * x‖ ^ s = ↑‖a‖ ^ s * ↑‖x‖ ^ s"
+    },
+    "Langlands.Tate.NonArchimedean.norm_mul_le_norm_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 108,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  c ≠ 0 → ∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), ‖c * x‖ ≤ ‖c‖ ↔ ‖x‖ ≤ 1"
+    },
+    "Langlands.Tate.NonArchimedean.norm_mul_le_zpow_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 190,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v} {d k : ℤ} {a : ℕ},\n  ‖c‖ = Langlands.Tate.NonArchimedean.q v ^ (d + ↑a) →\n    ∀ (y : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n      ‖c * y‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (d + k) ↔ ‖y‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (k - ↑a)"
     },
     "Langlands.Tate.NonArchimedean.ofReal_inv_cpow": {
       "kind": "theorem",
@@ -7705,6 +9245,17 @@
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)), 0 \u003c Langlands.Tate.NonArchimedean.q v"
     },
+    "Langlands.Tate.NonArchimedean.ramifiedIntegrand": {
+      "kind": "def",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 266,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u_1} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) →\n        ((IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ) →\n          AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ →\n            ℕ →\n              IsDedekindDomain.HeightOneSpectrum.adicCompletion K v →\n                ℂ → IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → ℂ"
+    },
     "Langlands.Tate.NonArchimedean.residue_eq_residue_iff": {
       "kind": "theorem",
       "file": "Langlands/Tate/NonArchimedeanMeasure.lean",
@@ -7715,6 +9266,28 @@
         "propext"
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (y c : ↥(Valued.integer (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v))),\n  (IsLocalRing.residue ↥(Valued.integer (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v))) y =\n      (IsLocalRing.residue ↥(Valued.integer (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v))) c ↔\n    ‖↑y - ↑c‖ \u003c 1"
+    },
+    "Langlands.Tate.NonArchimedean.setIntegral_ball_ramifiedIntegrand": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 329,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {b : ℕ},\n  ¬Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ b →\n    ∀ (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n      (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n          ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n        ∀ {c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n          ‖c‖ = Langlands.Tate.NonArchimedean.q v ^ (d + ↑(b + 1)) →\n            ∀ (s : ℂ),\n              ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) in Metric.ball 0 1,\n                  Langlands.Tate.NonArchimedean.ramifiedIntegrand v χ ψ (b + 1) c s\n                    x ∂Langlands.Tate.NonArchimedean.multHaar v =\n                0"
+    },
+    "Langlands.Tate.NonArchimedean.setIntegral_charExt_higherUnits": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 134,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {m : ℕ},\n  ¬Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ m →\n    ∫ (t : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) in\n        Metric.sphere 0 1 ∩ Metric.closedBall 1 ((Langlands.Tate.NonArchimedean.q v)⁻¹ ^ m),\n        Langlands.Tate.NonArchimedean.charExt χ t ∂Langlands.Tate.NonArchimedean.haar v =\n      0"
     },
     "Langlands.Tate.NonArchimedean.setIntegral_closedBall_addChar_of_forall": {
       "kind": "theorem",
@@ -7738,6 +9311,105 @@
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) {r : ℝ}\n  {a : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  a ∈ Metric.closedBall 0 r →\n    ψ a ≠ 1 →\n      ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) in Metric.closedBall 0 r,\n          ψ x ∂Langlands.Tate.NonArchimedean.haar v =\n        0"
     },
+    "Langlands.Tate.NonArchimedean.setIntegral_comp_mul_of_norm_eq_one": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 54,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) {E : Type u_2} [inst_2 : NormedAddCommGroup E]\n  [inst_3 : NormedSpace ℝ E] {S : Set (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)},\n  MeasurableSet S →\n    ∀ {w : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n      ‖w‖ = 1 →\n        (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), w * x ∈ S ↔ x ∈ S) →\n          ∀ (g : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → E),\n            ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) in S,\n                g (w * x) ∂Langlands.Tate.NonArchimedean.haar v =\n              ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) in S,\n                g x ∂Langlands.Tate.NonArchimedean.haar v"
+    },
+    "Langlands.Tate.NonArchimedean.setIntegral_eq_zero_of_comp_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 70,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {S : Set (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)},\n  MeasurableSet S →\n    ∀ {w : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n      ‖w‖ = 1 →\n        (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), w * x ∈ S ↔ x ∈ S) →\n          ∀ (g : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → ℂ) {c : ℂ},\n            c ≠ 1 →\n              (∀ x ∈ S, g (w * x) = c * g x) →\n                ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) in S,\n                    g x ∂Langlands.Tate.NonArchimedean.haar v =\n                  0"
+    },
+    "Langlands.Tate.NonArchimedean.setIntegral_multHaar_eq_zero_of_comp_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 92,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {S : Set (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)},\n  MeasurableSet S →\n    ∀ (g : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → ℂ)\n      {w : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n      w ≠ 0 →\n        (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), w * x ∈ S ↔ x ∈ S) →\n          ∀ {c : ℂ},\n            c ≠ 1 →\n              (∀ x ∈ S, g (w * x) = c * g x) →\n                ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) in S,\n                    g x ∂Langlands.Tate.NonArchimedean.multHaar v =\n                  0"
+    },
+    "Langlands.Tate.NonArchimedean.setIntegral_sphere_addChar": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 150,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n  (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n      ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n    (∃ x, ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (d + 1) ∧ ψ x ≠ 1) →\n      ∀ (b : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n        ∫ (w : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) in Metric.sphere 0 1,\n            ψ (b * w) ∂Langlands.Tate.NonArchimedean.haar v =\n          (Metric.closedBall 0 (Langlands.Tate.NonArchimedean.q v ^ d)).indicator 1 b -\n            (Metric.closedBall 0\n                  (Langlands.Tate.NonArchimedean.q v ^ d / (Langlands.Tate.NonArchimedean.q v)⁻¹)).indicator\n              (fun x =\u003e ↑(Langlands.Tate.NonArchimedean.q v)⁻¹) b"
+    },
+    "Langlands.Tate.NonArchimedean.setIntegral_sphere_multHaar": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 85,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (g : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → ℂ),\n  ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) in Metric.sphere 0 1,\n      g x ∂Langlands.Tate.NonArchimedean.multHaar v =\n    ↑(1 - (Langlands.Tate.NonArchimedean.q v)⁻¹)⁻¹ *\n      ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) in Metric.sphere 0 1,\n        g x ∂Langlands.Tate.NonArchimedean.haar v"
+    },
+    "Langlands.Tate.NonArchimedean.setIntegral_sphere_ramifiedIntegrand": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 357,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ)\n  (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (a : ℕ)\n  (c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) (s : ℂ),\n  ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) in Metric.sphere 0 1,\n      Langlands.Tate.NonArchimedean.ramifiedIntegrand v χ ψ a c s x ∂Langlands.Tate.NonArchimedean.multHaar v =\n    ↑((1 - (Langlands.Tate.NonArchimedean.q v)⁻¹)⁻¹ * (Langlands.Tate.NonArchimedean.q v)⁻¹ ^ a) *\n      Langlands.Tate.NonArchimedean.gaussSum v χ⁻¹ ψ c"
+    },
+    "Langlands.Tate.NonArchimedean.sphere_one_subset_compl": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 379,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)), Metric.sphere 0 1 ⊆ {0}ᶜ"
+    },
+    "Langlands.Tate.NonArchimedean.testFunction": {
+      "kind": "def",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 193,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u_1} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) →\n        ℕ → IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → ℂ"
+    },
+    "Langlands.Tate.NonArchimedean.testFunction_mul_charExt": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 201,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {a : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ a →\n    a ≠ 0 →\n      ∀ (s : ℂ) (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n        Langlands.Tate.NonArchimedean.testFunction v a x * Langlands.Tate.NonArchimedean.charExt χ x * ↑‖x‖ ^ s =\n          Langlands.Tate.NonArchimedean.testFunction v a x"
+    },
     "Langlands.Tate.NonArchimedean.zetaIntegral": {
       "kind": "def",
       "file": "Langlands/Tate/NonArchimedeanZeta.lean",
@@ -7760,6 +9432,105 @@
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) (χ : Langlands.HeckeCharacter K),\n  χ.IsUnramifiedAt v →\n    ∀ (s : ℂ),\n      ‖↑((χ.finiteComponent v) (Langlands.localUniformizer K v))‖ \u003c ↑(Ideal.absNorm v.asIdeal) ^ s.re →\n        Langlands.Tate.NonArchimedean.zetaIntegral v\n            ((↑(IsDedekindDomain.HeightOneSpectrum.adicCompletionIntegers K v)).indicator 1) (χ.finiteComponent v) s =\n          χ.localFactor v s"
     },
+    "Langlands.Tate.NonArchimedean.zetaIntegral_eq_mul_comp": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 151,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (f : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → ℂ)\n  (χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ) (s : ℂ)\n  {a : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v} (ha : a ≠ 0),\n  Langlands.Tate.NonArchimedean.zetaIntegral v f χ s =\n    ↑(χ (Units.mk0 a ha)) * ↑‖a‖ ^ s * Langlands.Tate.NonArchimedean.zetaIntegral v (fun x =\u003e f (a * x)) χ s"
+    },
+    "Langlands.Tate.NonArchimedean.zetaIntegral_eq_zero_of_ne_one": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 171,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (f : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v → ℂ)\n  (χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ) (s : ℂ)\n  (u : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ),\n  ‖↑u‖ = 1 →\n    (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v), f (↑u * x) = f x) →\n      χ u ≠ 1 → Langlands.Tate.NonArchimedean.zetaIntegral v f χ s = 0"
+    },
+    "Langlands.Tate.NonArchimedean.zetaIntegral_eq_zero_of_not_isUnramifiedAt": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 192,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) (χ : Langlands.HeckeCharacter K),\n  ¬χ.IsUnramifiedAt v →\n    ∀ (s : ℂ),\n      Langlands.Tate.NonArchimedean.zetaIntegral v\n          ((↑(IsDedekindDomain.HeightOneSpectrum.adicCompletionIntegers K v)).indicator 1) (χ.finiteComponent v) s =\n        0"
+    },
+    "Langlands.Tate.NonArchimedean.zetaIntegral_fourier_integers": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 139,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ),\n  (∀ (u : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ), ‖↑u‖ = 1 → χ u = 1) →\n    ∀ (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n      (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n          ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n        (∃ x, ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (d + 1) ∧ ψ x ≠ 1) →\n          ∀ (s : ℂ),\n            ‖↑(χ⁻¹ (Langlands.localUniformizer K v))‖ \u003c Langlands.Tate.NonArchimedean.q v ^ (1 - s).re →\n              Langlands.Tate.NonArchimedean.zetaIntegral v\n                  (Langlands.Tate.NonArchimedean.fourier v ψ ((Metric.closedBall 0 1).indicator 1)) χ⁻¹ (1 - s) =\n                Langlands.Tate.NonArchimedean.epsilonUnramified v χ d s *\n                  Langlands.Tate.NonArchimedean.localFactor v χ⁻¹ (1 - s)"
+    },
+    "Langlands.Tate.NonArchimedean.zetaIntegral_fourier_testFunction": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 368,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {b : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ (b + 1) →\n    ¬Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ b →\n      ∀ (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n        (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n            ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n          (∃ x, ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (d + 1) ∧ ψ x ≠ 1) →\n            ∀ {c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v} (hc0 : c ≠ 0),\n              ‖c‖ = Langlands.Tate.NonArchimedean.q v ^ (d + ↑(b + 1)) →\n                ∀ (s : ℂ),\n                  ‖↑(χ⁻¹ (Langlands.localUniformizer K v))‖ \u003c Langlands.Tate.NonArchimedean.q v ^ (1 - s).re →\n                    Langlands.Tate.NonArchimedean.zetaIntegral v\n                        (Langlands.Tate.NonArchimedean.fourier v ψ\n                          (Langlands.Tate.NonArchimedean.testFunction v (b + 1)))\n                        χ⁻¹ (1 - s) =\n                      Langlands.Tate.NonArchimedean.epsilonRamified v χ ψ hc0 s *\n                        ↑((1 - (Langlands.Tate.NonArchimedean.q v)⁻¹)⁻¹ *\n                            (Langlands.Tate.NonArchimedean.q v)⁻¹ ^ (b + 1))"
+    },
+    "Langlands.Tate.NonArchimedean.zetaIntegral_fourier_testFunction_comp": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 272,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ)\n  (ψ : AddChar (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) ℂ) (d : ℤ),\n  (∀ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v),\n      ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ d → ψ x = 1) →\n    (∃ x, ‖x‖ ≤ Langlands.Tate.NonArchimedean.q v ^ (d + 1) ∧ ψ x ≠ 1) →\n      ∀ (a : ℕ) {c : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n        c ≠ 0 →\n          ‖c‖ = Langlands.Tate.NonArchimedean.q v ^ (d + ↑a) →\n            ∀ (s : ℂ),\n              Langlands.Tate.NonArchimedean.zetaIntegral v\n                  (fun x =\u003e\n                    Langlands.Tate.NonArchimedean.fourier v ψ (Langlands.Tate.NonArchimedean.testFunction v a) (c * x))\n                  χ⁻¹ (1 - s) =\n                ∫ (x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v) in Metric.closedBall 0 1,\n                  Langlands.Tate.NonArchimedean.ramifiedIntegrand v χ ψ a c s\n                    x ∂Langlands.Tate.NonArchimedean.multHaar v"
+    },
+    "Langlands.Tate.NonArchimedean.zetaIntegral_integers_eq_localFactor": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 123,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ),\n  (∀ (u : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ), ‖↑u‖ = 1 → χ u = 1) →\n    ∀ (s : ℂ),\n      ‖↑(χ (Langlands.localUniformizer K v))‖ \u003c Langlands.Tate.NonArchimedean.q v ^ s.re →\n        Langlands.Tate.NonArchimedean.zetaIntegral v ((Metric.closedBall 0 1).indicator 1) χ s =\n          Langlands.Tate.NonArchimedean.localFactor v χ s"
+    },
+    "Langlands.Tate.NonArchimedean.zetaIntegral_integers_of_ramified": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanCharacter.lean",
+      "line": 183,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ),\n  (¬∀ (u : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ), ‖↑u‖ = 1 → χ u = 1) →\n    ∀ (s : ℂ), Langlands.Tate.NonArchimedean.zetaIntegral v ((Metric.closedBall 0 1).indicator 1) χ s = 0"
+    },
+    "Langlands.Tate.NonArchimedean.zetaIntegral_testFunction": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanLocalEquation.lean",
+      "line": 217,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ} {a : ℕ},\n  Langlands.Tate.NonArchimedean.IsTrivialOnHigherUnits v χ a →\n    a ≠ 0 →\n      ∀ (s : ℂ),\n        Langlands.Tate.NonArchimedean.zetaIntegral v (Langlands.Tate.NonArchimedean.testFunction v a) χ s =\n          ↑((1 - (Langlands.Tate.NonArchimedean.q v)⁻¹)⁻¹ * (Langlands.Tate.NonArchimedean.q v)⁻¹ ^ a)"
+    },
     "Langlands.Tate.NonArchimedean.zetaIntegral_unramified": {
       "kind": "theorem",
       "file": "Langlands/Tate/NonArchimedeanZeta.lean",
@@ -7770,6 +9541,17 @@
         "propext"
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  (χ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ),\n  (∀ (u : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ), ‖↑u‖ = 1 → χ u = 1) →\n    ∀ (ϖ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ),\n      ‖↑ϖ‖ = (Langlands.Tate.NonArchimedean.q v)⁻¹ →\n        ∀ (s : ℂ),\n          ‖↑(χ ϖ)‖ \u003c Langlands.Tate.NonArchimedean.q v ^ s.re →\n            Langlands.Tate.NonArchimedean.zetaIntegral v ((Metric.closedBall 0 1).indicator 1) χ s =\n              (1 - ↑(χ ϖ) * ↑(Langlands.Tate.NonArchimedean.q v) ^ (-s))⁻¹"
+    },
+    "Langlands.Tate.NonArchimedean.zpow_neg_natCast": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/NonArchimedeanGauss.lean",
+      "line": 197,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) (m : ℕ),\n  Langlands.Tate.NonArchimedean.q v ^ (-↑m) = (Langlands.Tate.NonArchimedean.q v)⁻¹ ^ m"
     },
     "Langlands.Tate.analyticAt_Gammaℂ": {
       "kind": "theorem",
