@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## v0.1.2 (2026-11-25)
+
 ### Added
 
 - The node LG4S7A4G1F for the local Langlands correspondence for induced tori. It is proved.
