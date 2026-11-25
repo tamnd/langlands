@@ -5,5 +5,6 @@ title: "The theorem of Kronecker and Weber"
 statement: "Each finite abelian extension of $\\mathbb{Q}$ is contained in a cyclotomic field $\\mathbb{Q}(\\zeta_n)$."
 sources: [{"paper": "Mil20", "loc": "Chapter V"}]
 uses: ["LGVAKJJD8Y"]
-lean: {"statement": "Langlands.KroneckerWeber"}
+lean: {"statement": "Langlands.KroneckerWeber", "proof": "Langlands.Bridge.kroneckerWeber"}
 tier: "T3"
+notes: "The proof is the port of n-yamaguchi-0729/ClassFieldTheory in Langlands/Ported/NYLL. The port proves it from global class field theory. The bridge moves the abstract embedding into a cyclotomic field to a subfield of the algebraic closure, with the normality of the extension."

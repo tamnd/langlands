@@ -1,14 +1,47 @@
 {
   "repository": "https://github.com/tamnd/langlands-lean",
-  "commit": "54b0386e7da66e0ae9b32935bec4c74c0a0668c8",
+  "commit": "8e3e85951b8ddd6756b84144845c9b42da8bc195",
   "toolchain": "4.35.0",
   "mathlib": "v4.35.0",
-  "built": "2026-11-25",
+  "built": "2026-11-26",
   "decls": {
+    "Langlands.AlgebraicIntegers": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 93,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Type"
+    },
     "Langlands.ArchimedeanParametersExist": {
       "kind": "def",
       "file": "Langlands/Statements/Hecke.lean",
       "line": 167,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.ArtinConjecture": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 210,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.ArtinOdd2Q": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 223,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -170,6 +203,17 @@
       ],
       "type": "∀ (K : Type u) (L : Type v) [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] [inst_3 : FiniteDimensional K L]\n  (x : Kˣ), ClassFieldTheory.IsFieldNorm K L x ↔ x ∈ Langlands.normGroup K L"
     },
+    "Langlands.Bridge.kroneckerWeber": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/NYLLGlobal.lean",
+      "line": 24,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.KroneckerWeber"
+    },
     "Langlands.Bridge.localExistence": {
       "kind": "theorem",
       "file": "Langlands/Bridge/NYLL.lean",
@@ -279,6 +323,17 @@
         "propext"
       ],
       "type": "∀ {Q Q' : ℕ → Prop} [inst : DecidablePred Q] [inst_1 : DecidablePred Q'] (P₀ : ℕ),\n  (∀ (p : ℕ), P₀ ≤ p → Nat.Prime p → (Q p ↔ Q' p)) →\n    ∀ {L : ℝ},\n      Filter.Tendsto (fun N =\u003e ↑(Finset.filter Q N.primesBelow).card / ↑N.primesBelow.card) Filter.atTop (nhds L) →\n        Filter.Tendsto (fun N =\u003e ↑(Finset.filter Q' N.primesBelow).card / ↑N.primesBelow.card) Filter.atTop (nhds L)"
+    },
+    "Langlands.EichlerShimuraDeligne": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 123,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
     },
     "Langlands.Fidelity.IsArtinMapArith": {
       "kind": "inductive",
@@ -400,6 +455,28 @@
       ],
       "type": "Langlands.Fidelity.X0_11.Δ = -161051"
     },
+    "Langlands.Fidelity.artinLFunction_one": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Galois.lean",
+      "line": 126,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] (L : IntermediateField K (AlgebraicClosure K)) [FiniteDimensional K ↥L]\n  [inst_2 : NumberField K] (s : ℂ),\n  Langlands.artinLFunction 1 s =\n    ∏' (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)),\n      (1 - ↑(Ideal.absNorm v.asIdeal) ^ (-s))⁻¹"
+    },
+    "Langlands.Fidelity.artinLocalFactor_one": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Galois.lean",
+      "line": 119,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] (L : IntermediateField K (AlgebraicClosure K)) [FiniteDimensional K ↥L]\n  [inst_2 : NumberField K] (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) (s : ℂ),\n  Langlands.artinLocalFactor 1 v s = (1 - ↑(Ideal.absNorm v.asIdeal) ^ (-s))⁻¹"
+    },
     "Langlands.Fidelity.congruentNumberCurve": {
       "kind": "def",
       "file": "Langlands/Fidelity/Modularity.lean",
@@ -443,6 +520,28 @@
       ],
       "type": "∀ (F : Type u) [inst : Field F] [NumberField F] (x : NumberField.RingOfIntegers ↥⊥),\n  ∃ a, (algebraMap (NumberField.RingOfIntegers F) (NumberField.RingOfIntegers ↥⊥)) a = x"
     },
+    "Langlands.Fidelity.exists_isComplexConjugation": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Galois.lean",
+      "line": 29,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∃ c, Langlands.IsComplexConjugation c"
+    },
+    "Langlands.Fidelity.exists_isFrobeniusAt": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Galois.lean",
+      "line": 69,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (p : ℕ), Nat.Prime p → ∃ σ, Langlands.IsFrobeniusAt p σ"
+    },
     "Langlands.Fidelity.exists_sq_ne_one": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/ClassField.lean",
@@ -476,6 +575,39 @@
       ],
       "type": "Langlands.HasCMOverQ Langlands.Fidelity.congruentNumberCurve"
     },
+    "Langlands.Fidelity.heckeOperator_one": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Maass.lean",
+      "line": 79,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (p : ℕ), 0 \u003c p → (Langlands.heckeOperator 1 p fun x =\u003e 1) = ↑(√↑p + (√↑p)⁻¹) • fun x =\u003e 1"
+    },
+    "Langlands.Fidelity.inertiaProjector_one": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Galois.lean",
+      "line": 108,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] (L : IntermediateField K (AlgebraicClosure K)) [FiniteDimensional K ↥L] {n : ℕ}\n  (P : Ideal (NumberField.RingOfIntegers ↥L)), Langlands.inertiaProjector 1 P = 1"
+    },
+    "Langlands.Fidelity.instCompactSpaceAbsoluteGaloisGroupRat_langlands": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Galois.lean",
+      "line": 46,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "CompactSpace (Field.absoluteGaloisGroup ℚ)"
+    },
     "Langlands.Fidelity.instIsEllipticRatCongruentNumberCurve": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/Modularity.lean",
@@ -497,6 +629,28 @@
         "propext"
       ],
       "type": "Langlands.Fidelity.X0_11.IsElliptic"
+    },
+    "Langlands.Fidelity.instTotallyDisconnectedSpaceAbsoluteGaloisGroupRat_langlands": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Galois.lean",
+      "line": 50,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "TotallyDisconnectedSpace (Field.absoluteGaloisGroup ℚ)"
+    },
+    "Langlands.Fidelity.integrableOn_fd": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Maass.lean",
+      "line": 29,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "MeasureTheory.IntegrableOn (fun z =\u003e 1 / z.im ^ 2) (UpperHalfPlane.coe '' ModularGroup.fd) MeasureTheory.volume"
     },
     "Langlands.Fidelity.invArt": {
       "kind": "def",
@@ -553,6 +707,39 @@
       ],
       "type": "∀ (F : Type u) [inst : Field F] [inst_1 : NumberField F] (L : IntermediateField F (AlgebraicClosure F))\n  (art : NumberField.IdeleClassGroup (NumberField.RingOfIntegers F) F →* Gal(↥L/F)),\n  Langlands.IsArtinMap F L art ↔ Langlands.Fidelity.IsArtinMapArith F L (Langlands.Fidelity.invArt F art)"
     },
+    "Langlands.Fidelity.isCongruenceSubgroup_top": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Maass.lean",
+      "line": 25,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "CongruenceSubgroup.IsCongruenceSubgroup ⊤"
+    },
+    "Langlands.Fidelity.isInvariant_algebraicIntegers": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Galois.lean",
+      "line": 54,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Algebra.IsInvariant ℤ Langlands.AlgebraicIntegers (Field.absoluteGaloisGroup ℚ)"
+    },
+    "Langlands.Fidelity.isL2Eigenfunction_one": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Maass.lean",
+      "line": 61,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)), Langlands.IsL2Eigenfunction Γ (fun x =\u003e 1) 0"
+    },
     "Langlands.Fidelity.isLocalArtinMapUnnormalized_inv": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/ClassField.lean",
@@ -563,6 +750,17 @@
         "propext"
       ],
       "type": "∀ (F : Type u) [inst : Field F] [inst_1 : ValuativeRel F] [inst_2 : TopologicalSpace F]\n  [inst_3 : IsNonarchimedeanLocalField F] {rec : Fˣ ≃ₜ* Langlands.WeilGroup.Ab F},\n  Langlands.Fidelity.IsLocalArtinMapUnnormalized F rec →\n    Langlands.Fidelity.IsLocalArtinMapUnnormalized F (rec.trans (Langlands.Fidelity.invEquiv F))"
+    },
+    "Langlands.Fidelity.isUnramifiedAt_one": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Galois.lean",
+      "line": 24,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {H : Type u_1} [inst : Group H] (p : ℕ), Langlands.IsUnramifiedAt 1 p"
     },
     "Langlands.Fidelity.kroneckerWeber_bot": {
       "kind": "theorem",
@@ -641,6 +839,17 @@
       ],
       "type": "Langlands.SatoTate → ¬Langlands.Fidelity.SatoTateUniform"
     },
+    "Langlands.Fidelity.not_selbergEigenvalue_of_eigenvalue_zero": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Maass.lean",
+      "line": 70,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "¬∀ (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) (f : UpperHalfPlane → ℂ) (ev : ℝ),\n    CongruenceSubgroup.IsCongruenceSubgroup Γ → f ≠ 0 → Langlands.IsL2Eigenfunction Γ f ev → 1 / 4 ≤ ev"
+    },
     "Langlands.Fidelity.satoTate_full": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/Modularity.lean",
@@ -685,6 +894,17 @@
       ],
       "type": "∀ (F : Type u) [inst : Field F], Subsingleton Gal(↥⊥/F)"
     },
+    "Langlands.Fidelity.two_lt_heckeEigenvalue_one": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Maass.lean",
+      "line": 96,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (p : ℕ),\n  Nat.Prime p →\n    Langlands.IsL2Eigenfunction (CongruenceSubgroup.Gamma1 1) (fun x =\u003e 1) 0 ∧\n      (∀ γ ∈ CongruenceSubgroup.Gamma0 1, ∀ (τ : UpperHalfPlane), (fun x =\u003e 1) (γ • τ) = 1 ↑(↑γ 1 1) * 1) ∧\n        ((Langlands.heckeOperator 1 p fun x =\u003e 1) = ↑(√↑p + (√↑p)⁻¹) • fun x =\u003e 1) ∧ 2 \u003c ‖↑(√↑p + (√↑p)⁻¹)‖"
+    },
     "Langlands.GlobalExistence": {
       "kind": "def",
       "file": "Langlands/Statements/ClassField.lean",
@@ -717,6 +937,17 @@
         "propext"
       ],
       "type": "(E : WeierstrassCurve ℚ) → [E.IsElliptic] → Prop"
+    },
+    "Langlands.HasNebentypus": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 71,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{N : ℕ} →\n  {k : ℤ} →\n    CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma1 N)) k →\n      DirichletCharacter ℂ N → Prop"
     },
     "Langlands.HasseWeilEllipticQ": {
       "kind": "def",
@@ -908,13 +1139,1772 @@
     "Langlands.HeckeFunctionalEquation": {
       "kind": "def",
       "file": "Langlands/Statements/Hecke.lean",
-      "line": 172,
+      "line": 191,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
         "propext"
       ],
       "type": "Prop"
+    },
+    "Langlands.HeckeFunctionalEquationAt": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 172,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) → [inst : Field K] → [NumberField K] → Prop"
+    },
+    "Langlands.HeckeRat.Analytic.analyticAt_completedLFunction_shift": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 303,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} [inst : NeZero N] {ψ : DirichletCharacter ℂ N},\n  ψ ≠ 1 → ∀ (t s : ℂ), AnalyticAt ℂ (fun s =\u003e DirichletCharacter.completedLFunction ψ (s + t)) s"
+    },
+    "Langlands.HeckeRat.Analytic.analyticAt_completedRiemannZeta_shift": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 315,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (t s : ℂ), s ≠ -t → s ≠ 1 - t → AnalyticAt ℂ (fun s =\u003e completedRiemannZeta (s + t)) s"
+    },
+    "Langlands.HeckeRat.Analytic.analyticAt_completedZeta₀_shift": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 311,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (t s : ℂ), AnalyticAt ℂ (fun s =\u003e completedRiemannZeta₀ (s + t)) s"
+    },
+    "Langlands.HeckeRat.Analytic.completedLFunction_eq_mul_LSeries": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 366,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} [inst : NeZero N] (ψ : DirichletCharacter ℂ N) {s : ℂ},\n  1 \u003c s.re → DirichletCharacter.completedLFunction ψ s = ψ.gammaFactor s * LSeries (fun n =\u003e ψ ↑n) s"
+    },
+    "Langlands.HeckeRat.Analytic.completedRiemannZeta_shift_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 307,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (t : ℂ),\n  (fun s =\u003e completedRiemannZeta (s + t)) = fun s =\u003e completedRiemannZeta₀ (s + t) - 1 / (s + t) - 1 / (1 - (s + t))"
+    },
+    "Langlands.HeckeRat.Analytic.conj_gaussSum": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 242,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} [inst : NeZero N] (χ : DirichletCharacter ℂ N),\n  (starRingEnd ℂ) (gaussSum χ ZMod.stdAddChar) = χ⁻¹ (-1) * gaussSum χ⁻¹ ZMod.stdAddChar"
+    },
+    "Langlands.HeckeRat.Analytic.conj_stdAddChar": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 237,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} [inst : NeZero N] (a : ZMod N), (starRingEnd ℂ) (ZMod.stdAddChar a) = ZMod.stdAddChar (-a)"
+    },
+    "Langlands.HeckeRat.Analytic.gaussSum_mul_gaussSum_inv": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 251,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} [inst : NeZero N] {χ : DirichletCharacter ℂ N},\n  χ.IsPrimitive → χ⁻¹ (-1) * gaussSum χ ZMod.stdAddChar * gaussSum χ⁻¹ ZMod.stdAddChar = ↑N"
+    },
+    "Langlands.HeckeRat.Analytic.isPrimitive_inv": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 233,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {ψ : DirichletCharacter ℂ N}, ψ.IsPrimitive → ψ⁻¹.IsPrimitive"
+    },
+    "Langlands.HeckeRat.Analytic.meromorphicAt_completedRiemannZeta_shift": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 323,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (t x : ℂ), MeromorphicAt (fun s =\u003e completedRiemannZeta (s + t)) x"
+    },
+    "Langlands.HeckeRat.Analytic.meromorphicOn_completedLFunction_shift": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 286,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} [inst : NeZero N] (ψ : DirichletCharacter ℂ N) (t : ℂ),\n  MeromorphicOn (fun s =\u003e DirichletCharacter.completedLFunction ψ (s + t)) Set.univ"
+    },
+    "Langlands.HeckeRat.Analytic.meromorphicOrderAt_completedRiemannZeta_shift_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 346,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (t : ℂ), meromorphicOrderAt (fun s =\u003e completedRiemannZeta (s + t)) (1 - t) = -1"
+    },
+    "Langlands.HeckeRat.Analytic.meromorphicOrderAt_completedRiemannZeta_shift_zero": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 329,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (t : ℂ), meromorphicOrderAt (fun s =\u003e completedRiemannZeta (s + t)) (-t) = -1"
+    },
+    "Langlands.HeckeRat.Analytic.norm_rootNumber": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 266,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} [inst : NeZero N] {ψ : DirichletCharacter ℂ N}, ψ.IsPrimitive → ‖ψ.rootNumber‖ = 1"
+    },
+    "Langlands.HeckeRat.Good": {
+      "kind": "def",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 874,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.HeckeCharacter ℚ → ℤ → Prop"
+    },
+    "Langlands.HeckeRat.H": {
+      "kind": "def",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 856,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.HeckeCharacter ℚ → ℚ → ℂˣ"
+    },
+    "Langlands.HeckeRat.H_congr": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 888,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {b b' : ℤ},\n  Langlands.HeckeRat.Good χ b →\n    ↑(Langlands.HeckeRat.level χ) ∣ b' - b → Langlands.HeckeRat.H χ ↑b' = Langlands.HeckeRat.H χ ↑b"
+    },
+    "Langlands.HeckeRat.H_inv": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 961,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (q : ℚ), Langlands.HeckeRat.H χ⁻¹ q = (Langlands.HeckeRat.H χ q)⁻¹"
+    },
+    "Langlands.HeckeRat.H_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 881,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {b c : ℤ},\n  Langlands.HeckeRat.Good χ b →\n    Langlands.HeckeRat.Good χ c →\n      Langlands.HeckeRat.H χ ↑(b * c) = Langlands.HeckeRat.H χ ↑b * Langlands.HeckeRat.H χ ↑c"
+    },
+    "Langlands.HeckeRat.H_neg_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1029,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {n : ℤ} {t : ℂ},\n  χ.IsArchimedeanParameter Rat.infinitePlace n t → ↑(Langlands.HeckeRat.H χ (-1)) = (-1) ^ n"
+    },
+    "Langlands.HeckeRat.H_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 957,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ), Langlands.HeckeRat.H χ 1 = 1"
+    },
+    "Langlands.HeckeRat.H_zmod": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 942,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (x : ZMod (Langlands.HeckeRat.level χ)) {b : ℤ},\n  ↑b = x → Langlands.HeckeRat.Good χ b → Langlands.HeckeRat.H χ ↑↑x.val = Langlands.HeckeRat.H χ ↑b"
+    },
+    "Langlands.HeckeRat.Top.Good": {
+      "kind": "def",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 116,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u_1) →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      Finset (IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) →\n        ℕ → NumberField.IdeleGroup (NumberField.RingOfIntegers K) K → Prop"
+    },
+    "Langlands.HeckeRat.Top.eq_one_of_forall_pow_two_pow": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 29,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {z : ℂ}, (∀ (k : ℕ), ‖z ^ 2 ^ k - 1‖ \u003c 1 / 2) → z = 1"
+    },
+    "Langlands.HeckeRat.Top.exists_trivial_on_units": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 204,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] (χ : Langlands.HeckeCharacter K),\n  ∃ S k,\n    ∀ (x : NumberField.IdeleGroup (NumberField.RingOfIntegers K) K),\n      (↑x).1 = 1 →\n        (∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)), Valued.v ((↑x).2 v) = 1) →\n          (∀ v ∈ S, Valued.v ((↑x).2 v - 1) ≤ WithZero.exp (-↑k)) → χ ↑x = 1"
+    },
+    "Langlands.HeckeRat.Top.finite_nhds_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 72,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  {B : Set (IsDedekindDomain.FiniteAdeleRing (NumberField.RingOfIntegers K) K)},\n  B ∈ nhds 1 →\n    ∃ S k,\n      ∀ (y : IsDedekindDomain.FiniteAdeleRing (NumberField.RingOfIntegers K) K),\n        (∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)), Valued.v (y v) ≤ 1) →\n          (∀ v ∈ S, Valued.v (y v - 1) ≤ WithZero.exp (-↑k)) → y ∈ B"
+    },
+    "Langlands.HeckeRat.Top.good_inv": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 155,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (S : Finset (IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))) (k : ℕ)\n  {x : NumberField.IdeleGroup (NumberField.RingOfIntegers K) K},\n  Langlands.HeckeRat.Top.Good K S k x → Langlands.HeckeRat.Top.Good K S k x⁻¹"
+    },
+    "Langlands.HeckeRat.Top.good_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 130,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (S : Finset (IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))) (k : ℕ)\n  {x y : NumberField.IdeleGroup (NumberField.RingOfIntegers K) K},\n  Langlands.HeckeRat.Top.Good K S k x → Langlands.HeckeRat.Top.Good K S k y → Langlands.HeckeRat.Top.Good K S k (x * y)"
+    },
+    "Langlands.HeckeRat.Top.good_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 122,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (S : Finset (IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))) (k : ℕ),\n  Langlands.HeckeRat.Top.Good K S k 1"
+    },
+    "Langlands.HeckeRat.Top.good_pow": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 149,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (S : Finset (IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))) (k : ℕ)\n  {x : NumberField.IdeleGroup (NumberField.RingOfIntegers K) K},\n  Langlands.HeckeRat.Top.Good K S k x → ∀ (n : ℕ), Langlands.HeckeRat.Top.Good K S k (x ^ n)"
+    },
+    "Langlands.HeckeRat.Top.idele_nhds_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 178,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  {U : Set (NumberField.IdeleGroup (NumberField.RingOfIntegers K) K)},\n  U ∈ nhds 1 →\n    ∃ S k, ∀ (x : NumberField.IdeleGroup (NumberField.RingOfIntegers K) K), Langlands.HeckeRat.Top.Good K S k x → x ∈ U"
+    },
+    "Langlands.HeckeRat.Top.valued_nhds": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 56,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {R : Type u_1} [inst : Ring R] [inst_1 : Valued R (WithZero (Multiplicative ℤ))] {u : Set R} {x : R},\n  u ∈ nhds x → ∃ k, ∀ (y : R), Valued.v (y - x) ≤ WithZero.exp (-↑k) → y ∈ u"
+    },
+    "Langlands.HeckeRat.TrivOn": {
+      "kind": "def",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 707,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.HeckeCharacter ℚ → (IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ) → ℕ) → Prop"
+    },
+    "Langlands.HeckeRat.absNorm_asIdeal": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1067,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)),\n  Ideal.absNorm v.asIdeal = Langlands.HeckeRat.pr v"
+    },
+    "Langlands.HeckeRat.absNorm_conductor": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1409,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ), Ideal.absNorm χ.conductor = Langlands.HeckeRat.level χ"
+    },
+    "Langlands.HeckeRat.algebraMap_intEquiv": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 600,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (y : NumberField.RingOfIntegers ℚ),\n  ↑((Rat.IsIntegralClosure.intEquiv (NumberField.RingOfIntegers ℚ)) y) = (algebraMap (NumberField.RingOfIntegers ℚ) ℚ) y"
+    },
+    "Langlands.HeckeRat.asIdeal_eq_span": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1060,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)),\n  v.asIdeal = Ideal.span {↑(Langlands.HeckeRat.pr v)}"
+    },
+    "Langlands.HeckeRat.cast_val": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 936,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (x : ZMod (Langlands.HeckeRat.level χ)), ↑↑x.val = x"
+    },
+    "Langlands.HeckeRat.chiI": {
+      "kind": "def",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 689,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.HeckeCharacter ℚ → NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ →* ℂˣ"
+    },
+    "Langlands.HeckeRat.chiI_apply": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 693,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (x : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ),\n  (Langlands.HeckeRat.chiI χ) x = χ ↑x"
+    },
+    "Langlands.HeckeRat.chiI_decomp": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1304,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (q : ℚˣ) (x : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ),\n  (Langlands.HeckeRat.chiI χ) (((NumberField.IdeleGroup.unitEmbedding (NumberField.RingOfIntegers ℚ) ℚ) q)⁻¹ * x) =\n    (Langlands.HeckeRat.chiI χ) x"
+    },
+    "Langlands.HeckeRat.chiI_inv": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 705,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (x : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ),\n  (Langlands.HeckeRat.chiI χ⁻¹) x = ((Langlands.HeckeRat.chiI χ) x)⁻¹"
+    },
+    "Langlands.HeckeRat.chiI_ofAdicCompletion": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 698,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ))\n  (y : (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)ˣ),\n  (Langlands.HeckeRat.chiI χ) ((NumberField.IdeleGroup.ofAdicCompletion (NumberField.RingOfIntegers ℚ) ℚ v) y) =\n    (χ.finiteComponent v) y"
+    },
+    "Langlands.HeckeRat.chiI_ofCompletion": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 695,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (y : Rat.infinitePlace.Completionˣ),\n  (Langlands.HeckeRat.chiI χ)\n      ((NumberField.IdeleGroup.ofCompletion (NumberField.RingOfIntegers ℚ) ℚ Rat.infinitePlace) y) =\n    (χ.infiniteComponent Rat.infinitePlace) y"
+    },
+    "Langlands.HeckeRat.chiI_unitEmbedding": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 701,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (q : ℚˣ),\n  (Langlands.HeckeRat.chiI χ) ((NumberField.IdeleGroup.unitEmbedding (NumberField.RingOfIntegers ℚ) ℚ) q) = 1"
+    },
+    "Langlands.HeckeRat.chi_eq_norm_cpow": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1435,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {n : ℤ} {t : ℂ},\n  χ.IsArchimedeanParameter Rat.infinitePlace n t →\n    Langlands.HeckeRat.level χ = 1 →\n      ∀ (x : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ), ↑(χ ↑x) = ↑(Langlands.ideleNorm ℚ x) ^ t"
+    },
+    "Langlands.HeckeRat.coe_compFin": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 401,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ))\n  (x : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ), ↑((Langlands.HeckeRat.compFin v) x) = (↑x).2 v"
+    },
+    "Langlands.HeckeRat.coe_compFin_unitEmbedding": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 437,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) (q : ℚˣ),\n  ↑((Langlands.HeckeRat.compFin v) ((NumberField.IdeleGroup.unitEmbedding (NumberField.RingOfIntegers ℚ) ℚ) q)) =\n    (algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)) ↑q"
+    },
+    "Langlands.HeckeRat.coe_compInf": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 398,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (x : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ),\n  ↑(Langlands.HeckeRat.compInf x) = (↑x).1 Rat.infinitePlace"
+    },
+    "Langlands.HeckeRat.coe_compInf_unitEmbedding": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 434,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (q : ℚˣ),\n  ↑(Langlands.HeckeRat.compInf ((NumberField.IdeleGroup.unitEmbedding (NumberField.RingOfIntegers ℚ) ℚ) q)) =\n    (algebraMap ℚ Rat.infinitePlace.Completion) ↑q"
+    },
+    "Langlands.HeckeRat.coe_loc": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 634,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)}\n  {x : IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v}, x ≠ 0 → ↑(Langlands.HeckeRat.loc v x) = x"
+    },
+    "Langlands.HeckeRat.compFin": {
+      "kind": "def",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 393,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) →\n  NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ →* (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)ˣ"
+    },
+    "Langlands.HeckeRat.compFin_ofAdicCompletion_of_ne": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 412,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {v w : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)},\n  w ≠ v →\n    ∀ (y : (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ w)ˣ),\n      (Langlands.HeckeRat.compFin v) ((NumberField.IdeleGroup.ofAdicCompletion (NumberField.RingOfIntegers ℚ) ℚ w) y) =\n        1"
+    },
+    "Langlands.HeckeRat.compFin_ofAdicCompletion_self": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 404,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ))\n  (y : (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)ˣ),\n  (Langlands.HeckeRat.compFin v) ((NumberField.IdeleGroup.ofAdicCompletion (NumberField.RingOfIntegers ℚ) ℚ v) y) = y"
+    },
+    "Langlands.HeckeRat.compFin_ofCompletion": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 431,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) (y : Rat.infinitePlace.Completionˣ),\n  (Langlands.HeckeRat.compFin v)\n      ((NumberField.IdeleGroup.ofCompletion (NumberField.RingOfIntegers ℚ) ℚ Rat.infinitePlace) y) =\n    1"
+    },
+    "Langlands.HeckeRat.compFin_unitEmbedding": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1022,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) (q : ℚˣ),\n  (Langlands.HeckeRat.compFin v) ((NumberField.IdeleGroup.unitEmbedding (NumberField.RingOfIntegers ℚ) ℚ) q) =\n    Langlands.HeckeRat.loc v ((algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)) ↑q)"
+    },
+    "Langlands.HeckeRat.compInf": {
+      "kind": "def",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 388,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ →* Rat.infinitePlace.Completionˣ"
+    },
+    "Langlands.HeckeRat.compInf_ofAdicCompletion": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 420,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (w : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ))\n  (y : (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ w)ˣ),\n  Langlands.HeckeRat.compInf ((NumberField.IdeleGroup.ofAdicCompletion (NumberField.RingOfIntegers ℚ) ℚ w) y) = 1"
+    },
+    "Langlands.HeckeRat.compInf_ofCompletion": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 423,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (y : Rat.infinitePlace.Completionˣ),\n  Langlands.HeckeRat.compInf\n      ((NumberField.IdeleGroup.ofCompletion (NumberField.RingOfIntegers ℚ) ℚ Rat.infinitePlace) y) =\n    y"
+    },
+    "Langlands.HeckeRat.completed_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1504,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {n : NumberField.InfinitePlace ℚ → ℤ} {t : NumberField.InfinitePlace ℚ → ℂ},\n  χ.IsArchimedeanParameter Rat.infinitePlace (n Rat.infinitePlace) (t Rat.infinitePlace) →\n    ∀ (N : ℕ) (hN : Langlands.HeckeRat.level χ = N) [inst : NeZero N] {s : ℂ},\n      1 \u003c (s + t Rat.infinitePlace).re →\n        χ.completedLFunction n t s =\n          DirichletCharacter.completedLFunction (Langlands.HeckeRat.psi χ N hN) (s + t Rat.infinitePlace)"
+    },
+    "Langlands.HeckeRat.cond_inv": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 831,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)),\n  χ⁻¹.conductorExponent v = χ.conductorExponent v"
+    },
+    "Langlands.HeckeRat.cond_le_of_isTrivial": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 786,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)} {a : ℕ},\n  χ.IsTrivialOnHigherUnits v a → χ.conductorExponent v ≤ a"
+    },
+    "Langlands.HeckeRat.dvd_val_sub": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 939,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (b : ℤ), ↑(Langlands.HeckeRat.level χ) ∣ ↑(↑b).val - b"
+    },
+    "Langlands.HeckeRat.exists_approx": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 541,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ))\n  (u : IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v),\n  Valued.v u ≤ 1 →\n    ∀ (k : ℕ),\n      ∃ b,\n        Valued.v\n            ((algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v))\n                ((algebraMap (NumberField.RingOfIntegers ℚ) ℚ) b) -\n              u) ≤\n          WithZero.exp (-↑k)"
+    },
+    "Langlands.HeckeRat.exists_approx_crt": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 604,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (S : Finset (IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)))\n  (u :\n    (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) →\n      IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v),\n  (∀ v ∈ S, Valued.v (u v) ≤ 1) →\n    ∀ (k : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ) → ℕ),\n      ∃ b,\n        ∀ v ∈ S,\n          Valued.v ((algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)) ↑b - u v) ≤\n            WithZero.exp (-↑(k v))"
+    },
+    "Langlands.HeckeRat.exists_completion_exp": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1447,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (a : ℝ), ∃ z, (NumberField.InfinitePlace.Completion.extensionEmbedding Rat.infinitePlace) ↑z = ↑(Real.exp a)"
+    },
+    "Langlands.HeckeRat.exists_good_H": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1203,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {w : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)},\n  w ∈ Langlands.HeckeRat.ram χ →\n    ∀ (u : (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ w)ˣ),\n      Valued.v ↑u = 1 →\n        ∃ b,\n          Langlands.HeckeRat.Good χ b ∧\n            Langlands.HeckeRat.H χ ↑b = (χ.finiteComponent w) u ∧\n              Valued.v ((algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ w)) ↑b - ↑u) ≤\n                  WithZero.exp (-↑(χ.conductorExponent w)) ∧\n                ∀ v ∈ Langlands.HeckeRat.ram χ,\n                  v ≠ w →\n                    Valued.v ((algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)) ↑b - 1) ≤\n                      WithZero.exp (-↑(χ.conductorExponent v))"
+    },
+    "Langlands.HeckeRat.exists_rat_val": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1274,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (x : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ),\n  ∃ q,\n    ∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)),\n      Valued.v ((algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)) ↑q) =\n        Valued.v ↑((Langlands.HeckeRat.compFin v) x)"
+    },
+    "Langlands.HeckeRat.exists_trivOn": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 768,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ), ∃ m S, Langlands.HeckeRat.TrivOn χ m ∧ ∀ v ∉ S, m v = 0"
+    },
+    "Langlands.HeckeRat.exists_unit_decomp": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1296,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (x : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ),\n  ∃ q,\n    ∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)),\n      Valued.v\n          ↑((Langlands.HeckeRat.compFin v)\n              (((NumberField.IdeleGroup.unitEmbedding (NumberField.RingOfIntegers ℚ) ℚ) q)⁻¹ * x)) =\n        1"
+    },
+    "Langlands.HeckeRat.exp_neg_lt_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1200,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {c : ℕ}, c ≠ 0 → WithZero.exp (-↑c) \u003c 1"
+    },
+    "Langlands.HeckeRat.exp_neg_nat_le_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 536,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (k : ℕ), WithZero.exp (-↑k) ≤ 1"
+    },
+    "Langlands.HeckeRat.ext_idele": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 441,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {x y : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ},\n  Langlands.HeckeRat.compInf x = Langlands.HeckeRat.compInf y →\n    (∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)),\n        (Langlands.HeckeRat.compFin v) x = (Langlands.HeckeRat.compFin v) y) →\n      x = y"
+    },
+    "Langlands.HeckeRat.extensionEmbedding_algebraMap": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1011,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (q : ℚ),\n  (NumberField.InfinitePlace.Completion.extensionEmbedding Rat.infinitePlace)\n      ((algebraMap ℚ Rat.infinitePlace.Completion) q) =\n    ↑q"
+    },
+    "Langlands.HeckeRat.finiteComponent_loc_congr": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 841,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {w : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)}\n  {x y : IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ w},\n  Valued.v x = 1 →\n    Valued.v y = 1 →\n      Valued.v (y - x) ≤ WithZero.exp (-↑(χ.conductorExponent w)) →\n        (χ.finiteComponent w) (Langlands.HeckeRat.loc w y) = (χ.finiteComponent w) (Langlands.HeckeRat.loc w x)"
+    },
+    "Langlands.HeckeRat.finiteComponent_localUniformizer": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1141,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {n : ℤ} {t : ℂ},\n  χ.IsArchimedeanParameter Rat.infinitePlace n t →\n    ∀ {w : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)},\n      w ∉ Langlands.HeckeRat.ram χ →\n        ↑((χ.finiteComponent w) (Langlands.localUniformizer ℚ w)) =\n          (Langlands.HeckeRat.psi χ (Langlands.HeckeRat.level χ) ⋯) ↑(Langlands.HeckeRat.pr w) *\n            ↑(Langlands.HeckeRat.pr w) ^ (-t)"
+    },
+    "Langlands.HeckeRat.finiteComponent_pr_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1105,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {w : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)},\n  w ∉ Langlands.HeckeRat.ram χ →\n    (χ.finiteComponent w)\n          (Langlands.HeckeRat.loc w\n            ((algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ w)) ↑(Langlands.HeckeRat.pr w))) *\n        ((χ.infiniteComponent Rat.infinitePlace)\n            (Langlands.HeckeRat.compInf\n              ((NumberField.IdeleGroup.unitEmbedding (NumberField.RingOfIntegers ℚ) ℚ)\n                (Units.mk0 ↑(Langlands.HeckeRat.pr w) ⋯))) *\n          Langlands.HeckeRat.H χ ↑(Langlands.HeckeRat.pr w)) =\n      1"
+    },
+    "Langlands.HeckeRat.finiteComponent_uniformizer": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1081,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {w : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)},\n  w ∉ Langlands.HeckeRat.ram χ →\n    (χ.finiteComponent w) (Langlands.localUniformizer ℚ w) =\n      (χ.finiteComponent w)\n        (Langlands.HeckeRat.loc w\n          ((algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ w)) ↑(Langlands.HeckeRat.pr w)))"
+    },
+    "Langlands.HeckeRat.finiteLFunction_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1172,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {χ : Langlands.HeckeCharacter ℚ} {n : ℤ} {t : ℂ},\n  χ.IsArchimedeanParameter Rat.infinitePlace n t →\n    ∀ {s : ℂ},\n      1 \u003c (s + t).re →\n        χ.finiteLFunction s = LSeries (fun k =\u003e (Langlands.HeckeRat.psi χ (Langlands.HeckeRat.level χ) ⋯) ↑k) (s + t)"
+    },
+    "Langlands.HeckeRat.finite_ramified": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 790,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ), {v | χ.conductorExponent v ≠ 0}.Finite"
+    },
+    "Langlands.HeckeRat.gammaFactor_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1181,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {χ : Langlands.HeckeCharacter ℚ} {n : NumberField.InfinitePlace ℚ → ℤ} {t : NumberField.InfinitePlace ℚ → ℂ},\n  χ.IsArchimedeanParameter Rat.infinitePlace (n Rat.infinitePlace) (t Rat.infinitePlace) →\n    ∀ (s : ℂ),\n      Langlands.gammaFactor ℚ n t s =\n        (Langlands.HeckeRat.psi χ (Langlands.HeckeRat.level χ) ⋯).gammaFactor (s + t Rat.infinitePlace)"
+    },
+    "Langlands.HeckeRat.good_congr": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 922,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {b b' : ℤ},\n  Langlands.HeckeRat.Good χ b → ↑(Langlands.HeckeRat.level χ) ∣ b' - b → Langlands.HeckeRat.Good χ b'"
+    },
+    "Langlands.HeckeRat.good_iff_coprime": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 910,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (n : ℕ), Langlands.HeckeRat.Good χ ↑n ↔ n.Coprime (Langlands.HeckeRat.level χ)"
+    },
+    "Langlands.HeckeRat.good_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 933,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {b c : ℤ},\n  Langlands.HeckeRat.Good χ b → Langlands.HeckeRat.Good χ c → Langlands.HeckeRat.Good χ (b * c)"
+    },
+    "Langlands.HeckeRat.good_neg_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 931,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ), Langlands.HeckeRat.Good χ (-1)"
+    },
+    "Langlands.HeckeRat.good_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 928,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ), Langlands.HeckeRat.Good χ 1"
+    },
+    "Langlands.HeckeRat.good_pr": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1071,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {w : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)},\n  w ∉ Langlands.HeckeRat.ram χ → Langlands.HeckeRat.Good χ ↑(Langlands.HeckeRat.pr w)"
+    },
+    "Langlands.HeckeRat.good_unit": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 952,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (a : (ZMod (Langlands.HeckeRat.level χ))ˣ), Langlands.HeckeRat.Good χ ↑(↑a).val"
+    },
+    "Langlands.HeckeRat.good_zmod_val": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 947,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (x : ZMod (Langlands.HeckeRat.level χ)) {b : ℤ},\n  ↑b = x → Langlands.HeckeRat.Good χ b → Langlands.HeckeRat.Good χ ↑x.val"
+    },
+    "Langlands.HeckeRat.ideleNorm_decomp": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1308,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (q : ℚˣ) (x : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ),\n  Langlands.ideleNorm ℚ (((NumberField.IdeleGroup.unitEmbedding (NumberField.RingOfIntegers ℚ) ℚ) q)⁻¹ * x) =\n    Langlands.ideleNorm ℚ x"
+    },
+    "Langlands.HeckeRat.ideleNorm_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 647,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (a b : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ),\n  Langlands.ideleNorm ℚ (a * b) = Langlands.ideleNorm ℚ a * Langlands.ideleNorm ℚ b"
+    },
+    "Langlands.HeckeRat.ideleNorm_of_units": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 671,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (y : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ),\n  (∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)),\n      Valued.v ↑((Langlands.HeckeRat.compFin v) y) = 1) →\n    Langlands.ideleNorm ℚ y = ‖↑(Langlands.HeckeRat.compInf y)‖"
+    },
+    "Langlands.HeckeRat.ideleNorm_unitEmbedding": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 668,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (q : ℚˣ), Langlands.ideleNorm ℚ ((NumberField.IdeleGroup.unitEmbedding (NumberField.RingOfIntegers ℚ) ℚ) q) = 1"
+    },
+    "Langlands.HeckeRat.infiniteComponent_of_exp": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1459,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {n : ℤ} {t : ℂ},\n  χ.IsArchimedeanParameter Rat.infinitePlace n t →\n    ∀ (a : ℝ) (z : Rat.infinitePlace.Completionˣ),\n      (NumberField.InfinitePlace.Completion.extensionEmbedding Rat.infinitePlace) ↑z = ↑(Real.exp a) →\n        ↑((χ.infiniteComponent Rat.infinitePlace) z) = Complex.exp (↑a * t)"
+    },
+    "Langlands.HeckeRat.infiniteComponent_rat": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1016,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {n : ℤ} {t : ℂ},\n  χ.IsArchimedeanParameter Rat.infinitePlace n t →\n    ∀ (q : ℚˣ),\n      ↑((χ.infiniteComponent Rat.infinitePlace)\n            (Langlands.HeckeRat.compInf ((NumberField.IdeleGroup.unitEmbedding (NumberField.RingOfIntegers ℚ) ℚ) q))) =\n        (↑↑q / ↑|↑↑q|) ^ n * ↑|↑↑q| ^ t"
+    },
+    "Langlands.HeckeRat.instNeZeroNatLevel": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 904,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ), NeZero (Langlands.HeckeRat.level χ)"
+    },
+    "Langlands.HeckeRat.intCast_intEquiv": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 463,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (b : NumberField.RingOfIntegers ℚ), ↑((Rat.IsIntegralClosure.intEquiv (NumberField.RingOfIntegers ℚ)) b) = b"
+    },
+    "Langlands.HeckeRat.intCast_mem_asIdeal_pow": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 468,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) (z : ℤ) (k : ℕ),\n  ↑z ∈ v.asIdeal ^ k ↔ ↑(Langlands.HeckeRat.pr v) ^ k ∣ z"
+    },
+    "Langlands.HeckeRat.isCoprime_of_good": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1332,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {b : ℤ}, Langlands.HeckeRat.Good χ b → IsCoprime b ↑(Langlands.HeckeRat.level χ)"
+    },
+    "Langlands.HeckeRat.isTrivial_cond": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 782,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)),\n  χ.IsTrivialOnHigherUnits v (χ.conductorExponent v)"
+    },
+    "Langlands.HeckeRat.isTrivial_mono": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 778,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)} {a b : ℕ},\n  a ≤ b → χ.IsTrivialOnHigherUnits v a → χ.IsTrivialOnHigherUnits v b"
+    },
+    "Langlands.HeckeRat.isUnit_of_good": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 985,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {b : ℤ}, Langlands.HeckeRat.Good χ b → IsUnit ↑b"
+    },
+    "Langlands.HeckeRat.isUnramifiedAt_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 802,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)),\n  χ.IsUnramifiedAt v ↔ v ∉ Langlands.HeckeRat.ram χ"
+    },
+    "Langlands.HeckeRat.key": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 713,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {m : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ) → ℕ},\n  Langlands.HeckeRat.TrivOn χ m →\n    ∀ (S : Finset (IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ))),\n      (∀ v ∉ S, m v = 0) →\n        ∀ (x : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ),\n          (∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)),\n              Valued.v ↑((Langlands.HeckeRat.compFin v) x) = 1) →\n            (Langlands.HeckeRat.chiI χ) x =\n              (χ.infiniteComponent Rat.infinitePlace) (Langlands.HeckeRat.compInf x) *\n                ∏ v ∈ S, (χ.finiteComponent v) ((Langlands.HeckeRat.compFin v) x)"
+    },
+    "Langlands.HeckeRat.key_ram": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 814,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (x : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ),\n  (∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)),\n      Valued.v ↑((Langlands.HeckeRat.compFin v) x) = 1) →\n    (Langlands.HeckeRat.chiI χ) x =\n      (χ.infiniteComponent Rat.infinitePlace) (Langlands.HeckeRat.compInf x) *\n        ∏ v ∈ Langlands.HeckeRat.ram χ, (χ.finiteComponent v) ((Langlands.HeckeRat.compFin v) x)"
+    },
+    "Langlands.HeckeRat.level": {
+      "kind": "def",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 860,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.HeckeCharacter ℚ → ℕ"
+    },
+    "Langlands.HeckeRat.level_dvd": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1324,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {z : ℤ},\n  (∀ v ∈ Langlands.HeckeRat.ram χ, ↑(Langlands.HeckeRat.pr v) ^ χ.conductorExponent v ∣ z) →\n    ↑(Langlands.HeckeRat.level χ) ∣ z"
+    },
+    "Langlands.HeckeRat.level_inv": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 871,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ), Langlands.HeckeRat.level χ⁻¹ = Langlands.HeckeRat.level χ"
+    },
+    "Langlands.HeckeRat.level_pos": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 863,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ), 0 \u003c Langlands.HeckeRat.level χ"
+    },
+    "Langlands.HeckeRat.loc": {
+      "kind": "def",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 629,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) →\n  IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v → (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)ˣ"
+    },
+    "Langlands.HeckeRat.loc_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 638,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)}\n  {x y : IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v},\n  x ≠ 0 → y ≠ 0 → Langlands.HeckeRat.loc v (x * y) = Langlands.HeckeRat.loc v x * Langlands.HeckeRat.loc v y"
+    },
+    "Langlands.HeckeRat.loc_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 955,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)), Langlands.HeckeRat.loc v 1 = 1"
+    },
+    "Langlands.HeckeRat.localFactor_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1160,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {χ : Langlands.HeckeCharacter ℚ} {n : ℤ} {t : ℂ},\n  χ.IsArchimedeanParameter Rat.infinitePlace n t →\n    ∀ (w : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) (s : ℂ),\n      χ.localFactor w s =\n        (1 -\n            (Langlands.HeckeRat.psi χ (Langlands.HeckeRat.level χ) ⋯) ↑(Langlands.HeckeRat.pr w) *\n              ↑(Langlands.HeckeRat.pr w) ^ (-(s + t)))⁻¹"
+    },
+    "Langlands.HeckeRat.mem_ram": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 799,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)},\n  v ∈ Langlands.HeckeRat.ram χ ↔ χ.conductorExponent v ≠ 0"
+    },
+    "Langlands.HeckeRat.n_eq_zero_of_level_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1425,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {n : ℤ} {t : ℂ},\n  χ.IsArchimedeanParameter Rat.infinitePlace n t → Langlands.HeckeRat.level χ = 1 → n = 0"
+    },
+    "Langlands.HeckeRat.ne_zero_of_val_eq_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 642,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)}\n  {x : IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v}, Valued.v x = 1 → x ≠ 0"
+    },
+    "Langlands.HeckeRat.norm_chi": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1312,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {n : ℤ} {t : ℂ},\n  χ.IsArchimedeanParameter Rat.infinitePlace n t →\n    ∀ (x : NumberField.IdeleGroup (NumberField.RingOfIntegers ℚ) ℚ), ‖↑(χ ↑x)‖ = Langlands.ideleNorm ℚ x ^ t.re"
+    },
+    "Langlands.HeckeRat.norm_extensionEmbedding": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 680,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (z : Rat.infinitePlace.Completion),\n  ‖(NumberField.InfinitePlace.Completion.extensionEmbedding Rat.infinitePlace) z‖ = ‖z‖"
+    },
+    "Langlands.HeckeRat.norm_finiteComponent_unit": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1240,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (w : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ))\n  (u : (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ w)ˣ), Valued.v ↑u = 1 → ‖↑((χ.finiteComponent w) u)‖ = 1"
+    },
+    "Langlands.HeckeRat.norm_infiniteComponent": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1252,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {n : ℤ} {t : ℂ},\n  χ.IsArchimedeanParameter Rat.infinitePlace n t →\n    ∀ (z : Rat.infinitePlace.Completionˣ), ‖↑((χ.infiniteComponent Rat.infinitePlace) z)‖ = ‖↑z‖ ^ t.re"
+    },
+    "Langlands.HeckeRat.not_good_pr": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1077,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {w : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)},\n  w ∈ Langlands.HeckeRat.ram χ → ¬Langlands.HeckeRat.Good χ ↑(Langlands.HeckeRat.pr w)"
+    },
+    "Langlands.HeckeRat.pow_dvd_level": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 865,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)},\n  v ∈ Langlands.HeckeRat.ram χ → Langlands.HeckeRat.pr v ^ χ.conductorExponent v ∣ Langlands.HeckeRat.level χ"
+    },
+    "Langlands.HeckeRat.pr": {
+      "kind": "def",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 453,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ) → ℕ"
+    },
+    "Langlands.HeckeRat.pr_dvd_level": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 868,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)},\n  v ∈ Langlands.HeckeRat.ram χ → Langlands.HeckeRat.pr v ∣ Langlands.HeckeRat.level χ"
+    },
+    "Langlands.HeckeRat.pr_injective": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 458,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Function.Injective Langlands.HeckeRat.pr"
+    },
+    "Langlands.HeckeRat.pr_ne_zero": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1079,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (w : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)), ↑(Langlands.HeckeRat.pr w) ≠ 0"
+    },
+    "Langlands.HeckeRat.pr_prime": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 456,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)), Nat.Prime (Langlands.HeckeRat.pr v)"
+    },
+    "Langlands.HeckeRat.prime_dvd_level": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 906,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {p : ℕ},\n  Nat.Prime p → p ∣ Langlands.HeckeRat.level χ → ∃ v ∈ Langlands.HeckeRat.ram χ, p = Langlands.HeckeRat.pr v"
+    },
+    "Langlands.HeckeRat.psi": {
+      "kind": "def",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 976,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(χ : Langlands.HeckeCharacter ℚ) → (N : ℕ) → Langlands.HeckeRat.level χ = N → DirichletCharacter ℂ N"
+    },
+    "Langlands.HeckeRat.psi.congr_simp": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ χ_1 : Langlands.HeckeCharacter ℚ) (e_χ : χ = χ_1) (N : ℕ) (hN : Langlands.HeckeRat.level χ = N),\n  Langlands.HeckeRat.psi χ N hN = Langlands.HeckeRat.psi χ_1 N ⋯"
+    },
+    "Langlands.HeckeRat.psiHom": {
+      "kind": "def",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 965,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(χ : Langlands.HeckeCharacter ℚ) → (N : ℕ) → Langlands.HeckeRat.level χ = N → (ZMod N)ˣ →* ℂˣ"
+    },
+    "Langlands.HeckeRat.psi_apply_int": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 989,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {b : ℤ},\n  Langlands.HeckeRat.Good χ b →\n    (Langlands.HeckeRat.psi χ (Langlands.HeckeRat.level χ) ⋯) ↑b = ↑(Langlands.HeckeRat.H χ ↑b)⁻¹"
+    },
+    "Langlands.HeckeRat.psi_apply_nat": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 994,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {n : ℕ},\n  Langlands.HeckeRat.Good χ ↑n →\n    (Langlands.HeckeRat.psi χ (Langlands.HeckeRat.level χ) ⋯) ↑n = ↑(Langlands.HeckeRat.H χ ↑n)⁻¹"
+    },
+    "Langlands.HeckeRat.psi_apply_nat_of_not_good": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 999,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {n : ℕ},\n  ¬Langlands.HeckeRat.Good χ ↑n → (Langlands.HeckeRat.psi χ (Langlands.HeckeRat.level χ) ⋯) ↑n = 0"
+    },
+    "Langlands.HeckeRat.psi_apply_unit": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 980,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (a : (ZMod (Langlands.HeckeRat.level χ))ˣ),\n  (Langlands.HeckeRat.psi χ (Langlands.HeckeRat.level χ) ⋯) ↑a = ↑(Langlands.HeckeRat.H χ ↑↑(↑a).val)⁻¹"
+    },
+    "Langlands.HeckeRat.psi_inv": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1003,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (N : ℕ) (hN : Langlands.HeckeRat.level χ = N)\n  (hN' : Langlands.HeckeRat.level χ⁻¹ = N), Langlands.HeckeRat.psi χ⁻¹ N hN' = (Langlands.HeckeRat.psi χ N hN)⁻¹"
+    },
+    "Langlands.HeckeRat.psi_isPrimitive": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1403,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) (N : ℕ) (hN : Langlands.HeckeRat.level χ = N),\n  (Langlands.HeckeRat.psi χ N hN).IsPrimitive"
+    },
+    "Langlands.HeckeRat.psi_isPrimitive_rfl": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1346,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ), (Langlands.HeckeRat.psi χ (Langlands.HeckeRat.level χ) ⋯).IsPrimitive"
+    },
+    "Langlands.HeckeRat.psi_neg_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1052,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {n : ℤ} {t : ℂ},\n  χ.IsArchimedeanParameter Rat.infinitePlace n t →\n    (Langlands.HeckeRat.psi χ (Langlands.HeckeRat.level χ) ⋯) (-1) = (-1) ^ n"
+    },
+    "Langlands.HeckeRat.ram": {
+      "kind": "def",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 796,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.HeckeCharacter ℚ → Finset (IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ))"
+    },
+    "Langlands.HeckeRat.ram_eq_empty": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1421,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ), Langlands.HeckeRat.level χ = 1 → Langlands.HeckeRat.ram χ = ∅"
+    },
+    "Langlands.HeckeRat.ram_inv": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 819,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ), Langlands.HeckeRat.ram χ⁻¹ = Langlands.HeckeRat.ram χ"
+    },
+    "Langlands.HeckeRat.t_inv": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1469,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {χ : Langlands.HeckeCharacter ℚ} {n n' : ℤ} {t t' : ℂ},\n  χ.IsArchimedeanParameter Rat.infinitePlace n t → χ⁻¹.IsArchimedeanParameter Rat.infinitePlace n' t' → t' = -t"
+    },
+    "Langlands.HeckeRat.trivOn_cond": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 808,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ), Langlands.HeckeRat.TrivOn χ χ.conductorExponent"
+    },
+    "Langlands.HeckeRat.trivOn_ofAdic": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 756,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {m : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ) → ℕ},\n  Langlands.HeckeRat.TrivOn χ m →\n    ∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)), χ.IsTrivialOnHigherUnits v (m v)"
+    },
+    "Langlands.HeckeRat.val_coe": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 516,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) (q : ℚ),\n  Valued.v ((algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)) q) =\n    (IsDedekindDomain.HeightOneSpectrum.valuation ℚ v) q"
+    },
+    "Langlands.HeckeRat.val_intCast_eq_one_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 525,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) (z : ℤ),\n  Valued.v ((algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)) ↑z) = 1 ↔\n    ¬↑(Langlands.HeckeRat.pr v) ∣ z"
+    },
+    "Langlands.HeckeRat.val_intCast_le_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 520,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) (z : ℤ) (k : ℕ),\n  Valued.v ((algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)) ↑z) ≤ WithZero.exp (-↑k) ↔\n    ↑(Langlands.HeckeRat.pr v) ^ k ∣ z"
+    },
+    "Langlands.HeckeRat.val_le_one_of_eq_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 529,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)}\n  {x : IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v}, Valued.v x = 1 → Valued.v x ≤ 1"
+    },
+    "Langlands.HeckeRat.val_neg_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1026,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)),\n  Valued.v ((algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)) (-1)) = 1"
+    },
+    "Langlands.HeckeRat.val_of_good": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 877,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (χ : Langlands.HeckeCharacter ℚ) {b : ℤ},\n  Langlands.HeckeRat.Good χ b →\n    ∀ {v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)},\n      v ∈ Langlands.HeckeRat.ram χ →\n        Valued.v ((algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)) ↑b) = 1"
+    },
+    "Langlands.HeckeRat.val_prod_pr_zpow": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1263,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (T : Finset (IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)))\n  (e : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ) → ℤ)\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)),\n  (IsDedekindDomain.HeightOneSpectrum.valuation ℚ v) (∏ w ∈ T, ↑(Langlands.HeckeRat.pr w) ^ (-e w)) =\n    if v ∈ T then WithZero.exp (e v) else 1"
+    },
+    "Langlands.HeckeRat.val_sub_one_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1338,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) (b : ℤ) (k : ℕ),\n  Valued.v ((algebraMap ℚ (IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v)) ↑b - 1) ≤ WithZero.exp (-↑k) ↔\n    ↑(Langlands.HeckeRat.pr v) ^ k ∣ b - 1"
+    },
+    "Langlands.HeckeRat.val_sub_one_le_one": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 532,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)}\n  {x : IsDedekindDomain.HeightOneSpectrum.adicCompletion ℚ v}, Valued.v x ≤ 1 → Valued.v (x - 1) ≤ 1"
+    },
+    "Langlands.HeckeRat.valuation_intCast": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 475,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) (z : ℤ),\n  (IsDedekindDomain.HeightOneSpectrum.valuation ℚ v) ↑z = v.intValuation ↑z"
+    },
+    "Langlands.HeckeRat.valuation_intCast_eq_one_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 484,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) (z : ℤ),\n  (IsDedekindDomain.HeightOneSpectrum.valuation ℚ v) ↑z = 1 ↔ ¬↑(Langlands.HeckeRat.pr v) ∣ z"
+    },
+    "Langlands.HeckeRat.valuation_intCast_le_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 480,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) (z : ℤ) (k : ℕ),\n  (IsDedekindDomain.HeightOneSpectrum.valuation ℚ v) ↑z ≤ WithZero.exp (-↑k) ↔ ↑(Langlands.HeckeRat.pr v) ^ k ∣ z"
+    },
+    "Langlands.HeckeRat.valuation_pr_of_ne": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 510,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {v w : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)},\n  w ≠ v → (IsDedekindDomain.HeightOneSpectrum.valuation ℚ v) ↑(Langlands.HeckeRat.pr w) = 1"
+    },
+    "Langlands.HeckeRat.valuation_pr_self": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 490,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)),\n  (IsDedekindDomain.HeightOneSpectrum.valuation ℚ v) ↑(Langlands.HeckeRat.pr v) = WithZero.exp (-1)"
     },
     "Langlands.InducedTorusCorrespond": {
       "kind": "def",
@@ -971,6 +2961,105 @@
       ],
       "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {L : IntermediateField K (AlgebraicClosure K)}\n  {art : NumberField.IdeleClassGroup (NumberField.RingOfIntegers K) K →* Gal(↥L/K)},\n  Langlands.IsArtinMap K L art → Function.Surjective ⇑art"
     },
+    "Langlands.IsComplexConjugation": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 107,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Field.absoluteGaloisGroup ℚ → Prop"
+    },
+    "Langlands.IsComplexConjugationOf": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 219,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{L : IntermediateField ℚ (AlgebraicClosure ℚ)} → Gal(↥L/ℚ) → Prop"
+    },
+    "Langlands.IsFrobeniusAt": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 97,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "ℕ → Field.absoluteGaloisGroup ℚ → Prop"
+    },
+    "Langlands.IsIrreducibleRep": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 111,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u_1} → [inst : Field F] → {G : Type u_2} → [inst_1 : Group G] → {n : ℕ} → (G →* GL (Fin n) F) → Prop"
+    },
+    "Langlands.IsL2Eigenfunction": {
+      "kind": "inductive",
+      "file": "Langlands/Statements/Maass.lean",
+      "line": 59,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ) → (UpperHalfPlane → ℂ) → ℝ → Prop"
+    },
+    "Langlands.IsL2Eigenfunction.eigen": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Maass.lean",
+      "line": 63,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)} {f : UpperHalfPlane → ℂ} {ev : ℝ},\n  Langlands.IsL2Eigenfunction Γ f ev → ∀ (τ : UpperHalfPlane), Langlands.hyperbolicLaplacian f τ = ↑ev * f τ"
+    },
+    "Langlands.IsL2Eigenfunction.invariant": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Maass.lean",
+      "line": 62,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)} {f : UpperHalfPlane → ℂ} {ev : ℝ},\n  Langlands.IsL2Eigenfunction Γ f ev → ∀ γ ∈ Γ, ∀ (τ : UpperHalfPlane), f (γ • τ) = f τ"
+    },
+    "Langlands.IsL2Eigenfunction.smooth": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Maass.lean",
+      "line": 61,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)} {f : UpperHalfPlane → ℂ} {ev : ℝ},\n  Langlands.IsL2Eigenfunction Γ f ev → ContDiffOn ℝ (↑⊤) (Langlands.onPlane f) {z | 0 \u003c z.im}"
+    },
+    "Langlands.IsL2Eigenfunction.squareIntegrable": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Maass.lean",
+      "line": 64,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)} {f : UpperHalfPlane → ℂ} {ev : ℝ},\n  Langlands.IsL2Eigenfunction Γ f ev →\n    ∀ (g : Matrix.SpecialLinearGroup (Fin 2) ℤ),\n      MeasureTheory.IntegrableOn (fun z =\u003e ‖f (g • ↑UpperHalfPlane.ofComplex z)‖ ^ 2 / z.im ^ 2)\n        (UpperHalfPlane.coe '' ModularGroup.fd) MeasureTheory.volume"
+    },
     "Langlands.IsLocalArtinMap": {
       "kind": "inductive",
       "file": "Langlands/Statements/ClassField.lean",
@@ -1014,6 +3103,50 @@
         "propext"
       ],
       "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {rec : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K},\n  Langlands.IsLocalArtinMap K rec →\n    ∀ (ϖ : Kˣ), Langlands.IsUniformizer ↑ϖ → ∃ Φ, Langlands.WeilGroup.IsGeometricFrobenius K Φ ∧ rec ϖ = ↑Φ"
+    },
+    "Langlands.IsMaassCuspForm": {
+      "kind": "inductive",
+      "file": "Langlands/Statements/Maass.lean",
+      "line": 77,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(N : ℕ) → DirichletCharacter ℂ N → (UpperHalfPlane → ℂ) → ℝ → Prop"
+    },
+    "Langlands.IsMaassCuspForm.cuspidal": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Maass.lean",
+      "line": 83,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {χ : DirichletCharacter ℂ N} {f : UpperHalfPlane → ℂ} {ev : ℝ},\n  Langlands.IsMaassCuspForm N χ f ev →\n    ∀ (g : Matrix.SpecialLinearGroup (Fin 2) ℤ) (y : ℝ),\n      0 \u003c y → ∫ (x : ℝ) in 0..↑N, f (g • ↑UpperHalfPlane.ofComplex (↑x + ↑y * Complex.I)) = 0"
+    },
+    "Langlands.IsMaassCuspForm.eigenfunction": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Maass.lean",
+      "line": 80,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {χ : DirichletCharacter ℂ N} {f : UpperHalfPlane → ℂ} {ev : ℝ},\n  Langlands.IsMaassCuspForm N χ f ev → Langlands.IsL2Eigenfunction (CongruenceSubgroup.Gamma1 N) f ev"
+    },
+    "Langlands.IsMaassCuspForm.nebentypus": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Maass.lean",
+      "line": 81,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {χ : DirichletCharacter ℂ N} {f : UpperHalfPlane → ℂ} {ev : ℝ},\n  Langlands.IsMaassCuspForm N χ f ev →\n    ∀ γ ∈ CongruenceSubgroup.Gamma0 N, ∀ (τ : UpperHalfPlane), f (γ • τ) = χ ↑(↑γ 1 1) * f τ"
     },
     "Langlands.IsNormalizedEigenform": {
       "kind": "inductive",
@@ -1070,6 +3203,72 @@
       ],
       "type": "∀ {N : ℕ} {k : ℤ} {f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)) k},\n  Langlands.IsNormalizedEigenform f → Langlands.qCoeff f 1 = 1"
     },
+    "Langlands.IsNormalizedEigenformWithCharacter": {
+      "kind": "inductive",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 76,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{N : ℕ} →\n  {k : ℤ} →\n    CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma1 N)) k →\n      DirichletCharacter ℂ N → Prop"
+    },
+    "Langlands.IsNormalizedEigenformWithCharacter.mul": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 82,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {k : ℤ} {f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma1 N)) k}\n  {χ : DirichletCharacter ℂ N},\n  Langlands.IsNormalizedEigenformWithCharacter f χ →\n    ∀ (m n : ℕ),\n      m.Coprime n → Langlands.qCoeffGamma1 f (m * n) = Langlands.qCoeffGamma1 f m * Langlands.qCoeffGamma1 f n"
+    },
+    "Langlands.IsNormalizedEigenformWithCharacter.nebentypus": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 80,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {k : ℤ} {f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma1 N)) k}\n  {χ : DirichletCharacter ℂ N}, Langlands.IsNormalizedEigenformWithCharacter f χ → Langlands.HasNebentypus f χ"
+    },
+    "Langlands.IsNormalizedEigenformWithCharacter.one": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 81,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {k : ℤ} {f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma1 N)) k}\n  {χ : DirichletCharacter ℂ N}, Langlands.IsNormalizedEigenformWithCharacter f χ → Langlands.qCoeffGamma1 f 1 = 1"
+    },
+    "Langlands.IsNormalizedEigenformWithCharacter.prime_pow": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 83,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {k : ℤ} {f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma1 N)) k}\n  {χ : DirichletCharacter ℂ N},\n  Langlands.IsNormalizedEigenformWithCharacter f χ →\n    ∀ (p r : ℕ),\n      Nat.Prime p →\n        Langlands.qCoeffGamma1 f (p ^ (r + 2)) =\n          Langlands.qCoeffGamma1 f p * Langlands.qCoeffGamma1 f (p ^ (r + 1)) -\n            χ ↑p * ↑p ^ (k - 1) * Langlands.qCoeffGamma1 f (p ^ r)"
+    },
+    "Langlands.IsOddRep": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 117,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{F : Type u_1} → [inst : Field F] → (Field.absoluteGaloisGroup ℚ →* GL (Fin 2) F) → Prop"
+    },
     "Langlands.IsSemistable": {
       "kind": "def",
       "file": "Langlands/Statements/Modularity.lean",
@@ -1091,6 +3290,17 @@
         "propext"
       ],
       "type": "{K : Type u_1} → [inst : Field K] → [ValuativeRel K] → K → Prop"
+    },
+    "Langlands.IsUnramifiedAt": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 102,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{H : Type u_1} → [inst : Group H] → (Field.absoluteGaloisGroup ℚ →* H) → ℕ → Prop"
     },
     "Langlands.KroneckerWeber": {
       "kind": "def",
@@ -2005,6 +4215,17 @@
       "kind": "def",
       "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
       "line": 114,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.RamanujanMaass": {
+      "kind": "def",
+      "file": "Langlands/Statements/Maass.lean",
+      "line": 92,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -3148,6 +5369,28 @@
       "kind": "def",
       "file": "Langlands/Statements/Modularity.lean",
       "line": 106,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.SelbergEigenvalue": {
+      "kind": "def",
+      "file": "Langlands/Statements/Maass.lean",
+      "line": 68,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.SerreModularityWeak": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 156,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -5019,6 +7262,49 @@
       ],
       "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (L : IntermediateField K (AlgebraicClosure K))\n  [inst_4 : FiniteDimensional K ↥L] (w : Langlands.WeilGroup ↥L),\n  (Langlands.WeilGroup.weilHom K L) w ∈ Langlands.WeilGroup.inertia K ↔ w ∈ Langlands.WeilGroup.inertia ↥L"
     },
+    "Langlands.artinLFunction": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 204,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [NumberField K] → {L : IntermediateField K (AlgebraicClosure K)} → {n : ℕ} → (Gal(↥L/K) →* GL (Fin n) ℂ) → ℂ → ℂ"
+    },
+    "Langlands.artinLocalFactor": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 197,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [NumberField K] →\n      {L : IntermediateField K (AlgebraicClosure K)} →\n        {n : ℕ} →\n          (Gal(↥L/K) →* GL (Fin n) ℂ) → IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K) → ℂ → ℂ"
+    },
+    "Langlands.artinLocalFactor.congr_simp": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Galois.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {L : IntermediateField K (AlgebraicClosure K)} {n : ℕ}\n  (ρ ρ_1 : Gal(↥L/K) →* GL (Fin n) ℂ),\n  ρ = ρ_1 →\n    ∀ (v v_1 : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)),\n      v = v_1 → ∀ (s s_1 : ℂ), s = s_1 → Langlands.artinLocalFactor ρ v s = Langlands.artinLocalFactor ρ_1 v_1 s_1"
+    },
+    "Langlands.character_mem_coeffRing": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 151,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {k : ℤ} (f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma1 N)) k)\n  (χ : DirichletCharacter ℂ N) (x : ZMod N), χ x ∈ Langlands.coeffRing f χ"
+    },
     "Langlands.cmJInvariants": {
       "kind": "def",
       "file": "Langlands/Statements/Modularity.lean",
@@ -5028,6 +7314,17 @@
         "propext"
       ],
       "type": "Set ℚ"
+    },
+    "Langlands.coeffRing": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 141,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{N : ℕ} →\n  {k : ℤ} →\n    CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma1 N)) k →\n      DirichletCharacter ℂ N → Subalgebra ℤ ℂ"
     },
     "Langlands.eq_inducedParameter": {
       "kind": "theorem",
@@ -5062,6 +7359,17 @@
       ],
       "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], ∃ rec, Langlands.IsLocalArtinMap K rec"
     },
+    "Langlands.frobeniusAbove": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 186,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    (L : IntermediateField K (AlgebraicClosure K)) →\n      IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K) → Gal(↥L/K)"
+    },
     "Langlands.gammaFactor": {
       "kind": "def",
       "file": "Langlands/Statements/Hecke.lean",
@@ -5072,6 +7380,39 @@
         "propext"
       ],
       "type": "(K : Type u) →\n  [inst : Field K] → [NumberField K] → (NumberField.InfinitePlace K → ℤ) → (NumberField.InfinitePlace K → ℂ) → ℂ → ℂ"
+    },
+    "Langlands.heckeFunctionalEquationAt_rat": {
+      "kind": "theorem",
+      "file": "Langlands/Hecke/Rational.lean",
+      "line": 1517,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.HeckeFunctionalEquationAt ℚ"
+    },
+    "Langlands.heckeOperator": {
+      "kind": "def",
+      "file": "Langlands/Statements/Maass.lean",
+      "line": 86,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{N : ℕ} → DirichletCharacter ℂ N → ℕ → (UpperHalfPlane → ℂ) → UpperHalfPlane → ℂ"
+    },
+    "Langlands.hyperbolicLaplacian": {
+      "kind": "def",
+      "file": "Langlands/Statements/Maass.lean",
+      "line": 55,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(UpperHalfPlane → ℂ) → UpperHalfPlane → ℂ"
     },
     "Langlands.ideleNorm": {
       "kind": "def",
@@ -5138,6 +7479,28 @@
         "propext"
       ],
       "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {L : IntermediateField K (AlgebraicClosure K)}\n  [inst_4 : FiniteDimensional K ↥L] (recL : (↥L)ˣ ≃ₜ* Langlands.WeilGroup.Ab ↥L) (χ : (↥L)ˣ →ₜ* ℂˣ),\n  Langlands.InducedTorusCorrespond K L recL χ (Langlands.inducedParameter recL χ)"
+    },
+    "Langlands.inertiaProjector": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 191,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    {L : IntermediateField K (AlgebraicClosure K)} →\n      {n : ℕ} → (Gal(↥L/K) →* GL (Fin n) ℂ) → Ideal (NumberField.RingOfIntegers ↥L) → Matrix (Fin n) (Fin n) ℂ"
+    },
+    "Langlands.instMulSemiringActionAbsoluteGaloisGroupRatAlgebraicClosure_langlands": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 89,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "MulSemiringAction (Field.absoluteGaloisGroup ℚ) (AlgebraicClosure ℚ)"
     },
     "Langlands.instSMulCommClassAlgEquivSubtypeAlgebraicClosureMemIntermediateFieldRingOfIntegers_langlands": {
       "kind": "theorem",
@@ -5216,6 +7579,28 @@
       ],
       "type": "(K : Type u_1) → [inst : Field K] → (L : Type u_2) → [inst_1 : Field L] → [Algebra K L] → Subgroup Kˣ"
     },
+    "Langlands.onPlane": {
+      "kind": "def",
+      "file": "Langlands/Statements/Maass.lean",
+      "line": 51,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(UpperHalfPlane → ℂ) → ℂ → ℂ"
+    },
+    "Langlands.primeAbove": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 181,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    (L : IntermediateField K (AlgebraicClosure K)) →\n      IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K) → Ideal (NumberField.RingOfIntegers ↥L)"
+    },
     "Langlands.qCoeff": {
       "kind": "def",
       "file": "Langlands/Statements/Modularity.lean",
@@ -5226,6 +7611,28 @@
         "propext"
       ],
       "type": "{N : ℕ} → {k : ℤ} → CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)) k → ℕ → ℂ"
+    },
+    "Langlands.qCoeffGamma1": {
+      "kind": "def",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 66,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{N : ℕ} → {k : ℤ} → CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma1 N)) k → ℕ → ℂ"
+    },
+    "Langlands.qCoeffGamma1_mem_coeffRing": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Galois.lean",
+      "line": 146,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {k : ℤ} (f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma1 N)) k)\n  (χ : DirichletCharacter ℂ N) (n : ℕ), Langlands.qCoeffGamma1 f n ∈ Langlands.coeffRing f χ"
     },
     "Langlands.satoTateAngle": {
       "kind": "def",
