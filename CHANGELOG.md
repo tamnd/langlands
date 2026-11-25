@@ -4,6 +4,12 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## v0.1.0 (2026-11-25)
+
+### Changed
+
+- This release closes milestone S0. It has the same content as v0.0.2. The statements, the map, the records and the site of S0 are complete.
+
 ## v0.0.2 (2026-11-25)
 
 ### Added
