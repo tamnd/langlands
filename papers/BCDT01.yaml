@@ -1,0 +1,26 @@
+id: T8-06
+key: BCDT01
+title: "On the modularity of elliptic curves over Q: wild 3-adic exercises"
+authors: [Christophe Breuil, Brian Conrad, Fred Diamond, Richard Taylor]
+where: "J. Amer. Math. Soc. 14 (2001), 843-939"
+year: 2001
+doi: 10.1090/S0894-0347-01-00370-8
+arxiv: null
+also: [T8-04, T0-11]
+read: { version: journal, by: owner, date: 2026-11-25, tag: U }
+tier: T8
+why: the proof of modularity for every elliptic curve over Q; the source of Langlands.ModularityEllipticQ
+expert_status: accepted
+uses: [T8-04]
+results:
+  - id: "Theorem A"
+    statement: ModularityEllipticQ
+    node: LGPNZWXVH5
+    kind: theorem
+    status: stated
+lean_elsewhere:
+  - { repo: ImperialCollegeLondon/FLT, commit: null, licence: Apache-2.0, what: parts of the modularity lifting theorems for the semistable case, use: read }
+lean_status: stated
+code_licence: null
+handbook: { volume: 11, chapter: null }
+notes: The paper extends the method of Wiles and Taylor-Wiles to the curves with additive reduction at 3. The project states the theorem with the q-expansion of a cusp form on Gamma_0(N). The page of the theorem is not checked yet, so the read tag is U.

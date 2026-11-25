@@ -1,0 +1,9 @@
+tag: "LGZ55EK0PA"
+slug: "modularity-semistable-q"
+kind: "theorem"
+title: "Modularity of semistable elliptic curves over Q"
+statement: "For each semistable elliptic curve $E$ over $\\mathbb{Q}$ there is a cusp form $f$ of weight 2 on $\\Gamma_0(N)$ with $a_n(f) = a_n(E)$ for each $n \\ge 1$."
+sources: [{"paper": "Wil95", "loc": "Theorem 0.4"}]
+lean: {"statement": "Langlands.ModularitySemistableQ"}
+tier: "T8"
+notes: "Imperial FLT formalizes the reduction of Fermat's last theorem to the modularity lifting theorems. A port is planned for milestone S4."

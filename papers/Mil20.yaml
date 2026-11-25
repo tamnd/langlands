@@ -14,11 +14,11 @@ uses: []
 results:
   - id: "Chapter I, Theorem 1.1"
     statement: LocalReciprocityGL1
-    node: null
+    node: LGAV7YV6K6
     kind: theorem
-    status: unstated
+    status: stated
 lean_elsewhere: []
-lean_status: none
+lean_status: stated
 code_licence: null
 handbook: { volume: 3, chapter: null }
 notes: The notes are free to read but are not under an open licence. The handbook cites them and does not copy them.

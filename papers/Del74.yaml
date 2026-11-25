@@ -1,0 +1,25 @@
+id: T4-10
+key: Del74
+title: "La conjecture de Weil. I"
+authors: [Pierre Deligne]
+where: "Publ. Math. IHES 43 (1974), 273-307"
+year: 1974
+doi: 10.1007/BF02684373
+arxiv: null
+also: []
+read: { version: journal, by: owner, date: 2026-11-25, tag: S }
+tier: T4
+why: the proof of the Weil conjectures, with the Ramanujan-Petersson conjecture for holomorphic forms of weight at least 2 as a consequence; the source of Langlands.RamanujanPeterssonHolomorphic
+expert_status: accepted
+uses: []
+results:
+  - id: "Section 8"
+    statement: RamanujanPeterssonHolomorphic
+    node: LGV8B6TVWZ
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 4, chapter: null }
+notes: Section 8 of the paper gives the bound for the Ramanujan function tau. The bound for a general weight uses the construction of Deligne of the Galois representations of an eigenform (Seminaire Bourbaki 355, 1969). The weight 1 case is the theorem of Deligne and Serre (Ann. Sci. ENS 7, 1974).

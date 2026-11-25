@@ -1,0 +1,10 @@
+tag: "LG5W3CRDEA"
+slug: "hasse-weil-elliptic-q"
+kind: "theorem"
+title: "The Hasse-Weil conjecture for elliptic curves over Q"
+statement: "For each elliptic curve $E$ over $\\mathbb{Q}$ the completed L-function $\\Lambda(E, s) = N^{s/2} (2\\pi)^{-s} \\Gamma(s) L(E, s)$ continues to an entire function with $\\Lambda(E, 2 - s) = \\pm \\Lambda(E, s)$."
+sources: [{"paper": "BCDT01", "loc": "Introduction"}]
+uses: ["LGPNZWXVH5"]
+lean: {"statement": "Langlands.HasseWeilEllipticQ"}
+tier: "T4"
+notes: "The theorem follows from modularity and the theory of Hecke. The bridge Langlands.Bridge.hasseWeil_rat_of_hasseWeilEllipticQ proves that this statement implies the statement of formal-conjectures."

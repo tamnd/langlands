@@ -1,0 +1,9 @@
+tag: "LGVAKJJD8Y"
+slug: "global-reciprocity"
+kind: "theorem"
+title: "Global reciprocity"
+statement: "For each finite abelian extension $L$ of a number field $K$ there is a homomorphism from the idele class group of $K$ to $\\mathrm{Gal}(L/K)$ that is trivial on the image of $K^\\times$ and that maps a uniformizer at each unramified place to the inverse of the arithmetic Frobenius."
+sources: [{"paper": "Mil20", "loc": "Chapter V"}]
+uses: ["LGAV7YV6K6"]
+lean: {"statement": "Langlands.GlobalReciprocity"}
+tier: "T3"

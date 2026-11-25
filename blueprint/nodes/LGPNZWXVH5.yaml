@@ -1,0 +1,9 @@
+tag: "LGPNZWXVH5"
+slug: "modularity-elliptic-q"
+kind: "theorem"
+title: "Modularity of elliptic curves over Q"
+statement: "For each elliptic curve $E$ over $\\mathbb{Q}$ there is a cusp form $f$ of weight 2 on $\\Gamma_0(N)$, for some $N \\ge 1$, with $a_n(f) = a_n(E)$ for each $n \\ge 1$."
+sources: [{"paper": "BCDT01", "loc": "Theorem A"}]
+uses: ["LGZ55EK0PA"]
+lean: {"statement": "Langlands.ModularityEllipticQ"}
+tier: "T8"

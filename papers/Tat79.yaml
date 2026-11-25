@@ -14,14 +14,14 @@ uses: [T0-04]
 results:
   - id: "Section 1.4"
     statement: WeilGroup
-    node: null
+    node: LGBPNG162F
     kind: definition
-    status: stated
+    status: defined
   - id: "Section 1.4.1"
     statement: WeilGroup.IsGeometricFrobenius
-    node: null
+    node: LGQVB4Z4KN
     kind: definition
-    status: stated
+    status: defined
 lean_elsewhere:
   - { repo: riemann-lean, commit: null, licence: none, what: a Weil group, use: read }
 lean_status: stated

@@ -1,0 +1,9 @@
+tag: "LGBPNG162F"
+slug: "weil-group"
+kind: "definition"
+title: "The Weil group of a nonarchimedean local field"
+statement: "For a nonarchimedean local field $K$ with residue field $k$, the Weil group $W_K$ is the subgroup of the elements of $\\mathrm{Gal}(\\overline{K}/K)$ that act on $\\overline{k}$ as an integral power of the Frobenius $x \\mapsto x^q$. Its topology makes the inertia subgroup open, with the topology of the Galois group on it."
+sources: [{"paper": "Tat79", "loc": "Section 1.4"}]
+lean: {"statement": "Langlands.WeilGroup"}
+tier: "T3"
+notes: "The spec takes this definition (question Q-04). An equivalence with the abstract extension of the integers by inertia is a task of milestone S1."

@@ -1,0 +1,1258 @@
+{
+  "repository": "https://github.com/tamnd/langlands-lean",
+  "commit": "96c5d11912229420eb1416a6c1212d5204629fbb",
+  "toolchain": "4.35.0",
+  "mathlib": "v4.35.0",
+  "built": "2026-11-25",
+  "decls": {
+    "Langlands.Bridge.coeff_one_qExpansion_eq_zero": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 111,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {k : ℤ},\n  2 ≤ N →\n    ∀ (f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)) k),\n      (PowerSeries.coeff 1) (UpperHalfPlane.qExpansion ↑N ⇑f) = 0"
+    },
+    "Langlands.Bridge.cuspForm_weight_two_eq_zero_of_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 135,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {Γ : Subgroup (GL (Fin 2) ℝ)}, Γ = (Matrix.SpecialLinearGroup.mapGL ℝ).range → ∀ (f : CuspForm Γ 2), f = 0"
+    },
+    "Langlands.Bridge.cuspFunction_natCast_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 79,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {k : ℤ},\n  0 \u003c N →\n    ∀ (f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)) k),\n      UpperHalfPlane.cuspFunction ↑N ⇑f = UpperHalfPlane.cuspFunction 1 ⇑f ∘ fun q =\u003e q ^ N"
+    },
+    "Langlands.Bridge.finiteAbelianLocalReciprocity": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/NYLL.lean",
+      "line": 29,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K] [IsNonarchimedeanLocalField K]\n  (L : IntermediateField K (AlgebraicClosure K)) [FiniteDimensional K ↥L] [IsAbelianGalois K ↥L],\n  ∃ artin, Function.Surjective ⇑artin ∧ ∀ (x : Kˣ), artin x = 1 ↔ x ∈ Langlands.normGroup K ↥L"
+    },
+    "Langlands.Bridge.gamma0_one_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 129,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 1) =\n  (Matrix.SpecialLinearGroup.mapGL ℝ).range"
+    },
+    "Langlands.Bridge.hasseWeil_rat_of_hasseWeilEllipticQ": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 32,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.HasseWeilEllipticQ → Langlands.Ported.FormalConjectures.HasseWeil.exists_hasAnalyticContinuation_rat"
+    },
+    "Langlands.Bridge.isFieldNorm_iff_mem_normGroup": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/NYLL.lean",
+      "line": 23,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) (L : Type v) [inst : Field K] [inst_1 : Field L] [inst_2 : Algebra K L] [inst_3 : FiniteDimensional K L]\n  (x : Kˣ), ClassFieldTheory.IsFieldNorm K L x ↔ x ∈ Langlands.normGroup K L"
+    },
+    "Langlands.Bridge.modularFormAn_one_eq_zero": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 140,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ},\n  0 \u003c N →\n    ∀ (f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)) 2),\n      Langlands.Ported.FormalConjectures.ModularityConjecture.modularFormAn 1 f = 0"
+    },
+    "Langlands.Bridge.natCast_mem_strictPeriods_Gamma0": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 74,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (N : ℕ), ↑N ∈ (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)).strictPeriods"
+    },
+    "Langlands.Bridge.not_modularityConjecture": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 151,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (E : WeierstrassCurve ℚ) [inst : E.IsElliptic],\n  ¬Langlands.Ported.FormalConjectures.ModularityConjecture.modularityConjecture E"
+    },
+    "Langlands.Bridge.not_modularity_conjecture": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 158,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "¬Langlands.Ported.FormalConjectures.ModularityConjecture.modularity_conjecture"
+    },
+    "Langlands.Bridge.one_mem_strictPeriods_Gamma0": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/FormalConjectures.lean",
+      "line": 70,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (N : ℕ), 1 ∈ (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)).strictPeriods"
+    },
+    "Langlands.Fidelity.X0_11": {
+      "kind": "def",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 46,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "WeierstrassCurve ℚ"
+    },
+    "Langlands.Fidelity.X0_11_j": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 56,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.Fidelity.X0_11.j = -122023936 / 161051"
+    },
+    "Langlands.Fidelity.X0_11_Δ": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 49,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.Fidelity.X0_11.Δ = -161051"
+    },
+    "Langlands.Fidelity.congruentNumberCurve": {
+      "kind": "def",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 27,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "WeierstrassCurve ℚ"
+    },
+    "Langlands.Fidelity.congruentNumberCurve_j": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 37,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.Fidelity.congruentNumberCurve.j = 1728"
+    },
+    "Langlands.Fidelity.congruentNumberCurve_Δ": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 30,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.Fidelity.congruentNumberCurve.Δ = 64"
+    },
+    "Langlands.Fidelity.hasCMOverQ_congruentNumber": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 41,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.HasCMOverQ Langlands.Fidelity.congruentNumberCurve"
+    },
+    "Langlands.Fidelity.instIsEllipticRatCongruentNumberCurve": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 34,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.Fidelity.congruentNumberCurve.IsElliptic"
+    },
+    "Langlands.Fidelity.instIsEllipticRatX0_11": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 53,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.Fidelity.X0_11.IsElliptic"
+    },
+    "Langlands.Fidelity.isAbelianGalois_bot": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 25,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] (E : Type u_2) [inst_1 : Field E] [inst_2 : Algebra K E], IsAbelianGalois K ↥⊥"
+    },
+    "Langlands.Fidelity.kroneckerWeber_bot": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 46,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∃ n ζ, 0 \u003c n ∧ IsPrimitiveRoot ζ n ∧ ⊥ ≤ ℚ⟮ζ⟯"
+    },
+    "Langlands.Fidelity.localExistence_top": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 41,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] (E : Type u_2) [inst_1 : Field E] [inst_2 : Algebra K E],\n  ∃ L, FiniteDimensional K ↥L ∧ IsAbelianGalois K ↥L ∧ Langlands.normGroup K ↥L = ⊤"
+    },
+    "Langlands.Fidelity.normGroup_bot": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 34,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] (E : Type u_2) [inst_1 : Field E] [inst_2 : Algebra K E], Langlands.normGroup K ↥⊥ = ⊤"
+    },
+    "Langlands.Fidelity.not_hasCMOverQ_X0_11": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 60,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "¬Langlands.HasCMOverQ Langlands.Fidelity.X0_11"
+    },
+    "Langlands.Fidelity.satoTate_total_mass": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 22,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "2 / Real.pi * ∫ (θ : ℝ) in 0..Real.pi, Real.sin θ ^ 2 = 1"
+    },
+    "Langlands.GlobalExistence": {
+      "kind": "def",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 120,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.GlobalReciprocity": {
+      "kind": "def",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 114,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.HasCMOverQ": {
+      "kind": "def",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 98,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(E : WeierstrassCurve ℚ) → [E.IsElliptic] → Prop"
+    },
+    "Langlands.HasseWeilEllipticQ": {
+      "kind": "def",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 79,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.IsArtinMap": {
+      "kind": "inductive",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 99,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      (L : IntermediateField K (AlgebraicClosure K)) →\n        (NumberField.IdeleClassGroup (NumberField.RingOfIntegers K) K →* Gal(↥L/K)) → Prop"
+    },
+    "Langlands.IsArtinMap.continuous": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 103,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {L : IntermediateField K (AlgebraicClosure K)}\n  {art : NumberField.IdeleClassGroup (NumberField.RingOfIntegers K) K →* Gal(↥L/K)},\n  Langlands.IsArtinMap K L art → Continuous ⇑art"
+    },
+    "Langlands.IsArtinMap.frobenius": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 107,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {L : IntermediateField K (AlgebraicClosure K)}\n  {art : NumberField.IdeleClassGroup (NumberField.RingOfIntegers K) K →* Gal(↥L/K)},\n  Langlands.IsArtinMap K L art →\n    ∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n      (w : Ideal (NumberField.RingOfIntegers ↥L)) [inst_2 : w.IsMaximal],\n      w.LiesOver v.asIdeal →\n        Algebra.IsUnramifiedAt (NumberField.RingOfIntegers K) w →\n          ∀ (ϖ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ),\n            Langlands.IsUniformizer ↑ϖ →\n              IsArithFrobAt (NumberField.RingOfIntegers K)\n                (art ((NumberField.IdeleClassGroup.ofAdicCompletion (NumberField.RingOfIntegers K) K v) ϖ))⁻¹ w"
+    },
+    "Langlands.IsArtinMap.surjective": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 105,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {L : IntermediateField K (AlgebraicClosure K)}\n  {art : NumberField.IdeleClassGroup (NumberField.RingOfIntegers K) K →* Gal(↥L/K)},\n  Langlands.IsArtinMap K L art → Function.Surjective ⇑art"
+    },
+    "Langlands.IsLocalArtinMap": {
+      "kind": "inductive",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 59,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] → [inst_3 : IsNonarchimedeanLocalField K] → Kˣ ≃ₜ* Langlands.WeilGroup.Ab K → Prop"
+    },
+    "Langlands.IsLocalArtinMap.ker": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 68,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {rec : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K},\n  Langlands.IsLocalArtinMap K rec →\n    ∀ (L : IntermediateField K (AlgebraicClosure K)) [inst_4 : FiniteDimensional K ↥L] [inst_5 : IsAbelianGalois K ↥L]\n      (x : Kˣ), (Langlands.WeilGroup.Ab.restrict K L) (rec x) = 1 ↔ x ∈ Langlands.normGroup K ↥L"
+    },
+    "Langlands.IsLocalArtinMap.surjective": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 65,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {rec : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K},\n  Langlands.IsLocalArtinMap K rec →\n    ∀ (L : IntermediateField K (AlgebraicClosure K)) [inst_4 : FiniteDimensional K ↥L] [inst_5 : IsAbelianGalois K ↥L],\n      Function.Surjective (⇑(Langlands.WeilGroup.Ab.restrict K L) ∘ ⇑rec)"
+    },
+    "Langlands.IsLocalArtinMap.uniformizer": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 62,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {rec : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K},\n  Langlands.IsLocalArtinMap K rec →\n    ∀ (ϖ : Kˣ), Langlands.IsUniformizer ↑ϖ → ∃ Φ, Langlands.WeilGroup.IsGeometricFrobenius K Φ ∧ rec ϖ = ↑Φ"
+    },
+    "Langlands.IsNormalizedEigenform": {
+      "kind": "inductive",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 52,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{N : ℕ} → {k : ℤ} → CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)) k → Prop"
+    },
+    "Langlands.IsNormalizedEigenform.bad": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 59,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {k : ℤ} {f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)) k},\n  Langlands.IsNormalizedEigenform f →\n    ∀ (p r : ℕ),\n      Nat.Prime p → p ∣ N → Langlands.qCoeff f (p ^ (r + 1)) = Langlands.qCoeff f p * Langlands.qCoeff f (p ^ r)"
+    },
+    "Langlands.IsNormalizedEigenform.good": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 57,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {k : ℤ} {f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)) k},\n  Langlands.IsNormalizedEigenform f →\n    ∀ (p r : ℕ),\n      Nat.Prime p →\n        ¬p ∣ N →\n          Langlands.qCoeff f (p ^ (r + 2)) =\n            Langlands.qCoeff f p * Langlands.qCoeff f (p ^ (r + 1)) - ↑p ^ (k - 1) * Langlands.qCoeff f (p ^ r)"
+    },
+    "Langlands.IsNormalizedEigenform.mul": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 56,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {k : ℤ} {f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)) k},\n  Langlands.IsNormalizedEigenform f →\n    ∀ (m n : ℕ), m.Coprime n → Langlands.qCoeff f (m * n) = Langlands.qCoeff f m * Langlands.qCoeff f n"
+    },
+    "Langlands.IsNormalizedEigenform.one": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 55,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {N : ℕ} {k : ℤ} {f : CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)) k},\n  Langlands.IsNormalizedEigenform f → Langlands.qCoeff f 1 = 1"
+    },
+    "Langlands.IsSemistable": {
+      "kind": "def",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 67,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "WeierstrassCurve ℚ → Prop"
+    },
+    "Langlands.IsUniformizer": {
+      "kind": "def",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 45,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u_1} → [inst : Field K] → [ValuativeRel K] → K → Prop"
+    },
+    "Langlands.KroneckerWeber": {
+      "kind": "def",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 127,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.LocalExistence": {
+      "kind": "def",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 78,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.LocalField.exists_prime": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 80,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  ∃ P, P.IsMaximal ∧ P.LiesOver (IsLocalRing.maximalIdeal ↥(ValuativeRel.valuation K).integer)"
+    },
+    "Langlands.LocalField.frobenius": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 123,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          Gal(Langlands.LocalField.residueFieldBar K/Langlands.LocalField.residueField K)"
+    },
+    "Langlands.LocalField.instFaithfulSMulSubtypeMemSubringIntegerValueGroupWithZeroValuationIntegers": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 72,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K],\n  FaithfulSMul (↥(ValuativeRel.valuation K).integer) (Langlands.LocalField.integers K)"
+    },
+    "Langlands.LocalField.instFieldResidueField": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 101,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] → Field (Langlands.LocalField.residueField K)"
+    },
+    "Langlands.LocalField.instFieldResidueFieldBar": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 104,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] → Field (Langlands.LocalField.residueFieldBar K)"
+    },
+    "Langlands.LocalField.instFintypeResidueField": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 107,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] → Fintype (Langlands.LocalField.residueField K)"
+    },
+    "Langlands.LocalField.instIsAlgebraicResidueFieldResidueFieldBar": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 114,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  Algebra.IsAlgebraic (Langlands.LocalField.residueField K) (Langlands.LocalField.residueFieldBar K)"
+    },
+    "Langlands.LocalField.instIsIntegralResidueFieldResidueFieldBar": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 111,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  Algebra.IsIntegral (Langlands.LocalField.residueField K) (Langlands.LocalField.residueFieldBar K)"
+    },
+    "Langlands.LocalField.instIsMaximalIntegersPrime": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 87,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], (Langlands.LocalField.prime K).IsMaximal"
+    },
+    "Langlands.LocalField.instLiesOverSubtypeMemSubringIntegerValueGroupWithZeroValuationIntegersPrimeMaximalIdeal": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 90,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  (Langlands.LocalField.prime K).LiesOver (IsLocalRing.maximalIdeal ↥(ValuativeRel.valuation K).integer)"
+    },
+    "Langlands.LocalField.instMulSemiringActionAbsoluteGaloisGroupAlgebraicClosure_langlands": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 57,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) → [inst : Field K] → MulSemiringAction (Field.absoluteGaloisGroup K) (AlgebraicClosure K)"
+    },
+    "Langlands.LocalField.instSMulCommClassAbsoluteGaloisGroupSubtypeMemSubringIntegerValueGroupWithZeroValuationAlgebraicClosure_langlands": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 61,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K],\n  SMulCommClass (Field.absoluteGaloisGroup K) (↥(ValuativeRel.valuation K).integer) (AlgebraicClosure K)"
+    },
+    "Langlands.LocalField.integers": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 68,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) → [inst : Field K] → [ValuativeRel K] → Type u"
+    },
+    "Langlands.LocalField.prime": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 83,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] → [IsNonarchimedeanLocalField K] → Ideal (Langlands.LocalField.integers K)"
+    },
+    "Langlands.LocalField.residueField": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 93,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] → [inst_1 : ValuativeRel K] → [inst_2 : TopologicalSpace K] → [IsNonarchimedeanLocalField K] → Type u"
+    },
+    "Langlands.LocalField.residueFieldBar": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 97,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] → [inst_1 : ValuativeRel K] → [inst_2 : TopologicalSpace K] → [IsNonarchimedeanLocalField K] → Type u"
+    },
+    "Langlands.LocalField.residueHom": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 117,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          ↥(MulAction.stabilizer (Field.absoluteGaloisGroup K) (Langlands.LocalField.prime K)) →*\n            Gal(Langlands.LocalField.residueFieldBar K/Langlands.LocalField.residueField K)"
+    },
+    "Langlands.LocalField.weilSubgroup": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 127,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] → [IsNonarchimedeanLocalField K] → Subgroup (Field.absoluteGaloisGroup K)"
+    },
+    "Langlands.LocalField.weilSubgroup_le_stabilizer": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 132,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K],\n  Langlands.LocalField.weilSubgroup K ≤\n    MulAction.stabilizer (Field.absoluteGaloisGroup K) (Langlands.LocalField.prime K)"
+    },
+    "Langlands.LocalReciprocityGL1": {
+      "kind": "def",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 73,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.ModularityEllipticQ": {
+      "kind": "def",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 61,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.ModularitySemistableQ": {
+      "kind": "def",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 73,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.Ported.FormalConjectures.HasseWeil.HasAnalyticContinuation": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 141,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u_1} → [inst : Field K] → [NumberField K] → WeierstrassCurve K → (ℂ → ℂ) → Prop"
+    },
+    "Langlands.Ported.FormalConjectures.HasseWeil.exists_hasAnalyticContinuation_rat": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 146,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.Ported.FormalConjectures.ModularityConjecture.IsNormalisedEigenform": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 65,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{N : ℕ} → {k : ℤ} → CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)) k → Prop"
+    },
+    "Langlands.Ported.FormalConjectures.ModularityConjecture.WeierstrassCurve.ap": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 61,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(E : WeierstrassCurve ℚ) → [E.IsElliptic] → ℕ → ℤ"
+    },
+    "Langlands.Ported.FormalConjectures.ModularityConjecture.modularFormAn": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 46,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "ℕ → {N : ℕ} → {k : ℤ} → CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)) k → ℂ"
+    },
+    "Langlands.Ported.FormalConjectures.ModularityConjecture.modularityConjecture": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 74,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(E : WeierstrassCurve ℚ) → [E.IsElliptic] → Prop"
+    },
+    "Langlands.Ported.FormalConjectures.ModularityConjecture.modularity_conjecture": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 79,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.Ported.FormalConjectures.ModularityConjecture.ratRed": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 50,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "ℚ → (p : ℕ) → ZMod p"
+    },
+    "Langlands.Ported.FormalConjectures.ModularityConjecture.setOfPointsModN": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 54,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(E : WeierstrassCurve ℚ) → [E.IsElliptic] → (n : ℕ) → Set (ZMod n × ZMod n)"
+    },
+    "Langlands.Ported.FormalConjectures.RamanujanTau.ramanujan_petersson": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 133,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.Ported.FormalConjectures.RamanujanTau.Δ": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 127,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "PowerSeries ℤ"
+    },
+    "Langlands.Ported.FormalConjectures.RamanujanTau.τ": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 130,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "ℕ → ℤ"
+    },
+    "Langlands.Ported.FormalConjectures.SatoTateConjecture.HasCM": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 94,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(E : WeierstrassCurve ℚ) → [E.IsElliptic] → Prop"
+    },
+    "Langlands.Ported.FormalConjectures.SatoTateConjecture.cmJInvariants": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 89,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Finset ℚ"
+    },
+    "Langlands.Ported.FormalConjectures.SatoTateConjecture.normalisedAp": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 98,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(E : WeierstrassCurve ℚ) → [E.IsElliptic] → ℕ → ℝ"
+    },
+    "Langlands.Ported.FormalConjectures.SatoTateConjecture.primeCountInInterval": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 110,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(E : WeierstrassCurve ℚ) → [E.IsElliptic] → ℝ → ℝ → ℕ → ℕ"
+    },
+    "Langlands.Ported.FormalConjectures.SatoTateConjecture.satoTateCDF": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 102,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "ℝ → ℝ"
+    },
+    "Langlands.Ported.FormalConjectures.SatoTateConjecture.satoTateMeasure": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 106,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "ℝ → ℝ → ℝ"
+    },
+    "Langlands.Ported.FormalConjectures.SatoTateConjecture.satoTate_conjecture": {
+      "kind": "def",
+      "file": "Langlands/Ported/FormalConjectures/Wikipedia.lean",
+      "line": 114,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.RamanujanPeterssonHolomorphic": {
+      "kind": "def",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 87,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.SatoTate": {
+      "kind": "def",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 106,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.WeilGroup": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 140,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] → [inst_1 : ValuativeRel K] → [inst_2 : TopologicalSpace K] → [IsNonarchimedeanLocalField K] → Type u"
+    },
+    "Langlands.WeilGroup.Ab": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 194,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] → [inst_1 : ValuativeRel K] → [inst_2 : TopologicalSpace K] → [IsNonarchimedeanLocalField K] → Type u"
+    },
+    "Langlands.WeilGroup.Ab.restrict": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 217,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          (L : IntermediateField K (AlgebraicClosure K)) →\n            [IsAbelianGalois K ↥L] → [FiniteDimensional K ↥L] → Langlands.WeilGroup.Ab K →* Gal(↥L/K)"
+    },
+    "Langlands.WeilGroup.Ab.restrict_mk": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 224,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (L : IntermediateField K (AlgebraicClosure K)) [inst_4 : IsAbelianGalois K ↥L]\n  [inst_5 : FiniteDimensional K ↥L] (w : Langlands.WeilGroup K),\n  (Langlands.WeilGroup.Ab.restrict K L) ↑w = (Langlands.WeilGroup.restrict K L) w"
+    },
+    "Langlands.WeilGroup.IsGeometricFrobenius": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 190,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] → [inst_3 : IsNonarchimedeanLocalField K] → Langlands.WeilGroup K → Prop"
+    },
+    "Langlands.WeilGroup.continuous_toGalois": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 172,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], Continuous ⇑(Langlands.WeilGroup.toGalois K)"
+    },
+    "Langlands.WeilGroup.inertia": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 183,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] → [inst_3 : IsNonarchimedeanLocalField K] → Subgroup (Langlands.WeilGroup K)"
+    },
+    "Langlands.WeilGroup.instGroup": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 146,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] → [inst_3 : IsNonarchimedeanLocalField K] → Group (Langlands.WeilGroup K)"
+    },
+    "Langlands.WeilGroup.instIsTopologicalGroup": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 163,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], IsTopologicalGroup (Langlands.WeilGroup K)"
+    },
+    "Langlands.WeilGroup.instTopologicalSpace": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 158,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] → [inst_3 : IsNonarchimedeanLocalField K] → TopologicalSpace (Langlands.WeilGroup K)"
+    },
+    "Langlands.WeilGroup.isClosed_ker_restrict": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 211,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (L : IntermediateField K (AlgebraicClosure K)) [inst_4 : Normal K ↥L]\n  [FiniteDimensional K ↥L], IsClosed ↑(Langlands.WeilGroup.restrict K L).ker"
+    },
+    "Langlands.WeilGroup.isOpen_fiber_toResidue": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 175,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K]\n  (σ : Gal(Langlands.LocalField.residueFieldBar K/Langlands.LocalField.residueField K)),\n  IsOpen (⇑(Langlands.WeilGroup.toResidue K) ⁻¹' {σ})"
+    },
+    "Langlands.WeilGroup.isOpen_inertia": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 187,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], IsOpen ↑(Langlands.WeilGroup.inertia K)"
+    },
+    "Langlands.WeilGroup.ker_restrict": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 203,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (L : IntermediateField K (AlgebraicClosure K)) [inst_4 : Normal K ↥L],\n  (Langlands.WeilGroup.restrict K L).ker = Subgroup.comap (Langlands.WeilGroup.toGalois K) L.fixingSubgroup"
+    },
+    "Langlands.WeilGroup.restrict": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 198,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          (L : IntermediateField K (AlgebraicClosure K)) → [Normal K ↥L] → Langlands.WeilGroup K →* Gal(↥L/K)"
+    },
+    "Langlands.WeilGroup.toGalois": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 149,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] → Langlands.WeilGroup K →* Field.absoluteGaloisGroup K"
+    },
+    "Langlands.WeilGroup.toGalois_injective": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 169,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], Function.Injective ⇑(Langlands.WeilGroup.toGalois K)"
+    },
+    "Langlands.WeilGroup.toResidue": {
+      "kind": "def",
+      "file": "Langlands/Statements/Basic.lean",
+      "line": 153,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          Langlands.WeilGroup K →* Gal(Langlands.LocalField.residueFieldBar K/Langlands.LocalField.residueField K)"
+    },
+    "Langlands.cmJInvariants": {
+      "kind": "def",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 93,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Set ℚ"
+    },
+    "Langlands.instSMulCommClassAlgEquivSubtypeAlgebraicClosureMemIntermediateFieldRingOfIntegers_langlands": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 89,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] (L : IntermediateField K (AlgebraicClosure K)),\n  SMulCommClass Gal(↥L/K) (NumberField.RingOfIntegers K) (NumberField.RingOfIntegers ↥L)"
+    },
+    "Langlands.normGroup": {
+      "kind": "def",
+      "file": "Langlands/Statements/ClassField.lean",
+      "line": 49,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u_1) → [inst : Field K] → (L : Type u_2) → [inst_1 : Field L] → [Algebra K L] → Subgroup Kˣ"
+    },
+    "Langlands.qCoeff": {
+      "kind": "def",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 47,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{N : ℕ} → {k : ℤ} → CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)) k → ℕ → ℂ"
+    },
+    "Langlands.satoTateAngle": {
+      "kind": "def",
+      "file": "Langlands/Statements/Modularity.lean",
+      "line": 102,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "WeierstrassCurve ℚ → ℕ → ℝ"
+    }
+  }
+}
