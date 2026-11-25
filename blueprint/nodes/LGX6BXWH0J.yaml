@@ -1,0 +1,10 @@
+tag: "LGX6BXWH0J"
+slug: "artin-odd-2-q"
+kind: "theorem"
+title: "Artin's conjecture for odd representations of dimension 2 over Q"
+statement: "Let $\\rho : \\mathrm{Gal}(L/\\mathbb{Q}) \\to GL_2(\\mathbb{C})$ be odd and irreducible. Then $L(s, \\rho)$ is the L-function of a newform of weight one, and so it is entire."
+sources: [{"paper": "KW09", "loc": "Part I, the application to Artin L-functions"}, {"paper": "Kis09", "loc": "Section 1"}, {"paper": "DS74", "loc": "Theorem 4.1"}]
+uses: []
+lean: {"statement": "Langlands.ArtinOdd2Q"}
+tier: "T6"
+notes: "The converse direction, from a newform of weight one to an odd representation, is the theorem of Deligne and Serre. The cases of a solvable image are earlier: Langlands and Tunnell for the tetrahedral and octahedral cases."

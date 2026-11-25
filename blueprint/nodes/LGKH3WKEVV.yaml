@@ -1,0 +1,10 @@
+tag: "LGKH3WKEVV"
+slug: "serre-modularity-weak"
+kind: "theorem"
+title: "Serre's modularity conjecture, weak form"
+statement: "Each continuous, odd and irreducible representation $\\bar\\rho : G_\\mathbb{Q} \\to GL_2(\\overline{\\mathbb{F}}_p)$ is the reduction of the representation of a newform: there are $N$, $k$, a newform $f$ and a ring homomorphism $\\theta$ from its coefficient ring to $\\overline{\\mathbb{F}}_p$ with $\\mathrm{tr}\\, \\bar\\rho(\\mathrm{Frob}_q) = \\theta(a_q)$ and $\\det \\bar\\rho(\\mathrm{Frob}_q) = \\theta(\\chi(q)) q^{k-1}$ for almost all $q$."
+sources: [{"paper": "KW09", "loc": "Parts I and II, the main theorem"}]
+uses: []
+lean: {"statement": "Langlands.SerreModularityWeak"}
+tier: "T8"
+notes: "The strong form with the level and the weight of Serre is a later statement. By the Chebotarev density theorem and the theorem of Brauer and Nesbitt, the condition on traces and determinants is the condition on the semisimplified reduction."

@@ -1,0 +1,25 @@
+id: T4-09
+key: Del69
+title: "Formes modulaires et representations l-adiques"
+authors: [Pierre Deligne]
+where: "Seminaire Bourbaki 355 (1969), Lecture Notes in Math. 175, 139-172"
+year: 1969
+doi: null
+arxiv: null
+also: []
+read: { version: journal, by: owner, date: 2026-11-25, tag: U }
+tier: T4
+why: the construction of the l-adic Galois representation of an eigenform of weight at least 2; the source of Langlands.EichlerShimuraDeligne
+expert_status: accepted
+uses: []
+results:
+  - id: "Theorem 6.1"
+    statement: EichlerShimuraDeligne
+    node: LGG3ZW59RX
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 4, chapter: null }
+notes: The case of weight 2 is due to Eichler and Shimura, with the Jacobian of the modular curve.

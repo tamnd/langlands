@@ -1,0 +1,25 @@
+id: T4-17
+key: Sel65
+title: "On the estimation of Fourier coefficients of modular forms"
+authors: [Atle Selberg]
+where: "Proc. Sympos. Pure Math. 8 (1965), 1-15"
+year: 1965
+doi: null
+arxiv: null
+also: []
+read: { version: journal, by: owner, date: 2026-11-25, tag: U }
+tier: T4
+why: the bound 3/16 for the first eigenvalue of congruence quotients and the conjecture 1/4; the source of Langlands.SelbergEigenvalue
+expert_status: accepted
+uses: []
+results:
+  - id: "the bound 3/16 and the conjecture"
+    statement: SelbergEigenvalue
+    node: LG0S1WN9ND
+    kind: conjecture
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 4, chapter: null }
+notes: The proof of the bound uses the Weil bound for Kloosterman sums.

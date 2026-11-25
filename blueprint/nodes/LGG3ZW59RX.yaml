@@ -1,0 +1,10 @@
+tag: "LGG3ZW59RX"
+slug: "eichler-shimura-deligne"
+kind: "theorem"
+title: "The Galois representations of modular forms"
+statement: "Let $f$ be a normalized eigenform of weight $k \\ge 2$, level $N$ and character $\\chi$, and let $\\ell$ be a prime with an isomorphism $\\iota : \\overline{\\mathbb{Q}}_\\ell \\cong \\mathbb{C}$. There is a continuous representation $\\rho : G_\\mathbb{Q} \\to GL_2(\\overline{\\mathbb{Q}}_\\ell)$, unramified at each $p \\nmid N \\ell$, with $\\iota(\\mathrm{tr}\\, \\rho(\\mathrm{Frob}_p)) = a_p$ and $\\iota(\\det \\rho(\\mathrm{Frob}_p)) = \\chi(p) p^{k-1}$."
+sources: [{"paper": "Del69", "loc": "Theorem 6.1"}]
+uses: []
+lean: {"statement": "Langlands.EichlerShimuraDeligne"}
+tier: "T4"
+notes: "The Lean statement uses the arithmetic Frobenius and normalized eigenforms of level N. By the theory of Atkin and Lehner this is equivalent to the statement for newforms. Mathlib has no etale cohomology, so the construction of Deligne cannot be formalized yet."

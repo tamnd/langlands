@@ -1,0 +1,30 @@
+id: T8-07
+key: KW09
+title: "Serre's modularity conjecture (I)"
+authors: [Chandrashekhar Khare, Jean-Pierre Wintenberger]
+where: "Invent. Math. 178 (2009), 485-504"
+year: 2009
+doi: 10.1007/s00222-009-0205-7
+arxiv: null
+also: [T6-12]
+read: { version: journal, by: owner, date: 2026-11-25, tag: U }
+tier: T8
+why: the proof of Serre's modularity conjecture, and with it Artin's conjecture for odd representations of dimension 2 over Q; the source of Langlands.SerreModularityWeak and Langlands.ArtinOdd2Q
+expert_status: accepted
+uses: []
+results:
+  - id: "Parts I and II, the main theorem"
+    statement: SerreModularityWeak
+    node: LGKH3WKEVV
+    kind: theorem
+    status: stated
+  - id: "Part I, the application to Artin L-functions"
+    statement: ArtinOdd2Q
+    node: LGX6BXWH0J
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 8, chapter: null }
+notes: Part II is in the same volume, pages 505-586. The case p = 2 uses the theorem of Kisin on 2-adic Barsotti-Tate representations.

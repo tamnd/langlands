@@ -1,0 +1,10 @@
+tag: "LGEHB4MGJK"
+slug: "artin-conjecture"
+kind: "conjecture"
+title: "Artin's conjecture"
+statement: "Let $L/K$ be a finite Galois extension of number fields and $\\rho$ a nontrivial irreducible complex representation of $\\mathrm{Gal}(L/K)$. The Artin L-function $L(s, \\rho)$ continues to an entire function on $\\mathbb{C}$."
+sources: [{"paper": "Neu99", "loc": "Chapter VII, Section 10"}]
+uses: []
+lean: {"statement": "Langlands.ArtinConjecture"}
+tier: "T6"
+notes: "This is open. By the theorem of Brauer the function is meromorphic. The strong form of the Langlands reciprocity conjecture implies it, because a cuspidal automorphic representation of GL(n) that is not a character has an entire L-function."

@@ -1,0 +1,25 @@
+id: T6-08
+key: Kim03
+title: "Functoriality for the exterior square of GL4 and the symmetric fourth of GL2"
+authors: [Henry H. Kim, Peter Sarnak]
+where: "J. Amer. Math. Soc. 16 (2003), 139-183"
+year: 2003
+doi: 10.1090/S0894-0347-02-00410-1
+arxiv: null
+also: [T4-17, T6-13]
+read: { version: journal, by: owner, date: 2026-11-25, tag: U }
+tier: T6
+why: the symmetric fourth power lift for GL(2) and, in appendix 2 with Sarnak, the best known bounds toward the Ramanujan and Selberg conjectures; the source of the bounds in the notes of Langlands.RamanujanMaass
+expert_status: accepted
+uses: []
+results:
+  - id: "Appendix 2"
+    statement: RamanujanMaass
+    node: LG75ERTV5K
+    kind: conjecture
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 6, chapter: null }
+notes: The main text is by Kim. Appendix 1 is by Ramakrishnan and appendix 2 is by Kim and Sarnak.

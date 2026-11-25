@@ -1,0 +1,25 @@
+id: T6-12
+key: Kis09
+title: "Modularity of 2-adic Barsotti-Tate representations"
+authors: [Mark Kisin]
+where: "Invent. Math. 178 (2009), 587-634"
+year: 2009
+doi: 10.1007/s00222-009-0207-5
+arxiv: null
+also: [T8-07]
+read: { version: journal, by: owner, date: 2026-11-25, tag: U }
+tier: T6
+why: the modularity lifting theorem at p = 2 that completes the proof of Serre's conjecture and of Artin's conjecture for odd representations of dimension 2 over Q
+expert_status: accepted
+uses: []
+results:
+  - id: "Section 1"
+    statement: ArtinOdd2Q
+    node: LGX6BXWH0J
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 6, chapter: null }
+notes: The paper proves a modularity lifting theorem for 2-adic Barsotti-Tate representations.
