@@ -1,0 +1,27 @@
+{
+  "id": "2026-11-25-e1-local-reciprocity-small-563c81b2",
+  "name": "e1-local-reciprocity-small",
+  "experiment": "E1",
+  "question": "For p in {2, 3, 5, 7}, is the norm group of each quadratic extension of Q_p, and of each cyclotomic extension Q_p(zeta_{p^n}) with p^n \u003c= 49, the kernel of the Artin map that Lubin-Tate theory with the uniformizer p predicts?",
+  "spec": "lab/specs/e1-local-reciprocity-small.yaml",
+  "spec_sha256": "563c81b2c3fc9d85349188b571c897e4b581c8b76a68c0c2e85feb8773b8e54e",
+  "node": "LGAV7YV6K6",
+  "tool": "lgl",
+  "tool_version": "dev",
+  "commit": "fb9dcfba42005ebad0d4118bd528ac5eb47b95d5",
+  "go": "go1.27.3",
+  "container": "none",
+  "network": false,
+  "seed": 1,
+  "host": "lab",
+  "started": "2026-11-25T13:47:28Z",
+  "wall_seconds": 1.031,
+  "result": "agrees: in 27 fields each norm that the run computed is in the kernel that Lubin-Tate predicts, and each class of the kernel has a norm",
+  "mismatches": 0,
+  "gaps": 0,
+  "files": {
+    "cyclotomic.json": "cc70beb10c3e69ed0689966dfb2618d10ae85c0ffcd1b98be0840a8ea2897455",
+    "quadratic.json": "698da4834fcdba9fab5e42c123ec74c3b4b975a7288885bcf6542af356a8ad1f",
+    "summary.md": "5d2703d02bdb473fbd1d7afac9a302a32e247236e8e53313001dc23fcf9b02ef"
+  }
+}

@@ -1,0 +1,14 @@
+name: e1-local-reciprocity-small
+experiment: E1
+question: For p in {2, 3, 5, 7}, is the norm group of each quadratic extension of Q_p, and of each cyclotomic extension Q_p(zeta_{p^n}) with p^n <= 49, the kernel of the Artin map that Lubin-Tate theory with the uniformizer p predicts?
+tool: lgl
+node: LGAV7YV6K6 # LocalReciprocityGL1
+inputs:
+  primes: [2, 3, 5, 7]
+  box: 40           # the norms a^2 - d b^2 of the quadratic fields use |a|, |b| <= 40
+  max_conductor: 49 # the fields Q_p(zeta_{p^n}) with p^n <= 49
+  samples: 200      # random elements of Z[zeta] for each cyclotomic field
+  coefficients: 2   # their coefficients are in [-2, 2]
+  seed: 1
+outputs: [quadratic.json, cyclotomic.json, summary.md]
+notes: A small version of E1 in Go, with no container and no network. It checks norm groups, which are the kernels of the Artin maps. It does not check the Artin map of a cyclotomic field of degree more than 2 element by element, and it has no Lean certificate (13.4).
