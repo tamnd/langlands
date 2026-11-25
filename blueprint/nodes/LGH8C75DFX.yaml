@@ -1,0 +1,10 @@
+tag: "LGH8C75DFX"
+slug: "fundamental-lemma"
+kind: "theorem"
+title: "The fundamental lemma for unitary Lie algebras"
+statement: "Let $F$ be a nonarchimedean local field of large residue characteristic, $E/F$ the unramified quadratic extension, and $H = U(n_1) \\times U(n_2)$ an endoscopic group of $G = U(n)$ with $n = n_1 + n_2$. For each regular semisimple stable class with characteristic polynomial $\\chi_1 \\chi_2$, the $\\kappa$-orbital integral of the unit function of $\\mathfrak{u}(n)(\\mathcal{O}_F)$ is the transfer factor $\\Delta(\\chi_1, \\chi_2)$ times the stable orbital integral of the unit function of $\\mathfrak{h}(\\mathcal{O}_F)$."
+sources: [{"paper": "Ngo10", "loc": "Introduction"}]
+uses: []
+lean: {"statement": "Langlands.FundamentalLemma"}
+tier: "T7"
+notes: "The Lean statement writes the orbital integrals as finite sums of indices over the classes of integral hermitian matrices, with $\\mathrm{vol}(K) = \\mathrm{vol}(T_c) = 1$, and asks for the identity for all residue characteristics above some bound. It is for the Lie algebra and for unitary groups only, which is the case of Laumon and Ngo. The group form and the other reductive groups are left out. The paper of Laumon and Ngo (Ann. of Math. 168, 2008) is not a row of the corpus, so the source is the general theorem of Ngo."

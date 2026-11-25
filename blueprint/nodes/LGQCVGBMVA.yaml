@@ -1,0 +1,7 @@
+tag: "LGQCVGBMVA"
+slug: "local-langlands-gsp4"
+kind: "theorem"
+title: "The local Langlands correspondence for GSp(4)"
+statement: "Let $K$ be a nonarchimedean local field of characteristic zero. There is a surjective finite-to-one map from the irreducible smooth representations of $GSp_4(K)$ to the L-parameters $W_K \\times SL_2(\\mathbb{C}) \\to GSp_4(\\mathbb{C})$. The fiber over a parameter $\\varphi$ is in bijection with the irreducible characters of its component group. The map takes the central character to the similitude character of the parameter, and for a generic representation it preserves the $\\gamma$-factors of pairs with the generic representations of $GL_r(K)$, $r \\le 2$."
+tier: "T5"
+notes: "This node has no Lean statement yet. The statement needs the L-parameters as $GSp_4(\\mathbb{C})$-conjugacy classes of pairs of a parameter and its similitude character, the component groups that index the L-packets, and the generic member of each tempered packet, with Whittaker models and the $\\gamma$-factors of pairs. The theorem is due to Gan and Takeda (Ann. of Math. 173, 2011), the corpus row T5-20, which has no paper record yet."

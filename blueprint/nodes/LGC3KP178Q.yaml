@@ -1,0 +1,10 @@
+tag: "LGC3KP178Q"
+slug: "sym-power-functoriality"
+kind: "theorem"
+title: "Symmetric power functoriality for holomorphic modular forms"
+statement: "Let $f$ be a newform of weight $k \\ge 2$ without complex multiplication, and let $n \\ge 1$. Then $\\mathrm{Sym}^n \\pi_f$ is a cuspidal automorphic representation of $GL_{n+1}(\\mathbb{A}_\\mathbb{Q})$. At each prime $p$ that does not divide the level, its Satake parameters are $\\alpha_p^{n-j} \\beta_p^j$ for $0 \\le j \\le n$, where $\\alpha_p$ and $\\beta_p$ are the unitary Satake parameters of $f$ at $p$."
+sources: [{"paper": "NT21", "loc": "Part II, the main theorem"}]
+uses: ["LGG3ZW59RX"]
+lean: {"statement": "Langlands.SymPowerFunctoriality"}
+tier: "T6"
+notes: "The Lean statement asks for a nonzero cusp form on $GL_{n+1}$ over $\\mathbb{Q}$ with these Satake parameters at each prime $p \\nmid N$. It does not ask for the local components at the other places. A Hecke eigenform at almost all places generates one cuspidal representation, by strong multiplicity one. The statement is for normalized eigenforms on $\\Gamma_1(N)$ with a character, which have the Hecke eigenvalues of a newform at the primes $p \\nmid N$."

@@ -1,0 +1,30 @@
+id: T0-02
+key: Lan70
+title: "Problems in the theory of automorphic forms"
+authors: [R. P. Langlands]
+where: "Lectures in Modern Analysis and Applications III, Lecture Notes in Mathematics 170, Springer (1970), 18-61"
+year: 1970
+doi: 10.1007/BFb0079065
+arxiv: null
+also: []
+read: { version: book, by: owner, date: 2026-11-26, tag: U }
+tier: T0
+why: the letter of questions that started the Langlands program, with the L-group and the principle of functoriality; the source of Langlands.FunctorialityGL and Langlands.RamanujanGL
+expert_status: accepted
+uses: []
+results:
+  - id: "the questions on the lifting of automorphic forms"
+    statement: FunctorialityGL
+    node: LGANNYN8R0
+    kind: conjecture
+    status: stated
+  - id: "the remarks on the Ramanujan conjecture"
+    statement: RamanujanGL
+    node: LGAGRC05KF
+    kind: conjecture
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 0, chapter: null }
+notes: The paper states the questions for a general reductive group. The Lean statements are only the cases of GL(n). The record is made from the bibliographic data only. Nobody has read the paper for the project yet, so the read tag is U.

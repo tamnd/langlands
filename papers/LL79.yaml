@@ -1,0 +1,25 @@
+id: T7-06
+key: LL79
+title: "L-indistinguishability for SL(2)"
+authors: [J.-P. Labesse, R. P. Langlands]
+where: "Canad. J. Math. 31 (1979), 726-785"
+year: 1979
+doi: 10.4153/CJM-1979-070-3
+arxiv: null
+also: []
+read: { version: journal, by: owner, date: 2026-11-26, tag: U }
+tier: T7
+why: the first study of L-packets and stability, for the group SL(2); the source of Langlands.LocalLanglandsSL2
+expert_status: accepted
+uses: []
+results:
+  - id: "the local L-packets"
+    statement: LocalLanglandsSL2
+    node: LG75V240RB
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 8, chapter: null }
+notes: The paper treats the local packets and the global multiplicity formula for SL(2) and its inner forms. The record is made from the bibliographic data only. Nobody has read the paper for the project yet, so the read tag is U.

@@ -1,0 +1,25 @@
+id: T5-10
+key: Kut80
+title: "The Langlands conjecture for Gl2 of a local field"
+authors: [Philip Kutzko]
+where: "Ann. of Math. 112 (1980), 381-412"
+year: 1980
+doi: 10.2307/1971151
+arxiv: null
+also: [T0-10]
+read: { version: journal, by: owner, date: 2026-11-26, tag: U }
+tier: T5
+why: the proof of the local Langlands correspondence for GL(2) over a nonarchimedean local field; a source of Langlands.LocalLanglandsGL2
+expert_status: accepted
+uses: []
+results:
+  - id: "the main theorem"
+    statement: LocalLanglandsGL2
+    node: LG453577KN
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 6, chapter: null }
+notes: The corpus row T5-10 gives the venue as Invent. Math., but the paper is in Ann. of Math. 112, and this record uses the journal of the DOI. The record is made from the bibliographic data only. Nobody has read the paper for the project yet, so the read tag is U.

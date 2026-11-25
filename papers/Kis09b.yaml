@@ -1,0 +1,30 @@
+id: T8-08
+key: Kis09b
+title: "The Fontaine-Mazur conjecture for GL_2"
+authors: [Mark Kisin]
+where: "J. Amer. Math. Soc. 22 (2009), 641-690"
+year: 2009
+doi: 10.1090/S0894-0347-09-00628-6
+arxiv: null
+also: [T8-07]
+read: { version: journal, by: owner, date: 2026-11-26, tag: U }
+tier: T8
+why: the proof of most cases of the Fontaine-Mazur conjecture for two-dimensional representations of the absolute Galois group of Q; the source of Langlands.FontaineMazurGL2Q
+expert_status: accepted
+uses: []
+results:
+  - id: "the main theorem"
+    statement: FontaineMazurGL2Q
+    node: LGNT1M1N6Z
+    kind: theorem
+    status: stated
+  - id: "the Breuil-Mezard conjecture"
+    statement: null
+    node: LGRMD7S8EV
+    kind: theorem
+    status: unstated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 10, chapter: null }
+notes: The key Kis09 is the record of the paper on 2-adic Barsotti-Tate representations, so this record has the key Kis09b. The paper proves a large part of the Breuil-Mezard conjecture and uses it for the modularity lifting. The record is made from the bibliographic data only. Nobody has read the paper for the project yet, so the read tag is U.

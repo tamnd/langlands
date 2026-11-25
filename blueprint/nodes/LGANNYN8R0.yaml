@@ -1,0 +1,10 @@
+tag: "LGANNYN8R0"
+slug: "functoriality-gl"
+kind: "conjecture"
+title: "Langlands functoriality from GL(n) to GL(m)"
+statement: "Let $K$ be a number field and $r : GL_n(\\mathbb{C}) \\to GL_m(\\mathbb{C})$ an algebraic representation. For each cuspidal automorphic representation $\\pi$ of $GL_n(\\mathbb{A}_K)$ there is an isobaric automorphic representation $\\Pi$ of $GL_m(\\mathbb{A}_K)$ with $\\mathrm{rec}(\\Pi_v) = r \\circ \\mathrm{rec}(\\pi_v)$ at each place $v$."
+sources: [{"paper": "Lan70", "loc": "the questions on the lifting of automorphic forms"}]
+uses: []
+lean: {"statement": "Langlands.FunctorialityGL"}
+tier: "T6"
+notes: "This is open in general. The Lean statement is the weak form at almost all places: at the unramified places the Satake parameters of $\\Pi_v$ are the eigenvalues of $r$ at the Satake parameters of $\\pi_v$. It covers only the representations $r$ that are trivial on the Weil group, not all L-homomorphisms ${}^L GL_n \\to {}^L GL_m$. The case $r = \\mathrm{id}$ is proved in Lean as Langlands.functorialityGL_id."

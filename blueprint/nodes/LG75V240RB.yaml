@@ -1,0 +1,10 @@
+tag: "LG75V240RB"
+slug: "local-langlands-sl2"
+kind: "theorem"
+title: "The L-packets of SL(2)"
+statement: "Let $K$ be a nonarchimedean local field. The restriction to $SL_2(K)$ of an irreducible smooth representation $\\pi$ of $GL_2(K)$ is a finite direct sum of irreducible representations with multiplicity one, and each irreducible representation of $SL_2(K)$ occurs in such a restriction. The restrictions of $\\pi$ and $\\pi'$ have a common constituent exactly when $\\pi' \\cong \\pi \\otimes \\chi \\circ \\det$ for a character $\\chi$ of $K^\\times$. The L-packets of $SL_2(K)$ are the sets of constituents of these restrictions. Through the correspondence for $GL_2$ they are in bijection with the projective parameters, the images of the parameters $\\mathrm{rec}(\\pi)$ in $PGL_2(\\mathbb{C})$."
+sources: [{"paper": "LL79", "loc": "the local L-packets"}]
+uses: ["LG453577KN"]
+lean: {"statement": "Langlands.LocalLanglandsSL2"}
+tier: "T5"
+notes: "The Lean statement has four parts. Each irreducible representation of $SL_2(K)$ occurs in a restriction, each restriction has multiplicity one, two restrictions meet exactly for twists, and for each map with the conditions of LG453577KN the twists on the two sides match. The parametrization of the members of a packet by the characters of the component group $S_\\varphi$ is left out, because it needs a choice of a generic character."
