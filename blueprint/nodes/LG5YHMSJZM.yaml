@@ -7,4 +7,4 @@ sources: [{"paper": "Tat79", "loc": "Section 9"}]
 uses: ["LGVSG50K41"]
 lean: {"statement": "Langlands.LocalLanglandsTorusSplit", "proof": "Langlands.localLanglandsTorusSplit"}
 tier: "T3"
-notes: "The proof needs only that $\\mathrm{rec}_K$ is an isomorphism of topological groups. The induced tori come later in milestone S1."
+notes: "The proof needs only that $\\mathrm{rec}_K$ is an isomorphism of topological groups. The induced tori are in the node LG4S7A4G1F."

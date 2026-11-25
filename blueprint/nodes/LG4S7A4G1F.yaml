@@ -1,0 +1,10 @@
+tag: "LG4S7A4G1F"
+slug: "local-langlands-induced-torus"
+kind: "theorem"
+title: "The local Langlands correspondence for induced tori"
+statement: "Let $L$ be a finite extension of $K$ and let $\\mathrm{rec}_L$ be a local Artin map of $L$. Through Shapiro's isomorphism $H^1(W_K, \\mathrm{Coind}_{W_L}^{W_K} \\mathbb{C}^\\times) \\cong \\mathrm{Hom}(W_L, \\mathbb{C}^\\times)$ and $\\mathrm{rec}_L$, the continuous characters of $L^\\times = \\mathrm{Res}_{L/K} \\mathbb{G}_m(K)$ are in bijection with the classes in $H^1(W_K, \\mathrm{Coind}_{W_L}^{W_K} \\mathbb{C}^\\times)$."
+sources: [{"paper": "Tat79", "loc": "Section 9"}]
+uses: ["LGVSG50K41", "LG5YHMSJZM"]
+lean: {"statement": "Langlands.LocalLanglandsTorusInduced", "proof": "Langlands.localLanglandsTorusInduced"}
+tier: "T3"
+notes: "The proof needs only that $\\mathrm{rec}_L$ is an isomorphism of topological groups, Shapiro's lemma, and the isomorphism of topological groups from $W_L$ to the open subgroup of $W_K$ that fixes $L$."
