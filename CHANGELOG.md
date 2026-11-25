@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## v0.1.5 (2026-11-26)
+
 ### Added
 
 - Eleven nodes for the new statements of langlands-lean about GL(n). Eight have the status stated: the local Langlands correspondence for GL(n) (LG2E74SP8W) and for GL(2) (LG453577KN), the L-packets of SL(2) (LG75V240RB), the local Jacquet-Langlands correspondence for GL(2) (LG7NVV7NSF), symmetric power functoriality (LGC3KP178Q), cyclic base change (LGCH6QCV3P), the fundamental lemma for unitary Lie algebras (LGH8C75DFX) and Kisin's theorem on the Fontaine-Mazur conjecture for GL(2) over Q (LGNT1M1N6Z). Three are open conjectures: the Ramanujan conjecture for GL(n) (LGAGRC05KF), functoriality from GL(n) to GL(m) (LGANNYN8R0) and the Hasse-Weil conjecture (LGFQ0HXS3H).
