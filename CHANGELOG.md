@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## v0.1.1 (2026-11-25)
+
 ### Added
 
 - The first run of lab experiment E1 in `lab/runs/`, with its spec in `lab/specs/e1-local-reciprocity-small.yaml`. In 27 quadratic and cyclotomic extensions of Q_p for p <= 7, each computed norm is in the kernel that Lubin-Tate theory predicts, and each class of the kernel has a norm.
