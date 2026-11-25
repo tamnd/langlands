@@ -1,0 +1,10 @@
+tag: "LG0S1WN9ND"
+slug: "selberg-eigenvalue"
+kind: "conjecture"
+title: "Selberg's eigenvalue conjecture"
+statement: "Let $\\Gamma$ be a congruence subgroup of $SL_2(\\mathbb{Z})$. Each nonzero eigenvalue $\\lambda$ of the hyperbolic Laplacian on $L^2(\\Gamma \\backslash \\mathbb{H})$ satisfies $\\lambda \\ge 1/4$."
+sources: [{"paper": "Sel65", "loc": "the bound 3/16 and the conjecture"}]
+uses: []
+lean: {"statement": "Langlands.SelbergEigenvalue"}
+tier: "T4"
+notes: "This is open. Selberg proved $\\lambda \\ge 3/16$. The best known bound is $\\lambda \\ge 975/4096$, by Kim and Sarnak. The conjecture is the Ramanujan conjecture at the archimedean place for GL(2) over Q."

@@ -1,0 +1,25 @@
+id: T4-11
+key: DS74
+title: "Formes modulaires de poids 1"
+authors: [Pierre Deligne, Jean-Pierre Serre]
+where: "Ann. Sci. ENS 7 (1974), 507-530"
+year: 1974
+doi: null
+arxiv: null
+also: []
+read: { version: journal, by: owner, date: 2026-11-25, tag: U }
+tier: T4
+why: the odd Artin representation of a newform of weight one; the converse direction of Langlands.ArtinOdd2Q
+expert_status: accepted
+uses: []
+results:
+  - id: "Theorem 4.1"
+    statement: ArtinOdd2Q
+    node: LGX6BXWH0J
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 4, chapter: null }
+notes: The proof reduces modulo many primes and uses the representations of weight 2 of Deligne.

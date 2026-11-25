@@ -1,0 +1,10 @@
+tag: "LG75ERTV5K"
+slug: "ramanujan-maass"
+kind: "conjecture"
+title: "The Ramanujan conjecture for Maass forms"
+statement: "Let $f$ be a Maass cusp form on $\\Gamma_1(N)$ with character $\\chi$, and $p \\nmid N$ a prime. Each eigenvalue $c$ of the normalized Hecke operator $T_p$ on $f$ satisfies $|c| \\le 2$."
+sources: [{"paper": "Kim03", "loc": "Appendix 2"}]
+uses: []
+lean: {"statement": "Langlands.RamanujanMaass"}
+tier: "T4"
+notes: "This is open. The best known bound is $|c| \\le p^{7/64} + p^{-7/64}$, by Kim and Sarnak. The fidelity check two_lt_heckeEigenvalue_one shows that the cuspidal condition is necessary."
