@@ -1,0 +1,9 @@
+tag: "LGDEPE7CM9"
+slug: "weil-group-ab-embeds"
+kind: "theorem"
+title: "The abelianized Weil group embeds in the abelianized Galois group"
+statement: "The map $W_K^{ab} \\to G_K^{ab}$ that the inclusion $W_K \\to G_K$ induces is continuous and injective."
+sources: [{"paper": "Tat79", "loc": "Section 1.4"}]
+uses: ["LGVSG50K41"]
+lean: {"statement": "Langlands.WeilGroup.toGaloisAb_injective", "proof": "Langlands.WeilGroup.toGaloisAb_injective"}
+tier: "T3"
