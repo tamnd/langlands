@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/tamnd/langlands-lean",
-  "commit": "3c0391ac54fce92b4b4e761da7a8d79a4b7e1a25",
+  "commit": "16a675faa9b35780cf65a49791dd07bf0b0c170a",
   "toolchain": "4.35.0",
   "mathlib": "v4.35.0",
   "built": "2026-11-26",
@@ -70,6 +70,17 @@
         "propext"
       ],
       "type": "Prop"
+    },
+    "Langlands.AutomorphicToGalois": {
+      "kind": "def",
+      "file": "Langlands/Statements/Reciprocity.lean",
+      "line": 178,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "ℕ → (K : Type u) → [inst : Field K] → [NumberField K] → Prop"
     },
     "Langlands.BaseChangeCyclic": {
       "kind": "def",
@@ -1048,6 +1059,221 @@
       ],
       "type": "Prop"
     },
+    "Langlands.GSpLParam": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 270,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] → [inst_1 : ValuativeRel K] → [inst_2 : TopologicalSpace K] → [IsNonarchimedeanLocalField K] → Type u"
+    },
+    "Langlands.GSpLParam.IsTwist": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 282,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          Langlands.GSpLParam K → Langlands.GSpLParam K → (Langlands.WeilGroup K →* ℂˣ) → Prop"
+    },
+    "Langlands.GSpLParam.mk": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 278,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] → Langlands.GSpParam K → Langlands.GSpLParam K"
+    },
+    "Langlands.GSpParam": {
+      "kind": "inductive",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 204,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] → [inst_1 : ValuativeRel K] → [inst_2 : TopologicalSpace K] → [IsNonarchimedeanLocalField K] → Type u"
+    },
+    "Langlands.GSpParam.IsDiscrete": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 253,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] → [inst_3 : IsNonarchimedeanLocalField K] → Langlands.GSpParam K → Prop"
+    },
+    "Langlands.GSpParam.Iso": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 215,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] → Langlands.GSpParam K → Langlands.GSpParam K → Prop"
+    },
+    "Langlands.GSpParam.centralizer": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 240,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] → Langlands.GSpParam K → Subgroup ↥(Langlands.gsp4 ℂ)"
+    },
+    "Langlands.GSpParam.componentCard": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 249,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] → [inst_3 : IsNonarchimedeanLocalField K] → Langlands.GSpParam K → ℕ"
+    },
+    "Langlands.GSpParam.ctorIdx": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  {inst : Field K} →\n    {inst_1 : ValuativeRel K} →\n      {inst_2 : TopologicalSpace K} → {inst_3 : IsNonarchimedeanLocalField K} → Langlands.GSpParam K → ℕ"
+    },
+    "Langlands.GSpParam.lie": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 209,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (self : Langlands.GSpParam K),\n  self.toWD.N.transpose * Langlands.gspForm ℂ + Langlands.gspForm ℂ * self.toWD.N = 0"
+    },
+    "Langlands.GSpParam.mem": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 208,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (self : Langlands.GSpParam K) (w : Langlands.WeilGroup K),\n  self.toWD.r w ∈ Langlands.gsp4 ℂ"
+    },
+    "Langlands.GSpParam.mk.inj": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} {inst : Field K} {inst_1 : ValuativeRel K} {inst_2 : TopologicalSpace K}\n  {inst_3 : IsNonarchimedeanLocalField K} {toWD : Langlands.WeilDeligneRep K 4}\n  {mem : ∀ (w : Langlands.WeilGroup K), toWD.r w ∈ Langlands.gsp4 ℂ}\n  {lie : toWD.N.transpose * Langlands.gspForm ℂ + Langlands.gspForm ℂ * toWD.N = 0}\n  {toWD_1 : Langlands.WeilDeligneRep K 4} {mem_1 : ∀ (w : Langlands.WeilGroup K), toWD_1.r w ∈ Langlands.gsp4 ℂ}\n  {lie_1 : toWD_1.N.transpose * Langlands.gspForm ℂ + Langlands.gspForm ℂ * toWD_1.N = 0},\n  { toWD := toWD, mem := mem, lie := lie } = { toWD := toWD_1, mem := mem_1, lie := lie_1 } → toWD = toWD_1"
+    },
+    "Langlands.GSpParam.mk.injEq": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (toWD : Langlands.WeilDeligneRep K 4)\n  (mem : ∀ (w : Langlands.WeilGroup K), toWD.r w ∈ Langlands.gsp4 ℂ)\n  (lie : toWD.N.transpose * Langlands.gspForm ℂ + Langlands.gspForm ℂ * toWD.N = 0)\n  (toWD_1 : Langlands.WeilDeligneRep K 4) (mem_1 : ∀ (w : Langlands.WeilGroup K), toWD_1.r w ∈ Langlands.gsp4 ℂ)\n  (lie_1 : toWD_1.N.transpose * Langlands.gspForm ℂ + Langlands.gspForm ℂ * toWD_1.N = 0),\n  ({ toWD := toWD, mem := mem, lie := lie } = { toWD := toWD_1, mem := mem_1, lie := lie_1 }) = (toWD = toWD_1)"
+    },
+    "Langlands.GSpParam.mk.sizeOf_spec": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] [inst_4 : SizeOf K] (toWD : Langlands.WeilDeligneRep K 4)\n  (mem : ∀ (w : Langlands.WeilGroup K), toWD.r w ∈ Langlands.gsp4 ℂ)\n  (lie : toWD.N.transpose * Langlands.gspForm ℂ + Langlands.gspForm ℂ * toWD.N = 0),\n  sizeOf { toWD := toWD, mem := mem, lie := lie } = 1 + sizeOf toWD + sizeOf lie"
+    },
+    "Langlands.GSpParam.noConfusionType": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Sort u_1 →\n  {K : Type u} →\n    [inst : Field K] →\n      [inst_1 : ValuativeRel K] →\n        [inst_2 : TopologicalSpace K] →\n          [inst_3 : IsNonarchimedeanLocalField K] →\n            Langlands.GSpParam K →\n              {K' : Type u} →\n                [inst' : Field K'] →\n                  [inst'_1 : ValuativeRel K'] →\n                    [inst'_2 : TopologicalSpace K'] →\n                      [inst'_3 : IsNonarchimedeanLocalField K'] → Langlands.GSpParam K' → Sort u_1"
+    },
+    "Langlands.GSpParam.rGSp": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 232,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] → Langlands.GSpParam K → Langlands.WeilGroup K →* ↥(Langlands.gsp4 ℂ)"
+    },
+    "Langlands.GSpParam.setoid": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 220,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] → [inst_3 : IsNonarchimedeanLocalField K] → Setoid (Langlands.GSpParam K)"
+    },
+    "Langlands.GSpParam.simChar": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 236,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] → Langlands.GSpParam K → Langlands.WeilGroup K →* ℂˣ"
+    },
+    "Langlands.GSpParam.simChar_eq_of_diagonal": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 257,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (φ : Langlands.GSpParam K) (φ₁ φ₂ φσ : Langlands.WeilGroup K →* ℂˣ),\n  (∀ (w : Langlands.WeilGroup K),\n      ↑(φ.toWD.r w) = Matrix.diagonal ![↑(φσ w) * ↑(φ₁ w) * ↑(φ₂ w), ↑(φσ w) * ↑(φ₁ w), ↑(φσ w) * ↑(φ₂ w), ↑(φσ w)]) →\n    φ.simChar = φσ ^ 2 * φ₁ * φ₂"
+    },
+    "Langlands.GSpParam.toWD": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 207,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] → Langlands.GSpParam K → Langlands.WeilDeligneRep K 4"
+    },
     "Langlands.GlobalExistence": {
       "kind": "def",
       "file": "Langlands/Statements/ClassField.lean",
@@ -1894,6 +2120,17 @@
         "propext"
       ],
       "type": "{F : Type u} →\n  [inst : Field F] →\n    {n : ℕ} →\n      ℕ → (Fin n → Fin n → Langlands.GlobalFunctionField.AdeleRing F) → Langlands.GlobalFunctionField.AdelicGL F n"
+    },
+    "Langlands.GlobalJacquetLanglandsGL2": {
+      "kind": "def",
+      "file": "Langlands/Statements/Reciprocity.lean",
+      "line": 188,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
     },
     "Langlands.GlobalReciprocity": {
       "kind": "def",
@@ -4050,6 +4287,17 @@
       ],
       "type": "{G : Type u} →\n  [inst : Group G] →\n    [inst_1 : TopologicalSpace G] → [IsTopologicalGroup G] → Langlands.IrrSmooth G → Langlands.IrrSmooth G → Prop"
     },
+    "Langlands.IrrSmooth.IsGSpGeneric": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 374,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] → [inst_1 : TopologicalSpace K] → Langlands.IrrSmooth ↥(Langlands.gsp4 K) → AddChar K ℂ → Prop"
+    },
     "Langlands.IrrSmooth.IsTwist": {
       "kind": "def",
       "file": "Langlands/Statements/Smooth.lean",
@@ -4269,6 +4517,127 @@
         "propext"
       ],
       "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [IsNonarchimedeanLocalField K] → {n : ℕ} → Langlands.SmoothRep (GL (Fin n) K) → (ℂ → ℂ) → Prop"
+    },
+    "Langlands.IsGSpLanglandsMap": {
+      "kind": "inductive",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 410,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          Kˣ ≃ₜ* Langlands.WeilGroup.Ab K → (Langlands.IrrSmooth ↥(Langlands.gsp4 K) → Langlands.GSpLParam K) → Prop"
+    },
+    "Langlands.IsGSpLanglandsMap.card_fiber": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 440,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {art : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K}\n  {L : Langlands.IrrSmooth ↥(Langlands.gsp4 K) → Langlands.GSpLParam K},\n  Langlands.IsGSpLanglandsMap K art L →\n    ∀ (φ : Langlands.GSpParam K), φ.IsDiscrete → Nat.card ↑(L ⁻¹' {Langlands.GSpLParam.mk φ}) = φ.componentCard"
+    },
+    "Langlands.IsGSpLanglandsMap.central": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 419,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {art : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K}\n  {L : Langlands.IrrSmooth ↥(Langlands.gsp4 K) → Langlands.GSpLParam K},\n  Langlands.IsGSpLanglandsMap K art L →\n    ∀ (π : Langlands.IrrRep ↥(Langlands.gsp4 K)) (ω : Kˣ →* ℂˣ),\n      Langlands.SmoothRep.HasCentralCharVia K (↑π) (Langlands.gspScalar K) ω →\n        ∀ (φ : Langlands.GSpParam K),\n          Langlands.GSpLParam.mk φ = L (Langlands.IrrSmooth.mk π) → Langlands.CharCorrespond K art ω φ.simChar"
+    },
+    "Langlands.IsGSpLanglandsMap.finite_fiber": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 417,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {art : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K}\n  {L : Langlands.IrrSmooth ↥(Langlands.gsp4 K) → Langlands.GSpLParam K},\n  Langlands.IsGSpLanglandsMap K art L → ∀ (x : Langlands.GSpLParam K), (L ⁻¹' {x}).Finite"
+    },
+    "Langlands.IsGSpLanglandsMap.generic": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 443,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {art : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K}\n  {L : Langlands.IrrSmooth ↥(Langlands.gsp4 K) → Langlands.GSpLParam K},\n  Langlands.IsGSpLanglandsMap K art L →\n    ∀ (ψ : AddChar K ℂ),\n      ψ ≠ 1 →\n        Continuous ⇑ψ →\n          ∀ (φ : Langlands.GSpParam K),\n            φ.IsDiscrete → ∃! x, L x = Langlands.GSpLParam.mk φ ∧ Langlands.IrrSmooth.IsGSpGeneric K x ψ"
+    },
+    "Langlands.IsGSpLanglandsMap.irreducible": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 437,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {art : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K}\n  {L : Langlands.IrrSmooth ↥(Langlands.gsp4 K) → Langlands.GSpLParam K},\n  Langlands.IsGSpLanglandsMap K art L →\n    ∀ (π : Langlands.IrrRep ↥(Langlands.gsp4 K)) (φ : Langlands.GSpParam K),\n      Langlands.GSpLParam.mk φ = L (Langlands.IrrSmooth.mk π) →\n        φ.toWD.IsIrreducible → (↑π).IsSupercuspidal (Langlands.gspScalar K)"
+    },
+    "Langlands.IsGSpLanglandsMap.principalSeries": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 426,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {art : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K}\n  {L : Langlands.IrrSmooth ↥(Langlands.gsp4 K) → Langlands.GSpLParam K},\n  Langlands.IsGSpLanglandsMap K art L →\n    ∀ (π : Langlands.IrrRep ↥(Langlands.gsp4 K)) (χ₁ χ₂ σ : Kˣ →* ℂˣ),\n      Langlands.IsSmoothChar K χ₁ →\n        Langlands.IsSmoothChar K χ₂ →\n          Langlands.IsSmoothChar K σ →\n            (↑π).HasHom (Langlands.gspPrincipalSeries K χ₁ χ₂ σ) →\n              ∀ (φ₁ φ₂ φσ : Langlands.WeilGroup K →* ℂˣ),\n                Langlands.CharCorrespond K art χ₁ φ₁ →\n                  Langlands.CharCorrespond K art χ₂ φ₂ →\n                    Langlands.CharCorrespond K art σ φσ →\n                      ∃ φ,\n                        Langlands.GSpLParam.mk φ = L (Langlands.IrrSmooth.mk π) ∧\n                          (∀ (w : Langlands.WeilGroup K),\n                              ↑(φ.toWD.r w) =\n                                Matrix.diagonal\n                                  ![↑(φσ w) * ↑(φ₁ w) * ↑(φ₂ w), ↑(φσ w) * ↑(φ₁ w), ↑(φσ w) * ↑(φ₂ w), ↑(φσ w)]) ∧\n                            ((Langlands.gspPrincipalSeries K χ₁ χ₂ σ).IsIrreducible → φ.toWD.N = 0)"
+    },
+    "Langlands.IsGSpLanglandsMap.supercuspidal": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 434,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {art : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K}\n  {L : Langlands.IrrSmooth ↥(Langlands.gsp4 K) → Langlands.GSpLParam K},\n  Langlands.IsGSpLanglandsMap K art L →\n    ∀ (π : Langlands.IrrRep ↥(Langlands.gsp4 K)),\n      (↑π).IsSupercuspidal (Langlands.gspScalar K) →\n        ∀ (φ : Langlands.GSpParam K), Langlands.GSpLParam.mk φ = L (Langlands.IrrSmooth.mk π) → φ.IsDiscrete"
+    },
+    "Langlands.IsGSpLanglandsMap.surjective": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 415,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {art : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K}\n  {L : Langlands.IrrSmooth ↥(Langlands.gsp4 K) → Langlands.GSpLParam K},\n  Langlands.IsGSpLanglandsMap K art L → Function.Surjective L"
+    },
+    "Langlands.IsGSpLanglandsMap.twist": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 422,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] {art : Kˣ ≃ₜ* Langlands.WeilGroup.Ab K}\n  {L : Langlands.IrrSmooth ↥(Langlands.gsp4 K) → Langlands.GSpLParam K},\n  Langlands.IsGSpLanglandsMap K art L →\n    ∀ (x y : Langlands.IrrSmooth ↥(Langlands.gsp4 K)) (χ : Kˣ →* ℂˣ) (hχ : Langlands.IsSmoothChar K χ),\n      y.IsTwist x (Langlands.gspSimChar K χ) ⋯ →\n        ∀ (φ : Langlands.WeilGroup K →* ℂˣ), Langlands.CharCorrespond K art χ φ → (L y).IsTwist (L x) φ"
+    },
+    "Langlands.IsGSpUnipotent": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 365,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) → [inst : Field K] → ↥(Langlands.gsp4 K) → Prop"
     },
     "Langlands.IsGoodPlace": {
       "kind": "def",
@@ -5694,6 +6063,17 @@
       ],
       "type": "Prop"
     },
+    "Langlands.LocalLanglandsGSp4": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 446,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
     "Langlands.LocalLanglandsSL2": {
       "kind": "def",
       "file": "Langlands/Statements/LocalLanglands.lean",
@@ -5759,6 +6139,654 @@
         "propext"
       ],
       "type": "Prop"
+    },
+    "Langlands.NumberFieldGL.AutomorphicClass": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 239,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) → [inst : Field K] → [NumberField K] → ℕ → Type u"
+    },
+    "Langlands.NumberFieldGL.CuspEigenform": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 193,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) → [inst : Field K] → [NumberField K] → ℕ → Type u"
+    },
+    "Langlands.NumberFieldGL.CuspEigenform.Equiv": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 197,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      {n : ℕ} → Langlands.NumberFieldGL.CuspEigenform K n → Langlands.NumberFieldGL.CuspEigenform K n → Prop"
+    },
+    "Langlands.NumberFieldGL.GaloisClass": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 315,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) → [inst : Field K] → [NumberField K] → ℕ → (ℓ : ℕ) → [Fact (Nat.Prime ℓ)] → Type u"
+    },
+    "Langlands.NumberFieldGL.GaloisRep": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 295,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) → [inst : Field K] → [NumberField K] → ℕ → (ℓ : ℕ) → [Fact (Nat.Prime ℓ)] → Type u"
+    },
+    "Langlands.NumberFieldGL.GaloisRep.Iso": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 299,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      {n ℓ : ℕ} →\n        [inst_2 : Fact (Nat.Prime ℓ)] →\n          Langlands.NumberFieldGL.GaloisRep K n ℓ → Langlands.NumberFieldGL.GaloisRep K n ℓ → Prop"
+    },
+    "Langlands.NumberFieldGL.HasCapelliRoots": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 153,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{n : ℕ} → {G : Type u_1} → (Fin n → Fin n → (G → ℂ) → G → ℂ) → (G → ℂ) → Multiset ℤ → Prop"
+    },
+    "Langlands.NumberFieldGL.IsAlgebraicClass": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 243,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] → [inst_1 : NumberField K] → {n : ℕ} → Langlands.NumberFieldGL.AutomorphicClass K n → Prop"
+    },
+    "Langlands.NumberFieldGL.IsAlgebraicForm": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 182,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} → [inst : Field K] → [inst_1 : NumberField K] → {n : ℕ} → (Langlands.AdelicGL K n → ℂ) → Prop"
+    },
+    "Langlands.NumberFieldGL.IsAlgebraicFormWith": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 175,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] → [inst_1 : NumberField K] → {n : ℕ} → (Multiset ℤ → Prop) → (Langlands.AdelicGL K n → ℂ) → Prop"
+    },
+    "Langlands.NumberFieldGL.IsAlmostUnramified": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 274,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [NumberField K] → {H : Type u_1} → [inst_2 : Group H] → (Langlands.GlobalFunctionField.GaloisGroup K →* H) → Prop"
+    },
+    "Langlands.NumberFieldGL.IsArchSmooth": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 135,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} → [inst : Field K] → [inst_1 : NumberField K] → {n : ℕ} → (Langlands.AdelicGL K n → ℂ) → Prop"
+    },
+    "Langlands.NumberFieldGL.IsFrobAt": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 262,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [NumberField K] →\n      IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K) →\n        Langlands.GlobalFunctionField.GaloisGroup K → Prop"
+    },
+    "Langlands.NumberFieldGL.IsFrobAt.congr_simp": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K]\n  (v v_1 : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)),\n  v = v_1 →\n    ∀ (σ σ_1 : Langlands.GlobalFunctionField.GaloisGroup K),\n      σ = σ_1 → Langlands.NumberFieldGL.IsFrobAt v σ = Langlands.NumberFieldGL.IsFrobAt v_1 σ_1"
+    },
+    "Langlands.NumberFieldGL.IsGaloisRep": {
+      "kind": "inductive",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 287,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [NumberField K] →\n      {n : ℕ} →\n        (ℓ : ℕ) →\n          [inst_2 : Fact (Nat.Prime ℓ)] →\n            (Langlands.GlobalFunctionField.GaloisGroup K →* GL (Fin n) (PadicAlgCl ℓ)) → Prop"
+    },
+    "Langlands.NumberFieldGL.IsGaloisRep.almost_unramified": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 292,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {n ℓ : ℕ} [inst_2 : Fact (Nat.Prime ℓ)]\n  {ρ : Langlands.GlobalFunctionField.GaloisGroup K →* GL (Fin n) (PadicAlgCl ℓ)},\n  Langlands.NumberFieldGL.IsGaloisRep ℓ ρ → Langlands.NumberFieldGL.IsAlmostUnramified ρ"
+    },
+    "Langlands.NumberFieldGL.IsGaloisRep.continuous": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 290,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {n ℓ : ℕ} [inst_2 : Fact (Nat.Prime ℓ)]\n  {ρ : Langlands.GlobalFunctionField.GaloisGroup K →* GL (Fin n) (PadicAlgCl ℓ)},\n  Langlands.NumberFieldGL.IsGaloisRep ℓ ρ → Continuous ⇑ρ"
+    },
+    "Langlands.NumberFieldGL.IsGaloisRep.irreducible": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 291,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {n ℓ : ℕ} [inst_2 : Fact (Nat.Prime ℓ)]\n  {ρ : Langlands.GlobalFunctionField.GaloisGroup K →* GL (Fin n) (PadicAlgCl ℓ)},\n  Langlands.NumberFieldGL.IsGaloisRep ℓ ρ → Langlands.IsIrreducibleRep ρ"
+    },
+    "Langlands.NumberFieldGL.IsMaximalQuaternionOrder": {
+      "kind": "def",
+      "file": "Langlands/Statements/Reciprocity.lean",
+      "line": 94,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{a b : ℚ} → Subring (QuaternionAlgebra ℚ a 0 b) → Prop"
+    },
+    "Langlands.NumberFieldGL.IsQuaternionLattice": {
+      "kind": "def",
+      "file": "Langlands/Statements/Reciprocity.lean",
+      "line": 86,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{a b : ℚ} → Submodule ℤ (QuaternionAlgebra ℚ a 0 b) → Prop"
+    },
+    "Langlands.NumberFieldGL.IsQuaternionOrder": {
+      "kind": "def",
+      "file": "Langlands/Statements/Reciprocity.lean",
+      "line": 90,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{a b : ℚ} → Subring (QuaternionAlgebra ℚ a 0 b) → Prop"
+    },
+    "Langlands.NumberFieldGL.IsRegularAlgebraicClass": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 247,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] → [inst_1 : NumberField K] → {n : ℕ} → Langlands.NumberFieldGL.AutomorphicClass K n → Prop"
+    },
+    "Langlands.NumberFieldGL.IsRegularAlgebraicForm": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 186,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} → [inst : Field K] → [inst_1 : NumberField K] → {n : ℕ} → (Langlands.AdelicGL K n → ℂ) → Prop"
+    },
+    "Langlands.NumberFieldGL.IsSplitAt": {
+      "kind": "def",
+      "file": "Langlands/Statements/Reciprocity.lean",
+      "line": 125,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "ℚ → ℚ → (q : ℕ) → [Fact (Nat.Prime q)] → Prop"
+    },
+    "Langlands.NumberFieldGL.IsUnramAt": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 269,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [NumberField K] →\n      {H : Type u_1} →\n        [inst_2 : Group H] →\n          (Langlands.GlobalFunctionField.GaloisGroup K →* H) →\n            IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K) → Prop"
+    },
+    "Langlands.NumberFieldGL.Matches": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 279,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      {n ℓ : ℕ} →\n        [inst_2 : Fact (Nat.Prime ℓ)] →\n          PadicAlgCl ℓ ≃+* ℂ →\n            Langlands.NumberFieldGL.CuspEigenform K n →\n              (Langlands.GlobalFunctionField.GaloisGroup K →* GL (Fin n) (PadicAlgCl ℓ)) → Prop"
+    },
+    "Langlands.NumberFieldGL.QuaternionIdealClass": {
+      "kind": "def",
+      "file": "Langlands/Statements/Reciprocity.lean",
+      "line": 112,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{a b : ℚ} → Subring (QuaternionAlgebra ℚ a 0 b) → Type"
+    },
+    "Langlands.NumberFieldGL.QuaternionIdealClass.nonempty": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Reciprocity.lean",
+      "line": 131,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {a b : ℚ} {O : Subring (QuaternionAlgebra ℚ a 0 b)},\n  Langlands.NumberFieldGL.IsQuaternionOrder O → Nonempty (Langlands.NumberFieldGL.QuaternionIdealClass O)"
+    },
+    "Langlands.NumberFieldGL.QuaternionRightIdeal": {
+      "kind": "def",
+      "file": "Langlands/Statements/Reciprocity.lean",
+      "line": 98,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{a b : ℚ} → Subring (QuaternionAlgebra ℚ a 0 b) → Type"
+    },
+    "Langlands.NumberFieldGL.antiholGenerator": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 169,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      {n : ℕ} → NumberField.InfinitePlace K → Fin n → Fin n → (Langlands.AdelicGL K n → ℂ) → Langlands.AdelicGL K n → ℂ"
+    },
+    "Langlands.NumberFieldGL.archAdele": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 79,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      (w : NumberField.InfinitePlace K) → w.Completion →+ NumberField.AdeleRing (NumberField.RingOfIntegers K) K"
+    },
+    "Langlands.NumberFieldGL.archAdele_mapMatrix_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 90,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {n : ℕ} (w : NumberField.InfinitePlace K)\n  (A B : Matrix (Fin n) (Fin n) w.Completion),\n  (Langlands.NumberFieldGL.archAdele K w).mapMatrix (A * B) =\n    (Langlands.NumberFieldGL.archAdele K w).mapMatrix A * (Langlands.NumberFieldGL.archAdele K w).mapMatrix B"
+    },
+    "Langlands.NumberFieldGL.archAdele_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 85,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] (w : NumberField.InfinitePlace K) (x y : w.Completion),\n  (Langlands.NumberFieldGL.archAdele K w) (x * y) =\n    (Langlands.NumberFieldGL.archAdele K w) x * (Langlands.NumberFieldGL.archAdele K w) y"
+    },
+    "Langlands.NumberFieldGL.archGL": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 108,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      {n : ℕ} → (w : NumberField.InfinitePlace K) → GL (Fin n) w.Completion →* Langlands.AdelicGL K n"
+    },
+    "Langlands.NumberFieldGL.archMatrix": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 98,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      {n : ℕ} →\n        (w : NumberField.InfinitePlace K) →\n          Matrix (Fin n) (Fin n) w.Completion →*\n            Matrix (Fin n) (Fin n) (NumberField.AdeleRing (NumberField.RingOfIntegers K) K)"
+    },
+    "Langlands.NumberFieldGL.brandtHecke": {
+      "kind": "def",
+      "file": "Langlands/Statements/Reciprocity.lean",
+      "line": 116,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{a b : ℚ} →\n  (O : Subring (QuaternionAlgebra ℚ a 0 b)) →\n    ℕ → (Langlands.NumberFieldGL.QuaternionIdealClass O → ℂ) → Langlands.NumberFieldGL.QuaternionIdealClass O → ℂ"
+    },
+    "Langlands.NumberFieldGL.capelliOperator": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 144,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{n : ℕ} → {G : Type u_1} → (Fin n → Fin n → (G → ℂ) → G → ℂ) → ℂ → (G → ℂ) → G → ℂ"
+    },
+    "Langlands.NumberFieldGL.capelliOperator_one": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 321,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {G : Type u_1} (D : Fin 1 → Fin 1 → (G → ℂ) → G → ℂ) (u : ℂ) (φ : G → ℂ),\n  Langlands.NumberFieldGL.capelliOperator D u φ = D 0 0 φ + u • φ"
+    },
+    "Langlands.NumberFieldGL.completionI": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 118,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} → [inst : Field K] → (w : NumberField.InfinitePlace K) → w.Completion"
+    },
+    "Langlands.NumberFieldGL.cuspSetoid": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 222,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] → [inst_1 : NumberField K] → (n : ℕ) → Setoid (Langlands.NumberFieldGL.CuspEigenform K n)"
+    },
+    "Langlands.NumberFieldGL.finitePlace": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 258,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [NumberField K] →\n      IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K) → Langlands.GlobalFunctionField.Place K"
+    },
+    "Langlands.NumberFieldGL.galoisSetoid": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 304,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      (n ℓ : ℕ) → [inst_2 : Fact (Nat.Prime ℓ)] → Setoid (Langlands.NumberFieldGL.GaloisRep K n ℓ)"
+    },
+    "Langlands.NumberFieldGL.heckeEigenvalue_unique": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 202,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {n : ℕ} {φ : Langlands.AdelicGL K n → ℂ},\n  φ ≠ 0 →\n    ∀ {v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)} {ev ev' : ℕ → ℂ},\n      Langlands.IsHeckeEigenAt φ v ev → Langlands.IsHeckeEigenAt φ v ev' → ∀ {i : ℕ}, 1 ≤ i → i ≤ n → ev i = ev' i"
+    },
+    "Langlands.NumberFieldGL.heckePolynomial": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 252,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "ℕ → ℕ → (ℕ → ℂ) → Polynomial ℂ"
+    },
+    "Langlands.NumberFieldGL.heckePolynomial_congr": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 346,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {n : ℕ} (q : ℕ) {ev ev' : ℕ → ℂ},\n  (∀ (i : ℕ), 1 ≤ i → i ≤ n → ev i = ev' i) →\n    Langlands.NumberFieldGL.heckePolynomial n q ev = Langlands.NumberFieldGL.heckePolynomial n q ev'"
+    },
+    "Langlands.NumberFieldGL.heckePolynomial_one": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 326,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (q : ℕ) (ev : ℕ → ℂ), Langlands.NumberFieldGL.heckePolynomial 1 q ev = Polynomial.X - Polynomial.C (ev 1)"
+    },
+    "Langlands.NumberFieldGL.heckePolynomial_one_eq_charpoly_map_iff": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 366,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {ℓ : ℕ} [inst : Fact (Nat.Prime ℓ)] (ι : PadicAlgCl ℓ ≃+* ℂ) (q : ℕ) (ev : ℕ → ℂ)\n  (A : Matrix (Fin 1) (Fin 1) (PadicAlgCl ℓ)),\n  Langlands.NumberFieldGL.heckePolynomial 1 q ev = Polynomial.map (↑ι) A.charpoly ↔ ι (A 0 0) = ev 1"
+    },
+    "Langlands.NumberFieldGL.heckePolynomial_two": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 330,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (q : ℕ) (ev : ℕ → ℂ),\n  Langlands.NumberFieldGL.heckePolynomial 2 q ev =\n    Polynomial.X ^ 2 - Polynomial.C (ev 1) * Polynomial.X + Polynomial.C (↑q * ev 2)"
+    },
+    "Langlands.NumberFieldGL.holGenerator": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 163,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      {n : ℕ} → NumberField.InfinitePlace K → Fin n → Fin n → (Langlands.AdelicGL K n → ℂ) → Langlands.AdelicGL K n → ℂ"
+    },
+    "Langlands.NumberFieldGL.isGaloisRep_one": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Reciprocity.lean",
+      "line": 151,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : NumberField K] (ℓ : ℕ) [inst_2 : Fact (Nat.Prime ℓ)],\n  Langlands.NumberFieldGL.IsGaloisRep ℓ 1 ∧ (Set.range ⇑1).Finite"
+    },
+    "Langlands.NumberFieldGL.isHeckeEigenAt_congr": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 215,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {n : ℕ} {φ : Langlands.AdelicGL K n → ℂ}\n  {v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)} {ev ev' : ℕ → ℂ},\n  Langlands.IsHeckeEigenAt φ v ev → (∀ (i : ℕ), 1 ≤ i → i ≤ n → ev i = ev' i) → Langlands.IsHeckeEigenAt φ v ev'"
+    },
+    "Langlands.NumberFieldGL.lieDerivative": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 128,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      {n : ℕ} →\n        (w : NumberField.InfinitePlace K) →\n          Matrix (Fin n) (Fin n) w.Completion → (Langlands.AdelicGL K n → ℂ) → Langlands.AdelicGL K n → ℂ"
+    },
+    "Langlands.NumberFieldGL.matches_conj": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 335,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {n ℓ : ℕ} [inst_2 : Fact (Nat.Prime ℓ)]\n  (ι : PadicAlgCl ℓ ≃+* ℂ) (φ : Langlands.NumberFieldGL.CuspEigenform K n)\n  (ρ ρ' : Langlands.GlobalFunctionField.GaloisGroup K →* GL (Fin n) (PadicAlgCl ℓ)) (A : GL (Fin n) (PadicAlgCl ℓ)),\n  (∀ (σ : Langlands.GlobalFunctionField.GaloisGroup K), ρ' σ = A * ρ σ * A⁻¹) →\n    (Langlands.NumberFieldGL.Matches ι φ ρ ↔ Langlands.NumberFieldGL.Matches ι φ ρ')"
+    },
+    "Langlands.NumberFieldGL.matches_of_equiv": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 354,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {n ℓ : ℕ} [inst_2 : Fact (Nat.Prime ℓ)]\n  (ι : PadicAlgCl ℓ ≃+* ℂ) {φ ψ : Langlands.NumberFieldGL.CuspEigenform K n},\n  φ.Equiv ψ →\n    ∀ (ρ : Langlands.GlobalFunctionField.GaloisGroup K →* GL (Fin n) (PadicAlgCl ℓ)),\n      Langlands.NumberFieldGL.Matches ι φ ρ → Langlands.NumberFieldGL.Matches ι ψ ρ"
+    },
+    "Langlands.NumberFieldGL.onePlusGL": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 123,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    {n : ℕ} → (w : NumberField.InfinitePlace K) → Matrix (Fin n) (Fin n) w.Completion → GL (Fin n) w.Completion"
+    },
+    "Langlands.NumberFieldGL.quaternionIdealSetoid": {
+      "kind": "def",
+      "file": "Langlands/Statements/Reciprocity.lean",
+      "line": 102,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{a b : ℚ} → (O : Subring (QuaternionAlgebra ℚ a 0 b)) → Setoid (Langlands.NumberFieldGL.QuaternionRightIdeal O)"
+    },
+    "Langlands.NumberFieldGL.realGenerator": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 158,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      {n : ℕ} → NumberField.InfinitePlace K → Fin n → Fin n → (Langlands.AdelicGL K n → ℂ) → Langlands.AdelicGL K n → ℂ"
+    },
+    "Langlands.NumberFieldGL.realToCompletion": {
+      "kind": "def",
+      "file": "Langlands/Statements/NumberFieldGL.lean",
+      "line": 112,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} → [inst : Field K] → (w : NumberField.InfinitePlace K) → ℝ →+* w.Completion"
+    },
+    "Langlands.NumberFieldGL.reciprocity_map_unique": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Reciprocity.lean",
+      "line": 136,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {n ℓ : ℕ} [inst_2 : Fact (Nat.Prime ℓ)]\n  (ι : PadicAlgCl ℓ ≃+* ℂ)\n  (Φ Φ' : { c // Langlands.NumberFieldGL.IsAlgebraicClass c } → Langlands.NumberFieldGL.GaloisClass K n ℓ),\n  (∀ (φ : Langlands.NumberFieldGL.CuspEigenform K n) (hφ : Langlands.NumberFieldGL.IsAlgebraicClass ⟦φ⟧)\n      (ρ : Langlands.NumberFieldGL.GaloisRep K n ℓ), Φ ⟨⟦φ⟧, hφ⟩ = ⟦ρ⟧ ↔ Langlands.NumberFieldGL.Matches ι φ ↑ρ) →\n    (∀ (φ : Langlands.NumberFieldGL.CuspEigenform K n) (hφ : Langlands.NumberFieldGL.IsAlgebraicClass ⟦φ⟧)\n        (ρ : Langlands.NumberFieldGL.GaloisRep K n ℓ), Φ' ⟨⟦φ⟧, hφ⟩ = ⟦ρ⟧ ↔ Langlands.NumberFieldGL.Matches ι φ ↑ρ) →\n      Φ = Φ'"
     },
     "Langlands.Ported.FormalConjectures.HasseWeil.HasAnalyticContinuation": {
       "kind": "def",
@@ -7142,6 +8170,17 @@
       ],
       "type": "ℕ → Prop"
     },
+    "Langlands.ReciprocityGL": {
+      "kind": "def",
+      "file": "Langlands/Statements/Reciprocity.lean",
+      "line": 163,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "ℕ → (K : Type u) → [inst : Field K] → [NumberField K] → Prop"
+    },
     "Langlands.SatoTate": {
       "kind": "def",
       "file": "Langlands/Statements/Modularity.lean",
@@ -7557,6 +8596,17 @@
       ],
       "type": "{K : Type u} →\n  [inst : Field K] → [inst_1 : TopologicalSpace K] → {n : ℕ} → Langlands.SmoothRep (GL (Fin n) K) → (Kˣ →* ℂˣ) → Prop"
     },
+    "Langlands.SmoothRep.HasCentralCharVia": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 378,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    {G : Type u} →\n      [inst_1 : Group G] → [inst_2 : TopologicalSpace G] → Langlands.SmoothRep G → (Kˣ →* G) → (Kˣ →* ℂˣ) → Prop"
+    },
     "Langlands.SmoothRep.HasHom": {
       "kind": "def",
       "file": "Langlands/Statements/Smooth.lean",
@@ -7589,6 +8639,17 @@
         "propext"
       ],
       "type": "{G : Type u} → [inst : Group G] → [inst_1 : TopologicalSpace G] → Langlands.SmoothRep G → G → ℂ → Prop"
+    },
+    "Langlands.SmoothRep.IsGSpGeneric": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 369,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] → [inst_1 : TopologicalSpace K] → Langlands.SmoothRep ↥(Langlands.gsp4 K) → AddChar K ℂ → Prop"
     },
     "Langlands.SmoothRep.IsIrreducible": {
       "kind": "def",
@@ -13562,6 +14623,17 @@
       ],
       "type": "{N : ℕ} →\n  {k : ℤ} →\n    CuspForm (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma1 N)) k →\n      DirichletCharacter ℂ N → Subalgebra ℤ ℂ"
     },
+    "Langlands.continuous_gsp4_sim": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 173,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (R : Type u) [inst : CommRing R] [inst_1 : TopologicalSpace R] [IsTopologicalRing R],\n  Continuous ⇑(Langlands.gsp4.sim R)"
+    },
     "Langlands.cycChar": {
       "kind": "def",
       "file": "Langlands/Statements/PadicGalois.lean",
@@ -13627,6 +14699,17 @@
         "propext"
       ],
       "type": "{n : ℕ} → (Fin n → ℂˣ) → GL (Fin n) ℂ"
+    },
+    "Langlands.diagonal_mem_gsp4": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 190,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {R : Type u} [inst : CommRing R] (x y z : Rˣ),\n  (Matrix.diagonal ![↑z * ↑x * ↑y, ↑z * ↑x, ↑z * ↑y, ↑z]).transpose * Langlands.gspForm R *\n      Matrix.diagonal ![↑z * ↑x * ↑y, ↑z * ↑x, ↑z * ↑y, ↑z] =\n    ↑(z ^ 2 * x * y) • Langlands.gspForm R"
     },
     "Langlands.eq_inducedParameter": {
       "kind": "theorem",
@@ -13769,6 +14852,169 @@
         "propext"
       ],
       "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      Langlands.GoodClosedPoint (CategoryTheory.CategoryStruct.id (Langlands.SpecIntegers K)) ≃\n        IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)"
+    },
+    "Langlands.gsp4": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 83,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(R : Type u) → [inst : CommRing R] → Subgroup (GL (Fin 4) R)"
+    },
+    "Langlands.gsp4.coe_sim": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 148,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {R : Type u} [inst : CommRing R] (g : ↥(Langlands.gsp4 R)),\n  ↑((Langlands.gsp4.sim R) g) = ((↑↑g).transpose * Langlands.gspForm R * ↑↑g) 0 3"
+    },
+    "Langlands.gsp4.coe_simVal": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 124,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {R : Type u} [inst : CommRing R] (g : ↥(Langlands.gsp4 R)),\n  ↑(Langlands.gsp4.simVal g) = ((↑↑g).transpose * Langlands.gspForm R * ↑↑g) 0 3"
+    },
+    "Langlands.gsp4.sim": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 131,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(R : Type u) → [inst : CommRing R] → ↥(Langlands.gsp4 R) →* Rˣ"
+    },
+    "Langlands.gsp4.simVal": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 116,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{R : Type u} → [inst : CommRing R] → ↥(Langlands.gsp4 R) → Rˣ"
+    },
+    "Langlands.gsp4.simVal_spec": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 120,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {R : Type u} [inst : CommRing R] (g : ↥(Langlands.gsp4 R)),\n  (↑↑g).transpose * Langlands.gspForm R * ↑↑g = ↑(Langlands.gsp4.simVal g) • Langlands.gspForm R"
+    },
+    "Langlands.gsp4.sim_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 154,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {R : Type u} [inst : CommRing R] {g : ↥(Langlands.gsp4 R)} {c : Rˣ},\n  (↑↑g).transpose * Langlands.gspForm R * ↑↑g = ↑c • Langlands.gspForm R → (Langlands.gsp4.sim R) g = c"
+    },
+    "Langlands.gsp4.sim_spec": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 151,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {R : Type u} [inst : CommRing R] (g : ↥(Langlands.gsp4 R)),\n  (↑↑g).transpose * Langlands.gspForm R * ↑↑g = ↑((Langlands.gsp4.sim R) g) • Langlands.gspForm R"
+    },
+    "Langlands.gspBorelChar": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 347,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [IsNonarchimedeanLocalField K] → (Kˣ →* ℂˣ) → (Kˣ →* ℂˣ) → (Kˣ →* ℂˣ) → ↥(Langlands.gsp4 K) → ℂ → Prop"
+    },
+    "Langlands.gspForm": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 75,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(R : Type u) → [CommRing R] → Matrix (Fin 4) (Fin 4) R"
+    },
+    "Langlands.gspForm_zero_three": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 79,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (R : Type u) [inst : CommRing R], Langlands.gspForm R 0 3 = 1"
+    },
+    "Langlands.gspPrincipalSeries": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 353,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [IsNonarchimedeanLocalField K] → (Kˣ →* ℂˣ) → (Kˣ →* ℂˣ) → (Kˣ →* ℂˣ) → Langlands.SmoothRep ↥(Langlands.gsp4 K)"
+    },
+    "Langlands.gspPrincipalSeries_hasCentralChar": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 383,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (χ₁ χ₂ σ : Kˣ →* ℂˣ),\n  Langlands.SmoothRep.HasCentralCharVia K (Langlands.gspPrincipalSeries K χ₁ χ₂ σ) (Langlands.gspScalar K)\n    (χ₁ * χ₂ * σ ^ 2)"
+    },
+    "Langlands.gspScalar": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 162,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(R : Type u) → [inst : CommRing R] → Rˣ →* ↥(Langlands.gsp4 R)"
+    },
+    "Langlands.gspSimChar": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 357,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) → [inst : Field K] → (Kˣ →* ℂˣ) → ↥(Langlands.gsp4 K) →* ℂˣ"
     },
     "Langlands.hasseWeilZeta": {
       "kind": "def",
@@ -14067,6 +15313,17 @@
       ],
       "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K] [IsNonarchimedeanLocalField K]\n  (n : ℕ) (χ : Kˣ →* ℂˣ), Langlands.IsSmoothChar K χ → IsOpen ↑(Langlands.detChar K n χ).ker"
     },
+    "Langlands.isOpen_ker_gspSimChar": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 361,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K] [IsNonarchimedeanLocalField K]\n  (χ : Kˣ →* ℂˣ), Langlands.IsSmoothChar K χ → IsOpen ↑(Langlands.gspSimChar K χ).ker"
+    },
     "Langlands.linearForm": {
       "kind": "def",
       "file": "Langlands/Statements/PadicGalois.lean",
@@ -14187,6 +15444,17 @@
         "propext"
       ],
       "type": "∀ {p : ℕ} [inst : Fact (Nat.Prime p)] {k : Type u_1} [inst_1 : Field k]\n  (ρbar : Field.absoluteGaloisGroup ℚ_[p] →* GL (Fin 2) k),\n  IsOpen ↑ρbar.ker → ρbar ∈ Langlands.FramedLift p ρbar k (RingHom.id k)"
+    },
+    "Langlands.mem_gsp4": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 112,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {R : Type u} [inst : CommRing R] {g : GL (Fin 4) R},\n  g ∈ Langlands.gsp4 R ↔ ∃ c, (↑g).transpose * Langlands.gspForm R * ↑g = ↑c • Langlands.gspForm R"
     },
     "Langlands.mem_vecStabilizer": {
       "kind": "theorem",
@@ -14363,6 +15631,39 @@
       ],
       "type": "∀ (K : Type u) [inst : Field K] [inst_1 : NumberField K], Langlands.RamanujanGL 1 K"
     },
+    "Langlands.relInduced": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 330,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{G : Type u} →\n  [inst : Group G] → [inst_1 : TopologicalSpace G] → [IsTopologicalGroup G] → (G → ℂ → Prop) → Langlands.SmoothRep G"
+    },
+    "Langlands.relInducedSpace": {
+      "kind": "def",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 296,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{G : Type u} → [Group G] → [TopologicalSpace G] → (G → ℂ → Prop) → Submodule ℂ (G → ℂ)"
+    },
+    "Langlands.relInducedSpace_stable": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 314,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {G : Type u} [inst : Group G] [inst_1 : TopologicalSpace G] [IsTopologicalGroup G] (P : G → ℂ → Prop),\n  Langlands.IsStableSubspace (Langlands.rightRegular G) (Langlands.relInducedSpace P)"
+    },
     "Langlands.residueCard": {
       "kind": "def",
       "file": "Langlands/Statements/Smooth.lean",
@@ -14503,6 +15804,17 @@
         "propext"
       ],
       "type": "∀ {F : Type u_1} [inst : Field F] (g : GL (Fin 2) F), (Langlands.serreWeight 0 0) g = 1"
+    },
+    "Langlands.sim_gspScalar": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/GSp4.lean",
+      "line": 168,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (R : Type u) [inst : CommRing R] (a : Rˣ), (Langlands.gsp4.sim R) ((Langlands.gspScalar R) a) = a ^ 2"
     },
     "Langlands.slTwo": {
       "kind": "def",

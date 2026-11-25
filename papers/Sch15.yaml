@@ -1,0 +1,25 @@
+id: T8-13
+key: Sch15
+title: "On torsion in the cohomology of locally symmetric varieties"
+authors: [Peter Scholze]
+where: "Ann. of Math. 182 (2015), 945-1066"
+year: 2015
+doi: 10.4007/annals.2015.182.3.3
+arxiv: "1306.2070"
+also: []
+read: { version: journal, by: owner, date: 2026-11-26, tag: U }
+tier: T8
+why: perfectoid Shimura varieties and Galois representations for torsion classes and for regular algebraic cuspidal representations; a source of Langlands.AutomorphicToGalois
+expert_status: accepted
+uses: []
+results:
+  - id: "Theorem V.4.1"
+    statement: AutomorphicToGalois
+    node: LGV2KZTSNS
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 8, chapter: null }
+notes: The record is made from the bibliographic data only. Nobody has read the paper for the project yet, so the read tag is U.

@@ -19,10 +19,10 @@ results:
     kind: theorem
     status: stated
   - id: "the global correspondence for quaternion algebras"
-    statement: null
+    statement: GlobalJacquetLanglandsGL2
     node: LGZWX81F9A
     kind: theorem
-    status: unstated
+    status: stated
 lean_elsewhere: []
 lean_status: stated
 code_licence: null

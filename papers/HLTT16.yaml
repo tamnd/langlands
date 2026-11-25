@@ -1,0 +1,25 @@
+id: T8-12
+key: HLTT16
+title: "On the rigid cohomology of certain Shimura varieties"
+authors: [Michael Harris, Kai-Wen Lan, Richard Taylor, Jack Thorne]
+where: "Res. Math. Sci. 3 (2016), Art. 37"
+year: 2016
+doi: 10.1186/s40687-016-0078-5
+arxiv: "1411.6717"
+also: []
+read: { version: journal, by: owner, date: 2026-11-26, tag: U }
+tier: T8
+why: the construction of Galois representations for regular algebraic cuspidal representations of GL(n) over a CM field without self-duality; a source of Langlands.AutomorphicToGalois
+expert_status: accepted
+uses: []
+results:
+  - id: "Theorem A"
+    statement: AutomorphicToGalois
+    node: LGV2KZTSNS
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 8, chapter: null }
+notes: The record is made from the bibliographic data only. Nobody has read the paper for the project yet, so the read tag is U.

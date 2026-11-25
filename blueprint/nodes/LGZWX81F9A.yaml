@@ -4,6 +4,7 @@ kind: "theorem"
 title: "The global Jacquet-Langlands correspondence"
 statement: "Let $D$ be a quaternion algebra over a number field $K$ and $S$ the set of places where $D$ is ramified. There is a bijection $\\pi' \\mapsto \\pi$ from the automorphic representations of $D^\\times(\\mathbb{A}_K)$ of dimension greater than one to the cuspidal automorphic representations of $GL_2(\\mathbb{A}_K)$ whose component at each place of $S$ is in the discrete series. For $v \\notin S$ it gives $\\pi_v \\cong \\pi'_v$, and for $v \\in S$ the components correspond under the local Jacquet-Langlands correspondence."
 sources: [{"paper": "JL70", "loc": "the global correspondence for quaternion algebras"}]
-uses: ["LG7NVV7NSF"]
+uses: []
+lean: {"statement": "Langlands.GlobalJacquetLanglandsGL2"}
 tier: "T4"
-notes: "This node has no Lean statement yet. It needs automorphic forms on the units of a quaternion algebra over the adeles, and the discrete series at the ramified places, including the infinite places. The local correspondence at the nonarchimedean places is the node LG7NVV7NSF."
+notes: "The Lean statement is a special form, the theorem of Eichler. The quaternion algebra $D$ is definite over $\\mathbb{Q}$ and ramifies exactly at one prime $p$ and at infinity. The Hecke eigensystems on the right ideal classes of a maximal order, other than the system $q + 1$ of the one-dimensional representations, are the eigensystems of the normalized eigenforms in $S_2(\\Gamma_0(p))$ at the primes other than $p$. Other algebras, levels and weights are left out. The local correspondence at the nonarchimedean places is the node LG7NVV7NSF."
