@@ -1,0 +1,13 @@
+# The weights of the library nodes in the work queue of lgl (spec 10.4). A node with no route has the weight of the first milestone of spec 15 that needs it: the first milestone with a top theorem of spec 14.2 that uses the node, directly or through other nodes. A node that no milestone needs has the weight "other". The route nodes have the weights of blueprint/routes.yaml. Spec 10.4 gives no number for a milestone, so these defaults are a guess of the project [U]: the earlier milestones weigh more, because the later ones need them. People set the weights.
+milestones:
+    S0: 1
+    S1: 1
+    S2: 1
+    S3: 0.8
+    S4: 0.6
+    S5: 0.5
+    S6: 0.4
+    S7: 0.3
+    S8: 0.2
+    S9: 0.1
+other: 0.1
