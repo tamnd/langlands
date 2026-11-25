@@ -1,0 +1,635 @@
+{
+  "updated": "2026-11-25",
+  "checks": [
+    {
+      "id": "Q0",
+      "question": "Is the source the one that the site describes?",
+      "state": "yes",
+      "note": "records/lean.json and the checkout of langlands-lean are both at commit fc22cd2."
+    },
+    {
+      "id": "Q1",
+      "question": "Does it build?",
+      "state": "yes",
+      "note": "records/lean.json is the record of the build of commit fc22cd2 with Lean 4.35.0 and Mathlib v4.35.0 on 2026-11-25. lgl trust reads the record and does not build."
+    },
+    {
+      "id": "Q2",
+      "question": "Which axioms do the top theorems use?",
+      "state": "yes",
+      "note": "The nodes name 29 declarations, and records/lean.json has 29 of them. Each of them uses only propext, Classical.choice and Quot.sound. The record has a complete proof for 9 nodes."
+    },
+    {
+      "id": "Q3",
+      "question": "Does a second kernel accept it?",
+      "state": "not run",
+      "note": "The kernel replay was not read: lgl trust ran with -quick."
+    },
+    {
+      "id": "Q4",
+      "question": "Do the proved theorems have the pinned statements?",
+      "state": "not run",
+      "note": "lake comparator was not run. The statement files match manifests/statements.sha256."
+    },
+    {
+      "id": "Q5",
+      "question": "Do the statements mean what the docstrings say?",
+      "state": "open",
+      "note": "0 of the 17 Lean statements of the map pass the fidelity checks of their class (spec 06.3). 4 have an entry in records/fidelity.json."
+    },
+    {
+      "id": "Q6",
+      "question": "Which published theorems are still hypotheses?",
+      "state": "yes",
+      "note": "No node is proved-mod, so no proof takes a published theorem as a hypothesis."
+    },
+    {
+      "id": "Q7",
+      "question": "Has a person read the proof?",
+      "state": "not run",
+      "note": "A person answers this row from the reviews of the handbook. lgl trust does not read the handbook yet."
+    },
+    {
+      "id": "Q8",
+      "question": "Has someone outside the project reproduced Q1 to Q4?",
+      "state": "not run",
+      "note": "A person answers this row with a link to an independent run. lgl trust does not check it."
+    }
+  ],
+  "lean": {
+    "repository": "https://github.com/tamnd/langlands-lean",
+    "commit": "fc22cd2cd3edc7e76c4b7f6c848170f24cf4cc54",
+    "toolchain": "4.35.0",
+    "mathlib": "v4.35.0",
+    "built": "2026-11-25",
+    "checkout": "fc22cd2cd3edc7e76c4b7f6c848170f24cf4cc54"
+  },
+  "replay": "none",
+  "theorems": [
+    {
+      "theorem": "Langlands.localReciprocityGL1",
+      "statement": "Langlands.LocalReciprocityGL1",
+      "milestone": "S1",
+      "node": "LGAV7YV6K6",
+      "status": "proved",
+      "checks": [
+        {
+          "id": "Q2",
+          "question": "Which axioms does the theorem use?",
+          "state": "yes",
+          "note": "The proof uses Classical.choice, Quot.sound, propext."
+        },
+        {
+          "id": "Q5",
+          "question": "Does the statement mean what the docstring says?",
+          "state": "open",
+          "note": "The statement does not pass yet: F4 is not passed; F5 is not passed; F6 is not passed."
+        }
+      ]
+    },
+    {
+      "theorem": "Langlands.localLanglandsTorus",
+      "statement": "Langlands.LocalLanglandsTorus",
+      "milestone": "S1",
+      "status": "not in the map",
+      "checks": [
+        {
+          "id": "Q2",
+          "question": "Which axioms does the theorem use?",
+          "state": "not run",
+          "note": "The record of the build has no proof Langlands.localLanglandsTorus."
+        },
+        {
+          "id": "Q5",
+          "question": "Does the statement mean what the docstring says?",
+          "state": "not run",
+          "note": "records/fidelity.json has no entry for the statement."
+        }
+      ]
+    },
+    {
+      "theorem": "Langlands.globalReciprocity",
+      "statement": "Langlands.GlobalReciprocity",
+      "milestone": "S2",
+      "node": "LGVAKJJD8Y",
+      "status": "stated",
+      "checks": [
+        {
+          "id": "Q2",
+          "question": "Which axioms does the theorem use?",
+          "state": "not run",
+          "note": "The record of the build has no proof Langlands.globalReciprocity."
+        },
+        {
+          "id": "Q5",
+          "question": "Does the statement mean what the docstring says?",
+          "state": "open",
+          "note": "The statement does not pass yet: F4 is not passed; F5 is not passed; F6 is not passed."
+        }
+      ]
+    },
+    {
+      "theorem": "Langlands.globalExistence",
+      "statement": "Langlands.GlobalExistence",
+      "milestone": "S2",
+      "node": "LGX8K4ZEGW",
+      "status": "stated",
+      "checks": [
+        {
+          "id": "Q2",
+          "question": "Which axioms does the theorem use?",
+          "state": "not run",
+          "note": "The record of the build has no proof Langlands.globalExistence."
+        },
+        {
+          "id": "Q5",
+          "question": "Does the statement mean what the docstring says?",
+          "state": "not run",
+          "note": "records/fidelity.json has no entry for the statement."
+        }
+      ]
+    },
+    {
+      "theorem": "Langlands.heckeFunctionalEquation",
+      "statement": "Langlands.HeckeFunctionalEquation",
+      "milestone": "S2",
+      "status": "not in the map",
+      "checks": [
+        {
+          "id": "Q2",
+          "question": "Which axioms does the theorem use?",
+          "state": "not run",
+          "note": "The record of the build has no proof Langlands.heckeFunctionalEquation."
+        },
+        {
+          "id": "Q5",
+          "question": "Does the statement mean what the docstring says?",
+          "state": "not run",
+          "note": "records/fidelity.json has no entry for the statement."
+        }
+      ]
+    },
+    {
+      "theorem": "Langlands.kroneckerWeber",
+      "statement": "Langlands.KroneckerWeber",
+      "milestone": "S2",
+      "node": "LG06WS8A1Y",
+      "status": "stated",
+      "checks": [
+        {
+          "id": "Q2",
+          "question": "Which axioms does the theorem use?",
+          "state": "not run",
+          "note": "The record of the build has no proof Langlands.kroneckerWeber."
+        },
+        {
+          "id": "Q5",
+          "question": "Does the statement mean what the docstring says?",
+          "state": "not run",
+          "note": "records/fidelity.json has no entry for the statement."
+        }
+      ]
+    },
+    {
+      "theorem": "Langlands.modularitySemistableQ",
+      "statement": "Langlands.ModularitySemistableQ",
+      "milestone": "S4",
+      "node": "LGZ55EK0PA",
+      "status": "stated",
+      "checks": [
+        {
+          "id": "Q2",
+          "question": "Which axioms does the theorem use?",
+          "state": "not run",
+          "note": "The record of the build has no proof Langlands.modularitySemistableQ."
+        },
+        {
+          "id": "Q5",
+          "question": "Does the statement mean what the docstring says?",
+          "state": "not run",
+          "note": "records/fidelity.json has no entry for the statement."
+        }
+      ]
+    },
+    {
+      "theorem": "Langlands.eichlerShimura",
+      "statement": "Langlands.EichlerShimuraDeligne",
+      "milestone": "S4",
+      "status": "not in the map",
+      "checks": [
+        {
+          "id": "Q2",
+          "question": "Which axioms does the theorem use?",
+          "state": "not run",
+          "note": "The record of the build has no proof Langlands.eichlerShimura."
+        },
+        {
+          "id": "Q5",
+          "question": "Does the statement mean what the docstring says?",
+          "state": "not run",
+          "note": "records/fidelity.json has no entry for the statement."
+        }
+      ]
+    },
+    {
+      "theorem": "Langlands.localLanglandsGL2_odd",
+      "milestone": "S5",
+      "status": "not in the map",
+      "checks": [
+        {
+          "id": "Q2",
+          "question": "Which axioms does the theorem use?",
+          "state": "not run",
+          "note": "The record of the build has no proof Langlands.localLanglandsGL2_odd."
+        },
+        {
+          "id": "Q5",
+          "question": "Does the statement mean what the docstring says?",
+          "state": "not run",
+          "note": "Spec 06.2 does not fix the statement yet."
+        }
+      ]
+    },
+    {
+      "theorem": "Langlands.localLanglandsGL2",
+      "statement": "Langlands.LocalLanglandsGL2",
+      "milestone": "S6",
+      "status": "not in the map",
+      "checks": [
+        {
+          "id": "Q2",
+          "question": "Which axioms does the theorem use?",
+          "state": "not run",
+          "note": "The record of the build has no proof Langlands.localLanglandsGL2."
+        },
+        {
+          "id": "Q5",
+          "question": "Does the statement mean what the docstring says?",
+          "state": "not run",
+          "note": "records/fidelity.json has no entry for the statement."
+        }
+      ]
+    },
+    {
+      "theorem": "Langlands.jacquetLanglandsGL2",
+      "statement": "Langlands.JacquetLanglandsGL2",
+      "milestone": "S6",
+      "status": "not in the map",
+      "checks": [
+        {
+          "id": "Q2",
+          "question": "Which axioms does the theorem use?",
+          "state": "not run",
+          "note": "The record of the build has no proof Langlands.jacquetLanglandsGL2."
+        },
+        {
+          "id": "Q5",
+          "question": "Does the statement mean what the docstring says?",
+          "state": "not run",
+          "note": "records/fidelity.json has no entry for the statement."
+        }
+      ]
+    },
+    {
+      "theorem": "Langlands.localLanglandsGL",
+      "statement": "Langlands.LocalLanglandsGL",
+      "milestone": "S8",
+      "status": "not in the map",
+      "checks": [
+        {
+          "id": "Q2",
+          "question": "Which axioms does the theorem use?",
+          "state": "not run",
+          "note": "The record of the build has no proof Langlands.localLanglandsGL."
+        },
+        {
+          "id": "Q5",
+          "question": "Does the statement mean what the docstring says?",
+          "state": "not run",
+          "note": "records/fidelity.json has no entry for the statement."
+        }
+      ]
+    }
+  ],
+  "declarations": [
+    {
+      "name": "Langlands.Bridge.finiteAbelianLocalReciprocity",
+      "node": "LGHEK0BGSD",
+      "role": "proof",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.Bridge.finiteAbelianLocalReciprocity",
+      "node": "LGHEK0BGSD",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.Bridge.localExistence",
+      "node": "LG875TDM3B",
+      "role": "proof",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.Bridge.not_modularity_conjecture",
+      "node": "LGDD6VVKSR",
+      "role": "negation",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.Bridge.ramanujan_petersson_of_ramanujanPeterssonHolomorphic",
+      "node": "LG1DP2ZDPA",
+      "role": "proof",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.Bridge.ramanujan_petersson_of_ramanujanPeterssonHolomorphic",
+      "node": "LG1DP2ZDPA",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.Bridge.satoTate_conjecture_of_satoTate",
+      "node": "LG6W8W7GE6",
+      "role": "proof",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.Bridge.satoTate_conjecture_of_satoTate",
+      "node": "LG6W8W7GE6",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.GlobalExistence",
+      "node": "LGX8K4ZEGW",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.GlobalReciprocity",
+      "node": "LGVAKJJD8Y",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.HasseWeilEllipticQ",
+      "node": "LG5W3CRDEA",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.KroneckerWeber",
+      "node": "LG06WS8A1Y",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.LocalExistence",
+      "node": "LG875TDM3B",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.LocalLanglandsTorusSplit",
+      "node": "LG5YHMSJZM",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.LocalReciprocityGL1",
+      "node": "LGAV7YV6K6",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.ModularityEllipticQ",
+      "node": "LGPNZWXVH5",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.ModularitySemistableQ",
+      "node": "LGZ55EK0PA",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.Ported.FormalConjectures.ModularityConjecture.modularity_conjecture",
+      "node": "LGDD6VVKSR",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.RamanujanPeterssonHolomorphic",
+      "node": "LGV8B6TVWZ",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.SatoTate",
+      "node": "LGVZHDXVTZ",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.WeilGroup",
+      "node": "LGBPNG162F",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.WeilGroup.Ab",
+      "node": "LGVSG50K41",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.WeilGroup.IsGeometricFrobenius",
+      "node": "LGQVB4Z4KN",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.WeilGroup.denseRange_toGalois",
+      "node": "LG3VDFDBW0",
+      "role": "proof",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.WeilGroup.denseRange_toGalois",
+      "node": "LG3VDFDBW0",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.WeilGroup.toGaloisAb_injective",
+      "node": "LGDEPE7CM9",
+      "role": "proof",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.WeilGroup.toGaloisAb_injective",
+      "node": "LGDEPE7CM9",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.localLanglandsTorusSplit",
+      "node": "LG5YHMSJZM",
+      "role": "proof",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.localReciprocityGL1",
+      "node": "LGAV7YV6K6",
+      "role": "proof",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ]
+}
