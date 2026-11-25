@@ -4,6 +4,16 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The paper records GT11 (Gan and Takeda), HLTT16 (Harris, Lan, Taylor and Thorne) and Sch15 (Scholze), from the bibliographic data only, with the read tag U.
+
+### Changed
+
+- Four nodes have a Lean statement now. The local Langlands correspondence for GSp(4) (LGQCVGBMVA), the Galois representations of regular algebraic cuspidal representations (LGV2KZTSNS) and the global Jacquet-Langlands correspondence (LGZWX81F9A) are stated. The reciprocity conjecture for GL(n) (LGRYCDD49K) is open, with a weak form in Lean. The notes of each node say what the Lean statement leaves out.
+- The Breuil-Mezard conjecture (LGRMD7S8EV) stays unstated. Its notes say why a special form is not stated.
+- `records/lean.json` is at langlands-lean 16a675f, with 1457 declarations.
+
 ## v0.1.5 (2026-11-26)
 
 ### Added

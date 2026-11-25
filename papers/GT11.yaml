@@ -1,0 +1,25 @@
+id: T5-20
+key: GT11
+title: "The local Langlands conjecture for GSp(4)"
+authors: [Wee Teck Gan, Shuichiro Takeda]
+where: "Ann. of Math. 173 (2011), 1841-1882"
+year: 2011
+doi: 10.4007/annals.2011.173.3.12
+arxiv: "0706.0952"
+also: []
+read: { version: journal, by: owner, date: 2026-11-26, tag: U }
+tier: T5
+why: the local Langlands correspondence for GSp(4) through theta correspondences with GL(4) and GSO(4); the source of Langlands.LocalLanglandsGSp4
+expert_status: accepted
+uses: []
+results:
+  - id: "Main Theorem"
+    statement: LocalLanglandsGSp4
+    node: LGQCVGBMVA
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 6, chapter: null }
+notes: The record is made from the bibliographic data only. Nobody has read the paper for the project yet, so the read tag is U.
