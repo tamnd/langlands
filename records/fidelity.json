@@ -1,0 +1,46 @@
+{
+  "Langlands.LocalReciprocityGL1": {
+    "class": "theorem",
+    "checks": {
+      "F1": true,
+      "F2": true,
+      "F3": true,
+      "F4": false,
+      "F5": false
+    },
+    "pass": false
+  },
+  "Langlands.GlobalReciprocity": {
+    "class": "theorem",
+    "checks": {
+      "F1": true,
+      "F2": true,
+      "F3": true,
+      "F4": false,
+      "F5": false
+    },
+    "pass": false
+  },
+  "Langlands.ModularityEllipticQ": {
+    "class": "theorem",
+    "checks": {
+      "F1": true,
+      "F2": true,
+      "F3": true,
+      "F4": false,
+      "F5": false
+    },
+    "pass": false
+  },
+  "Langlands.SatoTate": {
+    "class": "theorem",
+    "checks": {
+      "F1": true,
+      "F2": true,
+      "F3": true,
+      "F4": false,
+      "F5": false
+    },
+    "pass": false
+  }
+}

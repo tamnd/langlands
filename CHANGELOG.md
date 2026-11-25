@@ -8,7 +8,8 @@ Each release has a section. The newest release is first.
 
 - The first 15 nodes of the map in `blueprint/nodes/`: the Weil group, its geometric Frobenius elements and its abelianization, finite abelian local reciprocity, the statements of class field theory, the statements of modularity, Hasse-Weil, Ramanujan-Petersson and Sato-Tate, and the false modularity statement of formal-conjectures.
 - The paper records BCDT01, Wil95, Del74 and BLGHT11 for the rows T8-06, T8-04, T4-10 and T8-10 of the corpus.
-- `records/lean.json`: the declarations of langlands-lean at commit 96c5d11, from `lgl index`.
+- `records/lean.json`: the declarations of langlands-lean at commit a7228f8, from `lgl index`.
+- `records/fidelity.json`: the checks F1, F2 and F3 of spec 06.3 pass for `LocalReciprocityGL1`, `GlobalReciprocity`, `ModularityEllipticQ` and `SatoTate`. The checks F4 and F5 are not done, so no statement is `faithful` yet.
 
 ### Changed
 

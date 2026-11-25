@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/tamnd/langlands-lean",
-  "commit": "96c5d11912229420eb1416a6c1212d5204629fbb",
+  "commit": "a7228f84f6773a5a34eb2b925efd81e80c487dcf",
   "toolchain": "4.35.0",
   "mathlib": "v4.35.0",
   "built": "2026-11-25",
@@ -137,10 +137,98 @@
       ],
       "type": "∀ (N : ℕ), 1 ∈ (Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 N)).strictPeriods"
     },
+    "Langlands.Fidelity.IsArtinMapArith": {
+      "kind": "inductive",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 133,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) →\n  [inst : Field F] →\n    [inst_1 : NumberField F] →\n      (L : IntermediateField F (AlgebraicClosure F)) →\n        (NumberField.IdeleClassGroup (NumberField.RingOfIntegers F) F →* Gal(↥L/F)) → Prop"
+    },
+    "Langlands.Fidelity.IsArtinMapArith.continuous": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 137,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] [inst_1 : NumberField F] {L : IntermediateField F (AlgebraicClosure F)}\n  {art : NumberField.IdeleClassGroup (NumberField.RingOfIntegers F) F →* Gal(↥L/F)},\n  Langlands.Fidelity.IsArtinMapArith F L art → Continuous ⇑art"
+    },
+    "Langlands.Fidelity.IsArtinMapArith.frobenius": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 141,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] [inst_1 : NumberField F] {L : IntermediateField F (AlgebraicClosure F)}\n  {art : NumberField.IdeleClassGroup (NumberField.RingOfIntegers F) F →* Gal(↥L/F)},\n  Langlands.Fidelity.IsArtinMapArith F L art →\n    ∀ (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers F))\n      (w : Ideal (NumberField.RingOfIntegers ↥L)) [inst_2 : w.IsMaximal],\n      w.LiesOver v.asIdeal →\n        Algebra.IsUnramifiedAt (NumberField.RingOfIntegers F) w →\n          ∀ (ϖ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion F v)ˣ),\n            Langlands.IsUniformizer ↑ϖ →\n              IsArithFrobAt (NumberField.RingOfIntegers F)\n                (art ((NumberField.IdeleClassGroup.ofAdicCompletion (NumberField.RingOfIntegers F) F v) ϖ)) w"
+    },
+    "Langlands.Fidelity.IsArtinMapArith.surjective": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 139,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] [inst_1 : NumberField F] {L : IntermediateField F (AlgebraicClosure F)}\n  {art : NumberField.IdeleClassGroup (NumberField.RingOfIntegers F) F →* Gal(↥L/F)},\n  Langlands.Fidelity.IsArtinMapArith F L art → Function.Surjective ⇑art"
+    },
+    "Langlands.Fidelity.IsLocalArtinMapUnnormalized": {
+      "kind": "inductive",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 72,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) →\n  [inst : Field F] →\n    [inst_1 : ValuativeRel F] →\n      [inst_2 : TopologicalSpace F] → [inst_3 : IsNonarchimedeanLocalField F] → Fˣ ≃ₜ* Langlands.WeilGroup.Ab F → Prop"
+    },
+    "Langlands.Fidelity.IsLocalArtinMapUnnormalized.ker": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 78,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] [inst_1 : ValuativeRel F] [inst_2 : TopologicalSpace F]\n  [inst_3 : IsNonarchimedeanLocalField F] {rec : Fˣ ≃ₜ* Langlands.WeilGroup.Ab F},\n  Langlands.Fidelity.IsLocalArtinMapUnnormalized F rec →\n    ∀ (L : IntermediateField F (AlgebraicClosure F)) [inst_4 : FiniteDimensional F ↥L] [inst_5 : IsAbelianGalois F ↥L]\n      (x : Fˣ), (Langlands.WeilGroup.Ab.restrict F L) (rec x) = 1 ↔ x ∈ Langlands.normGroup F ↥L"
+    },
+    "Langlands.Fidelity.IsLocalArtinMapUnnormalized.surjective": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 75,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {F : Type u} [inst : Field F] [inst_1 : ValuativeRel F] [inst_2 : TopologicalSpace F]\n  [inst_3 : IsNonarchimedeanLocalField F] {rec : Fˣ ≃ₜ* Langlands.WeilGroup.Ab F},\n  Langlands.Fidelity.IsLocalArtinMapUnnormalized F rec →\n    ∀ (L : IntermediateField F (AlgebraicClosure F)) [inst_4 : FiniteDimensional F ↥L] [inst_5 : IsAbelianGalois F ↥L],\n      Function.Surjective (⇑(Langlands.WeilGroup.Ab.restrict F L) ∘ ⇑rec)"
+    },
+    "Langlands.Fidelity.SatoTateUniform": {
+      "kind": "def",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 92,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
     "Langlands.Fidelity.X0_11": {
       "kind": "def",
       "file": "Langlands/Fidelity/Modularity.lean",
-      "line": 46,
+      "line": 49,
       "axioms": [
         "Quot.sound",
         "propext"
@@ -150,7 +238,7 @@
     "Langlands.Fidelity.X0_11_j": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/Modularity.lean",
-      "line": 56,
+      "line": 59,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -161,7 +249,7 @@
     "Langlands.Fidelity.X0_11_Δ": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/Modularity.lean",
-      "line": 49,
+      "line": 52,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -172,7 +260,7 @@
     "Langlands.Fidelity.congruentNumberCurve": {
       "kind": "def",
       "file": "Langlands/Fidelity/Modularity.lean",
-      "line": 27,
+      "line": 30,
       "axioms": [
         "Quot.sound",
         "propext"
@@ -182,7 +270,7 @@
     "Langlands.Fidelity.congruentNumberCurve_j": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/Modularity.lean",
-      "line": 37,
+      "line": 40,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -193,7 +281,7 @@
     "Langlands.Fidelity.congruentNumberCurve_Δ": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/Modularity.lean",
-      "line": 30,
+      "line": 33,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -201,10 +289,43 @@
       ],
       "type": "Langlands.Fidelity.congruentNumberCurve.Δ = 64"
     },
+    "Langlands.Fidelity.exists_algebraMap_ringOfIntegers_bot": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 176,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (F : Type u) [inst : Field F] [NumberField F] (x : NumberField.RingOfIntegers ↥⊥),\n  ∃ a, (algebraMap (NumberField.RingOfIntegers F) (NumberField.RingOfIntegers ↥⊥)) a = x"
+    },
+    "Langlands.Fidelity.exists_sq_ne_one": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 87,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (F : Type u) [inst : Field F] [inst_1 : ValuativeRel F] [inst_2 : TopologicalSpace F] [IsNonarchimedeanLocalField F],\n  ∃ x, x ^ 2 ≠ 1"
+    },
+    "Langlands.Fidelity.finiteAbelian_of_localReciprocityGL1": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 65,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (F : Type u) [inst : Field F] [inst_1 : ValuativeRel F] [inst_2 : TopologicalSpace F] [IsNonarchimedeanLocalField F],\n  Langlands.LocalReciprocityGL1 →\n    ∀ (L : IntermediateField F (AlgebraicClosure F)) [FiniteDimensional F ↥L] [IsAbelianGalois F ↥L],\n      ∃ artin, Function.Surjective ⇑artin ∧ ∀ (x : Fˣ), artin x = 1 ↔ x ∈ Langlands.normGroup F ↥L"
+    },
     "Langlands.Fidelity.hasCMOverQ_congruentNumber": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/Modularity.lean",
-      "line": 41,
+      "line": 44,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -215,7 +336,7 @@
     "Langlands.Fidelity.instIsEllipticRatCongruentNumberCurve": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/Modularity.lean",
-      "line": 34,
+      "line": 37,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -226,7 +347,7 @@
     "Langlands.Fidelity.instIsEllipticRatX0_11": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/Modularity.lean",
-      "line": 53,
+      "line": 56,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -234,10 +355,32 @@
       ],
       "type": "Langlands.Fidelity.X0_11.IsElliptic"
     },
+    "Langlands.Fidelity.invArt": {
+      "kind": "def",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 146,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) →\n  [inst : Field F] →\n    [inst_1 : NumberField F] →\n      {L : IntermediateField F (AlgebraicClosure F)} →\n        (NumberField.IdeleClassGroup (NumberField.RingOfIntegers F) F →* Gal(↥L/F)) →\n          NumberField.IdeleClassGroup (NumberField.RingOfIntegers F) F →* Gal(↥L/F)"
+    },
+    "Langlands.Fidelity.invEquiv": {
+      "kind": "def",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 81,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(F : Type u) →\n  [inst : Field F] →\n    [inst_1 : ValuativeRel F] →\n      [inst_2 : TopologicalSpace F] →\n        [inst_3 : IsNonarchimedeanLocalField F] → Langlands.WeilGroup.Ab F ≃ₜ* Langlands.WeilGroup.Ab F"
+    },
     "Langlands.Fidelity.isAbelianGalois_bot": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/ClassField.lean",
-      "line": 25,
+      "line": 30,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -245,10 +388,43 @@
       ],
       "type": "∀ (K : Type u_1) [inst : Field K] (E : Type u_2) [inst_1 : Field E] [inst_2 : Algebra K E], IsAbelianGalois K ↥⊥"
     },
+    "Langlands.Fidelity.isArtinMap_bot": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 197,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (F : Type u) [inst : Field F] [inst_1 : NumberField F], Langlands.IsArtinMap F ⊥ 1"
+    },
+    "Langlands.Fidelity.isArtinMap_iff_isArtinMapArith_invArt": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 153,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (F : Type u) [inst : Field F] [inst_1 : NumberField F] (L : IntermediateField F (AlgebraicClosure F))\n  (art : NumberField.IdeleClassGroup (NumberField.RingOfIntegers F) F →* Gal(↥L/F)),\n  Langlands.IsArtinMap F L art ↔ Langlands.Fidelity.IsArtinMapArith F L (Langlands.Fidelity.invArt F art)"
+    },
+    "Langlands.Fidelity.isLocalArtinMapUnnormalized_inv": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 95,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (F : Type u) [inst : Field F] [inst_1 : ValuativeRel F] [inst_2 : TopologicalSpace F]\n  [inst_3 : IsNonarchimedeanLocalField F] {rec : Fˣ ≃ₜ* Langlands.WeilGroup.Ab F},\n  Langlands.Fidelity.IsLocalArtinMapUnnormalized F rec →\n    Langlands.Fidelity.IsLocalArtinMapUnnormalized F (rec.trans (Langlands.Fidelity.invEquiv F))"
+    },
     "Langlands.Fidelity.kroneckerWeber_bot": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/ClassField.lean",
-      "line": 46,
+      "line": 51,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -259,7 +435,7 @@
     "Langlands.Fidelity.localExistence_top": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/ClassField.lean",
-      "line": 41,
+      "line": 46,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -267,10 +443,21 @@
       ],
       "type": "∀ (K : Type u_1) [inst : Field K] (E : Type u_2) [inst_1 : Field E] [inst_2 : Algebra K E],\n  ∃ L, FiniteDimensional K ↥L ∧ IsAbelianGalois K ↥L ∧ Langlands.normGroup K ↥L = ⊤"
     },
+    "Langlands.Fidelity.modularitySemistableQ_of_modularityEllipticQ": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 123,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.ModularityEllipticQ → Langlands.ModularitySemistableQ"
+    },
     "Langlands.Fidelity.normGroup_bot": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/ClassField.lean",
-      "line": 34,
+      "line": 39,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -278,10 +465,21 @@
       ],
       "type": "∀ (K : Type u_1) [inst : Field K] (E : Type u_2) [inst_1 : Field E] [inst_2 : Algebra K E], Langlands.normGroup K ↥⊥ = ⊤"
     },
+    "Langlands.Fidelity.not_existsUnique_unnormalized": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 110,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (F : Type u) [inst : Field F] [inst_1 : ValuativeRel F] [inst_2 : TopologicalSpace F]\n  [inst_3 : IsNonarchimedeanLocalField F], ¬∃! rec, Langlands.Fidelity.IsLocalArtinMapUnnormalized F rec"
+    },
     "Langlands.Fidelity.not_hasCMOverQ_X0_11": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/Modularity.lean",
-      "line": 60,
+      "line": 63,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -289,16 +487,60 @@
       ],
       "type": "¬Langlands.HasCMOverQ Langlands.Fidelity.X0_11"
     },
+    "Langlands.Fidelity.not_satoTateUniform": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 112,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.SatoTate → ¬Langlands.Fidelity.SatoTateUniform"
+    },
+    "Langlands.Fidelity.satoTate_full": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 69,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (E : WeierstrassCurve ℚ) [E.IsElliptic],\n  Filter.Tendsto\n    (fun x =\u003e\n      ↑(Nat.card { p // Nat.Prime p ∧ p ≤ x ∧ Langlands.satoTateAngle E p ∈ Set.Icc 0 Real.pi }) /\n        ↑(Nat.card { p // Nat.Prime p ∧ p ≤ x }))\n    Filter.atTop (nhds (2 / Real.pi * ∫ (θ : ℝ) in 0..Real.pi, Real.sin θ ^ 2))"
+    },
+    "Langlands.Fidelity.satoTate_mass_quarter": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/Modularity.lean",
+      "line": 102,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "2 / Real.pi * ∫ (θ : ℝ) in 0..Real.pi / 4, Real.sin θ ^ 2 = 1 / 4 - 1 / (2 * Real.pi)"
+    },
     "Langlands.Fidelity.satoTate_total_mass": {
       "kind": "theorem",
       "file": "Langlands/Fidelity/Modularity.lean",
-      "line": 22,
+      "line": 25,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
         "propext"
       ],
       "type": "2 / Real.pi * ∫ (θ : ℝ) in 0..Real.pi, Real.sin θ ^ 2 = 1"
+    },
+    "Langlands.Fidelity.subsingleton_gal_bot": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "line": 190,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (F : Type u) [inst : Field F], Subsingleton Gal(↥⊥/F)"
     },
     "Langlands.GlobalExistence": {
       "kind": "def",
@@ -1034,6 +1276,16 @@
         "propext"
       ],
       "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          (L : IntermediateField K (AlgebraicClosure K)) →\n            [IsAbelianGalois K ↥L] → [FiniteDimensional K ↥L] → Langlands.WeilGroup.Ab K →* Gal(↥L/K)"
+    },
+    "Langlands.WeilGroup.Ab.restrict.congr_simp": {
+      "kind": "theorem",
+      "file": "Langlands/Fidelity/ClassField.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K] (L : IntermediateField K (AlgebraicClosure K)) [inst_4 : IsAbelianGalois K ↥L]\n  [inst_5 : FiniteDimensional K ↥L], Langlands.WeilGroup.Ab.restrict K L = Langlands.WeilGroup.Ab.restrict K L"
     },
     "Langlands.WeilGroup.Ab.restrict_mk": {
       "kind": "theorem",
