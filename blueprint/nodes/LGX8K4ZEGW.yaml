@@ -5,5 +5,6 @@ title: "The global existence theorem"
 statement: "Each open subgroup of finite index of the idele class group of a number field $K$ is the kernel of the Artin map of a finite abelian extension of $K$."
 sources: [{"paper": "Mil20", "loc": "Chapter V"}]
 uses: ["LGVAKJJD8Y"]
-lean: {"statement": "Langlands.GlobalExistence"}
+lean: {"statement": "Langlands.GlobalExistence", "proof": "Langlands.Bridge.globalExistence"}
 tier: "T3"
+notes: "The proof is the port of n-yamaguchi-0729/ClassFieldTheory in Langlands/Ported/NYLL. The class field of the port is in the separable closure, and the bridge embeds it into the algebraic closure without a change of the norm group."

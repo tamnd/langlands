@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/tamnd/langlands-lean",
-  "commit": "8e3e85951b8ddd6756b84144845c9b42da8bc195",
+  "commit": "b6f61f2",
   "toolchain": "4.35.0",
   "mathlib": "v4.35.0",
   "built": "2026-11-26",
@@ -170,6 +170,39 @@
       ],
       "type": "Subgroup.map (Matrix.SpecialLinearGroup.mapGL ℝ) (CongruenceSubgroup.Gamma0 1) =\n  (Matrix.SpecialLinearGroup.mapGL ℝ).range"
     },
+    "Langlands.Bridge.globalExistence": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/NYLLGlobal.lean",
+      "line": 200,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.GlobalExistence"
+    },
+    "Langlands.Bridge.globalNormResidue_ofAdicCompletion_inv_isArithFrobAt": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/NYLLGlobal.lean",
+      "line": 135,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : NumberField K] (L : Type v) [inst_2 : Field L] [inst_3 : NumberField L]\n  [inst_4 : Algebra K L] [inst_5 : FiniteDimensional K L] [inst_6 : IsAbelianGalois K L]\n  (p : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) (w : Ideal (NumberField.RingOfIntegers L))\n  [inst_7 : w.IsMaximal],\n  w.LiesOver p.asIdeal →\n    Algebra.IsUnramifiedAt (NumberField.RingOfIntegers K) w →\n      ∀ (ϖ : (IsDedekindDomain.HeightOneSpectrum.adicCompletion K p)ˣ),\n        Langlands.IsUniformizer ↑ϖ →\n          IsArithFrobAt (NumberField.RingOfIntegers K)\n            ((GlobalClassFieldTheory.Reciprocity.globalNormResidueMonoidHom K L)\n                ((NumberField.IdeleClassGroup.ofAdicCompletion (NumberField.RingOfIntegers K) K p) ϖ))⁻¹\n            w"
+    },
+    "Langlands.Bridge.globalReciprocity": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/NYLLGlobal.lean",
+      "line": 194,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Langlands.GlobalReciprocity"
+    },
     "Langlands.Bridge.hasCM_iff_hasCMOverQ": {
       "kind": "theorem",
       "file": "Langlands/Bridge/FormalConjectures.lean",
@@ -192,6 +225,17 @@
       ],
       "type": "Langlands.HasseWeilEllipticQ → Langlands.Ported.FormalConjectures.HasseWeil.exists_hasAnalyticContinuation_rat"
     },
+    "Langlands.Bridge.isArtinMap_globalNormResidue": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/NYLLGlobal.lean",
+      "line": 184,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : NumberField K] (L : IntermediateField K (AlgebraicClosure K))\n  [inst_2 : FiniteDimensional K ↥L] [inst_3 : IsAbelianGalois K ↥L] [inst_4 : NumberField ↥L],\n  Langlands.IsArtinMap K L (GlobalClassFieldTheory.Reciprocity.globalNormResidueMonoidHom K ↥L)"
+    },
     "Langlands.Bridge.isFieldNorm_iff_mem_normGroup": {
       "kind": "theorem",
       "file": "Langlands/Bridge/NYLL.lean",
@@ -206,7 +250,7 @@
     "Langlands.Bridge.kroneckerWeber": {
       "kind": "theorem",
       "file": "Langlands/Bridge/NYLLGlobal.lean",
-      "line": 24,
+      "line": 30,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -323,6 +367,17 @@
         "propext"
       ],
       "type": "∀ {Q Q' : ℕ → Prop} [inst : DecidablePred Q] [inst_1 : DecidablePred Q'] (P₀ : ℕ),\n  (∀ (p : ℕ), P₀ ≤ p → Nat.Prime p → (Q p ↔ Q' p)) →\n    ∀ {L : ℝ},\n      Filter.Tendsto (fun N =\u003e ↑(Finset.filter Q N.primesBelow).card / ↑N.primesBelow.card) Filter.atTop (nhds L) →\n        Filter.Tendsto (fun N =\u003e ↑(Finset.filter Q' N.primesBelow).card / ↑N.primesBelow.card) Filter.atTop (nhds L)"
+    },
+    "Langlands.Bridge.valued_eq_exp_neg_one_of_isUniformizer": {
+      "kind": "theorem",
+      "file": "Langlands/Bridge/NYLLGlobal.lean",
+      "line": 61,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K))\n  {x : IsDedekindDomain.HeightOneSpectrum.adicCompletion K v},\n  Langlands.IsUniformizer x → Valued.v x = WithZero.exp (-1)"
     },
     "Langlands.EichlerShimuraDeligne": {
       "kind": "def",
