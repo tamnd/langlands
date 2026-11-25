@@ -1,0 +1,24 @@
+id: T0-05
+key: Neu99
+title: Algebraic Number Theory
+authors: [Jurgen Neukirch]
+where: "Grundlehren der mathematischen Wissenschaften 322, Springer (1999)"
+doi: "10.1007/978-3-662-03983-0"
+arxiv: null
+also: []
+read: { version: book, by: owner, date: 2026-11-25, tag: U }
+tier: T0
+why: the base text of Volume 1, and a second source for the functional equation of Hecke L-functions
+expert_status: accepted
+uses: []
+results:
+  - id: "Chapter VII, Theorem 8.5"
+    statement: HeckeFunctionalEquation
+    node: LG6NN4B43V
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 1, chapter: 1 }
+notes: The handbook cites the book and does not copy it. Mathlib has a part of Chapter I, with the ring of integers, the class group and the unit theorem.

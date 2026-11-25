@@ -1,0 +1,24 @@
+id: T3-11
+key: CF67
+title: Algebraic Number Theory
+authors: [J. W. S. Cassels, Albrecht Frohlich]
+where: "Academic Press (1967); second edition, London Mathematical Society (2010)"
+doi: null
+arxiv: null
+also: [T0-04]
+read: { version: book, by: owner, date: 2026-11-25, tag: U }
+tier: T0
+why: Tate's thesis is Chapter XV, and it is the source of the statement HeckeFunctionalEquation; Chapter II of Cassels on global fields is the base text of Volume 1, Chapter 3
+expert_status: accepted
+uses: []
+results:
+  - id: "Chapter XV, Theorem 4.4.1"
+    statement: HeckeFunctionalEquation
+    node: LG6NN4B43V
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 1, chapter: 3 }
+notes: Chapter VI of this book is the record Ser67. The corpus row T0-04 is the book, and the row T3-11 is Tate's thesis in Chapter XV.

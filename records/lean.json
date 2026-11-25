@@ -1,10 +1,21 @@
 {
   "repository": "https://github.com/tamnd/langlands-lean",
-  "commit": "d98456c4a7f9f5fa7c8745b0787116fd2a1942a1",
+  "commit": "54b0386e7da66e0ae9b32935bec4c74c0a0668c8",
   "toolchain": "4.35.0",
   "mathlib": "v4.35.0",
   "built": "2026-11-25",
   "decls": {
+    "Langlands.ArchimedeanParametersExist": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 167,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
     "Langlands.Bridge.ApAgree": {
       "kind": "def",
       "file": "Langlands/Bridge/FormalConjectures.lean",
@@ -711,6 +722,193 @@
       "kind": "def",
       "file": "Langlands/Statements/Modularity.lean",
       "line": 79,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "Prop"
+    },
+    "Langlands.HeckeCharacter": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 50,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) → [inst : Field K] → [NumberField K] → Type u"
+    },
+    "Langlands.HeckeCharacter.IsArchimedeanParameter": {
+      "kind": "inductive",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 120,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] → [inst_1 : NumberField K] → Langlands.HeckeCharacter K → NumberField.InfinitePlace K → ℤ → ℂ → Prop"
+    },
+    "Langlands.HeckeCharacter.IsArchimedeanParameter.eq": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 125,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {χ : Langlands.HeckeCharacter K}\n  {v : NumberField.InfinitePlace K} {n : ℤ} {t : ℂ},\n  χ.IsArchimedeanParameter v n t →\n    ∀ (x : v.Completionˣ),\n      ↑((χ.infiniteComponent v) x) =\n        ((NumberField.InfinitePlace.Completion.extensionEmbedding v) ↑x /\n              ↑‖(NumberField.InfinitePlace.Completion.extensionEmbedding v) ↑x‖) ^\n            n *\n          ↑‖(NumberField.InfinitePlace.Completion.extensionEmbedding v) ↑x‖ ^ (↑v.mult * t)"
+    },
+    "Langlands.HeckeCharacter.IsArchimedeanParameter.isReal": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 123,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {K : Type u} [inst : Field K] [inst_1 : NumberField K] {χ : Langlands.HeckeCharacter K}\n  {v : NumberField.InfinitePlace K} {n : ℤ} {t : ℂ}, χ.IsArchimedeanParameter v n t → v.IsReal → n = 0 ∨ n = 1"
+    },
+    "Langlands.HeckeCharacter.IsTrivialOnHigherUnits": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 70,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      Langlands.HeckeCharacter K → IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K) → ℕ → Prop"
+    },
+    "Langlands.HeckeCharacter.IsUnramifiedAt": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 76,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      Langlands.HeckeCharacter K → IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K) → Prop"
+    },
+    "Langlands.HeckeCharacter.completedLFunction": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 143,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      Langlands.HeckeCharacter K → (NumberField.InfinitePlace K → ℤ) → (NumberField.InfinitePlace K → ℂ) → ℂ → ℂ"
+    },
+    "Langlands.HeckeCharacter.conductor": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 84,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] → [inst_1 : NumberField K] → Langlands.HeckeCharacter K → Ideal (NumberField.RingOfIntegers K)"
+    },
+    "Langlands.HeckeCharacter.conductorExponent": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 80,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      Langlands.HeckeCharacter K → IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K) → ℕ"
+    },
+    "Langlands.HeckeCharacter.conductor_one": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 160,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : NumberField K], Langlands.HeckeCharacter.conductor 1 = 1"
+    },
+    "Langlands.HeckeCharacter.finiteComponent": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 62,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      Langlands.HeckeCharacter K →\n        (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) →\n          (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ →* ℂˣ"
+    },
+    "Langlands.HeckeCharacter.finiteLFunction": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 116,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} → [inst : Field K] → [inst_1 : NumberField K] → Langlands.HeckeCharacter K → ℂ → ℂ"
+    },
+    "Langlands.HeckeCharacter.infiniteComponent": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 66,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] → Langlands.HeckeCharacter K → (v : NumberField.InfinitePlace K) → v.Completionˣ →* ℂˣ"
+    },
+    "Langlands.HeckeCharacter.isArchimedeanParameter_one": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 150,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : NumberField K] (v : NumberField.InfinitePlace K),\n  Langlands.HeckeCharacter.IsArchimedeanParameter 1 v 0 0"
+    },
+    "Langlands.HeckeCharacter.isUnramifiedAt_one": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 155,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)), Langlands.HeckeCharacter.IsUnramifiedAt 1 v"
+    },
+    "Langlands.HeckeCharacter.localFactor": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 109,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      Langlands.HeckeCharacter K → IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K) → ℂ → ℂ"
+    },
+    "Langlands.HeckeFunctionalEquation": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 172,
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -4864,6 +5062,28 @@
       ],
       "type": "∀ (K : Type u) [inst : Field K] [inst_1 : ValuativeRel K] [inst_2 : TopologicalSpace K]\n  [inst_3 : IsNonarchimedeanLocalField K], ∃ rec, Langlands.IsLocalArtinMap K rec"
     },
+    "Langlands.gammaFactor": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 133,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] → [NumberField K] → (NumberField.InfinitePlace K → ℤ) → (NumberField.InfinitePlace K → ℂ) → ℂ → ℂ"
+    },
+    "Langlands.ideleNorm": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 54,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) → [inst : Field K] → [inst_1 : NumberField K] → NumberField.IdeleGroup (NumberField.RingOfIntegers K) K → ℝ"
+    },
     "Langlands.inducedCharacter": {
       "kind": "def",
       "file": "Langlands/Torus/Induced.lean",
@@ -4974,6 +5194,17 @@
       ],
       "type": "Langlands.LocalReciprocityGL1"
     },
+    "Langlands.localUniformizer": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 100,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) →\n        (IsDedekindDomain.HeightOneSpectrum.adicCompletion K v)ˣ"
+    },
     "Langlands.normGroup": {
       "kind": "def",
       "file": "Langlands/Statements/ClassField.lean",
@@ -5050,6 +5281,28 @@
         "propext"
       ],
       "type": "{K : Type u} →\n  [inst : Field K] →\n    [inst_1 : ValuativeRel K] →\n      [inst_2 : TopologicalSpace K] →\n        [inst_3 : IsNonarchimedeanLocalField K] →\n          {n : ℕ} → Kˣ ≃ₜ* Langlands.WeilGroup.Ab K → ((Fin n → Kˣ) →ₜ* ℂˣ) → Langlands.WeilGroup K →ₜ* Fin n → ℂˣ"
+    },
+    "Langlands.uniformizer": {
+      "kind": "def",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 90,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u) →\n  [inst : Field K] → [NumberField K] → IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K) → K"
+    },
+    "Langlands.uniformizer_ne_zero": {
+      "kind": "theorem",
+      "file": "Langlands/Statements/Hecke.lean",
+      "line": 94,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u) [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)), Langlands.uniformizer K v ≠ 0"
     }
   }
 }

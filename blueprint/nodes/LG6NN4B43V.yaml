@@ -1,0 +1,10 @@
+tag: "LG6NN4B43V"
+slug: "hecke-functional-equation"
+kind: "theorem"
+title: "The functional equation of Hecke L-functions"
+statement: "Let $\\chi$ be a Hecke character of a number field $K$ with $|\\chi| = \\|\\cdot\\|^\\sigma$. The completed L-function $\\Lambda(s, \\chi)$ has a meromorphic continuation to $\\mathbb{C}$, and $\\Lambda(s, \\chi) = W (|d_K| N(\\mathfrak{f}_\\chi))^{1/2 - s - \\sigma} \\Lambda(1 - s, \\chi^{-1})$ with $|W| = 1$. The function is entire, unless $\\chi = \\|\\cdot\\|^{s_0}$, and then it has simple poles at $-s_0$ and $1 - s_0$ only."
+sources: [{"paper": "CF67", "loc": "Chapter XV, Theorem 4.4.1"}, {"paper": "Neu99", "loc": "Chapter VII, Theorem 8.5"}]
+uses: []
+lean: {"statement": "Langlands.HeckeFunctionalEquation"}
+tier: "T3"
+notes: "The archimedean parameters of the character are hypotheses of the Lean statement. Their existence is the separate statement Langlands.ArchimedeanParametersExist. The proof is Tate's thesis: the local zeta integrals, the local functional equations, and the Poisson summation formula on the adele ring."
