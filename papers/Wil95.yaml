@@ -1,0 +1,26 @@
+id: T8-04
+key: Wil95
+title: "Modular elliptic curves and Fermat's last theorem"
+authors: [Andrew Wiles]
+where: "Ann. of Math. 141 (1995), 443-551"
+year: 1995
+doi: 10.2307/2118559
+arxiv: null
+also: [T8-06]
+read: { version: journal, by: owner, date: 2026-11-25, tag: U }
+tier: T8
+why: the proof of modularity for semistable elliptic curves over Q, with the patching argument of Taylor-Wiles (Ann. of Math. 141 (1995), 553-572); the source of Langlands.ModularitySemistableQ
+expert_status: accepted
+uses: [T0-11]
+results:
+  - id: "Theorem 0.4"
+    statement: ModularitySemistableQ
+    node: LGZ55EK0PA
+    kind: theorem
+    status: stated
+lean_elsewhere:
+  - { repo: ImperialCollegeLondon/FLT, commit: null, licence: Apache-2.0, what: the patching argument and the reduction of Fermat's last theorem to modularity lifting, use: port }
+lean_status: stated
+code_licence: Apache-2.0
+handbook: { volume: 11, chapter: null }
+notes: The companion paper of Taylor and Wiles proves the ring-theoretic properties of the Hecke algebras that the proof uses. The number of the theorem is not checked against the journal yet, so the read tag is U.

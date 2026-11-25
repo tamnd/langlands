@@ -1,0 +1,10 @@
+tag: "LGQVB4Z4KN"
+slug: "geometric-frobenius"
+kind: "definition"
+title: "Geometric Frobenius elements"
+statement: "An element of $W_K$ is a geometric Frobenius if it acts on $\\overline{k}$ as $x \\mapsto x^{1/q}$, the inverse of the arithmetic Frobenius."
+sources: [{"paper": "Tat79", "loc": "Section 1.4.1"}]
+uses: ["LGBPNG162F"]
+lean: {"statement": "Langlands.WeilGroup.IsGeometricFrobenius"}
+tier: "T3"
+notes: "The project uses the geometric normalization everywhere. A uniformizer maps to a geometric Frobenius under the local Artin map."

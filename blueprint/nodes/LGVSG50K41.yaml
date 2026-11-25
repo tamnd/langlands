@@ -1,0 +1,9 @@
+tag: "LGVSG50K41"
+slug: "weil-group-ab"
+kind: "definition"
+title: "The abelianized Weil group"
+statement: "$W_K^{ab}$ is the quotient of $W_K$ by the closure of its commutator subgroup, with the quotient topology."
+sources: [{"paper": "Tat79", "loc": "Section 1.4"}]
+uses: ["LGBPNG162F"]
+lean: {"statement": "Langlands.WeilGroup.Ab"}
+tier: "T3"

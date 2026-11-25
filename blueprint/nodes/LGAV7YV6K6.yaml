@@ -1,0 +1,10 @@
+tag: "LGAV7YV6K6"
+slug: "local-reciprocity-gl1"
+kind: "theorem"
+title: "Local class field theory as the Langlands correspondence for GL(1)"
+statement: "For a nonarchimedean local field $K$ there is a unique topological isomorphism $K^\\times \\cong W_K^{ab}$ that maps each uniformizer to the class of a geometric Frobenius and that induces, for each finite abelian extension $L/K$, a surjection onto $\\mathrm{Gal}(L/K)$ with kernel $N_{L/K}(L^\\times)$."
+sources: [{"paper": "Ser67", "loc": "Chapter VI, Theorem 2"}, {"paper": "Mil20", "loc": "Chapter I, Theorem 1.1"}, {"paper": "Tat79", "loc": "Section 1.4"}]
+uses: ["LGBPNG162F", "LGQVB4Z4KN", "LGVSG50K41", "LGHEK0BGSD"]
+lean: {"statement": "Langlands.LocalReciprocityGL1"}
+tier: "T3"
+notes: "The plan of spec 05.5 goes from the finite abelian case to the limit over all finite abelian extensions, then to the uniqueness, then to the Weil group. These are the first proofs of milestone S1."

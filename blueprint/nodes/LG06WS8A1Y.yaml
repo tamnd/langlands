@@ -1,0 +1,9 @@
+tag: "LG06WS8A1Y"
+slug: "kronecker-weber"
+kind: "theorem"
+title: "The theorem of Kronecker and Weber"
+statement: "Each finite abelian extension of $\\mathbb{Q}$ is contained in a cyclotomic field $\\mathbb{Q}(\\zeta_n)$."
+sources: [{"paper": "Mil20", "loc": "Chapter V"}]
+uses: ["LGVAKJJD8Y"]
+lean: {"statement": "Langlands.KroneckerWeber"}
+tier: "T3"

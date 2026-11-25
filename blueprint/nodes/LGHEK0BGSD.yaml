@@ -1,0 +1,9 @@
+tag: "LGHEK0BGSD"
+slug: "finite-abelian-local-reciprocity"
+kind: "theorem"
+title: "Finite abelian local reciprocity"
+statement: "For a finite abelian extension $L/K$ of a nonarchimedean local field there is a continuous surjective homomorphism $K^\\times \\to \\mathrm{Gal}(L/K)$ whose kernel is the norm group $N_{L/K}(L^\\times)$."
+sources: [{"paper": "Ser67", "loc": "Chapter VI, Section 2"}, {"paper": "Mil20", "loc": "Chapter III"}]
+lean: {"statement": "Langlands.Bridge.finiteAbelianLocalReciprocity", "proof": "Langlands.Bridge.finiteAbelianLocalReciprocity"}
+tier: "T3"
+notes: "The proof is the port of NYLL (n-yamaguchi-0729/ClassFieldTheory) in Langlands/Ported/NYLL, with the bridge Langlands/Bridge/NYLL.lean. This is step 1 of the plan of spec 05.5 for LocalReciprocityGL1."

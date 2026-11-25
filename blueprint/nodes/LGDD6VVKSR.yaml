@@ -1,0 +1,9 @@
+tag: "LGDD6VVKSR"
+slug: "fc-modularity-statement"
+kind: "counterexample"
+title: "The modularity statement of formal-conjectures is false as written"
+statement: "The statement modularity_conjecture of formal-conjectures (commit 9097e2f) reads the coefficients of a cusp form on $\\Gamma_0(N)$ in the parameter $q_N = e^{2 \\pi i \\tau / N}$. The width of the cusp $\\infty$ is 1, so for $N \\ge 2$ the coefficient of $q_N$ is 0, and for $N = 1$ there is no nonzero cusp form of weight 2. So the condition $a_1(f) = 1$ fails for each form, and the statement is false for every elliptic curve over $\\mathbb{Q}$."
+uses: ["LGPNZWXVH5"]
+lean: {"statement": "Langlands.Ported.FormalConjectures.ModularityConjecture.modularity_conjecture", "negation": "Langlands.Bridge.not_modularity_conjecture"}
+tier: "T4"
+notes: "The finding is not reported to formal-conjectures yet. The owner decides about an issue there."

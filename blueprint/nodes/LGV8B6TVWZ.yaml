@@ -1,0 +1,8 @@
+tag: "LGV8B6TVWZ"
+slug: "ramanujan-petersson-holomorphic"
+kind: "theorem"
+title: "The Ramanujan-Petersson conjecture for holomorphic forms"
+statement: "For a normalized Hecke eigenform of weight $k$ on $\\Gamma_0(N)$ and a prime $p \\nmid N$, $|a_p| \\le 2 p^{(k-1)/2}$."
+sources: [{"paper": "Del74", "loc": "Section 8"}]
+lean: {"statement": "Langlands.RamanujanPeterssonHolomorphic"}
+tier: "T4"

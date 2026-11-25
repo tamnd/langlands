@@ -1,0 +1,26 @@
+id: T8-10
+key: BLGHT11
+title: "A family of Calabi-Yau varieties and potential automorphy II"
+authors: [Thomas Barnet-Lamb, David Geraghty, Michael Harris, Richard Taylor]
+where: "Publ. Res. Inst. Math. Sci. 47 (2011), 29-98"
+year: 2011
+doi: 10.2977/PRIMS/31
+arxiv: null
+also: []
+read: { version: journal, by: owner, date: 2026-11-25, tag: S }
+tier: T8
+why: the proof of the Sato-Tate conjecture for all elliptic curves over totally real fields without complex multiplication; the source of Langlands.SatoTate
+expert_status: accepted
+uses: [T8-04]
+results:
+  - id: "Introduction"
+    statement: SatoTate
+    node: LGVZHDXVTZ
+    kind: theorem
+    status: stated
+lean_elsewhere:
+  - { repo: google-deepmind/formal-conjectures, commit: 9097e2f90e66d2f6244209cb1c07f7120d17ec53, licence: Apache-2.0, what: a statement of the Sato-Tate conjecture, use: bridge }
+lean_status: stated
+code_licence: Apache-2.0
+handbook: { volume: 11, chapter: null }
+notes: The curves with a nonintegral j-invariant were done before in the papers of Clozel, Harris, Shepherd-Barron and Taylor (Publ. Math. IHES 108, 2008, and Ann. of Math. 171, 2010). The project states the theorem over Q only.

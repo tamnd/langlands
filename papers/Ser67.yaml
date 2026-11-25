@@ -14,11 +14,16 @@ uses: []
 results:
   - id: "Chapter VI, Theorem 2"
     statement: LocalReciprocityGL1
-    node: null
+    node: LGAV7YV6K6
     kind: theorem
-    status: unstated
+    status: stated
+  - id: "Chapter VI, Section 2"
+    statement: Bridge.finiteAbelianLocalReciprocity
+    node: LGHEK0BGSD
+    kind: theorem
+    status: proved
 lean_elsewhere:
-  - { repo: n-yamaguchi/ClassFieldTheory, commit: null, licence: Apache-2.0, what: finite abelian local reciprocity, use: port }
+  - { repo: n-yamaguchi-0729/ClassFieldTheory, commit: fc644f42dade5bdc7157fc3ef2eef4dbf2d6a565, licence: Apache-2.0, what: finite abelian local reciprocity, use: port }
 lean_status: port-available
 code_licence: Apache-2.0
 handbook: { volume: 3, chapter: 2 }

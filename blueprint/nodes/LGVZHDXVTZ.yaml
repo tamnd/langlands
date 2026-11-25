@@ -1,0 +1,9 @@
+tag: "LGVZHDXVTZ"
+slug: "sato-tate"
+kind: "theorem"
+title: "The Sato-Tate conjecture for elliptic curves over Q"
+statement: "For an elliptic curve $E$ over $\\mathbb{Q}$ without complex multiplication, the angles $\\theta_p \\in [0, \\pi]$ with $a_p = 2 \\sqrt{p} \\cos \\theta_p$ are equidistributed for the measure $\\frac{2}{\\pi} \\sin^2 \\theta \\, d\\theta$."
+sources: [{"paper": "BLGHT11", "loc": "Introduction"}]
+uses: ["LGPNZWXVH5"]
+lean: {"statement": "Langlands.SatoTate"}
+tier: "T8"
