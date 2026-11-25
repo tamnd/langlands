@@ -1,0 +1,10 @@
+tag: "LGCH6QCV3P"
+slug: "base-change-cyclic"
+kind: "theorem"
+title: "Cyclic base change for GL(n)"
+statement: "Let $L/K$ be a cyclic extension of number fields of prime degree and $\\pi$ a cuspidal automorphic representation of $GL_n(\\mathbb{A}_K)$. There is an isobaric automorphic representation $\\Pi$ of $GL_n(\\mathbb{A}_L)$ whose local components are the local base changes of the components of $\\pi$. It is cuspidal unless $\\pi \\cong \\pi \\otimes (\\eta \\circ \\det)$, where $\\eta$ is a character of the idele class group of $K$ attached to $L/K$."
+sources: [{"paper": "AC89", "loc": "Chapter 3"}]
+uses: []
+lean: {"statement": "Langlands.BaseChangeCyclic"}
+tier: "T6"
+notes: "The Lean statement is the weak form at the unramified places. At a place $w$ of $L$ over $v$ with residue degree $f$, the Satake parameters of $\\Pi_w$ are the $f$-th powers of those of $\\pi_v$. It leaves out the condition for $\\Pi$ to be cuspidal and the local base change at the ramified places. By strong multiplicity one for isobaric representations, the weak form determines $\\Pi$."

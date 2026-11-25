@@ -1,0 +1,25 @@
+id: T6-06
+key: AC89
+title: "Simple Algebras, Base Change, and the Advanced Theory of the Trace Formula"
+authors: [James Arthur, Laurent Clozel]
+where: "Annals of Mathematics Studies 120, Princeton University Press (1989)"
+year: 1989
+doi: 10.1515/9781400882403
+arxiv: null
+also: []
+read: { version: book, by: owner, date: 2026-11-26, tag: U }
+tier: T6
+why: cyclic base change and automorphic induction for GL(n) by the trace formula; the source of Langlands.BaseChangeCyclic
+expert_status: accepted
+uses: []
+results:
+  - id: "Chapter 3"
+    statement: BaseChangeCyclic
+    node: LGCH6QCV3P
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 7, chapter: null }
+notes: The book also proves the global correspondence between GL(n) and the units of a central simple algebra. The record is made from the bibliographic data only. Nobody has read the paper for the project yet, so the read tag is U.

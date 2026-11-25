@@ -1,0 +1,7 @@
+tag: "LGZJQ4K11G"
+slug: "reciprocity-function-field-gl"
+kind: "theorem"
+title: "The Langlands correspondence for GL(n) over function fields"
+statement: "Let $F$ be a global function field and $\\ell$ a prime different from its characteristic. There is a bijection between the cuspidal automorphic representations of $GL_n(\\mathbb{A}_F)$ whose central character has finite order and the irreducible continuous representations $G_F \\to GL_n(\\overline{\\mathbb{Q}}_\\ell)$ that are unramified at almost all places and have a determinant of finite order. At each place where both sides are unramified, the Satake parameters are the eigenvalues of Frobenius, and at every place the bijection is compatible with the local Langlands correspondence."
+tier: "T10"
+notes: "This node has no Lean statement yet. It needs the full adele ring of a global function field, with its places at infinity. Mathlib has the finite adeles of a Dedekind domain, but not this ring. The theorem is due to Drinfeld for $n = 2$ and to L. Lafforgue in general, the corpus row T10-02, which has no paper record yet."

@@ -1,0 +1,30 @@
+id: T4-13
+key: JL70
+title: "Automorphic Forms on GL(2)"
+authors: [H. Jacquet, R. P. Langlands]
+where: "Lecture Notes in Mathematics 114, Springer (1970)"
+year: 1970
+doi: 10.1007/BFb0058988
+arxiv: null
+also: []
+read: { version: book, by: owner, date: 2026-11-26, tag: U }
+tier: T4
+why: the representation theory of GL(2) over local fields and over the adeles, and the correspondence with quaternion algebras; the source of Langlands.JacquetLanglandsGL2
+expert_status: accepted
+uses: []
+results:
+  - id: "the local correspondence for quaternion algebras"
+    statement: JacquetLanglandsGL2
+    node: LG7NVV7NSF
+    kind: theorem
+    status: stated
+  - id: "the global correspondence for quaternion algebras"
+    statement: null
+    node: LGZWX81F9A
+    kind: theorem
+    status: unstated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 5, chapter: null }
+notes: The local correspondence has a Lean statement. The global correspondence does not have one yet. The record is made from the bibliographic data only. Nobody has read the paper for the project yet, so the read tag is U.

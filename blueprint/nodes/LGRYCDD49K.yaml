@@ -1,0 +1,7 @@
+tag: "LGRYCDD49K"
+slug: "reciprocity-gl"
+kind: "conjecture"
+title: "The reciprocity conjecture for GL(n)"
+statement: "Let $K$ be a number field, $\\ell$ a prime and $\\iota : \\overline{\\mathbb{Q}}_\\ell \\cong \\mathbb{C}$. There is a bijection between the cuspidal algebraic automorphic representations $\\pi$ of $GL_n(\\mathbb{A}_K)$ and the irreducible continuous representations $\\rho : G_K \\to GL_n(\\overline{\\mathbb{Q}}_\\ell)$ that are unramified at almost all places and de Rham at the places over $\\ell$. At almost all places $v$, the Satake parameters of $\\pi_v$, with the normalization of Clozel, are the images under $\\iota$ of the eigenvalues of $\\rho(\\mathrm{Frob}_v)$."
+tier: "T8"
+notes: "This node has no Lean statement yet. The algebraic condition needs the infinitesimal character of $\\pi$ at the infinite places, which the vocabulary of langlands-lean does not have, and the de Rham condition needs $p$-adic Hodge theory, which Mathlib does not have. A form with only the algebraicity of the Satake parameters is a different and stronger statement, so langlands-lean does not give it. The sources are the corpus rows T0-16 and T8-23, which have no paper records yet."

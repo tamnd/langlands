@@ -1,0 +1,25 @@
+id: T0-10
+key: BH06
+title: "The Local Langlands Conjecture for GL(2)"
+authors: [Colin J. Bushnell, Guy Henniart]
+where: "Grundlehren der mathematischen Wissenschaften 335, Springer (2006)"
+year: 2006
+doi: 10.1007/3-540-31511-X
+arxiv: null
+also: [T5-10]
+read: { version: book, by: owner, date: 2026-11-26, tag: U }
+tier: T0
+why: the standard text on the local Langlands correspondence for GL(2), with the explicit construction by tame types; a source of Langlands.LocalLanglandsGL2
+expert_status: accepted
+uses: []
+results:
+  - id: "Chapter 8"
+    statement: LocalLanglandsGL2
+    node: LG453577KN
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 6, chapter: null }
+notes: The book gives an explicit form of the correspondence by admissible pairs when the residue characteristic is odd. The record is made from the bibliographic data only. Nobody has read the paper for the project yet, so the read tag is U.

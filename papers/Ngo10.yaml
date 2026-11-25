@@ -1,0 +1,25 @@
+id: T7-08
+key: Ngo10
+title: "Le lemme fondamental pour les algèbres de Lie"
+authors: [Bao Châu Ngô]
+where: "Publ. Math. IHES 111 (2010), 1-169"
+year: 2010
+doi: 10.1007/s10240-010-0026-7
+arxiv: "0801.0446"
+also: []
+read: { version: journal, by: owner, date: 2026-11-26, tag: U }
+tier: T7
+why: the proof of the fundamental lemma for Lie algebras by the Hitchin fibration; the source of Langlands.FundamentalLemma
+expert_status: accepted
+uses: []
+results:
+  - id: "Introduction"
+    statement: FundamentalLemma
+    node: LGH8C75DFX
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 8, chapter: null }
+notes: The unitary case in the Lean statement is the earlier theorem of Laumon and Ngô (Ann. of Math. 168, 2008), which is not a row of the corpus. The record is made from the bibliographic data only. Nobody has read the paper for the project yet, so the read tag is U.

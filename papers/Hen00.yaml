@@ -1,0 +1,25 @@
+id: T5-11
+key: Hen00
+title: "Une preuve simple des conjectures de Langlands pour GL(n) sur un corps p-adique"
+authors: [Guy Henniart]
+where: "Invent. Math. 139 (2000), 439-455"
+year: 2000
+doi: 10.1007/s002220050012
+arxiv: null
+also: [T5-12]
+read: { version: journal, by: owner, date: 2026-11-26, tag: U }
+tier: T5
+why: a short proof of the local Langlands correspondence for GL(n) over a p-adic field; a source of Langlands.LocalLanglandsGL
+expert_status: accepted
+uses: []
+results:
+  - id: "the main theorem"
+    statement: LocalLanglandsGL
+    node: LG2E74SP8W
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 6, chapter: null }
+notes: The proof uses the results of Harris and Taylor on the cohomology of Shimura varieties. The uniqueness of the correspondence is an earlier paper of Henniart (Invent. Math. 113, 1993), which is not a row of the corpus. The record is made from the bibliographic data only. Nobody has read the paper for the project yet, so the read tag is U.

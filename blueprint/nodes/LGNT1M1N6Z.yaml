@@ -1,0 +1,10 @@
+tag: "LGNT1M1N6Z"
+slug: "fontaine-mazur-gl2-q"
+kind: "theorem"
+title: "Kisin's theorem on the Fontaine-Mazur conjecture for GL(2) over Q"
+statement: "Let $p > 2$ and let $\\rho : G_\\mathbb{Q} \\to GL_2(\\overline{\\mathbb{Q}}_p)$ be continuous, irreducible and odd, unramified at almost all primes, and de Rham at $p$ with distinct Hodge-Tate weights. Assume that $\\bar\\rho|_{G_{\\mathbb{Q}(\\zeta_p)}}$ is absolutely irreducible and that $\\bar\\rho|_{G_{\\mathbb{Q}_p}}$ is not of the form $\\begin{pmatrix} \\omega \\chi & * \\\\ 0 & \\chi \\end{pmatrix}$. Then $\\rho$ is the twist of the representation of a modular eigenform by a power of the cyclotomic character."
+sources: [{"paper": "Kis09b", "loc": "the main theorem"}]
+uses: ["LGG3ZW59RX", "LGKH3WKEVV"]
+lean: {"statement": "Langlands.FontaineMazurGL2Q"}
+tier: "T8"
+notes: "The Lean statement replaces the condition to be de Rham at $p$ by the stronger condition to be ordinary of weight $k \\ge 2$, because Mathlib does not have the ring $B_{dR}$. It keeps $p > 2$ and the residual conditions of Kisin. The conclusion is modularity in the form of the traces and determinants of Frobenius at the primes $\\ell \\nmid Np$, which gives $\\rho \\cong \\rho_f$ by the theorems of Chebotarev and of Brauer and Nesbitt."

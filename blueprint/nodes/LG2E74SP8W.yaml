@@ -1,0 +1,10 @@
+tag: "LG2E74SP8W"
+slug: "local-langlands-gl"
+kind: "theorem"
+title: "The local Langlands correspondence for GL(n)"
+statement: "Let $K$ be a nonarchimedean local field. For each $n \\ge 1$ there is a unique family of bijections $\\mathrm{rec}_n$ from the classes of irreducible smooth representations of $GL_n(K)$ to the classes of Frobenius semisimple Weil-Deligne representations of $W_K$ of dimension $n$ with these properties. For $n = 1$ the map $\\mathrm{rec}_1$ is given by local class field theory. The map takes the central character to the determinant, commutes with twists by characters, takes the contragredient to the dual, and preserves the L-factors and the $\\varepsilon$-factors of pairs."
+sources: [{"paper": "HT01", "loc": "Introduction"}, {"paper": "Hen00", "loc": "the main theorem"}]
+uses: ["LGAV7YV6K6"]
+lean: {"statement": "Langlands.LocalLanglandsGL"}
+tier: "T5"
+notes: "The Lean statement is the existence part, with conditions 1 to 4 and the standard L-factor of Godement and Jacquet, that is condition 5 for $\\pi' = 1$. It leaves out the $\\varepsilon$-factors and the L-factors of pairs with $m' \\ge 2$, which need the Rankin-Selberg integrals of Jacquet, Piatetski-Shapiro and Shalika and the local constants of Deligne and Langlands. Without them the conditions do not determine the bijection for $n \\ge 2$. So the statement does not give the uniqueness theorem of Henniart."

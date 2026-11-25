@@ -1,0 +1,7 @@
+tag: "LGV2KZTSNS"
+slug: "automorphic-to-galois"
+kind: "theorem"
+title: "Galois representations of regular algebraic cuspidal representations"
+statement: "Let $K$ be a CM field and $\\pi$ a regular algebraic cuspidal automorphic representation of $GL_n(\\mathbb{A}_K)$. For each prime $\\ell$ and each $\\iota : \\overline{\\mathbb{Q}}_\\ell \\cong \\mathbb{C}$ there is a continuous semisimple representation $\\rho_{\\pi, \\iota} : G_K \\to GL_n(\\overline{\\mathbb{Q}}_\\ell)$ with this property. At each finite place $v \\nmid \\ell$ where $\\pi$ and $K$ are unramified, $\\rho_{\\pi, \\iota}$ is unramified and the eigenvalues of $\\rho_{\\pi, \\iota}(\\mathrm{Frob}_v)$ correspond under $\\iota$ to the Satake parameters of $\\pi_v$."
+tier: "T8"
+notes: "This node has no Lean statement yet. The regular algebraic condition needs the infinitesimal character of $\\pi$ at the infinite places, which the vocabulary of langlands-lean does not have. The theorem is due to Harris, Lan, Taylor and Thorne, and to Scholze, the corpus rows T8-12 and T8-13, which have no paper records yet."

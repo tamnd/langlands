@@ -1,0 +1,10 @@
+tag: "LG7NVV7NSF"
+slug: "jacquet-langlands-local-gl2"
+kind: "theorem"
+title: "The local Jacquet-Langlands correspondence for GL(2)"
+statement: "Let $K$ be a nonarchimedean local field and $D$ the quaternion division algebra over $K$. There is a unique bijection $\\mathrm{JL}$ from the discrete series representations of $GL_2(K)$ to the irreducible smooth representations of $D^\\times$ such that $\\theta_\\pi(g) = -\\theta_{\\mathrm{JL}(\\pi)}(d)$ for each regular elliptic $g \\in GL_2(K)$ and each $d \\in D^\\times$ whose reduced characteristic polynomial is the characteristic polynomial of $g$."
+sources: [{"paper": "JL70", "loc": "the local correspondence for quaternion algebras"}]
+uses: []
+lean: {"statement": "Langlands.JacquetLanglandsGL2"}
+tier: "T5"
+notes: "The Lean statement uses the Harish-Chandra character in a pointwise form, so the identity is between the values of the characters at the regular elliptic elements. The discrete series are the supercuspidal representations and the twists of the Steinberg representation. The global correspondence of Jacquet and Langlands is the node LGZWX81F9A, which has no Lean statement yet."

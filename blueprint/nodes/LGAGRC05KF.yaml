@@ -1,0 +1,10 @@
+tag: "LGAGRC05KF"
+slug: "ramanujan-gl"
+kind: "conjecture"
+title: "The Ramanujan conjecture for GL(n)"
+statement: "Let $K$ be a number field and $\\pi$ a cuspidal automorphic representation of $GL_n(\\mathbb{A}_K)$ with a unitary central character. Then each local component $\\pi_v$ is tempered."
+sources: [{"paper": "Lan70", "loc": "the remarks on the Ramanujan conjecture"}, {"paper": "Kim03", "loc": "Appendix 2"}]
+uses: []
+lean: {"statement": "Langlands.RamanujanGL"}
+tier: "T6"
+notes: "This is open for $n \\ge 2$. The Lean statement is the case of the finite places where $\\pi$ is unramified: each Satake parameter of a bounded cusp form that is a Hecke eigenvector at $v$ has absolute value 1. It leaves out the ramified places and the infinite places. The case $n = 1$ is proved in Lean as Langlands.ramanujanGL_one, and the node LG75ERTV5K is the case of Maass forms for GL(2) over Q."

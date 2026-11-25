@@ -1,0 +1,25 @@
+id: T6-10
+key: NT21
+title: "Symmetric power functoriality for holomorphic modular forms, II"
+authors: [James Newton, Jack A. Thorne]
+where: "Publ. Math. IHES 134 (2021), 117-152"
+year: 2021
+doi: 10.1007/s10240-021-00126-4
+arxiv: "2009.07180"
+also: []
+read: { version: journal, by: owner, date: 2026-11-26, tag: U }
+tier: T6
+why: the proof that every symmetric power of a holomorphic newform without complex multiplication is automorphic; the source of Langlands.SymPowerFunctoriality
+expert_status: accepted
+uses: []
+results:
+  - id: "Part II, the main theorem"
+    statement: SymPowerFunctoriality
+    node: LGC3KP178Q
+    kind: theorem
+    status: stated
+lean_elsewhere: []
+lean_status: stated
+code_licence: null
+handbook: { volume: 7, chapter: null }
+notes: Part I is Publ. Math. IHES 134 (2021), 1-116, DOI 10.1007/s10240-021-00127-3, arXiv 1912.11261. Part I proves the case of level one and Part II proves the general case. The record is made from the bibliographic data only. Nobody has read the paper for the project yet, so the read tag is U.

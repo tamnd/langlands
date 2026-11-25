@@ -1,0 +1,9 @@
+tag: "LGFQ0HXS3H"
+slug: "hasse-weil"
+kind: "conjecture"
+title: "The Hasse-Weil conjecture"
+statement: "Let $X$ be a smooth projective variety over a number field $K$. The Hasse-Weil zeta function $\\zeta_X(s)$ continues to a meromorphic function on $\\mathbb{C}$, and the completed zeta function satisfies a functional equation under $s \\mapsto \\dim X + 1 - s$."
+uses: []
+lean: {"statement": "Langlands.HasseWeil"}
+tier: "T8"
+notes: "This is open. The Lean statement takes a proper model $\\mathcal{X} \\to \\mathrm{Spec}\\, \\mathcal{O}_K$ with a smooth generic fiber, and the Euler product over the closed points at the places of good reduction. It asks only for a meromorphic continuation from a half plane, not for the functional equation, because the gamma factors and the conductor need Hodge numbers and etale cohomology. The source is Serre, Zeta and L functions (1965), which is not a row of the corpus yet, so the node cites no paper record."

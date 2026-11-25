@@ -1,0 +1,10 @@
+tag: "LG453577KN"
+slug: "local-langlands-gl2"
+kind: "theorem"
+title: "The local Langlands correspondence for GL(2)"
+statement: "Let $K$ be a nonarchimedean local field. There is a bijection $\\mathrm{rec}$ from the irreducible smooth representations of $GL_2(K)$ to the Frobenius semisimple Weil-Deligne representations of $W_K$ of dimension 2, with the properties of the correspondence for $GL_n$. A subrepresentation of the principal series $\\mathrm{Ind}(\\chi_1, \\chi_2)$ goes to $\\varphi_1 \\oplus \\varphi_2$ with $\\varphi_i = \\chi_i \\circ \\mathrm{art}_K^{-1}$ and $N = 0$, except when $\\chi_1 = \\chi_2 |\\cdot|$. In that case the subrepresentation is a twist of the Steinberg representation, and its parameter has $N \\ne 0$. The supercuspidal representations go to the irreducible representations of $W_K$."
+sources: [{"paper": "Kut80", "loc": "the main theorem"}, {"paper": "BH06", "loc": "Chapter 8"}]
+uses: ["LGAV7YV6K6"]
+lean: {"statement": "Langlands.LocalLanglandsGL2"}
+tier: "T5"
+notes: "The Lean statement gives the parameters of the representations that are not supercuspidal in explicit form. It also says that $\\pi$ is supercuspidal exactly when $\\mathrm{rec}(\\pi)$ is irreducible. It leaves out the $\\varepsilon$-factors, as LG2E74SP8W does, so it does not fix $\\mathrm{rec}$ on the supercuspidal representations. The explicit description of Bushnell and Henniart by tame types and admissible pairs is not in the statement."
