@@ -1,0 +1,126 @@
+# The research routes of langlands on the open parts of the Langlands program. The text comes from spec 04. The weights set the share of the research budget of the agent for the first year. The computation lab has the weight 0.05; it is a method, not a route, so it is not in this file.
+- id: R1
+  title: Formal checks of fresh 2026 claims
+  weight: 0.20
+  idea: |
+    In 2026 strong results appear faster than referees can read them, and some come from AI systems with no human author. A formal check of a part of a claim that stands alone is new evidence that no referee can give. The route does not try to formalize a whole paper. For each claim it writes a claim record with the date and the status, states the main theorem in Lean as a `def ... : Prop` with status `claimed`, maps the dependencies, and picks the smallest part that is new, stands alone and can be checked.
+  known: |
+    The claims exist as preprints. None has a Lean proof. The claims include the twisted weighted fundamental lemma in good characteristic (Halleck-Dube, arXiv:2611.26750), Arthur-Ramanujan for unramified forms over function fields (Gaitsgory, V. Lafforgue and Raskin, arXiv:2603.26925), the comparison of Fargues-Scholze parameters with the parameters of Kaletha on the supercuspidals of Yu (Cotner-Feng, arXiv:2609.16381 and 2609.16387), and supercuspidals and types through double covers (Fintzen-Kaletha, arXiv:2611.31396).
+  obstruction: |
+    Most claims rest on foundations that are not in Lean, so a check reaches only an edge of the claim. A check of a part is not a check of the claim. The record must say exactly which part was checked.
+  first: |
+    - `LG-claim-twfl`, `LG-claim-glr-ar`, `LG-claim-cf`: the three claimed statements, with status `claimed`, over the vocabulary of the library. The parts that need missing foundations are named hypotheses.
+    - `LG-claim-fk-weil`: the finite group core of Fintzen-Kaletha, the twisted Heisenberg-Weil representation and its character over a finite field of odd characteristic.
+    - `LG-cross-rl-cft`, `LG-cross-rl-tate`: the global reciprocity map and the functional equation of Hecke from riemann-lean, stated again in the vocabulary of the project. riemann-lean has no licence, so the project reads it and does not copy it.
+- id: R2
+  title: Explicit local Langlands for small groups and low depth
+  weight: 0.15
+  idea: |
+    Build the local theory from the bottom: smooth representations, types, supercuspidals and the explicit correspondence. Then push at the edges of the known cases: small $p$, wild ramification, groups that are not split, and exceptional groups.
+  known: |
+    $\mathrm{GL}_2$ has a purely local proof (Kutzko; Bushnell-Henniart 2006). $\mathrm{SL}_2$ and its inner forms follow by restriction (Labesse-Langlands, Gelbart-Knapp). $\mathrm{GSp}_4$ is due to Gan-Takeda and $G_2$ to Gan-Savin. The regular and non singular supercuspidals of Kaletha give an explicit correspondence for tame groups with $p \nmid |W|$. Depth zero is known (DeBacker-Reeder, Solleveld-Xu).
+  obstruction: |
+    The smooth representation theory of $p$-adic groups is not in Mathlib. The $\varepsilon$-factors of representations of the Weil group are expensive, and the filtrations of Moy-Prasad need Bruhat-Tits buildings, which no Lean library has. In the mathematics, small $p$, exceptional groups and uniqueness are open because the explicit methods need tame hypotheses.
+  first: |
+    - `LG-smooth-rep`: smooth and admissible representations.
+    - `LG-ind-jacquet`: parabolic induction and Jacquet modules, with Frobenius reciprocity.
+    - `LG-gl2-nonsc`: the classification of the irreducible representations of $\mathrm{GL}_2(F)$ that are not cuspidal.
+    - `LG-gl2-types`: strata, simple characters and types for $\mathrm{GL}_2$.
+    - `LG-admissible-pairs`: admissible pairs $(E/F, \xi)$ and the tame parametrization for $p \neq 2$.
+    - `LG-llc-gl2`: the statement `LocalLanglandsGL 2`.
+    - `LG-g2-roadmap`: the statement of the local correspondence for $G_2$.
+- id: R3
+  title: Modularity and automorphy lifting
+  weight: 0.15
+  idea: |
+    Prove the direction from Galois to automorphic by deformation theory. Show $R = \mathbb{T}$ by the patching of Taylor-Wiles-Kisin, then switch primes or use potential automorphy. Two Lean projects on Fermat's Last Theorem have done part of this route, with code under the Apache-2.0 licence.
+  known: |
+    Elliptic curves over $\mathbb{Q}$ (Breuil, Conrad, Diamond and Taylor), and over real quadratic, totally real cubic and totally real quartic fields. Elliptic curves over imaginary quadratic fields in many cases (Caraiani-Newton). Potential modularity over totally real and CM fields. A positive proportion of abelian surfaces over $\mathbb{Q}$, about 11.9%.
+  obstruction: |
+    The Galois representations of automorphic forms need Shimura varieties. The construction of Deligne alone is far more than 500,000 lines of Lean with a full proof. The route states these inputs as hypotheses of `proved-mod` nodes and proves the algebra around them. In the mathematics, no Galois representation is known for fields with a complex place that are not CM, and patching fails outside regular weight without new ideas.
+  first: |
+    - `LG-patching`: the abstract patching theorem as pure commutative algebra.
+    - `LG-wiles-criterion`: the numerical criterion of Wiles and congruence modules.
+    - `LG-galrep`: continuous Galois representations, and the Galois representation of an eigenform as a predicate.
+    - `LG-mod-ell-q`: the statement `ModularityEllipticQ`, joined to the statements of other Lean projects.
+- id: R4
+  title: Ramanujan bounds
+  weight: 0.05
+  idea: |
+    The Ramanujan conjecture follows from functoriality of all symmetric powers. Partial functoriality gives partial bounds. Kim-Sarnak used $\mathrm{Sym}^4$ to get the bound $7/64$ for $\mathrm{GL}_2$ over $\mathbb{Q}$.
+  known: |
+    Deligne for holomorphic forms. The regular algebraic cases over totally real and CM fields. Cohomological $\mathrm{GL}_2$ over CM fields. $\mathrm{GL}_n$ over function fields. The bound $7/64$ for $\mathrm{GL}_2$ over $\mathbb{Q}$.
+  obstruction: |
+    No method is known for Maass forms. Every known bound for Maass forms comes from functoriality of small symmetric powers, and the next one, $\mathrm{Sym}^5$ or $\mathrm{Sym}^6$, is open.
+  first: |
+    - `LG-ramanujan`: the statement `RamanujanGL`.
+    - `LG-ramanujan-tau`: the bridge to `RamanujanTau` of formal-conjectures.
+    - `LG-symn-to-ram`: the theorem that automorphy of $\mathrm{Sym}^m \pi$ for all $m$ implies Ramanujan at the unramified places, by Rankin-Selberg and the lemma of Landau, with named analytic hypotheses.
+- id: R5
+  title: The trace formula and Beyond Endoscopy
+  weight: 0.10
+  idea: |
+    The trace formula compares spectral and geometric data. It gives Jacquet-Langlands, base change, Langlands-Tunnell and the endoscopic classification. Beyond Endoscopy (Langlands 2004) tries to detect the poles of $L(s, \pi, r)$ in a limit of the stable trace formula, and so to reach functoriality in general.
+  known: |
+    The formula of Selberg for cocompact lattices. The invariant and stable formulas of Arthur, and the fundamental lemma of Ngô. Beyond Endoscopy for the standard representation of $\mathrm{GL}_2$ over $\mathbb{Q}$ (Altuğ in the unramified case, Cheng in the ramified case).
+  obstruction: |
+    The trace formula has no Lean code. The formula of Arthur for $\mathrm{GL}_2$ alone is about 100,000 lines of Lean or more, a guess of the project. Beyond Endoscopy has given no new transfer. Its main terms are controlled, but beyond $\mathrm{GL}_2$ its error terms in the limit are not.
+  first: |
+    - `LG-tf-finite`: the trace formula for a finite group that acts on the functions on a finite set, as a statement for teaching.
+    - `LG-tf-selberg`: the trace formula of Selberg for a cocompact discrete subgroup of a unimodular group, with the trace class property as a hypothesis.
+    - `LG-orbital-gl2`: orbital integrals for $\mathrm{GL}_2(F)$.
+    - `LG-fl`: the statement `FundamentalLemma`, first as a statement and then as a `proved-mod` node.
+- id: R6
+  title: Functoriality cases and converse theorems
+  weight: 0.10
+  idea: |
+    Prove a transfer $\pi \mapsto \Pi$ with a converse theorem: show that the candidate $\Pi$ has the correct twisted L-functions. The converse theorems are those of Hecke, Weil, Jacquet, Piatetski-Shapiro and Shalika, and Cogdell and Piatetski-Shapiro. Galois methods (Newton-Thorne) are the second way.
+  known: |
+    The known transfers: Jacquet-Langlands, cyclic base change, $\mathrm{Sym}^2$, $\mathrm{Sym}^3$, $\mathrm{Sym}^4$, the transfers from classical groups to $\mathrm{GL}_N$, and $\mathrm{Sym}^n$ of holomorphic eigenforms. Matringe proves a local converse theorem for split groups with acceptable dual and shows that it fails for $\mathrm{SO}_{2n}$, $n \ge 3$.
+  obstruction: |
+    Converse theorems need analytic control of all twisted L-functions of the candidate. This is known only when the candidate comes from a construction (Langlands-Shahidi or Galois). New transfers without Galois input need new constructions.
+  first: |
+    - `LG-functoriality`: the statement `Functoriality`, with L-homomorphisms.
+    - `LG-hecke-converse`: the converse theorem of Hecke for level 1, from the L-function of a modular form in Mathlib and its functional equation.
+    - `LG-weil-converse`: the converse theorem of Weil for $\Gamma_0(N)$.
+    - `LG-rankin-selberg`: Rankin-Selberg for $\mathrm{GL}_2 \times \mathrm{GL}_2$.
+- id: R7
+  title: Function fields
+  weight: 0.05
+  idea: |
+    Over a function field the program is close to complete for $\mathrm{GL}_n$. It is open with ramification for a general $G$. Shtukas take the place of Shimura varieties.
+  known: |
+    Reciprocity for $\mathrm{GL}_n$ (L. Lafforgue 2002). The direction from automorphic to Galois for every reductive $G$ (V. Lafforgue 2018).
+  obstruction: |
+    The étale cohomology of stacks of shtukas and the geometric Satake equivalence are far from Lean. In the mathematics, the direction from Galois to automorphic for a general $G$ with ramification and the multiplicities are open.
+  first: |
+    - `LG-ff-statements`: the bijection of L. Lafforgue and the decomposition of V. Lafforgue, as statements.
+    - `LG-ff-cft`: class field theory for global function fields.
+    - `LG-ff-drinfeld-gl2`: the theorem of Drinfeld for $\mathrm{GL}_2$, as a statement.
+- id: R8
+  title: Geometric Langlands
+  weight: 0.05
+  idea: |
+    State the geometric conjecture and the six open problems of GLC V. Prove the abelian case, geometric class field theory.
+  known: |
+    The geometric conjecture in characteristic 0, unramified, in the de Rham setting, for every reductive $G$ (Gaitsgory, Raskin and coauthors, five papers, 2024 to 2026).
+  obstruction: |
+    D-modules, ind coherent sheaves, derived stacks and $\mathrm{Bun}_G$ are not in Lean. They are several hundred thousand lines of foundations, a guess of the project. The six problems of GLC V are open: tame and wild ramification, local and global, the quantum form, the $\ell$-adic form over $\bar{\mathbb{F}}_q$ on all components, and the Fargues-Fontaine curve.
+  first: |
+    - `LG-gcft`: geometric class field theory for $\mathrm{GL}_1$, with the Abel-Jacobi map and the descent of a local system of rank one to $\mathrm{Pic}$.
+    - `LG-gl1-eigensheaf`: the property of a Hecke eigensheaf for $\mathrm{GL}_1$.
+    - `LG-glc`: the statement `GeometricLanglands`, as a placeholder until the foundations exist.
+- id: R9
+  title: p-adic and mod p Langlands
+  weight: 0.10
+  idea: |
+    Build the objects of the theory for $\mathrm{GL}_2(\mathbb{Q}_p)$: étale $(\varphi, \Gamma)$-modules, the functor of Colmez, the classification mod $p$, Serre weights and Galois deformation rings. Align with the TauCeti roadmap `PadicLocalLanglandsForGL2Qp` and do not duplicate it.
+  known: |
+    The $p$-adic correspondence for $\mathrm{GL}_2(\mathbb{Q}_p)$ (Colmez, Paškūnas, Colmez-Dospinescu-Paškūnas). The categorical form for $\mathrm{GL}_2(\mathbb{Q}_p)$ with $p \ge 5$ (Dotto, Emerton and Gee).
+  obstruction: |
+    The categorical statements need $\infty$-categories of ind coherent sheaves on formal algebraic stacks, and the Emerton-Gee stack is not in Lean. Perfectoid fields are still a draft pull request to Mathlib. In the mathematics, no construction of $\Pi(\rho)$ is known for $K \neq \mathbb{Q}_p$.
+  first: |
+    - `LG-phigamma`: étale $(\varphi, \Gamma)$-modules over $\mathbb{Q}_p$ and the equivalence of Fontaine.
+    - `LG-modp-gl2`: the classification of the irreducible smooth representations mod $p$ of $\mathrm{GL}_2(\mathbb{Q}_p)$ (Barthel-Livné, Breuil).
+    - `LG-serre-weights`: Serre weights as representations of $\mathrm{GL}_2(\mathbb{F}_q)$, and the recipe of Herzig as a combinatorial statement.
+    - `LG-def-functor`: Galois deformation functors and their representability.
