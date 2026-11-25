@@ -1,0 +1,8 @@
+tag: "LG6W8W7GE6"
+slug: "fc-sato-tate-bridge"
+kind: "theorem"
+title: "The Sato-Tate statement of formal-conjectures follows from the project statement"
+statement: "Assume that for each elliptic curve $E$ over $\\mathbb{Q}$ the coefficient $a_p$ computed from the given equation agrees with the coefficient of $L(E, s)$, and that $|a_p| \\le 2 \\sqrt{p}$, at all but finitely many primes. Then the Sato-Tate statement in the angles $\\theta_p$ implies the statement in the normalized coefficients $a_p / (2 \\sqrt{p})$ with the distribution function $(t \\sqrt{1 - t^2} + \\arcsin t)/\\pi + 1/2$."
+lean: {"statement": "Langlands.Bridge.satoTate_conjecture_of_satoTate", "proof": "Langlands.Bridge.satoTate_conjecture_of_satoTate"}
+tier: "T8"
+notes: "The Lean statement is an implication from the node LGVZHDXVTZ (SatoTate), so its proof does not use a proof of that node. This is the bridge of spec 06.4 for SatoTate. The two assumptions are theorems that Mathlib does not have yet: the count of points at a prime of good reduction, and the Hasse bound. The proof takes them as the hypotheses ApAgree and HasseBound of the Lean statement."
