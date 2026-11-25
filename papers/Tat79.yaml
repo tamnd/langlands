@@ -1,0 +1,30 @@
+id: T3-04
+key: Tat79
+title: Number theoretic background
+authors: [John Tate]
+where: "Automorphic Forms, Representations and L-functions, Proc. Sympos. Pure Math. 33, part 2, AMS (1979), 3-26"
+doi: 10.1090/pspum/033.2
+arxiv: null
+also: [T0-03]
+read: { version: journal, by: owner, date: 2026-11-25, tag: S }
+tier: T3
+why: the reference definition of the Weil group and of its normalizations; the source of Langlands.WeilGroup
+expert_status: accepted
+uses: [T0-04]
+results:
+  - id: "Section 1.4"
+    statement: WeilGroup
+    node: null
+    kind: definition
+    status: stated
+  - id: "Section 1.4.1"
+    statement: WeilGroup.IsGeometricFrobenius
+    node: null
+    kind: definition
+    status: stated
+lean_elsewhere:
+  - { repo: riemann-lean, commit: null, licence: none, what: a Weil group, use: read }
+lean_status: stated
+code_licence: null
+handbook: { volume: 3, chapter: 1 }
+notes: Tate gives the Weil group as an abstract group with a map to the Galois group. The project uses the subgroup of the Galois group, which Tate shows is equivalent (question Q-04 of the spec).

@@ -1,0 +1,24 @@
+id: T0-07
+key: Mil20
+title: Class Field Theory
+authors: [James S. Milne]
+where: "Course notes, version 4.03 (2020), www.jmilne.org/math/CourseNotes/cft.html"
+doi: null
+arxiv: null
+also: [T0-04, T0-05]
+read: { version: "v4.03", by: owner, date: 2026-11-25, tag: S }
+tier: T0
+why: Lubin-Tate theory and the cohomological proofs of local and global class field theory; the base text of Volume 3
+expert_status: accepted
+uses: []
+results:
+  - id: "Chapter I, Theorem 1.1"
+    statement: LocalReciprocityGL1
+    node: null
+    kind: theorem
+    status: unstated
+lean_elsewhere: []
+lean_status: none
+code_licence: null
+handbook: { volume: 3, chapter: null }
+notes: The notes are free to read but are not under an open licence. The handbook cites them and does not copy them.
