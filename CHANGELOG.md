@@ -6,8 +6,8 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
-- `records/lean.json` is at langlands-lean 17b3152, with 1621 declarations.
-- `records/replay.json` has the result of the kernel replay of langlands-lean 17b3152. leanchecker --fresh, lean4lean, nanoda and `lake comparator --paranoid` accept the commit. Rows Q0 to Q4 of the trust report are yes.
+- `records/lean.json` is at langlands-lean 6531e9e, with 2252 declarations, 0 with `sorry`.
+- `records/replay.json` has the result of the kernel replay of langlands-lean 6531e9e. leanchecker --fresh, lean4lean, nanoda and `lake comparator --paranoid` accept the commit. Rows Q0 to Q4 of the trust report are yes.
 
 ## v0.1.6 (2026-11-26)
 
