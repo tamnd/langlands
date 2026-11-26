@@ -1,0 +1,11 @@
+{
+  "commit": "9a88d56b5784fc373b1434359b284de0187db693",
+  "date": "2026-11-26",
+  "run": "https://github.com/tamnd/langlands-lean/actions/runs/45729921911",
+  "checkers": [
+    {"name": "leanchecker --fresh", "independent": false, "ok": true, "note": "The kernel of Lean replays the environment of the module Langlands from a fresh start."},
+    {"name": "lean4lean", "independent": true, "ok": true, "note": "lean4lean replays all the declarations of the package with the prefix Langlands."},
+    {"name": "nanoda", "independent": true, "ok": true, "note": "nanoda checks the export of the module Langlands."}
+  ],
+  "comparator": {"ok": true, "note": "lake comparator --paranoid accepts the statements of Langlands/Statements."}
+}
