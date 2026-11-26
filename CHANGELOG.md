@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## v0.1.6 (2026-11-26)
+
 ### Added
 
 - The paper records GT11 (Gan and Takeda), HLTT16 (Harris, Lan, Taylor and Thorne) and Sch15 (Scholze), from the bibliographic data only, with the read tag U.
@@ -12,7 +14,8 @@ Each release has a section. The newest release is first.
 
 - Four nodes have a Lean statement now. The local Langlands correspondence for GSp(4) (LGQCVGBMVA), the Galois representations of regular algebraic cuspidal representations (LGV2KZTSNS) and the global Jacquet-Langlands correspondence (LGZWX81F9A) are stated. The reciprocity conjecture for GL(n) (LGRYCDD49K) is open, with a weak form in Lean. The notes of each node say what the Lean statement leaves out.
 - The Breuil-Mezard conjecture (LGRMD7S8EV) stays unstated. Its notes say why a special form is not stated.
-- `records/lean.json` is at langlands-lean 16a675f, with 1457 declarations.
+- `records/lean.json` is at langlands-lean 9a88d56, with 1537 declarations.
+- `records/replay.json` is new. It has the result of the kernel replay of langlands-lean 9a88d56 by leanchecker, lean4lean and nanoda. Row Q3 of the trust report is yes. Row Q4 is no, because the statement manifest of that commit was old. tamnd/langlands-lean#56 corrects it.
 
 ## v0.1.5 (2026-11-26)
 
