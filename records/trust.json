@@ -5,13 +5,13 @@
       "id": "Q0",
       "question": "Is the source the one that the site describes?",
       "state": "yes",
-      "note": "records/lean.json and the checkout of langlands-lean are both at commit 17b3152."
+      "note": "records/lean.json and the checkout of langlands-lean are both at commit 6531e9e."
     },
     {
       "id": "Q1",
       "question": "Does it build?",
       "state": "yes",
-      "note": "records/lean.json is the record of the build of commit 17b3152 with Lean 4.35.0 and Mathlib v4.35.0 on 2026-11-26. lgl trust reads the record and does not build."
+      "note": "records/lean.json is the record of the build of commit 6531e9e with Lean 4.35.0 and Mathlib v4.35.0 on 2026-11-26. lgl trust reads the record and does not build."
     },
     {
       "id": "Q2",
@@ -23,13 +23,13 @@
       "id": "Q3",
       "question": "Does a second kernel accept it?",
       "state": "yes",
-      "note": "On 2026-11-26 leanchecker --fresh, lean4lean, nanoda accepted commit 17b3152."
+      "note": "On 2026-11-26 leanchecker --fresh, lean4lean, nanoda accepted commit 6531e9e."
     },
     {
       "id": "Q4",
       "question": "Do the proved theorems have the pinned statements?",
       "state": "yes",
-      "note": "On 2026-11-26 lake comparator matched each proof of commit 17b3152 to its pinned statement. The statement files match manifests/statements.sha256."
+      "note": "On 2026-11-26 lake comparator matched each proof of commit 6531e9e to its pinned statement. The statement files match manifests/statements.sha256."
     },
     {
       "id": "Q5",
@@ -58,11 +58,11 @@
   ],
   "lean": {
     "repository": "https://github.com/tamnd/langlands-lean",
-    "commit": "17b31525660e114e38af0c3e93ee8fb47ec60e94",
+    "commit": "6531e9e9dcf23ccd9de967feff4ce2fc9685f59b",
     "toolchain": "4.35.0",
     "mathlib": "v4.35.0",
     "built": "2026-11-26",
-    "checkout": "17b31525660e114e38af0c3e93ee8fb47ec60e94"
+    "checkout": "6531e9e9dcf23ccd9de967feff4ce2fc9685f59b"
   },
   "replay": "records/replay.json",
   "theorems": [
