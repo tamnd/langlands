@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The first measurement of the cost per proved node, in reports/2026-11-27-cost-per-node.md, with the data of each agent run.
+
 ## v0.1.8 (2026-11-27)
 
 ### Added
