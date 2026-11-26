@@ -1,0 +1,1047 @@
+[
+  {
+    "p": 3,
+    "pi_conductor": 0,
+    "pair_conductor": 0,
+    "pairs": 1,
+    "matches": 1,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_0 a1, chi_0 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 0,
+      "pair_conductor": 0,
+      "gl2_L": "1/(1 - a1 X)(1 - a2 X)",
+      "gl2_epsilon": "1",
+      "galois_L": "1/(1 - a1 X)(1 - a2 X)",
+      "galois_epsilon": "1",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 0,
+    "pair_conductor": 2,
+    "pairs": 1,
+    "matches": 1,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_0 a1, chi_0 a2)",
+      "twist": "chi_3",
+      "pi_conductor": 0,
+      "pair_conductor": 2,
+      "gl2_L": "1",
+      "gl2_epsilon": "-3 a1 a2 X^2",
+      "galois_L": "1",
+      "galois_epsilon": "-3 a1 a2 X^2",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 0,
+    "pair_conductor": 4,
+    "pairs": 4,
+    "matches": 4,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_0 a1, chi_0 a2)",
+      "twist": "chi_1",
+      "pi_conductor": 0,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "(1.562834+8.863270i) a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "(1.562834+8.863270i) a1^2 a2^2 X^4",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 1,
+    "pair_conductor": 1,
+    "pairs": 2,
+    "matches": 2,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_0 a1, chi_3 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 1,
+      "pair_conductor": 1,
+      "gl2_L": "1/(1 - a1 X)",
+      "gl2_epsilon": "(0.000000+1.732051i) a2 X",
+      "galois_L": "1/(1 - a1 X)",
+      "galois_epsilon": "(0.000000+1.732051i) a2 X",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 1,
+    "pair_conductor": 4,
+    "pairs": 4,
+    "matches": 4,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_0 a1, chi_3 a2)",
+      "twist": "chi_1",
+      "pi_conductor": 1,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "(1.562834+8.863270i) a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "(1.562834+8.863270i) a1^2 a2^2 X^4",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 2,
+    "pair_conductor": 0,
+    "pairs": 1,
+    "matches": 1,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_3 a1, chi_3 a2)",
+      "twist": "chi_3",
+      "pi_conductor": 2,
+      "pair_conductor": 0,
+      "gl2_L": "1/(1 - a1 X)(1 - a2 X)",
+      "gl2_epsilon": "1",
+      "galois_L": "1/(1 - a1 X)(1 - a2 X)",
+      "galois_epsilon": "1",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 2,
+    "pair_conductor": 2,
+    "pairs": 9,
+    "matches": 9,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_0 a1, chi_1 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 2,
+      "pair_conductor": 2,
+      "gl2_L": "1/(1 - a1 X)",
+      "gl2_epsilon": "(2.298133+1.928363i) a2^2 X^2",
+      "galois_L": "1/(1 - a1 X)",
+      "galois_epsilon": "(2.298133+1.928363i) a2^2 X^2",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 2,
+    "pair_conductor": 3,
+    "pairs": 8,
+    "matches": 8,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_0 a1, chi_1 a2)",
+      "twist": "chi_2",
+      "pi_conductor": 2,
+      "pair_conductor": 3,
+      "gl2_L": "1",
+      "gl2_epsilon": "(3.340022+3.980484i) a1^2 a2 X^3",
+      "galois_L": "1",
+      "galois_epsilon": "(3.340022+3.980484i) a1^2 a2 X^3",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 2,
+    "pair_conductor": 4,
+    "pairs": 12,
+    "matches": 12,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_0 a1, chi_1 a2)",
+      "twist": "chi_1",
+      "pi_conductor": 2,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "9 a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "9 a1^2 a2^2 X^4",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 3,
+    "pair_conductor": 2,
+    "pairs": 8,
+    "matches": 8,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_1 a1, chi_3 a2)",
+      "twist": "chi_3",
+      "pi_conductor": 3,
+      "pair_conductor": 2,
+      "gl2_L": "1/(1 - a2 X)",
+      "gl2_epsilon": "(2.298133+1.928363i) a1^2 X^2",
+      "galois_L": "1/(1 - a2 X)",
+      "galois_epsilon": "(2.298133+1.928363i) a1^2 X^2",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 3,
+    "pair_conductor": 3,
+    "pairs": 8,
+    "matches": 8,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_1 a1, chi_3 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 3,
+      "pair_conductor": 3,
+      "gl2_L": "1",
+      "gl2_epsilon": "(-3.340022+3.980484i) a1^2 a2 X^3",
+      "galois_L": "1",
+      "galois_epsilon": "(-3.340022+3.980484i) a1^2 a2 X^3",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 3,
+    "pair_conductor": 4,
+    "pairs": 8,
+    "matches": 8,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_1 a1, chi_3 a2)",
+      "twist": "chi_1",
+      "pi_conductor": 3,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "9 a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "9 a1^2 a2^2 X^4",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 4,
+    "pair_conductor": 0,
+    "pairs": 4,
+    "matches": 4,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_1 a1, chi_1 a2)",
+      "twist": "chi_5",
+      "pi_conductor": 4,
+      "pair_conductor": 0,
+      "gl2_L": "1/(1 - a1 X)(1 - a2 X)",
+      "gl2_epsilon": "1",
+      "galois_L": "1/(1 - a1 X)(1 - a2 X)",
+      "galois_epsilon": "1",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 4,
+    "pair_conductor": 1,
+    "pairs": 4,
+    "matches": 4,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_1 a1, chi_4 a2)",
+      "twist": "chi_2",
+      "pi_conductor": 4,
+      "pair_conductor": 1,
+      "gl2_L": "1/(1 - a2 X)",
+      "gl2_epsilon": "(0.000000+1.732051i) a1 X",
+      "galois_L": "1/(1 - a2 X)",
+      "galois_epsilon": "(0.000000+1.732051i) a1 X",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 4,
+    "pair_conductor": 2,
+    "pairs": 12,
+    "matches": 12,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_1 a1, chi_1 a2)",
+      "twist": "chi_2",
+      "pi_conductor": 4,
+      "pair_conductor": 2,
+      "gl2_L": "1",
+      "gl2_epsilon": "-3 a1 a2 X^2",
+      "galois_L": "1",
+      "galois_epsilon": "-3 a1 a2 X^2",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 4,
+    "pair_conductor": 3,
+    "pairs": 8,
+    "matches": 8,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_1 a1, chi_2 a2)",
+      "twist": "chi_1",
+      "pi_conductor": 4,
+      "pair_conductor": 3,
+      "gl2_L": "1",
+      "gl2_epsilon": "(3.340022+3.980484i) a1^2 a2 X^3",
+      "galois_L": "1",
+      "galois_epsilon": "(3.340022+3.980484i) a1^2 a2 X^3",
+      "match": true
+    }
+  },
+  {
+    "p": 3,
+    "pi_conductor": 4,
+    "pair_conductor": 4,
+    "pairs": 32,
+    "matches": 32,
+    "example": {
+      "p": 3,
+      "pi": "pi(chi_1 a1, chi_1 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 4,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "(1.562834+8.863270i) a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "(1.562834+8.863270i) a1^2 a2^2 X^4",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 0,
+    "pair_conductor": 0,
+    "pairs": 1,
+    "matches": 1,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_0 a1, chi_0 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 0,
+      "pair_conductor": 0,
+      "gl2_L": "1/(1 - a1 X)(1 - a2 X)",
+      "gl2_epsilon": "1",
+      "galois_L": "1/(1 - a1 X)(1 - a2 X)",
+      "galois_epsilon": "1",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 0,
+    "pair_conductor": 2,
+    "pairs": 3,
+    "matches": 3,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_0 a1, chi_0 a2)",
+      "twist": "chi_5",
+      "pi_conductor": 0,
+      "pair_conductor": 2,
+      "gl2_L": "1",
+      "gl2_epsilon": "(-2.236068+4.472136i) a1 a2 X^2",
+      "galois_L": "1",
+      "galois_epsilon": "(-2.236068+4.472136i) a1 a2 X^2",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 0,
+    "pair_conductor": 4,
+    "pairs": 16,
+    "matches": 16,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_0 a1, chi_0 a2)",
+      "twist": "chi_1",
+      "pi_conductor": 0,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "(23.244412+9.203114i) a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "(23.244412+9.203114i) a1^2 a2^2 X^4",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 1,
+    "pair_conductor": 1,
+    "pairs": 6,
+    "matches": 6,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_0 a1, chi_5 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 1,
+      "pair_conductor": 1,
+      "gl2_L": "1/(1 - a1 X)",
+      "gl2_epsilon": "(1.175571+1.902113i) a2 X",
+      "galois_L": "1/(1 - a1 X)",
+      "galois_epsilon": "(1.175571+1.902113i) a2 X",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 1,
+    "pair_conductor": 2,
+    "pairs": 6,
+    "matches": 6,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_0 a1, chi_5 a2)",
+      "twist": "chi_5",
+      "pi_conductor": 1,
+      "pair_conductor": 2,
+      "gl2_L": "1",
+      "gl2_epsilon": "(2.628656+4.253254i) a1 a2 X^2",
+      "galois_L": "1",
+      "galois_epsilon": "(2.628656+4.253254i) a1 a2 X^2",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 1,
+    "pair_conductor": 4,
+    "pairs": 48,
+    "matches": 48,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_0 a1, chi_5 a2)",
+      "twist": "chi_1",
+      "pi_conductor": 1,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "(9.203114-23.244412i) a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "(9.203114-23.244412i) a1^2 a2^2 X^4",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 2,
+    "pair_conductor": 0,
+    "pairs": 3,
+    "matches": 3,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_5 a1, chi_5 a2)",
+      "twist": "chi_15",
+      "pi_conductor": 2,
+      "pair_conductor": 0,
+      "gl2_L": "1/(1 - a1 X)(1 - a2 X)",
+      "gl2_epsilon": "1",
+      "galois_L": "1/(1 - a1 X)(1 - a2 X)",
+      "galois_epsilon": "1",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 2,
+    "pair_conductor": 1,
+    "pairs": 6,
+    "matches": 6,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_5 a1, chi_10 a2)",
+      "twist": "chi_10",
+      "pi_conductor": 2,
+      "pair_conductor": 1,
+      "gl2_L": "1/(1 - a2 X)",
+      "gl2_epsilon": "(-1.175571+1.902113i) a1 X",
+      "galois_L": "1/(1 - a2 X)",
+      "galois_epsilon": "(-1.175571+1.902113i) a1 X",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 2,
+    "pair_conductor": 2,
+    "pairs": 47,
+    "matches": 47,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_0 a1, chi_1 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 2,
+      "pair_conductor": 2,
+      "gl2_L": "1/(1 - a1 X)",
+      "gl2_epsilon": "(4.911436+0.936907i) a2^2 X^2",
+      "galois_L": "1/(1 - a1 X)",
+      "galois_epsilon": "(4.911436+0.936907i) a2^2 X^2",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 2,
+    "pair_conductor": 3,
+    "pairs": 96,
+    "matches": 96,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_0 a1, chi_1 a2)",
+      "twist": "chi_4",
+      "pi_conductor": 2,
+      "pair_conductor": 3,
+      "gl2_L": "1",
+      "gl2_epsilon": "(8.240707-7.555842i) a1^2 a2 X^3",
+      "galois_L": "1",
+      "galois_epsilon": "(8.240707-7.555842i) a1^2 a2 X^3",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 2,
+    "pair_conductor": 4,
+    "pairs": 288,
+    "matches": 288,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_0 a1, chi_1 a2)",
+      "twist": "chi_1",
+      "pi_conductor": 2,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "(24.950668-1.569763i) a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "(24.950668-1.569763i) a1^2 a2^2 X^4",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 3,
+    "pair_conductor": 2,
+    "pairs": 96,
+    "matches": 96,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_1 a1, chi_5 a2)",
+      "twist": "chi_15",
+      "pi_conductor": 3,
+      "pair_conductor": 2,
+      "gl2_L": "1/(1 - a2 X)",
+      "gl2_epsilon": "(-0.936907+4.911436i) a1^2 X^2",
+      "galois_L": "1/(1 - a2 X)",
+      "galois_epsilon": "(-0.936907+4.911436i) a1^2 X^2",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 3,
+    "pair_conductor": 3,
+    "pairs": 288,
+    "matches": 288,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_1 a1, chi_5 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 3,
+      "pair_conductor": 3,
+      "gl2_L": "1",
+      "gl2_epsilon": "(3.991637+10.443507i) a1^2 a2 X^3",
+      "galois_L": "1",
+      "galois_epsilon": "(3.991637+10.443507i) a1^2 a2 X^3",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 3,
+    "pair_conductor": 4,
+    "pairs": 576,
+    "matches": 576,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_1 a1, chi_5 a2)",
+      "twist": "chi_1",
+      "pi_conductor": 3,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "(-1.569763-24.950668i) a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "(-1.569763-24.950668i) a1^2 a2^2 X^4",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 4,
+    "pair_conductor": 0,
+    "pairs": 16,
+    "matches": 16,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_1 a1, chi_1 a2)",
+      "twist": "chi_19",
+      "pi_conductor": 4,
+      "pair_conductor": 0,
+      "gl2_L": "1/(1 - a1 X)(1 - a2 X)",
+      "gl2_epsilon": "1",
+      "galois_L": "1/(1 - a1 X)(1 - a2 X)",
+      "galois_epsilon": "1",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 4,
+    "pair_conductor": 1,
+    "pairs": 48,
+    "matches": 48,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_1 a1, chi_6 a2)",
+      "twist": "chi_14",
+      "pi_conductor": 4,
+      "pair_conductor": 1,
+      "gl2_L": "1/(1 - a2 X)",
+      "gl2_epsilon": "(-1.175571+1.902113i) a1 X",
+      "galois_L": "1/(1 - a2 X)",
+      "galois_epsilon": "(-1.175571+1.902113i) a1 X",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 4,
+    "pair_conductor": 2,
+    "pairs": 288,
+    "matches": 288,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_1 a1, chi_1 a2)",
+      "twist": "chi_4",
+      "pi_conductor": 4,
+      "pair_conductor": 2,
+      "gl2_L": "1",
+      "gl2_epsilon": "(-2.236068+4.472136i) a1 a2 X^2",
+      "galois_L": "1",
+      "galois_epsilon": "(-2.236068+4.472136i) a1 a2 X^2",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 4,
+    "pair_conductor": 3,
+    "pairs": 576,
+    "matches": 576,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_1 a1, chi_2 a2)",
+      "twist": "chi_3",
+      "pi_conductor": 4,
+      "pair_conductor": 3,
+      "gl2_L": "1",
+      "gl2_epsilon": "(8.240707-7.555842i) a1^2 a2 X^3",
+      "galois_L": "1",
+      "galois_epsilon": "(8.240707-7.555842i) a1^2 a2 X^3",
+      "match": true
+    }
+  },
+  {
+    "p": 5,
+    "pi_conductor": 4,
+    "pair_conductor": 4,
+    "pairs": 1792,
+    "matches": 1792,
+    "example": {
+      "p": 5,
+      "pi": "pi(chi_1 a1, chi_1 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 4,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "(23.244412+9.203114i) a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "(23.244412+9.203114i) a1^2 a2^2 X^4",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 0,
+    "pair_conductor": 0,
+    "pairs": 1,
+    "matches": 1,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_0 a1, chi_0 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 0,
+      "pair_conductor": 0,
+      "gl2_L": "1/(1 - a1 X)(1 - a2 X)",
+      "gl2_epsilon": "1",
+      "galois_L": "1/(1 - a1 X)(1 - a2 X)",
+      "galois_epsilon": "1",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 0,
+    "pair_conductor": 2,
+    "pairs": 5,
+    "matches": 5,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_0 a1, chi_0 a2)",
+      "twist": "chi_7",
+      "pi_conductor": 0,
+      "pair_conductor": 2,
+      "gl2_L": "1",
+      "gl2_epsilon": "(4.908502+4.990652i) a1 a2 X^2",
+      "galois_L": "1",
+      "galois_epsilon": "(4.908502+4.990652i) a1 a2 X^2",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 0,
+    "pair_conductor": 4,
+    "pairs": 36,
+    "matches": 36,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_0 a1, chi_0 a2)",
+      "twist": "chi_1",
+      "pi_conductor": 0,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "(47.397448-12.429075i) a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "(47.397448-12.429075i) a1^2 a2^2 X^4",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 1,
+    "pair_conductor": 1,
+    "pairs": 10,
+    "matches": 10,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_0 a1, chi_7 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 1,
+      "pair_conductor": 1,
+      "gl2_L": "1/(1 - a1 X)",
+      "gl2_epsilon": "(2.440133+1.022619i) a2 X",
+      "galois_L": "1/(1 - a1 X)",
+      "galois_epsilon": "(2.440133+1.022619i) a2 X",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 1,
+    "pair_conductor": 2,
+    "pairs": 20,
+    "matches": 20,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_0 a1, chi_7 a2)",
+      "twist": "chi_7",
+      "pi_conductor": 1,
+      "pair_conductor": 2,
+      "gl2_L": "1",
+      "gl2_epsilon": "(4.582576+5.291503i) a1 a2 X^2",
+      "galois_L": "1",
+      "galois_epsilon": "(4.582576+5.291503i) a1 a2 X^2",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 1,
+    "pair_conductor": 4,
+    "pairs": 180,
+    "matches": 180,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_0 a1, chi_7 a2)",
+      "twist": "chi_1",
+      "pi_conductor": 1,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "(-47.397448+12.429075i) a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "(-47.397448+12.429075i) a1^2 a2^2 X^4",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 2,
+    "pair_conductor": 0,
+    "pairs": 5,
+    "matches": 5,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_7 a1, chi_7 a2)",
+      "twist": "chi_35",
+      "pi_conductor": 2,
+      "pair_conductor": 0,
+      "gl2_L": "1/(1 - a1 X)(1 - a2 X)",
+      "gl2_epsilon": "1",
+      "galois_L": "1/(1 - a1 X)(1 - a2 X)",
+      "galois_epsilon": "1",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 2,
+    "pair_conductor": 1,
+    "pairs": 20,
+    "matches": 20,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_7 a1, chi_14 a2)",
+      "twist": "chi_28",
+      "pi_conductor": 2,
+      "pair_conductor": 1,
+      "gl2_L": "1/(1 - a2 X)",
+      "gl2_epsilon": "(-2.440133+1.022619i) a1 X",
+      "galois_L": "1/(1 - a2 X)",
+      "galois_epsilon": "(-2.440133+1.022619i) a1 X",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 2,
+    "pair_conductor": 2,
+    "pairs": 137,
+    "matches": 137,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_0 a1, chi_1 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 2,
+      "pair_conductor": 2,
+      "gl2_L": "1/(1 - a1 X)",
+      "gl2_epsilon": "(-6.942530+0.895140i) a2^2 X^2",
+      "galois_L": "1/(1 - a1 X)",
+      "galois_epsilon": "(-6.942530+0.895140i) a2^2 X^2",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 2,
+    "pair_conductor": 3,
+    "pairs": 360,
+    "matches": 360,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_0 a1, chi_1 a2)",
+      "twist": "chi_6",
+      "pi_conductor": 2,
+      "pair_conductor": 3,
+      "gl2_L": "1",
+      "gl2_epsilon": "(16.025312+9.283823i) a1^2 a2 X^3",
+      "galois_L": "1",
+      "galois_epsilon": "(16.025312+9.283823i) a1^2 a2 X^3",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 2,
+    "pair_conductor": 4,
+    "pairs": 1620,
+    "matches": 1620,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_0 a1, chi_1 a2)",
+      "twist": "chi_1",
+      "pi_conductor": 2,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "(14.942506+46.666064i) a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "(14.942506+46.666064i) a1^2 a2^2 X^4",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 3,
+    "pair_conductor": 2,
+    "pairs": 360,
+    "matches": 360,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_1 a1, chi_7 a2)",
+      "twist": "chi_35",
+      "pi_conductor": 3,
+      "pair_conductor": 2,
+      "gl2_L": "1/(1 - a2 X)",
+      "gl2_epsilon": "(6.942530-0.895140i) a1^2 X^2",
+      "galois_L": "1/(1 - a2 X)",
+      "galois_epsilon": "(6.942530-0.895140i) a1^2 X^2",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 3,
+    "pair_conductor": 3,
+    "pairs": 1800,
+    "matches": 1800,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_1 a1, chi_7 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 3,
+      "pair_conductor": 3,
+      "gl2_L": "1",
+      "gl2_epsilon": "(-17.856086-4.915300i) a1^2 a2 X^3",
+      "galois_L": "1",
+      "galois_epsilon": "(-17.856086-4.915300i) a1^2 a2 X^3",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 3,
+    "pair_conductor": 4,
+    "pairs": 5400,
+    "matches": 5400,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_1 a1, chi_7 a2)",
+      "twist": "chi_1",
+      "pi_conductor": 3,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "(-14.942506-46.666064i) a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "(-14.942506-46.666064i) a1^2 a2^2 X^4",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 4,
+    "pair_conductor": 0,
+    "pairs": 36,
+    "matches": 36,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_1 a1, chi_1 a2)",
+      "twist": "chi_41",
+      "pi_conductor": 4,
+      "pair_conductor": 0,
+      "gl2_L": "1/(1 - a1 X)(1 - a2 X)",
+      "gl2_epsilon": "1",
+      "galois_L": "1/(1 - a1 X)(1 - a2 X)",
+      "galois_epsilon": "1",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 4,
+    "pair_conductor": 1,
+    "pairs": 180,
+    "matches": 180,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_1 a1, chi_8 a2)",
+      "twist": "chi_34",
+      "pi_conductor": 4,
+      "pair_conductor": 1,
+      "gl2_L": "1/(1 - a2 X)",
+      "gl2_epsilon": "(-2.440133+1.022619i) a1 X",
+      "galois_L": "1/(1 - a2 X)",
+      "galois_epsilon": "(-2.440133+1.022619i) a1 X",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 4,
+    "pair_conductor": 2,
+    "pairs": 1620,
+    "matches": 1620,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_1 a1, chi_1 a2)",
+      "twist": "chi_6",
+      "pi_conductor": 4,
+      "pair_conductor": 2,
+      "gl2_L": "1",
+      "gl2_epsilon": "(4.908502+4.990652i) a1 a2 X^2",
+      "galois_L": "1",
+      "galois_epsilon": "(4.908502+4.990652i) a1 a2 X^2",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 4,
+    "pair_conductor": 3,
+    "pairs": 5400,
+    "matches": 5400,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_1 a1, chi_2 a2)",
+      "twist": "chi_5",
+      "pi_conductor": 4,
+      "pair_conductor": 3,
+      "gl2_L": "1",
+      "gl2_epsilon": "(16.025312+9.283823i) a1^2 a2 X^3",
+      "galois_L": "1",
+      "galois_epsilon": "(16.025312+9.283823i) a1^2 a2 X^3",
+      "match": true
+    }
+  },
+  {
+    "p": 7,
+    "pi_conductor": 4,
+    "pair_conductor": 4,
+    "pairs": 20736,
+    "matches": 20736,
+    "example": {
+      "p": 7,
+      "pi": "pi(chi_1 a1, chi_1 a2)",
+      "twist": "chi_0",
+      "pi_conductor": 4,
+      "pair_conductor": 4,
+      "gl2_L": "1",
+      "gl2_epsilon": "(47.397448-12.429075i) a1^2 a2^2 X^4",
+      "galois_L": "1",
+      "galois_epsilon": "(47.397448-12.429075i) a1^2 a2^2 X^4",
+      "match": true
+    }
+  }
+]

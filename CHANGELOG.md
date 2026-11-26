@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The spec `lab/specs/e2-llc-gl2-small.yaml` and the run `lab/runs/2026-11-26-e2-llc-gl2-small-64a59b93/` of lab experiment E2. The run compares the L-factors and the ε-factors of 45552 pairs for $GL_2(\mathbb{Q}_p)$ with $p$ in 3, 5 and 7, and it finds no mismatch.
+
 ## v0.1.7 (2026-11-26)
 
 ### Changed

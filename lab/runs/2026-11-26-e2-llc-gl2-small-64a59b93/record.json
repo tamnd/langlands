@@ -1,0 +1,28 @@
+{
+  "id": "2026-11-26-e2-llc-gl2-small-64a59b93",
+  "name": "e2-llc-gl2-small",
+  "experiment": "E2",
+  "question": "For p in {3, 5, 7}, does the explicit local Langlands correspondence give the same L-factor and epsilon-factor of pi x chi on the GL2 side and on the Galois side, for the principal series, the twisted Steinberg and the depth-zero supercuspidal representations pi of GL2(Q_p) of conductor exponent at most 4 and the characters chi of conductor exponent at most 2?",
+  "spec": "lab/specs/e2-llc-gl2-small.yaml",
+  "spec_sha256": "64a59b93d4be5eb10ab323f5ced1b36663db8a2bd7934f91d2496099cc421a9b",
+  "node": "LG453577KN",
+  "tool": "lgl",
+  "tool_version": "dev",
+  "go": "go1.27.3",
+  "container": "none",
+  "network": false,
+  "seed": 0,
+  "host": "lab",
+  "started": "2026-11-26T19:16:49Z",
+  "wall_seconds": 9.694,
+  "result": "agrees: for each of the 45552 pairs (pi, chi) the L-factor and the epsilon-factor of pi x chi on the GL2 side are equal to those on the Galois side, exactly in Q(zeta_N)",
+  "mismatches": 0,
+  "gaps": 0,
+  "files": {
+    "counts.json": "8dbca4f75bd1ff87e28b29a1dc96d6eb456418bddf15d4df18b8cd53588cea6b",
+    "principal.json": "900cfeb64c0e8cb96886f44be8df6065edd0c7b116e9f646f90fa490a7683690",
+    "steinberg.json": "a96c2fa14c20c3584afc823e356bd69d5ac50af56a2f2e4ea25b4b72a7c562d5",
+    "summary.md": "799def8ea3a7cfa21392474f7ecca198673fbe6c13bb5c1ada54f662806954ae",
+    "supercuspidal.json": "148bc09ea9dba7317fdbaaefe0c98c0814c059364e0e46c959c01b92fe34b346"
+  }
+}
