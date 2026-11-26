@@ -1,41 +1,41 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "checks": [
     {
       "id": "Q0",
       "question": "Is the source the one that the site describes?",
       "state": "yes",
-      "note": "records/lean.json and the checkout of langlands-lean are both at commit fc22cd2."
+      "note": "records/lean.json and the checkout of langlands-lean are both at commit 9a88d56."
     },
     {
       "id": "Q1",
       "question": "Does it build?",
       "state": "yes",
-      "note": "records/lean.json is the record of the build of commit fc22cd2 with Lean 4.35.0 and Mathlib v4.35.0 on 2026-11-25. lgl trust reads the record and does not build."
+      "note": "records/lean.json is the record of the build of commit 9a88d56 with Lean 4.35.0 and Mathlib v4.35.0 on 2026-11-26. lgl trust reads the record and does not build."
     },
     {
       "id": "Q2",
       "question": "Which axioms do the top theorems use?",
       "state": "yes",
-      "note": "The nodes name 29 declarations, and records/lean.json has 29 of them. Each of them uses only propext, Classical.choice and Quot.sound. The record has a complete proof for 9 nodes."
+      "note": "The nodes name 59 declarations, and records/lean.json has 59 of them. Each of them uses only propext, Classical.choice and Quot.sound. The record has a complete proof for 14 nodes."
     },
     {
       "id": "Q3",
       "question": "Does a second kernel accept it?",
-      "state": "not run",
-      "note": "The kernel replay was not read: lgl trust ran with -quick."
+      "state": "yes",
+      "note": "On 2026-11-26 leanchecker --fresh, lean4lean, nanoda accepted commit 9a88d56."
     },
     {
       "id": "Q4",
       "question": "Do the proved theorems have the pinned statements?",
-      "state": "not run",
-      "note": "lake comparator was not run. The statement files match manifests/statements.sha256."
+      "state": "no",
+      "note": "Langlands/Statements/Automorphic.lean is not in manifests/statements.sha256. Langlands/Statements/FunctionField.lean is not in manifests/statements.sha256. Langlands/Statements/FundamentalLemma.lean is not in manifests/statements.sha256. Langlands/Statements/GSp4.lean is not in manifests/statements.sha256. Langlands/Statements/Galois.lean does not have the hash of manifests/statements.sha256. Langlands/Statements/GlobalGL.lean is not in manifests/statements.sha256. Langlands/Statements/GodementJacquet.lean is not in manifests/statements.sha256. Langlands/Statements/HasseWeil.lean is not in manifests/statements.sha256. Langlands/Statements/LocalLanglands.lean is not in manifests/statements.sha256. Langlands/Statements/NumberFieldGL.lean is not in manifests/statements.sha256. Langlands/Statements/PadicGalois.lean is not in manifests/statements.sha256. Langlands/Statements/Reciprocity.lean is not in manifests/statements.sha256. Langlands/Statements/Smooth.lean is not in manifests/statements.sha256. Langlands/Statements/WeilDeligne.lean is not in manifests/statements.sha256."
     },
     {
       "id": "Q5",
       "question": "Do the statements mean what the docstrings say?",
       "state": "open",
-      "note": "0 of the 17 Lean statements of the map pass the fidelity checks of their class (spec 06.3). 4 have an entry in records/fidelity.json."
+      "note": "0 of the 42 Lean statements of the map pass the fidelity checks of their class (spec 06.3). 4 have an entry in records/fidelity.json."
     },
     {
       "id": "Q6",
@@ -58,13 +58,13 @@
   ],
   "lean": {
     "repository": "https://github.com/tamnd/langlands-lean",
-    "commit": "fc22cd2cd3edc7e76c4b7f6c848170f24cf4cc54",
+    "commit": "9a88d56b5784fc373b1434359b284de0187db693",
     "toolchain": "4.35.0",
     "mathlib": "v4.35.0",
-    "built": "2026-11-25",
-    "checkout": "fc22cd2cd3edc7e76c4b7f6c848170f24cf4cc54"
+    "built": "2026-11-26",
+    "checkout": "9a88d56b5784fc373b1434359b284de0187db693"
   },
-  "replay": "none",
+  "replay": "records/replay.json",
   "theorems": [
     {
       "theorem": "Langlands.localReciprocityGL1",
@@ -112,7 +112,7 @@
       "statement": "Langlands.GlobalReciprocity",
       "milestone": "S2",
       "node": "LGVAKJJD8Y",
-      "status": "stated",
+      "status": "proved",
       "checks": [
         {
           "id": "Q2",
@@ -133,7 +133,7 @@
       "statement": "Langlands.GlobalExistence",
       "milestone": "S2",
       "node": "LGX8K4ZEGW",
-      "status": "stated",
+      "status": "proved",
       "checks": [
         {
           "id": "Q2",
@@ -153,7 +153,8 @@
       "theorem": "Langlands.heckeFunctionalEquation",
       "statement": "Langlands.HeckeFunctionalEquation",
       "milestone": "S2",
-      "status": "not in the map",
+      "node": "LG6NN4B43V",
+      "status": "stated",
       "checks": [
         {
           "id": "Q2",
@@ -174,7 +175,7 @@
       "statement": "Langlands.KroneckerWeber",
       "milestone": "S2",
       "node": "LG06WS8A1Y",
-      "status": "stated",
+      "status": "proved",
       "checks": [
         {
           "id": "Q2",
@@ -215,7 +216,8 @@
       "theorem": "Langlands.eichlerShimura",
       "statement": "Langlands.EichlerShimuraDeligne",
       "milestone": "S4",
-      "status": "not in the map",
+      "node": "LGG3ZW59RX",
+      "status": "stated",
       "checks": [
         {
           "id": "Q2",
@@ -254,7 +256,8 @@
       "theorem": "Langlands.localLanglandsGL2",
       "statement": "Langlands.LocalLanglandsGL2",
       "milestone": "S6",
-      "status": "not in the map",
+      "node": "LG453577KN",
+      "status": "stated",
       "checks": [
         {
           "id": "Q2",
@@ -274,7 +277,8 @@
       "theorem": "Langlands.jacquetLanglandsGL2",
       "statement": "Langlands.JacquetLanglandsGL2",
       "milestone": "S6",
-      "status": "not in the map",
+      "node": "LG7NVV7NSF",
+      "status": "stated",
       "checks": [
         {
           "id": "Q2",
@@ -294,7 +298,8 @@
       "theorem": "Langlands.localLanglandsGL",
       "statement": "Langlands.LocalLanglandsGL",
       "milestone": "S8",
-      "status": "not in the map",
+      "node": "LG2E74SP8W",
+      "status": "stated",
       "checks": [
         {
           "id": "Q2",
@@ -313,6 +318,50 @@
   ],
   "declarations": [
     {
+      "name": "Langlands.ArtinConjecture",
+      "node": "LGEHB4MGJK",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.ArtinOdd2Q",
+      "node": "LGX6BXWH0J",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.AutomorphicToGalois",
+      "node": "LGV2KZTSNS",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.BaseChangeCyclic",
+      "node": "LGCH6QCV3P",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
       "name": "Langlands.Bridge.finiteAbelianLocalReciprocity",
       "node": "LGHEK0BGSD",
       "role": "proof",
@@ -327,6 +376,39 @@
       "name": "Langlands.Bridge.finiteAbelianLocalReciprocity",
       "node": "LGHEK0BGSD",
       "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.Bridge.globalExistence",
+      "node": "LGX8K4ZEGW",
+      "role": "proof",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.Bridge.globalReciprocity",
+      "node": "LGVAKJJD8Y",
+      "role": "proof",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.Bridge.kroneckerWeber",
+      "node": "LG06WS8A1Y",
+      "role": "proof",
       "found": true,
       "axioms": [
         "Classical.choice",
@@ -401,8 +483,63 @@
       ]
     },
     {
+      "name": "Langlands.EichlerShimuraDeligne",
+      "node": "LGG3ZW59RX",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.FontaineMazurGL2Q",
+      "node": "LGNT1M1N6Z",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.FunctorialityGL",
+      "node": "LGANNYN8R0",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.FundamentalLemma",
+      "node": "LGH8C75DFX",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
       "name": "Langlands.GlobalExistence",
       "node": "LGX8K4ZEGW",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.GlobalJacquetLanglandsGL2",
+      "node": "LGZWX81F9A",
       "role": "statement",
       "found": true,
       "axioms": [
@@ -423,8 +560,52 @@
       ]
     },
     {
+      "name": "Langlands.HasseWeil",
+      "node": "LGFQ0HXS3H",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
       "name": "Langlands.HasseWeilEllipticQ",
       "node": "LG5W3CRDEA",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.HeckeFunctionalEquation",
+      "node": "LG6NN4B43V",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.HeckeFunctionalEquationAt",
+      "node": "LG01JZBNVC",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.JacquetLanglandsGL2",
+      "node": "LG7NVV7NSF",
       "role": "statement",
       "found": true,
       "axioms": [
@@ -447,6 +628,61 @@
     {
       "name": "Langlands.LocalExistence",
       "node": "LG875TDM3B",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.LocalLanglandsGL",
+      "node": "LG2E74SP8W",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.LocalLanglandsGL2",
+      "node": "LG453577KN",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.LocalLanglandsGSp4",
+      "node": "LGQCVGBMVA",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.LocalLanglandsSL2",
+      "node": "LG75V240RB",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.LocalLanglandsTorusInduced",
+      "node": "LG4S7A4G1F",
       "role": "statement",
       "found": true,
       "axioms": [
@@ -511,6 +747,28 @@
       ]
     },
     {
+      "name": "Langlands.RamanujanGL",
+      "node": "LGAGRC05KF",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.RamanujanMaass",
+      "node": "LG75ERTV5K",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
       "name": "Langlands.RamanujanPeterssonHolomorphic",
       "node": "LGV8B6TVWZ",
       "role": "statement",
@@ -522,8 +780,63 @@
       ]
     },
     {
+      "name": "Langlands.ReciprocityFunctionFieldGL",
+      "node": "LGZJQ4K11G",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.ReciprocityGL",
+      "node": "LGRYCDD49K",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
       "name": "Langlands.SatoTate",
       "node": "LGVZHDXVTZ",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.SelbergEigenvalue",
+      "node": "LG0S1WN9ND",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.SerreModularityWeak",
+      "node": "LGKH3WKEVV",
+      "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.SymPowerFunctoriality",
+      "node": "LGC3KP178Q",
       "role": "statement",
       "found": true,
       "axioms": [
@@ -602,6 +915,28 @@
       "name": "Langlands.WeilGroup.toGaloisAb_injective",
       "node": "LGDEPE7CM9",
       "role": "statement",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.heckeFunctionalEquationAt_rat",
+      "node": "LG01JZBNVC",
+      "role": "proof",
+      "found": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "Langlands.localLanglandsTorusInduced",
+      "node": "LG4S7A4G1F",
+      "role": "proof",
       "found": true,
       "axioms": [
         "Classical.choice",
