@@ -1,0 +1,117 @@
+task,area,tokens,tool_uses,minutes
+Research p-adic/mod p Langlands,research and site,167345,94,12
+Research global Langlands 2026,research and site,166509,89,14
+Research local Langlands 2026,research and site,54609,132,15
+Research Langlands books and courses,research and site,63521,98,16
+Research Lean/AI formalization state,research and site,57856,66,17
+Research geometric Langlands 2026,research and site,62260,119,19
+Write 01 research and index,research and site,153881,14,3
+Write 03 program and 04 routes,research and site,145051,12,6
+Write 05 base and 07 corpus,research and site,53828,17,7
+Write langlands site pages,research and site,168060,38,6
+Draft handbook Volume 0,handbook,108377,139,33
+Write lgl trust and fidelity,tooling,158557,108,30
+Weil group abelianization embedding,lean,78022,23,12
+Residue action of Galois elements,lean,135122,47,21
+Prove denseRange_toGalois,lean,139003,33,18
+Degree map of Weil group,lean,53653,13,2
+Draft handbook Volume 3 ch 2-4,handbook,134500,90,46
+Uniqueness of local Artin map,lean,160119,51,22
+Shapiro lemma continuous H1,lean,46185,10,4
+Existence of local Artin map,lean,125076,161,56
+Weil group of finite extension,lean,30445,78,41
+Induced torus correspondence,lean,79132,20,11
+Implement lgl claim/queue/agent,tooling,123381,69,20
+Draft handbook Volume 1,handbook,64080,105,38
+State Hecke functional equation,lean,82737,22,11
+Referee Volume 3 Chapters 1-4,handbook,74948,13,5
+Prove analytic Dirichlet lemmas,lean,76867,31,22
+Write Tate's thesis chapter,handbook,84069,70,37
+State Galois and modular statements,lean,133111,86,35
+Prove idele topology lemma,lean,88254,38,29
+Port NYLL global CFT,lean,116617,451,129
+Prove Hecke equation over Q,lean,46875,150,88
+Bridge global reciprocity and existence,lean,65545,96,37
+Cross-check against riemann-lean,tooling,138047,50,11
+Agent eval sets of spec 10.9,tooling,70784,128,41
+Tate thesis archimedean local theory,lean,125404,83,46
+Tate thesis nonarchimedean local theory,lean,65225,67,54
+Local GL statements,lean,148455,53,43
+Tate thesis lattice Poisson summation,lean,131021,110,57
+Galois geometric statements,lean,134753,75,48
+Global automorphic GL statements,lean,124482,66,49
+Map nodes for GL statements,tooling,49519,50,9
+Tate local ramified theory,lean,166812,114,51
+Function field reciprocity statement,lean,48611,43,26
+Local GSp4 and Breuil-Mezard statements,lean,54525,31,18
+Global GL statements round 2,lean,161318,44,29
+Handbook Vol 3 Ch 6 Artin,handbook,85862,84,425
+Handbook Vol 4 modular forms,handbook,84298,142,425
+Tate global: number field lattices,lean,121352,95,177
+Handbook: class group characters,handbook,117654,28,7
+Check Vol 3 ch 6 Artin,handbook,157014,35,9
+Check Vol 3 ch 7 global CFT,handbook,114436,68,19
+Check Vol 3 ch 5 Tate,handbook,114660,63,16
+Check Vol 3 ch 1-4,handbook,159531,59,22
+Lean: unramified Hecke characters,lean,68097,66,51
+Write Vol 2 ch 1 algebraic groups,handbook,140992,61,30
+Write Vol 2 ch 3 reductive groups,handbook,161264,75,34
+Write Vol 2 ch 2 Lie algebras,handbook,159971,109,45
+Handbook: class type Hecke text,handbook,79419,32,13
+Write Vol 2 ch 4 representations,handbook,144070,63,31
+Write Vol 2 ch 5 dual group,handbook,162359,84,32
+Lean: T2 root data and duals,lean,26859,53,42
+Lean: class type twist by norm power,lean,62955,85,44
+Handbook: twist and root datum text,handbook,91400,40,12
+Write Vol 6 ch 2 Weil-Deligne,handbook,43929,92,43
+Lean: T5 smooth representations,lean,156144,85,43
+Write Vol 6 ch 3 local Langlands,handbook,49062,106,45
+Handbook: Vol 6 ch1 Lean lines,handbook,145280,31,6
+Handbook: ramified local Tate text,handbook,133528,25,7
+Check ramified Gauss subsection,handbook,113798,17,4
+Lean: GL2 principal series Jacquet,lean,51513,54,28
+Handbook: principal series Lean lines,handbook,111459,20,7
+Lean: local Langlands GL1 case,lean,130036,64,45
+Lean: ramified Hecke global FE,lean,116946,41,29
+Lean: Bruhat and Jacquet lemma,lean,155908,32,17
+Handbook: Vol 6 ch3 GL1 lines,handbook,33370,30,10
+"Check Vol 6 ch1, write solutions",handbook,131737,43,24
+Check Vol 6 ch3 LLC,handbook,97637,46,7
+Check Vol 6 ch2 Weil-Deligne,handbook,156645,34,8
+Lean: ray class FE imaginary quadratic,lean,83079,59,25
+Handbook: Bruhat and Jacquet lemma,handbook,157652,41,11
+Lean: prove GL1LFactor,lean,38630,141,69
+Lean: Jacquet module dimension 2,lean,126858,103,68
+Handbook: update GL1 section,handbook,42744,52,13
+Lean: ramified FE imag quadratic,lean,149684,74,46
+Check Vol6 ch1 new text,handbook,129747,34,6
+Check Vol6 GL1 section,handbook,34236,40,7
+Lean: GL1 epsilon factors,lean,64318,50,32
+Handbook: ray class Hecke text,handbook,106754,50,72
+Lean: principal series irreducibility,lean,70260,47,26
+Check Vol3 ray class text,handbook,131200,26,6
+Checker pass Vol6 GL2 files,handbook,108082,24,6
+Lean: ray class Gauss vanishing,lean,95494,34,9
+Lean: unramified general local FE,lean,156077,27,10
+Lean: ray class Gauss evaluation,lean,127276,25,10
+Lean: GL2 reducible principal series,lean,147053,35,18
+Lean: |tau|^2 = N f,lean,55565,37,25
+Lean: GL2 reducible quotient case,lean,151550,33,9
+"Lean: Steinberg irreducible, length 2",lean,28652,45,17
+Lean: Hecke FE assembly,lean,115957,77,27
+"Lean: length 2, other order",lean,41974,36,16
+Lean: Hecke FE with n ≠ 0,lean,143563,43,17
+Lean: BZ classification for GL2,lean,77805,54,17
+Lean: Jacquet module finite dim,lean,34080,46,14
+Lean: Hecke FE n ≠ 0 assembly,lean,105752,70,24
+Lean: Jacquet cuspidal coefficients,lean,139683,34,9
+Handbook: GL2 classification backfill,handbook,53184,42,12
+Lean: Gauss sums for periodicCoeff,lean,47389,40,15
+Lean: Langlands family epsilon factors,lean,139267,28,7
+Lab E2: explicit LLC GL2(Qp),tooling,78455,40,20
+Lean: Hecke FE n≠0 final assembly,lean,103695,139,43
+Lean: Hecke FE conductor one,lean,159820,32,10
+Lean: Hecke FE over Q,lean,40430,7,1
+Handbook: Hecke L-functions Lean backfill,handbook,152175,51,15
+Lean: state remaining G1a statements,lean,163085,32,13
+Lean: weighted theta on mixed space,lean,130662,54,15
