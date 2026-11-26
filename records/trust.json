@@ -5,13 +5,13 @@
       "id": "Q0",
       "question": "Is the source the one that the site describes?",
       "state": "yes",
-      "note": "records/lean.json and the checkout of langlands-lean are both at commit 9a88d56."
+      "note": "records/lean.json and the checkout of langlands-lean are both at commit 17b3152."
     },
     {
       "id": "Q1",
       "question": "Does it build?",
       "state": "yes",
-      "note": "records/lean.json is the record of the build of commit 9a88d56 with Lean 4.35.0 and Mathlib v4.35.0 on 2026-11-26. lgl trust reads the record and does not build."
+      "note": "records/lean.json is the record of the build of commit 17b3152 with Lean 4.35.0 and Mathlib v4.35.0 on 2026-11-26. lgl trust reads the record and does not build."
     },
     {
       "id": "Q2",
@@ -23,13 +23,13 @@
       "id": "Q3",
       "question": "Does a second kernel accept it?",
       "state": "yes",
-      "note": "On 2026-11-26 leanchecker --fresh, lean4lean, nanoda accepted commit 9a88d56."
+      "note": "On 2026-11-26 leanchecker --fresh, lean4lean, nanoda accepted commit 17b3152."
     },
     {
       "id": "Q4",
       "question": "Do the proved theorems have the pinned statements?",
-      "state": "no",
-      "note": "Langlands/Statements/Automorphic.lean is not in manifests/statements.sha256. Langlands/Statements/FunctionField.lean is not in manifests/statements.sha256. Langlands/Statements/FundamentalLemma.lean is not in manifests/statements.sha256. Langlands/Statements/GSp4.lean is not in manifests/statements.sha256. Langlands/Statements/Galois.lean does not have the hash of manifests/statements.sha256. Langlands/Statements/GlobalGL.lean is not in manifests/statements.sha256. Langlands/Statements/GodementJacquet.lean is not in manifests/statements.sha256. Langlands/Statements/HasseWeil.lean is not in manifests/statements.sha256. Langlands/Statements/LocalLanglands.lean is not in manifests/statements.sha256. Langlands/Statements/NumberFieldGL.lean is not in manifests/statements.sha256. Langlands/Statements/PadicGalois.lean is not in manifests/statements.sha256. Langlands/Statements/Reciprocity.lean is not in manifests/statements.sha256. Langlands/Statements/Smooth.lean is not in manifests/statements.sha256. Langlands/Statements/WeilDeligne.lean is not in manifests/statements.sha256."
+      "state": "yes",
+      "note": "On 2026-11-26 lake comparator matched each proof of commit 17b3152 to its pinned statement. The statement files match manifests/statements.sha256."
     },
     {
       "id": "Q5",
@@ -58,11 +58,11 @@
   ],
   "lean": {
     "repository": "https://github.com/tamnd/langlands-lean",
-    "commit": "9a88d56b5784fc373b1434359b284de0187db693",
+    "commit": "17b31525660e114e38af0c3e93ee8fb47ec60e94",
     "toolchain": "4.35.0",
     "mathlib": "v4.35.0",
     "built": "2026-11-26",
-    "checkout": "9a88d56b5784fc373b1434359b284de0187db693"
+    "checkout": "17b31525660e114e38af0c3e93ee8fb47ec60e94"
   },
   "replay": "records/replay.json",
   "theorems": [

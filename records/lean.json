@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/tamnd/langlands-lean",
-  "commit": "9a88d56b5784fc373b1434359b284de0187db693",
+  "commit": "17b31525660e114e38af0c3e93ee8fb47ec60e94",
   "toolchain": "4.35.0",
   "mathlib": "v4.35.0",
   "built": "2026-11-26",
@@ -10614,6 +10614,39 @@
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers K)) (m : ℕ),\n  Langlands.Tate.NonArchimedean.q v ^ (-↑m) = (Langlands.Tate.NonArchimedean.q v)⁻¹ ^ m"
     },
+    "Langlands.Tate.absNorm_dualUnit": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 93,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  ↑(FractionalIdeal.absNorm ↑(Langlands.Tate.dualUnit K a)) =\n    (↑(FractionalIdeal.absNorm ↑a) * |↑(NumberField.discr K)|)⁻¹"
+    },
+    "Langlands.Tate.absNorm_pos": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 172,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ), 0 \u003c ↑(FractionalIdeal.absNorm ↑a)"
+    },
+    "Langlands.Tate.absNorm_toPrincipalIdeal_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 129,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] (x : Kˣ)\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  ↑(FractionalIdeal.absNorm ↑((toPrincipalIdeal (NumberField.RingOfIntegers K) K) x * a)) =\n    |↑((Algebra.norm ℚ) ↑x)| * ↑(FractionalIdeal.absNorm ↑a)"
+    },
     "Langlands.Tate.abs_norm_pos": {
       "kind": "theorem",
       "file": "Langlands/Tate/DedekindMellin.lean",
@@ -10801,6 +10834,147 @@
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] {v : NumberField.InfinitePlace K} {n : ℤ} {t s : ℂ},\n  (v.IsReal → n = 0 ∨ n = 1) →\n    0 \u003c (s + t).re →\n      Langlands.Tate.archZeta v n t s = (if v.IsReal then 1 else ↑Real.pi) * Langlands.Tate.archGamma v n t s"
     },
+    "Langlands.Tate.card_infinitePlace_of_isQuadratic": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 83,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] [NumberField.IsTotallyComplex K],\n  Module.finrank ℚ K = 2 → Fintype.card (NumberField.InfinitePlace K) = 1"
+    },
+    "Langlands.Tate.classGroup_mk_surjective": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 288,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K], Function.Surjective ⇑(ClassGroup.mk K)"
+    },
+    "Langlands.Tate.classRep": {
+      "kind": "def",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 293,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u_1) →\n  [inst : Field K] →\n    [NumberField K] →\n      ClassGroup (NumberField.RingOfIntegers K) → (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ"
+    },
+    "Langlands.Tate.classRep.congr_simp": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] (C C_1 : ClassGroup (NumberField.RingOfIntegers K)),\n  C = C_1 → Langlands.Tate.classRep K C = Langlands.Tate.classRep K C_1"
+    },
+    "Langlands.Tate.classTerm": {
+      "kind": "def",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 201,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u_1) →\n  [inst : Field K] → [NumberField K] → (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ → ℂ → ℂ"
+    },
+    "Langlands.Tate.classTerm.congr_simp": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a a_1 : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  a = a_1 → ∀ (s s_1 : ℂ), s = s_1 → Langlands.Tate.classTerm K a s = Langlands.Tate.classTerm K a_1 s_1"
+    },
+    "Langlands.Tate.classTerm_eq_of_mk_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 278,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] [NumberField.IsTotallyComplex K],\n  Module.finrank ℚ K = 2 →\n    ∀ {a b : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ},\n      (ClassGroup.mk K) a = (ClassGroup.mk K) b →\n        ∀ {s : ℂ}, s ≠ 0 → s ≠ 2 → Langlands.Tate.classTerm K a s = Langlands.Tate.classTerm K b s"
+    },
+    "Langlands.Tate.classTerm_toPrincipalIdeal_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 254,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] [NumberField.IsTotallyComplex K],\n  Module.finrank ℚ K = 2 →\n    ∀ (x : Kˣ) (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) {s : ℂ},\n      s ≠ 0 →\n        s ≠ 2 →\n          Langlands.Tate.classTerm K ((toPrincipalIdeal (NumberField.RingOfIntegers K) K) x * a) s =\n            Langlands.Tate.classTerm K a s"
+    },
+    "Langlands.Tate.classTerm_toPrincipalIdeal_mul_of_lt": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 236,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] [NumberField.IsTotallyComplex K],\n  Module.finrank ℚ K = 2 →\n    ∀ (x : Kˣ) (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) {s : ℂ},\n      2 \u003c s.re →\n        Langlands.Tate.classTerm K ((toPrincipalIdeal (NumberField.RingOfIntegers K) K) x * a) s =\n          Langlands.Tate.classTerm K a s"
+    },
+    "Langlands.Tate.classTerm_two_sub": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 211,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K],\n  Module.finrank ℚ K = 2 →\n    ∀ (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) (s : ℂ),\n      Langlands.Tate.classTerm K a (2 - s) = Langlands.Tate.classTerm K (Langlands.Tate.dualUnit K a) s"
+    },
+    "Langlands.Tate.classZeta": {
+      "kind": "def",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 310,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u_1) → [inst : Field K] → [NumberField K] → ℂ → ℂ"
+    },
+    "Langlands.Tate.classZeta_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 335,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] [NumberField.IsTotallyComplex K],\n  Module.finrank ℚ K = 2 →\n    ∀ {s : ℂ},\n      2 \u003c s.re →\n        Langlands.Tate.classZeta K s =\n          s.Gammaℝ *\n            ∑ C,\n              ↑(Langlands.Tate.idealScale K (Langlands.Tate.classRep K C)) ^ s *\n                ∑' (α : ↥↑(Langlands.Tate.classRep K C)), if ↑α = 0 then 0 else ↑√(2 * |↑((Algebra.norm ℚ) ↑α)|) ^ (-s)"
+    },
+    "Langlands.Tate.classZeta_two_sub": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 320,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] [NumberField.IsTotallyComplex K],\n  Module.finrank ℚ K = 2 → ∀ {s : ℂ}, s ≠ 0 → s ≠ 2 → Langlands.Tate.classZeta K (2 - s) = Langlands.Tate.classZeta K s"
+    },
     "Langlands.Tate.coe_dualIndexEquiv": {
       "kind": "theorem",
       "file": "Langlands/Tate/PoissonLattice.lean",
@@ -10811,6 +10985,28 @@
         "propext"
       ],
       "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] (L : Submodule ℤ V)\n  [inst_2 : FiniteDimensional ℝ V] [inst_3 : DiscreteTopology ↥L] [inst_4 : IsZLattice ℝ L] {ι : Type u_2}\n  [inst_5 : Fintype ι] (b : Module.Basis ι ℤ ↥L) (k : ι → ℤ),\n  ↑((Langlands.Tate.dualIndexEquiv L b) k) = (Langlands.Tate.dualMap L b) (Langlands.Tate.intPoint k)"
+    },
+    "Langlands.Tate.coe_dualUnit": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 80,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  ↑(Langlands.Tate.dualUnit K a) = FractionalIdeal.dual ℤ ℚ ↑a"
+    },
+    "Langlands.Tate.coe_dualUnit_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 86,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  ↑(Langlands.Tate.dualUnit K a) = (↑a * ↑(differentIdeal ℤ (NumberField.RingOfIntegers K)))⁻¹"
     },
     "Langlands.Tate.coe_globalDualEquiv": {
       "kind": "theorem",
@@ -10845,6 +11041,17 @@
       ],
       "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] (L : Submodule ℤ V)\n  [inst_2 : FiniteDimensional ℝ V] [inst_3 : DiscreteTopology ↥L] [inst_4 : IsZLattice ℝ L] {ι : Type u_2}\n  [inst_5 : Fintype ι] (b : Module.Basis ι ℤ ↥L) (m : ι → ℤ),\n  ↑((Langlands.Tate.latticeIndexEquiv L b) m) = (Langlands.Tate.latticeEquiv L b) (Langlands.Tate.intPoint m)"
     },
+    "Langlands.Tate.coe_mulEquivIdeal": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 125,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] (x : Kˣ)\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) (α : ↥↑a),\n  ↑((Langlands.Tate.mulEquivIdeal K x a) α) = ↑x * ↑α"
+    },
     "Langlands.Tate.coe_thetaScale": {
       "kind": "theorem",
       "file": "Langlands/Tate/DedekindTheta.lean",
@@ -10855,6 +11062,137 @@
         "propext"
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] {t : NumberField.InfinitePlace K → ℝ}\n  (ht : ∀ (w : NumberField.InfinitePlace K), 0 \u003c t w) (w : NumberField.InfinitePlace K),\n  ↑(Langlands.Tate.thetaScale ht w) = √(↑w.mult * t w)"
+    },
+    "Langlands.Tate.completedEpsteinZeta": {
+      "kind": "def",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 241,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{V : Type u_1} →\n  [inst : NormedAddCommGroup V] →\n    [inst_1 : InnerProductSpace ℝ V] →\n      [FiniteDimensional ℝ V] →\n        [inst_3 : MeasurableSpace V] →\n          [BorelSpace V] →\n            (L : Submodule ℤ V) → [inst_5 : DiscreteTopology ↥L] → [IsZLattice ℝ L] → [Nontrivial V] → ℂ → ℂ"
+    },
+    "Langlands.Tate.completedEpsteinZeta_congr": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 47,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} {W : Type u_2} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V]\n  [inst_2 : FiniteDimensional ℝ V] [inst_3 : MeasurableSpace V] [inst_4 : BorelSpace V] [inst_5 : Nontrivial V]\n  [inst_6 : NormedAddCommGroup W] [inst_7 : InnerProductSpace ℝ W] [inst_8 : FiniteDimensional ℝ W]\n  [inst_9 : MeasurableSpace W] [inst_10 : BorelSpace W] [inst_11 : Nontrivial W] (L : Submodule ℤ V)\n  [inst_12 : DiscreteTopology ↥L] [inst_13 : IsZLattice ℝ L] (M : Submodule ℤ W) [inst_14 : DiscreteTopology ↥M]\n  [inst_15 : IsZLattice ℝ M],\n  Module.finrank ℝ V = Module.finrank ℝ W →\n    (∀ (t : ℝ), Langlands.Tate.latticeTheta L t = Langlands.Tate.latticeTheta M t) →\n      ZLattice.covolume L MeasureTheory.volume = ZLattice.covolume M MeasureTheory.volume →\n        Langlands.Tate.completedEpsteinZeta L = Langlands.Tate.completedEpsteinZeta M"
+    },
+    "Langlands.Tate.completedEpsteinZeta_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 279,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : FiniteDimensional ℝ V]\n  [inst_3 : MeasurableSpace V] [inst_4 : BorelSpace V] (L : Submodule ℤ V) [inst_5 : DiscreteTopology ↥L]\n  [inst_6 : IsZLattice ℝ L] [inst_7 : Nontrivial V] {s : ℂ},\n  ↑(Module.finrank ℝ V) \u003c s.re → Langlands.Tate.completedEpsteinZeta L s = s.Gammaℝ * Langlands.Tate.epsteinZeta L s"
+    },
+    "Langlands.Tate.completedEpsteinZeta_residue": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 321,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : FiniteDimensional ℝ V]\n  [inst_3 : MeasurableSpace V] [inst_4 : BorelSpace V] (L : Submodule ℤ V) [inst_5 : DiscreteTopology ↥L]\n  [inst_6 : IsZLattice ℝ L] [inst_7 : Nontrivial V],\n  Filter.Tendsto (fun s =\u003e (s - ↑(Module.finrank ℝ V)) * Langlands.Tate.completedEpsteinZeta L s)\n    (nhdsWithin ↑(Module.finrank ℝ V) {↑(Module.finrank ℝ V)}ᶜ)\n    (nhds (2 * ↑(ZLattice.covolume L MeasureTheory.volume)⁻¹))"
+    },
+    "Langlands.Tate.completedEpsteinZeta_sub": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 307,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : FiniteDimensional ℝ V]\n  [inst_3 : MeasurableSpace V] [inst_4 : BorelSpace V] (L : Submodule ℤ V) [inst_5 : DiscreteTopology ↥L]\n  [inst_6 : IsZLattice ℝ L] [inst_7 : Nontrivial V] (s : ℂ),\n  Langlands.Tate.completedEpsteinZeta L (↑(Module.finrank ℝ V) - s) =\n    ↑(ZLattice.covolume L MeasureTheory.volume)⁻¹ * Langlands.Tate.completedEpsteinZeta (Langlands.Tate.dualLattice L) s"
+    },
+    "Langlands.Tate.completedIdealZeta": {
+      "kind": "def",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 167,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u_1) →\n  [inst : Field K] → [NumberField K] → (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ → ℂ → ℂ"
+    },
+    "Langlands.Tate.completedIdealZeta.congr_simp": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a a_1 : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  a = a_1 →\n    ∀ (s s_1 : ℂ), s = s_1 → Langlands.Tate.completedIdealZeta K a s = Langlands.Tate.completedIdealZeta K a_1 s_1"
+    },
+    "Langlands.Tate.completedIdealZeta_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 175,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) {s : ℂ},\n  ↑(Module.finrank ℚ K) \u003c s.re →\n    Langlands.Tate.completedIdealZeta K a s =\n      s.Gammaℝ * ∑' (α : ↥↑a), if ↑α = 0 then 0 else ↑√(∑ w, ↑w.mult * w ↑α ^ 2) ^ (-s)"
+    },
+    "Langlands.Tate.completedIdealZeta_eq_of_isQuadratic": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 100,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] [NumberField.IsTotallyComplex K],\n  Module.finrank ℚ K = 2 →\n    ∀ (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) {s : ℂ},\n      2 \u003c s.re →\n        Langlands.Tate.completedIdealZeta K a s =\n          s.Gammaℝ * ∑' (α : ↥↑a), if ↑α = 0 then 0 else ↑√(2 * |↑((Algebra.norm ℚ) ↑α)|) ^ (-s)"
+    },
+    "Langlands.Tate.completedIdealZeta_residue": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 216,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  Filter.Tendsto (fun s =\u003e (s - ↑(Module.finrank ℚ K)) * Langlands.Tate.completedIdealZeta K a s)\n    (nhdsWithin ↑(Module.finrank ℚ K) {↑(Module.finrank ℚ K)}ᶜ)\n    (nhds (2 * ↑(↑(FractionalIdeal.absNorm ↑a) * √|↑(NumberField.discr K)|)⁻¹))"
+    },
+    "Langlands.Tate.completedIdealZeta_sub": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 206,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) (s : ℂ),\n  Langlands.Tate.completedIdealZeta K a (↑(Module.finrank ℚ K) - s) =\n    ↑(↑(FractionalIdeal.absNorm ↑a) * √|↑(NumberField.discr K)|)⁻¹ *\n      Langlands.Tate.completedIdealZeta K (Langlands.Tate.dualUnit K a) s"
+    },
+    "Langlands.Tate.completedIdealZeta_toPrincipalIdeal_mul_of_lt": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 138,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] [NumberField.IsTotallyComplex K],\n  Module.finrank ℚ K = 2 →\n    ∀ (x : Kˣ) (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) {s : ℂ},\n      2 \u003c s.re →\n        Langlands.Tate.completedIdealZeta K ((toPrincipalIdeal (NumberField.RingOfIntegers K) K) x * a) s =\n          ↑√|↑((Algebra.norm ℚ) ↑x)| ^ (-s) * Langlands.Tate.completedIdealZeta K a s"
     },
     "Langlands.Tate.complexFourier": {
       "kind": "def",
@@ -11010,6 +11348,17 @@
       ],
       "type": "∀ (n : ℤ) {t s : ℂ},\n  0 \u003c (s + t).re →\n    (s + t).re \u003c 1 →\n      Langlands.Tate.complexZeta (Langlands.Tate.complexFourier (Langlands.Tate.complexTest n)) (-n) (-t) (1 - s) =\n        Langlands.Tate.complexRootNumber n * ((1 - s - t + ↑|n| / 2).Gammaℂ / (s + t + ↑|n| / 2).Gammaℂ) *\n          Langlands.Tate.complexZeta (Langlands.Tate.complexTest n) n t s"
     },
+    "Langlands.Tate.continuousOn_latticeTheta": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 124,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [FiniteDimensional ℝ V]\n  (M : Submodule ℤ V) [inst_3 : DiscreteTopology ↥M] [IsZLattice ℝ M],\n  ContinuousOn (Langlands.Tate.latticeTheta M) (Set.Ioi 0)"
+    },
     "Langlands.Tate.continuous_gaussConj": {
       "kind": "theorem",
       "file": "Langlands/Tate/ArchimedeanFourier.lean",
@@ -11054,6 +11403,28 @@
       ],
       "type": "∀ {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℝ E] [FiniteDimensional ℝ E]\n  [inst_3 : MeasurableSpace E] [BorelSpace E] (μ : MeasureTheory.Measure E) [μ.IsAddHaarMeasure] (L : Submodule ℤ E)\n  [inst_6 : DiscreteTopology ↥L] [IsZLattice ℝ L] (e : E ≃L[ℝ] E),\n  ZLattice.covolume (ZLattice.comap ℝ L ↑↑e) μ = |LinearMap.det ↑↑e|⁻¹ * ZLattice.covolume L μ"
     },
+    "Langlands.Tate.covolume_dualLattice": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 191,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : FiniteDimensional ℝ V]\n  [inst_3 : MeasurableSpace V] [inst_4 : BorelSpace V] (L : Submodule ℤ V) [inst_5 : DiscreteTopology ↥L]\n  [IsZLattice ℝ L],\n  ZLattice.covolume (Langlands.Tate.dualLattice L) MeasureTheory.volume = (ZLattice.covolume L MeasureTheory.volume)⁻¹"
+    },
+    "Langlands.Tate.covolume_dualLattice_traceLattice": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 157,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  ZLattice.covolume (Langlands.Tate.dualLattice (Langlands.Tate.traceLattice K a)) MeasureTheory.volume =\n    ZLattice.covolume (Langlands.Tate.traceLattice K (Langlands.Tate.dualUnit K a)) MeasureTheory.volume"
+    },
     "Langlands.Tate.covolume_globalLattice": {
       "kind": "theorem",
       "file": "Langlands/Tate/GlobalLattice.lean",
@@ -11075,6 +11446,17 @@
         "propext"
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) {t : NumberField.InfinitePlace K → ℝ}\n  (ht : ∀ (w : NumberField.InfinitePlace K), 0 \u003c t w),\n  ZLattice.covolume (Langlands.Tate.globalLattice K (Langlands.Tate.thetaScale ht) a) MeasureTheory.volume =\n    ↑(FractionalIdeal.absNorm ↑a) * √|↑(NumberField.discr K)| * ∏ w, √(t w) ^ w.mult"
+    },
+    "Langlands.Tate.covolume_traceLattice": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 122,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  ZLattice.covolume (Langlands.Tate.traceLattice K a) MeasureTheory.volume =\n    ↑(FractionalIdeal.absNorm ↑a) * √|↑(NumberField.discr K)|"
     },
     "Langlands.Tate.dedekindTheta": {
       "kind": "def",
@@ -11163,6 +11545,71 @@
       ],
       "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] (c : NumberField.InfinitePlace K → ℝ),\n  LinearMap.det (Langlands.Tate.mixedScaleₗ K c) = ∏ w, c w ^ w.mult"
     },
+    "Langlands.Tate.differentUnit": {
+      "kind": "def",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 301,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u_1) →\n  [inst : Field K] → [NumberField K] → (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ"
+    },
+    "Langlands.Tate.differentUnit.congr_simp": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K],\n  Langlands.Tate.differentUnit K = Langlands.Tate.differentUnit K"
+    },
+    "Langlands.Tate.differentiableAt_classTerm": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 205,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K],\n  Module.finrank ℚ K = 2 →\n    ∀ (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) {s : ℂ},\n      s ≠ 0 → s ≠ 2 → DifferentiableAt ℂ (Langlands.Tate.classTerm K a) s"
+    },
+    "Langlands.Tate.differentiableAt_classZeta": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 314,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K],\n  Module.finrank ℚ K = 2 → ∀ {s : ℂ}, s ≠ 0 → s ≠ 2 → DifferentiableAt ℂ (Langlands.Tate.classZeta K) s"
+    },
+    "Langlands.Tate.differentiableAt_completedEpsteinZeta": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 295,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : FiniteDimensional ℝ V]\n  [inst_3 : MeasurableSpace V] [inst_4 : BorelSpace V] (L : Submodule ℤ V) [inst_5 : DiscreteTopology ↥L]\n  [inst_6 : IsZLattice ℝ L] [inst_7 : Nontrivial V] {s : ℂ},\n  s ≠ 0 → s ≠ ↑(Module.finrank ℝ V) → DifferentiableAt ℂ (Langlands.Tate.completedEpsteinZeta L) s"
+    },
+    "Langlands.Tate.differentiableAt_completedIdealZeta": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 199,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) {s : ℂ},\n  s ≠ 0 → s ≠ ↑(Module.finrank ℚ K) → DifferentiableAt ℂ (Langlands.Tate.completedIdealZeta K a) s"
+    },
     "Langlands.Tate.differentiable_archGamma_inv": {
       "kind": "theorem",
       "file": "Langlands/Tate/ArchimedeanParameter.lean",
@@ -11216,6 +11663,28 @@
         "propext"
       ],
       "type": "{V : Type u_1} → [inst : NormedAddCommGroup V] → [InnerProductSpace ℝ V] → Submodule ℤ V → Submodule ℤ V"
+    },
+    "Langlands.Tate.dualLattice_dualLattice": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 79,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [FiniteDimensional ℝ V]\n  (L : Submodule ℤ V) [inst_3 : DiscreteTopology ↥L] [IsZLattice ℝ L],\n  Langlands.Tate.dualLattice (Langlands.Tate.dualLattice L) = L"
+    },
+    "Langlands.Tate.dualLattice_eq_span": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 61,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : FiniteDimensional ℝ V]\n  (L : Submodule ℤ V) [inst_3 : DiscreteTopology ↥L] [inst_4 : IsZLattice ℝ L]\n  [inst_5 : DecidableEq (Module.Free.ChooseBasisIndex ℤ ↥L)],\n  Langlands.Tate.dualLattice L =\n    Submodule.span ℤ\n      (Set.range\n        ⇑(LinearMap.BilinForm.dualBasis (innerₗ V) ⋯ (Module.Basis.ofZLatticeBasis ℝ L (Module.Free.chooseBasis ℤ ↥L))))"
     },
     "Langlands.Tate.dualMap": {
       "kind": "def",
@@ -11282,6 +11751,38 @@
       ],
       "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] (L : Submodule ℤ V)\n  [inst_2 : FiniteDimensional ℝ V] [inst_3 : DiscreteTopology ↥L] [inst_4 : IsZLattice ℝ L] {ι : Type u_2}\n  [inst_5 : Fintype ι] (b : Module.Basis ι ℤ ↥L) (k : ι → ℤ),\n  (Langlands.Tate.dualMap L b) (Langlands.Tate.intPoint k) ∈ Langlands.Tate.dualLattice L"
     },
+    "Langlands.Tate.dualUnit": {
+      "kind": "def",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 75,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u_1) →\n  [inst : Field K] →\n    [NumberField K] →\n      (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ →\n        (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ"
+    },
+    "Langlands.Tate.dualUnit.congr_simp": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a a_1 : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  a = a_1 → Langlands.Tate.dualUnit K a = Langlands.Tate.dualUnit K a_1"
+    },
+    "Langlands.Tate.dualUnit_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 305,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  Langlands.Tate.dualUnit K a = (a * Langlands.Tate.differentUnit K)⁻¹"
+    },
     "Langlands.Tate.dual_eq_inv_mul_different": {
       "kind": "theorem",
       "file": "Langlands/Tate/GlobalLattice.lean",
@@ -11293,6 +11794,28 @@
       ],
       "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (I : FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K),\n  FractionalIdeal.dual ℤ ℚ I = (I * ↑(differentIdeal ℤ (NumberField.RingOfIntegers K)))⁻¹"
     },
+    "Langlands.Tate.epsteinZeta": {
+      "kind": "def",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 237,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{V : Type u_1} → [inst : NormedAddCommGroup V] → Submodule ℤ V → ℂ → ℂ"
+    },
+    "Langlands.Tate.eq_of_eq_of_lt_re": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 32,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {f g : ℂ → ℂ} {p q : ℂ} {r : ℝ},\n  (∀ (s : ℂ), s ≠ p → s ≠ q → DifferentiableAt ℂ f s) →\n    (∀ (s : ℂ), s ≠ p → s ≠ q → DifferentiableAt ℂ g s) →\n      (∀ (s : ℂ), r \u003c s.re → f s = g s) → ∀ {s : ℂ}, s ≠ p → s ≠ q → f s = g s"
+    },
     "Langlands.Tate.exists_eq_add_intPoint_of_torusProj_eq": {
       "kind": "theorem",
       "file": "Langlands/Tate/PoissonSummation.lean",
@@ -11303,6 +11826,28 @@
         "propext"
       ],
       "type": "∀ {d : Type u_1} {x y : EuclideanSpace ℝ d},\n  Langlands.Tate.torusProj x = Langlands.Tate.torusProj y → ∃ m, x = y + Langlands.Tate.intPoint m"
+    },
+    "Langlands.Tate.exists_eq_toPrincipalIdeal_mul": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 263,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  {a b : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ},\n  (ClassGroup.mk K) a = (ClassGroup.mk K) b → ∃ x, b = (toPrincipalIdeal (NumberField.RingOfIntegers K) K) x * a"
+    },
+    "Langlands.Tate.exists_pos_le_norm_sq": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 108,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] (M : Submodule ℤ V) [DiscreteTopology ↥M],\n  ∃ c, 0 \u003c c ∧ ∀ (μ : ↥M), μ ≠ 0 → c ≤ ‖↑μ‖ ^ 2"
     },
     "Langlands.Tate.exp_log_mul": {
       "kind": "theorem",
@@ -11325,6 +11870,17 @@
         "propext"
       ],
       "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] (L : Submodule ℤ V)\n  [FiniteDimensional ℝ V] [inst_3 : DiscreteTopology ↥L] [IsZLattice ℝ L] {ι : Type u_2} [inst_5 : Fintype ι]\n  (b : Module.Basis ι ℤ ↥L), Module.finrank ℝ V = Fintype.card ι"
+    },
+    "Langlands.Tate.finrank_euclidean_mixedSpace": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 171,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K],\n  Module.finrank ℝ (NumberField.mixedEmbedding.euclidean.mixedSpace K) = Module.finrank ℚ K"
     },
     "Langlands.Tate.fourierGaussConj": {
       "kind": "def",
@@ -11641,6 +12197,28 @@
       ],
       "type": "∀ (k : ℕ) (v u : ℂ),\n  HasDerivAt (fun ε =\u003e Langlands.Tate.fourierGaussConj k (v + ε • u))\n    (1 / 2 * (-Complex.I / 2) ^ k *\n      (↑k * (starRingEnd ℂ) v ^ (k - 1) * (starRingEnd ℂ) u * Complex.exp ↑(-(Real.pi / 2 * ‖v‖ ^ 2)) +\n        (starRingEnd ℂ) v ^ k * (Complex.exp ↑(-(Real.pi / 2 * ‖v‖ ^ 2)) * ↑(-(Real.pi / 2 * (2 * inner ℝ v u))))))\n    0"
     },
+    "Langlands.Tate.hasSum_completedEpsteinZeta": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 245,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : FiniteDimensional ℝ V]\n  [inst_3 : MeasurableSpace V] [inst_4 : BorelSpace V] (L : Submodule ℤ V) [inst_5 : DiscreteTopology ↥L]\n  [inst_6 : IsZLattice ℝ L] [inst_7 : Nontrivial V] {s : ℂ},\n  ↑(Module.finrank ℝ V) \u003c s.re →\n    HasSum (fun ℓ =\u003e if ℓ = 0 then 0 else s.Gammaℝ * ↑‖↑ℓ‖ ^ (-s)) (Langlands.Tate.completedEpsteinZeta L s)"
+    },
+    "Langlands.Tate.hasSum_latticeTheta_sub_one": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 117,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [FiniteDimensional ℝ V]\n  (M : Submodule ℤ V) [inst_3 : DiscreteTopology ↥M] [IsZLattice ℝ M] {t : ℝ},\n  0 \u003c t →\n    HasSum (fun μ =\u003e if μ = 0 then 0 else Real.exp (-(Real.pi * t) * ‖↑μ‖ ^ 2)) (Langlands.Tate.latticeTheta M t - 1)"
+    },
     "Langlands.Tate.hasSum_tsum_add_intPoint": {
       "kind": "theorem",
       "file": "Langlands/Tate/PoissonSummation.lean",
@@ -11662,6 +12240,60 @@
         "propext"
       ],
       "type": "∀ {d : Type u_1}, ⋃ m, Langlands.Tate.tile m = Set.univ"
+    },
+    "Langlands.Tate.idealScale": {
+      "kind": "def",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 168,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u_1) →\n  [inst : Field K] → [NumberField K] → (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ → ℝ"
+    },
+    "Langlands.Tate.idealScale.congr_simp": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a a_1 : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  a = a_1 → Langlands.Tate.idealScale K a = Langlands.Tate.idealScale K a_1"
+    },
+    "Langlands.Tate.idealScale_dualUnit": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 189,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  Langlands.Tate.idealScale K (Langlands.Tate.dualUnit K a) = (Langlands.Tate.idealScale K a)⁻¹"
+    },
+    "Langlands.Tate.idealScale_pos": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 181,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ), 0 \u003c Langlands.Tate.idealScale K a"
+    },
+    "Langlands.Tate.idealScale_sq": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 184,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  Langlands.Tate.idealScale K a ^ 2 = ↑(FractionalIdeal.absNorm ↑a) * √|↑(NumberField.discr K)|"
     },
     "Langlands.Tate.inner_dualMap": {
       "kind": "theorem",
@@ -11729,6 +12361,28 @@
       ],
       "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] (x y : NumberField.mixedEmbedding.mixedSpace K),\n  inner ℝ ((NumberField.mixedEmbedding.euclidean.toMixed K).symm x)\n      ((NumberField.mixedEmbedding.euclidean.toMixed K).symm y) =\n    ∑ w, x.1 w * y.1 w + ∑ w, inner ℝ (x.2 w) (y.2 w)"
     },
+    "Langlands.Tate.innerₗ_nondegenerate": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 55,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (V : Type u_1) [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V], (innerₗ V).Nondegenerate"
+    },
+    "Langlands.Tate.instDiscreteTopologySubtypeMemSubmoduleIntDualLattice": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 69,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [FiniteDimensional ℝ V]\n  (L : Submodule ℤ V) [inst_3 : DiscreteTopology ↥L] [IsZLattice ℝ L], DiscreteTopology ↥(Langlands.Tate.dualLattice L)"
+    },
     "Langlands.Tate.instDiscreteTopologySubtypeMixedSpaceMemSubmoduleIntGlobalLattice": {
       "kind": "theorem",
       "file": "Langlands/Tate/GlobalLattice.lean",
@@ -11739,6 +12393,17 @@
         "propext"
       ],
       "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] (c : NumberField.InfinitePlace K → ℝˣ)\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ),\n  DiscreteTopology ↥(Langlands.Tate.globalLattice K c a)"
+    },
+    "Langlands.Tate.instIsZLatticeRealDualLattice": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 74,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : FiniteDimensional ℝ V]\n  (L : Submodule ℤ V) [inst_3 : DiscreteTopology ↥L] [inst_4 : IsZLattice ℝ L],\n  IsZLattice ℝ (Langlands.Tate.dualLattice L)"
     },
     "Langlands.Tate.instIsZLatticeRealMixedSpaceGlobalLattice": {
       "kind": "theorem",
@@ -12026,6 +12691,17 @@
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] {t : NumberField.InfinitePlace K → ℝ},\n  (∀ (w : NumberField.InfinitePlace K), 0 \u003c t w) → ∀ (w : NumberField.InfinitePlace K), 0 \u003c (fun w =\u003e (t w)⁻¹) w"
     },
+    "Langlands.Tate.isBigO_latticeTheta_sub_one": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 155,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [FiniteDimensional ℝ V]\n  (M : Submodule ℤ V) [inst_3 : DiscreteTopology ↥M] [IsZLattice ℝ M] (r : ℝ),\n  (fun t =\u003e ↑(Langlands.Tate.latticeTheta M t) - 1) =O[Filter.atTop] fun x =\u003e x ^ r"
+    },
     "Langlands.Tate.isOpenQuotientMap_torusProj": {
       "kind": "theorem",
       "file": "Langlands/Tate/PoissonSummation.lean",
@@ -12101,6 +12777,61 @@
         "propext"
       ],
       "type": "{V : Type u_1} →\n  [inst : NormedAddCommGroup V] →\n    (L : Submodule ℤ V) → {ι : Type u_2} → [Fintype ι] → Module.Basis ι ℤ ↥L → (ι → ℤ) ≃ ↥L"
+    },
+    "Langlands.Tate.latticeTheta": {
+      "kind": "def",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 93,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{V : Type u_1} → [inst : NormedAddCommGroup V] → Submodule ℤ V → ℝ → ℝ"
+    },
+    "Langlands.Tate.latticeTheta_dualLattice_traceLattice": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 149,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K]\n  (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) (t : ℝ),\n  Langlands.Tate.latticeTheta (Langlands.Tate.dualLattice (Langlands.Tate.traceLattice K a)) t =\n    Langlands.Tate.latticeTheta (Langlands.Tate.traceLattice K (Langlands.Tate.dualUnit K a)) t"
+    },
+    "Langlands.Tate.latticeTheta_one_div": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 183,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : FiniteDimensional ℝ V]\n  [inst_3 : MeasurableSpace V] [inst_4 : BorelSpace V] (L : Submodule ℤ V) [inst_5 : DiscreteTopology ↥L]\n  [IsZLattice ℝ L] {x : ℝ},\n  0 \u003c x →\n    Langlands.Tate.latticeTheta L (1 / x) =\n      (ZLattice.covolume L MeasureTheory.volume)⁻¹ * x ^ (↑(Module.finrank ℝ V) / 2) *\n        Langlands.Tate.latticeTheta (Langlands.Tate.dualLattice L) x"
+    },
+    "Langlands.Tate.latticeTheta_sub_one_le": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 137,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [FiniteDimensional ℝ V]\n  (M : Submodule ℤ V) [inst_3 : DiscreteTopology ↥M] [IsZLattice ℝ M] {c : ℝ},\n  (∀ (μ : ↥M), μ ≠ 0 → c ≤ ‖↑μ‖ ^ 2) →\n    ∀ {t : ℝ},\n      1 ≤ t →\n        0 ≤ Langlands.Tate.latticeTheta M t - 1 ∧\n          Langlands.Tate.latticeTheta M t - 1 ≤\n            Real.exp (-(Real.pi * c) * (t - 1)) * (Langlands.Tate.latticeTheta M 1 - 1)"
+    },
+    "Langlands.Tate.locallyIntegrableOn_latticeTheta": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 172,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [FiniteDimensional ℝ V]\n  (M : Submodule ℤ V) [inst_3 : DiscreteTopology ↥M] [IsZLattice ℝ M],\n  MeasureTheory.LocallyIntegrableOn (fun t =\u003e ↑(Langlands.Tate.latticeTheta M t)) (Set.Ioi 0) MeasureTheory.volume"
     },
     "Langlands.Tate.mFourierCoeff_torusPeriodize": {
       "kind": "theorem",
@@ -12365,6 +13096,28 @@
       ],
       "type": "∀ (K : Type u_1) [inst : Field K] (x : NumberField.mixedEmbedding.mixedSpace K), (Langlands.Tate.mixedScaleₗ K 1) x = x"
     },
+    "Langlands.Tate.mk_classRep": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 297,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] (C : ClassGroup (NumberField.RingOfIntegers K)),\n  (ClassGroup.mk K) (Langlands.Tate.classRep K C) = C"
+    },
+    "Langlands.Tate.mulEquivIdeal": {
+      "kind": "def",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 109,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u_1) →\n  [inst : Field K] →\n    [inst_1 : NumberField K] →\n      (x : Kˣ) →\n        (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) →\n          ↥↑a ≃ ↥↑((toPrincipalIdeal (NumberField.RingOfIntegers K) K) x * a)"
+    },
     "Langlands.Tate.mult_mul_re_pos": {
       "kind": "theorem",
       "file": "Langlands/Tate/DedekindMellin.lean",
@@ -12464,6 +13217,17 @@
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K] {t : NumberField.InfinitePlace K → ℝ}\n  (ht : ∀ (w : NumberField.InfinitePlace K), 0 \u003c t w) (x : K),\n  ‖(Langlands.Tate.globalConjEmbedding K fun w =\u003e ↑(Langlands.Tate.thetaScale ht w)) x‖ ^ 2 =\n    ∑ w, ↑w.mult * t w * w x ^ 2"
     },
+    "Langlands.Tate.norm_globalConjEmbedding_traceScale_sq": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 109,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] (x : K),\n  ‖(Langlands.Tate.globalConjEmbedding K fun w =\u003e ↑(Langlands.Tate.traceScale K w)) x‖ ^ 2 = ∑ w, ↑w.mult * w x ^ 2"
+    },
     "Langlands.Tate.norm_globalEmbedding_sq": {
       "kind": "theorem",
       "file": "Langlands/Tate/GlobalLattice.lean",
@@ -12485,6 +13249,17 @@
         "propext"
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K] {t : NumberField.InfinitePlace K → ℝ}\n  (ht : ∀ (w : NumberField.InfinitePlace K), 0 \u003c t w) (x : K),\n  ‖(Langlands.Tate.globalEmbedding K fun w =\u003e ↑(Langlands.Tate.thetaScale ht w)) x‖ ^ 2 = ∑ w, ↑w.mult * t w * w x ^ 2"
+    },
+    "Langlands.Tate.norm_globalEmbedding_traceScale_sq": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 103,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] (x : K),\n  ‖(Langlands.Tate.globalEmbedding K fun w =\u003e ↑(Langlands.Tate.traceScale K w)) x‖ ^ 2 = ∑ w, ↑w.mult * w x ^ 2"
     },
     "Langlands.Tate.norm_le_dualMap": {
       "kind": "theorem",
@@ -12948,6 +13723,17 @@
       ],
       "type": "∀ {d : Type u_1} [inst : Fintype d] {E : Type u_2} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace ℝ E]\n  (g : EuclideanSpace ℝ d → E) (m : d → ℤ),\n  ∫ (z : EuclideanSpace ℝ d) in Langlands.Tate.tile m, g z =\n    ∫ (y : EuclideanSpace ℝ d) in Langlands.Tate.tile 0, g (y + Langlands.Tate.intPoint m)"
     },
+    "Langlands.Tate.sqrt_abs_discr_pos": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 178,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K], 0 \u003c √|↑(NumberField.discr K)|"
+    },
     "Langlands.Tate.sum_filter_mk_eq": {
       "kind": "theorem",
       "file": "Langlands/Tate/GlobalLattice.lean",
@@ -12969,6 +13755,17 @@
         "propext"
       ],
       "type": "∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K] (α : K),\n  α ≠ 0 → ∑ w, ↑w.mult * Real.log (w α) = Real.log |↑((Algebra.norm ℚ) α)|"
+    },
+    "Langlands.Tate.sum_mult_sq_eq_of_isQuadratic": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/ImaginaryQuadratic.lean",
+      "line": 90,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] [NumberField.IsTotallyComplex K],\n  Module.finrank ℚ K = 2 → ∀ (x : K), ∑ w, ↑w.mult * w x ^ 2 = 2 * |↑((Algebra.norm ℚ) x)|"
     },
     "Langlands.Tate.summable_dedekindTheta": {
       "kind": "theorem",
@@ -13003,6 +13800,28 @@
       ],
       "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] (L : Submodule ℤ V)\n  [FiniteDimensional ℝ V] [inst_3 : DiscreteTopology ↥L] [IsZLattice ℝ L] {ι : Type u_2} [Fintype ι]\n  (b : Module.Basis ι ℤ ↥L) {f : V → ℂ} {N : ℕ},\n  Langlands.Tate.HasDecay f N → Module.finrank ℝ V \u003c N → Summable fun μ =\u003e f ↑μ"
     },
+    "Langlands.Tate.summable_epsteinZeta": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 286,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [FiniteDimensional ℝ V]\n  [inst_3 : MeasurableSpace V] [BorelSpace V] (L : Submodule ℤ V) [inst_5 : DiscreteTopology ↥L] [IsZLattice ℝ L]\n  [Nontrivial V] {s : ℂ}, ↑(Module.finrank ℝ V) \u003c s.re → Summable fun ℓ =\u003e if ℓ = 0 then 0 else ↑‖↑ℓ‖ ^ (-s)"
+    },
+    "Langlands.Tate.summable_latticeTheta": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 99,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [FiniteDimensional ℝ V]\n  (M : Submodule ℤ V) [inst_3 : DiscreteTopology ↥M] [IsZLattice ℝ M] {t : ℝ},\n  0 \u003c t → Summable fun μ =\u003e Real.exp (-(Real.pi * t) * ‖↑μ‖ ^ 2)"
+    },
     "Langlands.Tate.summable_one_add_norm_intPoint_pow_inv": {
       "kind": "theorem",
       "file": "Langlands/Tate/PoissonSummation.lean",
@@ -13024,6 +13843,38 @@
         "propext"
       ],
       "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [FiniteDimensional ℝ V]\n  (L : Submodule ℤ V) [inst_3 : DiscreteTopology ↥L] [IsZLattice ℝ L] {f : V → ℂ} {N : ℕ},\n  Langlands.Tate.HasDecay f N → Module.finrank ℝ V \u003c N → Summable fun ℓ =\u003e f ↑ℓ"
+    },
+    "Langlands.Tate.thetaFEPair": {
+      "kind": "def",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 210,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "{V : Type u_1} →\n  [inst : NormedAddCommGroup V] →\n    [inst_1 : InnerProductSpace ℝ V] →\n      [FiniteDimensional ℝ V] →\n        [inst_3 : MeasurableSpace V] →\n          [BorelSpace V] →\n            (L : Submodule ℤ V) → [inst_5 : DiscreteTopology ↥L] → [IsZLattice ℝ L] → [Nontrivial V] → WeakFEPair ℂ"
+    },
+    "Langlands.Tate.thetaFEPair.congr_simp": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : FiniteDimensional ℝ V]\n  [inst_3 : MeasurableSpace V] [inst_4 : BorelSpace V] (L L_1 : Submodule ℤ V) (e_L : L = L_1)\n  [inst_5 : DiscreteTopology ↥L] [inst_6 : IsZLattice ℝ L] [inst_7 : Nontrivial V],\n  Langlands.Tate.thetaFEPair L = Langlands.Tate.thetaFEPair L_1"
+    },
+    "Langlands.Tate.thetaFEPair_symm": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/EpsteinZeta.lean",
+      "line": 229,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : FiniteDimensional ℝ V]\n  [inst_3 : MeasurableSpace V] [inst_4 : BorelSpace V] (L : Submodule ℤ V) [inst_5 : DiscreteTopology ↥L]\n  [inst_6 : IsZLattice ℝ L] [inst_7 : Nontrivial V],\n  (Langlands.Tate.thetaFEPair L).symm = Langlands.Tate.thetaFEPair (Langlands.Tate.dualLattice L)"
     },
     "Langlands.Tate.thetaScale": {
       "kind": "def",
@@ -13134,6 +13985,39 @@
       ],
       "type": "∀ {d : Type u_1} (x : EuclideanSpace ℝ d) (m : d → ℤ),\n  Langlands.Tate.torusProj (x + Langlands.Tate.intPoint m) = Langlands.Tate.torusProj x"
     },
+    "Langlands.Tate.traceLattice": {
+      "kind": "def",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 70,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u_1) →\n  [inst : Field K] →\n    [NumberField K] →\n      (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ →\n        Submodule ℤ (NumberField.mixedEmbedding.euclidean.mixedSpace K)"
+    },
+    "Langlands.Tate.traceScale": {
+      "kind": "def",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 66,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "(K : Type u_1) → [inst : Field K] → NumberField.InfinitePlace K → ℝˣ"
+    },
+    "Langlands.Tate.traceScale_mul_traceScale": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 117,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] (w : NumberField.InfinitePlace K),\n  ↑(Langlands.Tate.traceScale K w) * ↑(Langlands.Tate.traceScale K w) = ↑w.mult"
+    },
     "Langlands.Tate.trace_eq_inner": {
       "kind": "theorem",
       "file": "Langlands/Tate/GlobalLattice.lean",
@@ -13211,6 +14095,17 @@
       ],
       "type": "∀ {V : Type u_1} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] (L : Submodule ℤ V)\n  [inst_2 : FiniteDimensional ℝ V] [inst_3 : DiscreteTopology ↥L] [IsZLattice ℝ L] {ι : Type u_2} [Fintype ι]\n  (b : Module.Basis ι ℤ ↥L) [inst_6 : MeasurableSpace V] [inst_7 : BorelSpace V] (f : SchwartzMap V ℂ) (x y : V),\n  ∑' (ℓ : ↥L), f (x + ↑ℓ) * Complex.exp (2 * ↑Real.pi * Complex.I * ↑(inner ℝ (x + ↑ℓ) y)) =\n    ↑(ZLattice.covolume L MeasureTheory.volume)⁻¹ *\n      ∑' (μ : ↥(Langlands.Tate.dualLattice L)),\n        (FourierTransform.fourier f) (↑μ - y) * Complex.exp (2 * ↑Real.pi * Complex.I * ↑(inner ℝ x ↑μ))"
     },
+    "Langlands.Tate.tsum_dualLattice_traceLattice": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 138,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] {β : Type u_2} [inst_2 : AddCommMonoid β]\n  [inst_3 : TopologicalSpace β] (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) (F : ℝ → β),\n  ∑' (ℓ : ↥(Langlands.Tate.dualLattice (Langlands.Tate.traceLattice K a))), F (‖↑ℓ‖ ^ 2) =\n    ∑' (β : ↥(FractionalIdeal.dual ℤ ℚ ↑a)), F (∑ w, ↑w.mult * w ↑β ^ 2)"
+    },
     "Langlands.Tate.tsum_intPoint_eq_tsum_fourier": {
       "kind": "theorem",
       "file": "Langlands/Tate/PoissonSummation.lean",
@@ -13221,6 +14116,17 @@
         "propext"
       ],
       "type": "∀ {d : Type u_1} [inst : Fintype d] {f : EuclideanSpace ℝ d → ℂ},\n  Continuous f →\n    Langlands.Tate.HasSummableTranslates f →\n      (Summable fun k =\u003e FourierTransform.fourier f (Langlands.Tate.intPoint k)) →\n        ∑' (m : d → ℤ), f (Langlands.Tate.intPoint m) =\n          ∑' (k : d → ℤ), FourierTransform.fourier f (Langlands.Tate.intPoint k)"
+    },
+    "Langlands.Tate.tsum_traceLattice": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 129,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ (K : Type u_1) [inst : Field K] [inst_1 : NumberField K] {β : Type u_2} [inst_2 : AddCommMonoid β]\n  [inst_3 : TopologicalSpace β] (a : (FractionalIdeal (nonZeroDivisors (NumberField.RingOfIntegers K)) K)ˣ) (F : ℝ → β),\n  ∑' (ℓ : ↥(Langlands.Tate.traceLattice K a)), F (‖↑ℓ‖ ^ 2) = ∑' (α : ↥↑a), F (∑ w, ↑w.mult * w ↑α ^ 2)"
     },
     "Langlands.Tate.tsum_zlattice_eq_of_hasDecay": {
       "kind": "theorem",
@@ -13287,6 +14193,17 @@
         "propext"
       ],
       "type": "∀ {ι : Type u_2} [inst : Fintype ι], MeasureTheory.volume {x | ∀ (i : ι), x.ofLp i ∈ Set.Ico 0 1} = 1"
+    },
+    "Langlands.Tate.weakFEPair_Λ_eq": {
+      "kind": "theorem",
+      "file": "Langlands/Tate/IdealZeta.lean",
+      "line": 35,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "type": "∀ {E : Type u_1} [inst : NormedAddCommGroup E] [inst_1 : NormedSpace ℂ E] (P Q : WeakFEPair E),\n  P.f = Q.f → P.k = Q.k → P.ε = Q.ε → P.f₀ = Q.f₀ → P.g₀ = Q.g₀ → P.Λ = Q.Λ"
     },
     "Langlands.TorusCorrespond": {
       "kind": "def",
