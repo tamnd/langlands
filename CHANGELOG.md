@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## v0.1.7 (2026-11-26)
+
 ### Changed
 
 - `records/lean.json` is at langlands-lean 6531e9e, with 2252 declarations, 0 with `sorry`.
