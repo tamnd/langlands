@@ -1,0 +1,13 @@
+name: e2-llc-gl2-small
+experiment: E2
+question: For p in {3, 5, 7}, does the explicit local Langlands correspondence give the same L-factor and epsilon-factor of pi x chi on the GL2 side and on the Galois side, for the principal series, the twisted Steinberg and the depth-zero supercuspidal representations pi of GL2(Q_p) of conductor exponent at most 4 and the characters chi of conductor exponent at most 2?
+tool: lgl
+node: LG453577KN # LocalLanglandsGL2
+inputs:
+  primes: [3, 5, 7]
+  conductor_exponent: 4           # a(pi) <= 4
+  twist_conductor: 2              # a(chi) <= 2
+  additive_character: conductor-O # psi(x) = exp(2 pi i {x}_p), trivial on Z_p and not on p^-1 Z_p
+  families: [principal-series, steinberg, depth-zero-supercuspidal]
+outputs: [counts.json, principal.json, steinberg.json, supercuspidal.json, summary.md]
+notes: A small version of E2 in Go, with no container and no network. The arithmetic is exact in Q(zeta_N) with N = lcm(4, p^2, p^2 - 1). The values at p of the unramified parts of the characters are formal variables. The principal series use inducing characters of conductor exponent at most 2 each, so the principal series with an inducing character of conductor exponent 3 or 4 are not in the run. The supercuspidal representations of positive depth are not in the run, except as the twists of a depth-zero one by a character of conductor exponent 2. The case p = 2 is not in the run. The run has no Lean certificate (13.4).

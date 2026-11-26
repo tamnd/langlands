@@ -1,0 +1,86 @@
+[
+  {
+    "p": 3,
+    "family": "principal-series",
+    "field": 72,
+    "representations": 21,
+    "twists": 6,
+    "pairs": 126,
+    "matches": 126
+  },
+  {
+    "p": 3,
+    "family": "steinberg",
+    "field": 72,
+    "representations": 6,
+    "twists": 6,
+    "pairs": 36,
+    "matches": 36
+  },
+  {
+    "p": 3,
+    "family": "depth-zero-supercuspidal",
+    "field": 72,
+    "representations": 3,
+    "twists": 6,
+    "pairs": 18,
+    "matches": 18,
+    "naive_epsilon_matches": 12
+  },
+  {
+    "p": 5,
+    "family": "principal-series",
+    "field": 600,
+    "representations": 210,
+    "twists": 20,
+    "pairs": 4200,
+    "matches": 4200
+  },
+  {
+    "p": 5,
+    "family": "steinberg",
+    "field": 600,
+    "representations": 20,
+    "twists": 20,
+    "pairs": 400,
+    "matches": 400
+  },
+  {
+    "p": 5,
+    "family": "depth-zero-supercuspidal",
+    "field": 600,
+    "representations": 10,
+    "twists": 20,
+    "pairs": 200,
+    "matches": 200,
+    "naive_epsilon_matches": 160
+  },
+  {
+    "p": 7,
+    "family": "principal-series",
+    "field": 2352,
+    "representations": 903,
+    "twists": 42,
+    "pairs": 37926,
+    "matches": 37926
+  },
+  {
+    "p": 7,
+    "family": "steinberg",
+    "field": 2352,
+    "representations": 42,
+    "twists": 42,
+    "pairs": 1764,
+    "matches": 1764
+  },
+  {
+    "p": 7,
+    "family": "depth-zero-supercuspidal",
+    "field": 2352,
+    "representations": 21,
+    "twists": 42,
+    "pairs": 882,
+    "matches": 882,
+    "naive_epsilon_matches": 756
+  }
+]
