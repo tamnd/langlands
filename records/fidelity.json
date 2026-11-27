@@ -42,5 +42,16 @@
       "F5": false
     },
     "pass": false
+  },
+  "Langlands.LocalLanglandsGLFull": {
+    "class": "theorem",
+    "checks": {
+      "F1": true,
+      "F2": true,
+      "F3": true,
+      "F4": true,
+      "F5": true
+    },
+    "pass": true
   }
 }
