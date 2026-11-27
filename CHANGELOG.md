@@ -4,6 +4,8 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+## v0.1.10 (2026-11-27)
+
 ### Added
 
 - The fidelity record of `Langlands.LocalLanglandsGLFull` with the checks F1 to F5, and the round trip translation in records/roundtrip/LocalLanglandsGLFull.md.
