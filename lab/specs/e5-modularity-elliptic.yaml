@@ -1,0 +1,38 @@
+name: e5-modularity-elliptic
+experiment: E5
+question: For each isogeny class of elliptic curves over Q of conductor N <= 1000 in the Cremona database, are the a_p of the curve, from point counts mod p, equal to the a_p of the newform of weight 2 and level N in the aplist of the database, at each prime of the aplist, and for which N do these primes reach the Sturm bound floor(N prod_{p | N} (1 + 1/p) / 6)?
+tool: lgl
+node: LGPNZWXVH5 # ModularityEllipticQ
+inputs:
+  max_conductor: 1000
+  livne_prime_bound: 100000 # the search for the primes of the Livne set stops here
+  source: J. E. Cremona, the Cremona database of elliptic curves, the repository ecdata, https://github.com/JohnCremona/ecdata, read on 2026-11-27 with gh api and the header Accept application/vnd.github.raw
+  commit: 6fedd3ab463a70e52061ebc0b04832ad19fd2e01
+  licence: The Artistic License 2.0. The README says that the data is available under TheArtistic License 2.0, and LICENSE is the text of The Artistic License 2.0, Copyright (c) 2000-2006, The Perl Foundation. GitHub gives the SPDX id Artistic-2.0
+  files:
+    curves:
+      path: allcurves/allcurves.00000-09999
+      name: cremona-allcurves-00000-09999.txt
+      sha256: 259f3846329395b371e8079c77a6f1097adaebc98a054974573e241416efa968
+    aplist:
+      path: aplist/aplist.00000-09999
+      name: cremona-aplist-00000-09999.txt
+      sha256: a1cc11fb2c53b58bcf03600cd67d8d9133a14381f1df9dac7b096c20699eca65
+    labels:
+      path: alllabels/alllabels.00000-09999
+      name: cremona-alllabels-00000-09999.txt
+      sha256: bc06d9bd10dbba36ddb84ad2fc407d2a71c8c89f22361befae8eda08aa18a377
+    readme:
+      path: README.md
+      name: cremona-readme.txt
+      sha256: 619466f9a1542c3bfeaa68b592feb903edd205c652cac59d7f21d70444203bb5
+    format:
+      path: docs/file-format.txt
+      name: cremona-file-format.txt
+      sha256: 6ed8ed51d79425a53f4fea78004446576fafba81bc2a32c34b954253ade3cb1a
+    licence:
+      path: LICENSE
+      name: cremona-licence.txt
+      sha256: e7000d1562eb8d32209576028f36bf5caed23f01e9a99fa318063cc4684afc01
+outputs: [classes.json, counts.json, livne.json, summary.md]
+notes: E5 in Go, with no container and no network. The files are the files of the repository at the commit, with the names of the spec; they cover the conductors from 1 to 9999. The run checks the sha256 of each file. The aplist gives a_p only for p < 100 and the sign of W_q for the primes q > 100 of N, so the check reaches the Sturm bound only for some N. The run uses curve number 1 of each class in the Cremona numbering. The LMFDB API is not used, because it sent a reCAPTCHA page. The Livne set is computed only for the classes with a rational point of order 2, and the hypothesis that the traces of rho_f are even is not proved. The run has no Lean certificate (13.4).

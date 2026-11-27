@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The run of lab experiment E5 on Cremona's ecdata: 2463 isogeny classes of conductor N ≤ 1000, 61944 compared a_p and no mismatch. 643 classes reach the Sturm bound.
+
 ## v0.4.0 (2026-11-27)
 
 ### Changed
