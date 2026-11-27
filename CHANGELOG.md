@@ -8,7 +8,7 @@ Each release has a section. The newest release is first.
 
 ### Changed
 
-- This release closes milestone S4, Modularity and Galois representations.
+- This release closes milestone S4, GL(2), modular and automorphic.
 
 ## v0.4.1 (2026-11-27)
 
