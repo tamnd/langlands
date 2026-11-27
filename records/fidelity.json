@@ -53,5 +53,38 @@
       "F5": true
     },
     "pass": true
+  },
+  "Langlands.RamanujanGL": {
+    "class": "conjecture",
+    "checks": {
+      "F1": true,
+      "F2": true,
+      "F3": true,
+      "F4": true,
+      "F5": true
+    },
+    "pass": true
+  },
+  "Langlands.FunctorialityGL": {
+    "class": "conjecture",
+    "checks": {
+      "F1": true,
+      "F2": true,
+      "F3": true,
+      "F4": true,
+      "F5": true
+    },
+    "pass": true
+  },
+  "Langlands.ReciprocityGL": {
+    "class": "conjecture",
+    "checks": {
+      "F1": true,
+      "F2": true,
+      "F3": true,
+      "F4": true,
+      "F5": true
+    },
+    "pass": true
   }
 }

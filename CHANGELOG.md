@@ -4,6 +4,10 @@ Each release has a section. The newest release is first.
 
 ## Unreleased
 
+### Added
+
+- The fidelity records of `Langlands.RamanujanGL`, `Langlands.FunctorialityGL` and `Langlands.ReciprocityGL` with the checks F1 to F5, and their round trip translations in records/roundtrip/.
+
 ## v0.1.10 (2026-11-27)
 
 ### Added
